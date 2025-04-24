@@ -1,0 +1,839 @@
+/*custom style ----------------*/
+
+body {
+    /*background-color: #EFF2F5;*/
+    background-color: #ffffff;
+}
+
+textarea:focus, input:focus{   
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+#sidebar ul li a:hover, #sidebar ul li a.active {
+    color: #fff;
+    background: #cc0000;
+}
+
+
+#body>.navbar {
+
+    border-bottom: 1px solid rgb(101 109 119 / 38%);
+}
+
+#sidebar .sidebar-header {
+    border-bottom: 1px solid rgb(101 109 119 / 38%);
+}
+
+#sidebar {
+    
+   border-right: 1px solid rgb(101 109 119 / 38%);
+}
+
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow:none;
+}
+
+ 
+
+/*.footer {
+  position: relative;
+  margin-top: -150px;  
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+} 
+*/
+
+/*Maraqee ------------------------------*/
+
+.tr-cross-scrtips {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  z-index: 12;
+  align-self: baseline;
+  background: #ffffff;
+
+  position: relative;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.tr-cross-scrtips--one {
+    width: 130%;
+    background: #ffffff;
+    position: relative;
+    z-index: 3;
+    margin-right: -15px;
+    margin-left: -20px;
+    transform-origin: right;
+    display: flex;
+    align-items: center;
+    /*border-top: 5px solid red;
+    border-bottom: 5px solid red;*/
+}
+
+.tr-cross-scrtips--two {
+  width: 130%;
+
+  background: black;
+ 
+  position: relative;
+  margin-right: -15px;
+  margin-left: -15px;
+  z-index: 2;
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+}
+
+
+.tr-cross-scrtips ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.tr-cross-scrtips ul li {
+    margin: 0px 10px;
+    font-weight:700;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    font-size:30px;
+    padding: 2px 8px;
+}
+
+.webuy-color {
+    color: #f20108;
+    font-size: 25px;
+    font-stretch: extra-condensed;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: flex;
+}
+
+.wesell-color {
+    color:#07215e;
+    font-size: 25px;
+    font-stretch: extra-condensed;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: flex;
+}
+
+/*.tr-cross-scrtips ul li::before {
+  content: '';
+  height: 30px;
+  display: flex;
+  width: 30px;
+  margin-right: 10px;
+
+  background: black;
+  border-radius: 50%;
+}*/
+
+.tr-cross-scrtips .tr-cross-scrtips--two ul li::before {
+  background: white;
+}
+
+.tr-cross-scrtips .tr-cross-scrtips--two ul li {
+  margin: 0px 10px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+.track {
+
+  white-space: nowrap;
+  will-change: transform;
+}
+.track-left {
+  animation: marquee-left 10s linear infinite;
+}
+.track-right {
+  animation: marquee-right 40s linear infinite;
+}
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/*------------ Marquee end --------------*/
+
+
+.cash-exchange {
+    min-height:20px;
+    line-height:25px;
+    /*border-top: 7px solid #fb852d;
+    border-bottom: 7px solid #fb852d;*/
+    background-color: #ffffff;
+    width: 100%;
+    /*margin: 10px -20px;*/
+}
+
+
+/*.cash-exchange ul li {
+    list-style: none;
+    float: left;
+    margin-right: 75px;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    color: #000000;
+    line-height: 25px;
+    margin-top: -10px;
+}*/
+
+.cash-exchange ul{
+    margin-bottom: 0px;
+}
+
+.cash-exchange ul li {
+    list-style: none;
+    /*float: left;*/
+    margin-right: 75px;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    color: #000000;
+    line-height: 25px;
+    display: inline-grid;
+
+}
+
+.orange-bg {
+    background-color: #fb852d;
+
+}
+
+.competitive-rates-section {
+    background-color: #fb852d;
+    padding: 10px 10px;
+    width: 100%;
+    bottom: 0px;
+    position: relative;
+}
+
+.competitive-rates-section h1 {
+    color: #1b1b1b;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.competitive-rates-section h1 a:link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.competitive-rates-section h1 a:visited {
+    color: #ffffff;
+}
+
+.competitive-rates-section h1 a:focus {
+    color: #ffffff;
+}
+
+.competitive-rates-section h2 {
+    color: #1b1b1b;
+    font-weight: bold;
+    font-size: 2.1rem;
+    font-style: italic;
+}
+
+.competitive-rates-section h2 a:link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+/*Rate page style -------------------------------------------------*/
+
+
+.transact-btn {
+    color: #f20108;
+    font-weight: 600;
+    line-height: 20px;
+    border: 3px solid #010101;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #ffffff;
+    margin-top: 4%;
+    display: block;
+    letter-spacing: 0.1px;
+}
+
+
+/*Tab style*/
+
+
+.header-hr {
+  /*border: 1px solid #fb852d;*/
+  border: 1px solid #010101;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  /*margin-right: -20px;*/
+}
+
+.nav-pills {
+    padding:0px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.rate-tab-style {
+    border: 5px solid #010101;
+    color: #010101;
+    font-weight: bold;
+    font-size:18px;
+    border-radius: 0;
+    margin-top: 5px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.rate-tab-style a {
+    color: #010101;
+    vertical-align: middle;
+}
+
+.rate-tab-ce {
+    /*line-height:70px;*/
+    text-align: center;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.rate-tab-rsr {
+    line-height:20px;
+    text-align: center;
+    height: 60px;
+    bottom: -40px;
+    position: relative;
+}
+
+.rate-tab-tc {
+    line-height:20px;
+    text-align: center;
+    height: 80px;
+    bottom: -20px;
+    position: relative;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ffffff;
+    color: #f20108;
+}
+
+.rate-table h2 {
+    font-size:18px;
+    color: #07215e;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+
+.rate-table table th {
+    font-size:14px;
+    color: #1b1b1b;
+    text-align: center;
+    font-weight: bold;
+    text-transform:uppercase;
+    border: 2px solid #000000;
+}
+
+.rate-table table td {
+    font-size:14px;
+    color: #1b1b1b;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #000000;
+    padding: .2rem .5rem;
+}
+
+
+.country-td {
+    text-align: left !important;
+    font-weight: bolder !important;
+}
+
+.transact {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+
+.transact:last-child {
+     
+    border-bottom:0px solid #ffffff !important;
+}
+
+.color-orange {
+   color:#fb852d;
+}
+
+.color-blue {
+   color:#07215e;
+}
+
+.color-red {
+    color: #cc0000!important;
+}
+
+.color-green {
+   color:green !important;
+}
+
+.color-black {
+   color:#010101;
+}
+
+
+.home-icon {
+    padding: 10px;
+}
+
+.home-icon i {
+    margin-left:5px;
+    margin-top:5px;
+}
+
+
+
+/*Login style -----------------------------------------------------------*/
+
+
+.stretched-link {
+    color: #000000;
+    font-size: 16px;
+}
+
+.services .service-item {
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid #dddddd;
+    padding: 30px 20px 30px;
+    transition: border ease-in-out 0.3s;
+    height: auto;
+    border-radius: 7px;
+}
+
+.services .fa-envelope {
+    color:#ffffff;
+    size:30px;
+}
+
+.services .service-item p {
+    line-height: 26px;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.services .service-item .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 44px;
+    background: #000000;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.message-try p {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 30px;
+    font-weight: 500;
+}
+
+
+.login-div {
+    background-color:#ffffff;
+    height:auto;
+    /* padding: 30px; */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+.login-div-header {
+    background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px 15px 6px 15px;
+    margin: 0px;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    /*border-bottom: 2px solid #000000;*/
+}
+
+
+.login-div-header span {
+    font-size: 20px;
+    font-weight: 600;
+    text-align:center;
+    color:#000000;
+}
+
+
+.login-div-body {
+    padding: 25px 30px 20px;
+}
+
+.submit-btn {
+    background-color: #65ef08;
+    border:3px solid #010101;
+    padding: 5px 5px;
+    transition: 0.4s;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    width: 100%;
+}
+
+.new-account-but {
+    color: #cc0000;
+    background-color: #ffffff;
+    border: 3px solid #010101;
+    padding: 5px 5px;
+    transition: 0.4s;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.reset-but {
+    color: #cc0000;
+    background-color: #ffffff;
+    border: 3px solid #010101;
+    padding: 5px 5px;
+    transition: 0.4s;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    /* background-color: #f7f7f7; */
+    background-clip: padding-box;
+    border: 1px solid #c4c4c4;
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.login-div-body label {
+    color:#000000;
+}
+
+.otp {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.color-white {
+    background-color:#ffffff;
+}
+
+.nettt-logo {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        vertical-align: middle;
+}
+
+
+/*Dashboard style --------------------------------------------------------------------*/
+
+
+.content-menu {
+    padding: 1rem 1.5rem 1rem;
+    /*border-bottom: 1px solid rgba(101, 109, 119, .16);*/
+    /*max-height: 60px;*/
+}
+
+.content-menu h4 {
+    font-size:0.9rem;
+    text-transform: uppercase;
+    line-height: 1.3;
+    color:#4b5158;
+    font-weight: bold;
+
+}
+
+.content-menu p{
+    font-size: .8rem;
+    line-height: 1.2;
+    color: #656d77;
+    text-align: left;
+}
+
+.page-pretitle {
+    font-size: .8rem;
+    text-transform: uppercase;
+    line-height: 1.6;
+    color: #070707;
+}
+
+.page-header {
+    margin-top: .5rem;
+    border:1px solid #dddddd;
+    padding: 10px 10px 10px 10px;
+    background-color:#ffffff;
+    border-radius:5px;
+}
+
+.page-header p {
+    line-height: 18px;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: justify;
+    color: #000000;
+}
+
+.page-header p span {
+    color:#f42804;
+    font-weight: 500;
+ }
+
+ #sidebar ul li a {
+    padding: .8rem 1.5rem;
+    font-size: 0.950rem;
+    display: block;
+    border-bottom: 1px solid #e4e6e9;
+    color: #010101;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsive style class -----------------------------------------------------------------------------------*/
+
+
+@media (max-width: 680px) {
+
+    #body .navbar-collapse {
+        display: block !important;
+    }
+
+}
+
+
+
+@media only screen and (min-width:768px) {
+
+     
+}
+
+
+
+ @media only screen and (max-width:767px) {
+
+
+
+     .rate-tab-style {
+        width:100%;
+     }
+
+     .transact-btn {
+        color: #f20108;
+        font-weight: 600;
+        line-height: 16px;
+        border: 3px solid #010101;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 13px;
+        background-color: #ffffff;
+        margin-top: 4%;
+        display: block;
+        letter-spacing: 0.1px;
+    }
+
+    .rate-tab-ce {
+    height: 80px;
+    line-height:25px;
+    }
+
+    .rate-tab-rsr {
+         
+        height:70px;
+        bottom:0px;
+        position: relative;
+    }
+
+    .rate-tab-tc {
+        bottom:0px;
+        position: relative;
+        height:70px;
+        line-height: 40px;
+    }
+
+    .home-icon {
+        padding: 5px;
+    }
+
+    #body>.navbar {
+     
+        margin-top: 10px;
+    }
+}
+
+
+@media only screen and (min-width:1024px) and (max-width:1920px) {
+    
+.competitive-rates-section {
+    background-color: #fb852d;
+    padding: 10px 10px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    position: fixed !important;
+    margin: 0px;
+}
+
+    
+
+    .rate-tab-rsr {
+        line-height: 30px;
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    .rate-tab-tc {
+        line-height:55px;
+    }
+
+
+}
+
+@media only screen and (min-width:1087px) {
+
+    .rate-tab-ce {
+        line-height:75px;
+    }
+
+}
+
+
+@media only screen and (min-width:768px) and (max-width: 992px) {
+
+   .rate-tab-rsr {
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    
+
+}
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
