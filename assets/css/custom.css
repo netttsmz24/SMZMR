@@ -19,6 +19,12 @@ textarea:focus, input:focus{
 }
 
 
+#body {
+
+    min-height:100%;
+    
+}
+
 #body>.navbar {
 
     border-bottom: 1px solid rgb(101 109 119 / 38%);
@@ -208,6 +214,10 @@ textarea:focus, input:focus{
     /*margin: 10px -20px;*/
 }
 
+.cash-exchange marquee {
+    margin: 0px -10px 0px -20px;
+}
+
 
 /*.cash-exchange ul li {
     list-style: none;
@@ -266,7 +276,7 @@ textarea:focus, input:focus{
     color: #ffffff;
 }
 
-.competitive-rates-section h1 a:focus {
+.competitive-rates-section a, a:hover, a:focus {
     color: #ffffff;
 }
 
@@ -742,12 +752,11 @@ textarea:focus, input:focus{
     }
 
     .rate-tab-ce {
-    height: 80px;
-    line-height:25px;
+        height: 80px;
+        line-height:25px;
     }
 
     .rate-tab-rsr {
-         
         height:70px;
         bottom:0px;
         position: relative;
@@ -765,9 +774,13 @@ textarea:focus, input:focus{
     }
 
     #body>.navbar {
-     
         margin-top: 10px;
     }
+
+    #body {
+        min-height:40hv;
+    }
+
 }
 
 
@@ -814,10 +827,15 @@ textarea:focus, input:focus{
         border-right: 0px;
     }
 
-    
-
 }
 
+
+@media only screen and (min-width:768px) and (max-width:799px) {
+
+    .competitive-rates-section {
+        position:absolute;
+    }
+}
 
 
 
