@@ -859,6 +859,10 @@ textarea:focus, input:focus{
         font-size: 22px;
     }
 
+    .pmt {
+        margin-top:5% !important
+    }
+
 }
 
 
