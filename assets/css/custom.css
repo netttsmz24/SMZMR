@@ -276,8 +276,20 @@ textarea:focus, input:focus{
     color: #ffffff;
 }
 
-.competitive-rates-section a, a:hover, a:focus {
+.competitive-rates-section a {
     color: #ffffff;
+}
+
+.competitive-rates-section a:hover {
+    color: #000000 !important;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.competitive-rates-section a:focus {
+    color: #000000 !important;
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
 .competitive-rates-section h2 {
@@ -476,21 +488,21 @@ textarea:focus, input:focus{
 }
 
 .services .service-item p {
-    line-height: 26px;
+    line-height: 22px;
     font-size: 20px;
     margin-bottom: 0;
 }
 
 .services .service-item .icon {
     margin: 0 auto;
-    width: 64px;
-    height: 44px;
+    width: 50px;
+    height: 31px;
     background: #000000;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     transition: 0.3s;
 }
 
@@ -523,7 +535,6 @@ textarea:focus, input:focus{
     /*border-bottom: 2px solid #000000;*/
 }
 
-
 .login-div-header span {
     font-size: 20px;
     font-weight: 600;
@@ -533,7 +544,7 @@ textarea:focus, input:focus{
 
 
 .login-div-body {
-    padding: 25px 30px 20px;
+    padding: 25px 30px 15px;
 }
 
 .submit-btn {
@@ -561,6 +572,7 @@ textarea:focus, input:focus{
     font-size: 20px;
     width: 100%;
     margin-bottom: 5px;
+    line-height: 25px;
 }
 
 .reset-but {
@@ -683,7 +695,10 @@ textarea:focus, input:focus{
 }
 
 
-
+.list-middle-align {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 
 
 
@@ -796,7 +811,6 @@ textarea:focus, input:focus{
     margin: 0px;
 }
 
-    
 
     .rate-tab-rsr {
         line-height: 30px;
@@ -811,13 +825,13 @@ textarea:focus, input:focus{
 
 }
 
-@media only screen and (min-width:1087px) {
+/*@media only screen and (min-width:1087px) {
 
     .rate-tab-ce {
-        line-height:75px;
+        line-height:70px;
     }
 
-}
+}*/
 
 
 @media only screen and (min-width:768px) and (max-width: 992px) {
@@ -838,7 +852,14 @@ textarea:focus, input:focus{
 }
 
 
+@media only screen and (min-width: 1280px) {
 
+    .rate-tab-ce {
+       /* line-height:33px;*/
+        font-size: 22px;
+    }
+
+}
 
 
 
@@ -854,4 +875,6 @@ textarea:focus, input:focus{
 /* Large devices (laptops/desktops, 992px and up) */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+
+
+
