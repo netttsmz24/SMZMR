@@ -950,11 +950,52 @@ header.page-headr{
 
 /*Transaction page ----------------------------------------------------------------------------*/
 
+.transaction-pmt {
+        margin:1% auto 2%;
+    }
+
+
+.transaction-pmt .nav-pills .nav-link.active {
+    background-color: #ffffff;
+    color: #010101;
+    border:1px solid #a0a0a0;
+    border-radius: 0px;
+    margin:2px 25px 2px 0px;
+}
+
+ 
+.transaction-pmt .nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size:14px;
+    font-weight: var(--bs-nav-link-font-weight);
+    color:#dddddd;
+    text-decoration: none;
+    border:1px solid #dddddd;
+    border-radius: 0px;
+    margin:2px 25px 2px 0px;
+     
+}
+
+.transaction-pmt .border {
+    border:1px solid #a0a0a0 !important;
+}
 
 .transaction-box {
     padding: 10px;
-    maragin:30% auto 20% auto;
+    /*margin:30% auto 20% auto;*/
     /*background-color:#dddddd;*/
+}
+
+.s1-lab-box {
+    min-height:50px;
+    border: 1px solid #a0a0a0 !important;
+}
+
+.s1-input-box {
+    min-height: 45px;
+    border: 1px solid #a0a0a0 !important;
+    border-top:0px;
 }
 
 .step1 {
@@ -963,12 +1004,14 @@ header.page-headr{
     min-height:95px;
 }
 
+
 .step1 label {
     color: red;
     font-size: 0.988rem;
     font-weight: bold;
     text-align: center;
     display: block;
+    margin:auto;
 }
 
 /*.step1 div { min-height:40px;}*/
@@ -1003,7 +1046,9 @@ header.page-headr{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: 1px solid #dddddd;
+    border: 1px solid #a0a0a0;
+    border-top: 0px;
+     min-height: 42px;
 }
 
 .step1 .form-select:focus {
@@ -1019,12 +1064,14 @@ header.page-headr{
     min-height:95px;
 }
 
+
 .step2 label {
-    color:#000000;
+    color:red;
     font-size: 0.988rem;
     font-weight: bold;
     text-align: center;
     display: block;
+    margin:auto;
 }
 
 /*.step2 div { min-height:40px;}*/
@@ -1060,7 +1107,9 @@ header.page-headr{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: 1px solid #dddddd;
+    border: 1px solid #a0a0a0;
+    border-top: 0px;
+     min-height: 42px;
 }
 
 .step2 .form-select:focus {
@@ -1081,19 +1130,25 @@ header.page-headr{
 /*.step3 div { min-height:40px;}*/
 
  .step3 label {
-    color:#000000;
+    color:#010101;
     font-size: 0.988rem;
     font-weight: bold;
     text-align: center;
     display: block;
+    margin:auto;
 }
 
 .step3 .form-control {
     border-radius: 0px;
-    text-align:center;
+    text-align: center;
     font-weight: bold;
-    color:#010101;
+    color: #dddddd;
+    min-height: 42px;
+    border: 1px solid #a0a0a0;
+    border-top: 0px;
 }
+
+.step3 input::placeholder {color:#bbbbbb;}
 
 
 .step3 .form-control:focus {
@@ -1112,13 +1167,17 @@ header.page-headr{
     min-height:95px;
 }
 
+.color-yellow{
+    background-color:yellow;
+}
 
  .step4 label {
-    color:#000000;
-    font-size: 0.988rem;
+    color:#010101;
+    font-size: 2.0rem;
     font-weight: bold;
     text-align: center;
     display: block;
+    margin:auto;
 }
 
 .step4 .form-control {
@@ -1126,6 +1185,10 @@ header.page-headr{
     text-align:center;
     font-weight: bold;
     color:#010101;
+     min-height: 42px;
+     border: 1px solid #a0a0a0;
+    border-top: 0px;
+    font-size: 18px;
 }
 
 
@@ -1145,18 +1208,24 @@ header.page-headr{
 }
 
  .step5 label {
-    color:#000000;
-    font-size: 0.988rem;
+    color:red;
+    font-size: 2.0rem;
     font-weight: bold;
     text-align: center;
     display: block;
+    margin:auto;
 }
 
 .step5 .form-control {
     border-radius: 0px;
-    text-align:center;
-    font-weight: bold;
-    color:#010101;
+    text-align: center;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    min-height: 42px;
+    padding: 0px;
+    border: 1px solid #a0a0a0;
+    border-top: 0px;
 }
 
 
@@ -1176,20 +1245,24 @@ header.page-headr{
 }
 
  .step6 label {
-    color:#000000;
-    font-size: 0.988rem;
+    color:red;
+    font-size: 2.0rem;
     font-weight: bold;
     text-align: center;
     display: block;
+    margin:auto;
 }
 
 .step6 .form-control {
     border-radius: 0px;
-    text-align:center;
+    text-align: right;
     font-weight: bold;
-    color:#010101;
+    color: #010101;
+    font-size:19px;
+     min-height: 42px;
+     border: 1px solid #a0a0a0;
+    border-top: 0px;
 }
-
 
 .step6 .form-control:focus {
     color: var(--bs-body-color);
@@ -1200,9 +1273,21 @@ header.page-headr{
 }
 
 
+.next-btn {
+    background-color: #548235;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
+    float:right;
+    padding:10px 30px;
+    margin:0px -10px 0 0;
+}
 
-
-
+.next-btn:hover {
+    background-color: #548235;
+    color: #ffffff;
+}
 
 
 
@@ -1291,6 +1376,17 @@ header.page-headr{
 
 @media only screen and (max-width:767px) {
 
+    .next-btn {
+        background-color: #548235;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 17px;
+        float: right;
+        padding: 10px 30px;
+        margin: 15px 0px;
+        width: 100%;
+    }
 
     .btn-profile {
         font-size: 18px;
@@ -1445,7 +1541,26 @@ header.page-headr{
         margin: -25px auto auto auto;
     }
 
+    .transaction-pmt .nav-pills .nav-link.active {
+    
+        margin: 2px 35px 2px 0px;
+    }
+
+    .transaction-pmt .nav-link {
+        min-width: 150px;
+        margin: 2px 35px 2px 0px;
+    }
+
+    .transaction-box {
+        padding: 10px;
+        margin:2% auto;
+    /* background-color: #dddddd; */
 }
+
+.next-btn {
+    margin-top:-10px;
+}
+
 
 /*@media only screen and (min-width:1900px) {
 
