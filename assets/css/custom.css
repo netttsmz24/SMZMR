@@ -967,14 +967,13 @@ header.page-headr{
 .transaction-pmt .nav-link {
     display: block;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-    font-size:14px;
+    font-size: 14px;
     font-weight: var(--bs-nav-link-font-weight);
-    color:#dddddd;
+    color: #b8bdbf;
     text-decoration: none;
-    border:1px solid #dddddd;
+    border: 1px solid #c5c0c0;
     border-radius: 0px;
-    margin:2px 25px 2px 0px;
-     
+    margin: 2px 25px 2px 0px;
 }
 
 .transaction-pmt .border {

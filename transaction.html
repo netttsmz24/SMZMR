@@ -97,28 +97,28 @@
 
                     <div class="transaction-pmt">
 
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-
+                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            
                           <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="tabOne" data-bs-toggle="pill" data-bs-target="#tabOne" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Calculate Amnts ❶ </button>
+                            <button class="nav-link active" id="pills-one-tab" data-bs-toggle="pill" data-bs-target="#tabOne" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Calculate Amnts ❶ </button>
                           </li>
                           <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tabTwo" data-bs-toggle="pill" data-bs-target="#tabTwo" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Categorization ❷ </button>
+                            <button class="nav-link" id="pills-two-tab" data-bs-toggle="pill" data-bs-target="#tabTwo" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Categorization ❷ </button>
                           </li>
                           <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tabThree" data-bs-toggle="pill" data-bs-target="#tabThree" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Simplified  KYC ❸ </button>
-                          </li>
-
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tabFour" data-bs-toggle="pill" data-bs-target="#tabFour" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">INVOICE ❹ </button>
+                            <button class="nav-link" id="pills-three-tab" data-bs-toggle="pill" data-bs-target="#tabThree" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Simplified  KYC ❸ </button>
                           </li>
 
                           <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tabFive" data-bs-toggle="pill" data-bs-target="#tabFive" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">PAYMENTS ❺ </button>
+                            <button class="nav-link" id="pills-four-tab" data-bs-toggle="pill" data-bs-target="#tabFour" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">INVOICE ❹ </button>
                           </li>
 
                           <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tabSix" data-bs-toggle="pill" data-bs-target="#tabSix" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">COLLECTION ❻ </button>
+                            <button class="nav-link" id="pills-five-tab" data-bs-toggle="pill" data-bs-target="#tabFive" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">PAYMENTS ❺ </button>
+                          </li>
+
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-six-tab" data-bs-toggle="pill" data-bs-target="#tabSix" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">COLLECTION ❻ </button>
                           </li>
                            
                         </ul>
@@ -337,12 +337,12 @@
         
     
     window.addEventListener('load', () => {
-      new LeaderLine(document.getElementById('tabOne'), document.getElementById('tabTwo'),{ path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('tabTwo'), document.getElementById('tabThree'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('tabThree'), document.getElementById('tabFour'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('tabFour'), document.getElementById('tabFive'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('tabFive'), document.getElementById('tabSix'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('tabSix'), document.getElementById('tabSeven'), { path: 'straight', color: '#4472C4',size:3});
+      new LeaderLine(document.getElementById('pills-one-tab'), document.getElementById('pills-two-tab'),{ path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-two-tab'), document.getElementById('pills-three-tab'), { path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-three-tab'), document.getElementById('pills-four-tab'), { path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-four-tab'), document.getElementById('pills-five-tab'), { path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-five-tab'), document.getElementById('pills-six-tab'), { path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-six-tab'), document.getElementById('pills-seven-tab'), { path: 'straight', color: '#4472C4',size:3});
     });
   
 
