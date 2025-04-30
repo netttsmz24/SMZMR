@@ -495,7 +495,7 @@ header.page-headr{
 
 
 .home-icon {
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .home-icon i {
@@ -785,16 +785,17 @@ header.page-headr{
     padding: 5px 10px;
     min-height: 95px;
     border: 6px solid #010101;
+    display: flex;
 }
 
 .select-me p {
     text-align: center;
-    font-size: 20px;
+    font-size:1.2rem;
     font-weight: bold;
     line-height: 120%;
     color: red;
     vertical-align: middle;
-    margin-top: 5%;
+    margin:auto;
 }
 
 .select-me span {
@@ -805,17 +806,18 @@ header.page-headr{
     padding: 5px 10px;
     min-height: 95px;
     border: 6px solid #010101;
+    display: flex;
 }
 
 
 .select-rss p {
     text-align: center;
-    font-size: 20px;
+    font-size:1.2rem;
     font-weight: bold;
     line-height: 120%;
     color: red;
     vertical-align: middle;
-    margin-top: 5%;
+    margin:auto;
 }
 
 .select-rss span {
@@ -975,6 +977,8 @@ header.page-headr{
     border-radius: 0px;
     margin: 2px 25px 2px 0px;
 }
+
+
 
 .transaction-pmt .border {
     border:1px solid #a0a0a0 !important;
@@ -1280,7 +1284,8 @@ header.page-headr{
     font-size: 17px;
     float:right;
     padding:10px 30px;
-    margin:0px -10px 0 0;
+    margin:0px -10px 0px 0px;
+    clear:both;
 }
 
 .next-btn:hover {
@@ -1454,6 +1459,67 @@ header.page-headr{
 
 }
 
+/*@media only screen and (max-width:920px) {*/
+@media only screen and (min-width:320px) and (max-width:767px) {
+
+    .transaction-pmt li.nav-item {
+         margin: 2px 5px 5px 7px;
+        width: 46%;
+    }
+
+    .transaction-pmt .nav-link {
+        margin:10px 5px 2px 0px;
+        width: 95%;
+    }
+
+    .transaction-pmt .nav-pills .nav-link.active {
+     
+        margin: 10px 5px 2px 0px;
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:920px) {
+
+    .transaction-pmt li.nav-item {
+        margin: 2px 5px 10px 15px;
+        width: 30%;
+    }
+
+    .transaction-pmt .nav-link {
+        margin:10px 5px 2px 0px;
+        width: 95%;
+    }
+
+    .transaction-pmt .nav-pills .nav-link.active {
+     
+        margin: 15px 5px 2px 0px;
+    }
+}
+
+
+
+@media only screen and (min-width:921px) and (max-width:1280px) {
+
+    .transaction-pmt .nav-link {
+        margin: 10px 5px 2px 0px;
+        width:auto;
+    }
+
+    .transaction-pmt li.nav-item {
+        margin: 2px 12px 15px 0px;
+        width:auto;
+    }
+
+    .transaction-pmt .nav-pills .nav-link.active {
+     
+        margin: 10px 15px 2px 0px;
+    }
+
+}
+
+
+
 
 @media only screen and (min-width:1024px) and (max-width:1920px) {
     
@@ -1556,9 +1622,7 @@ header.page-headr{
     /* background-color: #dddddd; */
 }
 
-.next-btn {
-    margin-top:-10px;
-}
+
 
 
 /*@media only screen and (min-width:1900px) {
