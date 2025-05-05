@@ -1,0 +1,166 @@
+<!doctype html>
+ 
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>### Home ###</title>
+    <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+     
+     <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
+
+
+    <style type="text/css">
+        
+        
+
+    </style>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    
+            <header class="page-headr">
+            <!-- navbar navigation component -->
+
+                <nav class="navbar-expand-lg navbar-white bg-white">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid mx-auto d-block pb-2 mt-2" src="assets/images/new-smz-logo.png"> 
+                        </div>
+
+                        <div class="col-md-6">
+
+                             <ul class="navbar-nav ms-auto" style="float:right;">
+                                
+                                <li> 
+                                    <div class="home-icon">
+                                        <h6 class="mt-1"> WELCOME Username ! </h6> 
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="home-icon">
+                                             <a class="icon" href="index.html" title="Back"> <i class="fas fa-arrow-alt-circle-left fs-5"></i></a>
+
+                                             <a class="icon" href="index.html" title="Back"> <i class="fas fa-arrow-alt-circle-right fs-5"></i></a>
+
+                                             <a class="icon" href="index.html" title="home"> <i class="fas fa-home fs-5"></i> </a>
+
+                                             <a href="index.html">&nbsp; <i class='fas fa-sign-out-alt' style='font-size:18px'></i> </a> 
+                                    </div>
+                                </li>
+                             </ul>
+
+                             <div class="col">
+
+                                <table style="float:right;">
+
+                                    <tr>
+                                        <td><button type="button" class="btn btn-profile">Profile</button> </td>
+                                        <td><button type="button" class="btn btn-activity">Activity</button> </td>
+                                        <td><button type="button" class="btn btn-bulletin">Bulletin POP-UPS <span>Notifications</span></button> 
+                                        </td>
+
+
+                                        <!-- <td> <img class="" style="width:124px;height:53px" src="assets/images/profile-btn.png"> </td>
+                                        <td> <img class="" style="width:161px;height:41px" src="assets/images/activity-btn.png"> </td>
+                                        <td> <img class="" style="width:163px;height:60px" src="assets/images/bulletin-btn.png"> </td> -->
+
+                                    </tr>
+
+                                </table>
+
+                             </div>
+
+                        </div>
+                    </div>
+                </nav>
+
+            </header>
+
+                <!-- <div class="header-hr"> </div> -->
+
+
+
+             <main>
+
+                <div class="container">
+
+                    <div class="transaction-pmt">
+
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-one-tab" data-bs-toggle="pill" data-bs-target="#tabOne" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Calculate Amnts ❶ </button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-two-tab" data-bs-toggle="pill" data-bs-target="#tabTwo" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Categorization ❷ </button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-three-tab" data-bs-toggle="pill" data-bs-target="#tabThree" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Simplified  KYC ❸ </button>
+                          </li>
+
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-four-tab" data-bs-toggle="pill" data-bs-target="#tabFour" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">INVOICE ❹ </button>
+                          </li>
+
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-five-tab" data-bs-toggle="pill" data-bs-target="#tabFive" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">PAYMENTS ❺ </button>
+                          </li>
+
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-six-tab" data-bs-toggle="pill" data-bs-target="#tabSix" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">COLLECTION ❻ </button>
+                          </li>
+                           
+                        </ul>
+
+
+
+                          
+                        <h4> Please SELECT THE CATEGORY and <span> CLICK At The Box To  Complete Transaction </span></h4>
+
+
+                         
+
+
+                    </div>
+
+                </div>
+
+            </main>
+
+
+             
+             
+    <script type="text/javascript">
+        
+    
+    window.addEventListener('load', () => {
+      new LeaderLine(document.getElementById('pills-one-tab'), document.getElementById('pills-two-tab'),{ path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-two-tab'), document.getElementById('pills-three-tab'), { path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-three-tab'), document.getElementById('pills-four-tab'), { path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-four-tab'), document.getElementById('pills-five-tab'), { path: 'curved', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-five-tab'), document.getElementById('pills-six-tab'), { path: 'straight', color: '#4472C4',size:3 });
+      new LeaderLine(document.getElementById('pills-six-tab'), document.getElementById('pills-seven-tab'), { path: 'straight', color: '#4472C4',size:3});
+    });
+  
+
+    </script>
+
+    
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
