@@ -14,14 +14,6 @@
     <link href="assets/css/master.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
      
-     <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
-
-
-    <style type="text/css">
-        
-        
-
-    </style>
 
 </head>
 
@@ -51,22 +43,22 @@
                                     <div class="home-icon">
 
 
-                                        <a class="icon" href="#" title="Back"> 
+                                        <!-- <a class="icon" href="#" title="Back"> 
                                             <img src="assets/images/red-left-arrow.png"> 
                                         </a>
 
 
                                         <a class="icon" href="index.html" title="Home"> 
                                            &nbsp; <img src="assets/images/home-icon.png"> 
-                                        </a>
+                                        </a> -->
 
-                                             <!-- <a class="icon" href="index.html" title="Back"> <i class="fas fa-arrow-alt-circle-left fs-5"></i></a>
+                                             <a class="icon" href="index.html" title="Back"> <i class="fas fa-arrow-alt-circle-left fs-4"></i></a>
 
-                                             <a class="icon" href="index.html" title="Back"> <i class="fas fa-arrow-alt-circle-right fs-5"></i></a>
+                                             <a class="icon" href="index.html" title="Back"> <i class="fas fa-arrow-alt-circle-right fs-4"></i></a>
 
-                                             <a class="icon" href="index.html" title="home"> <i class="fas fa-home fs-5"></i> </a>
+                                             <a class="icon" href="index.html" title="home"> <i class="fas fa-home fs-4"></i> </a>
 
-                                             <a href="index.html">&nbsp; <i class='fas fa-sign-out-alt' style='font-size:18px'></i> </a>  -->
+                                             <a href="index.html">&nbsp; <i class="fas fa-sign-out-alt fs-4"> </i> </a> 
                                     </div>
                                 </li>
                              </ul>
@@ -106,43 +98,33 @@
 
                 <div class="container">
 
-                    <div class="transaction-pmt">
+                  <div class="transaction-pmt">
 
-                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-one-tab" data-bs-toggle="pill" data-bs-target="#tabOne" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Calculate Amnts ❶ </button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-two-tab" data-bs-toggle="pill" data-bs-target="#tabTwo" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Categorization ❷ </button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-three-tab" data-bs-toggle="pill" data-bs-target="#tabThree" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Simplified  KYC ❸ </button>
-                          </li>
-
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-four-tab" data-bs-toggle="pill" data-bs-target="#tabFour" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">INVOICE ❹ </button>
-                          </li>
-
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-five-tab" data-bs-toggle="pill" data-bs-target="#tabFive" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">PAYMENTS ❺ </button>
-                          </li>
-
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-six-tab" data-bs-toggle="pill" data-bs-target="#tabSix" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">COLLECTION ❻ </button>
-                          </li>
-                           
-                        </ul>
-
-
-
-                        <div class="tab-content" id="pills-tabContent">
-
-                          <div class="tab-pane fade show active" id="tabOne" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-
-                           <!-- tab1 content ---------------- -->
-
+                    <div class="row justify-content-center mt-0">
+                        <div class="col-12 col-sm-9 col-md-12 col-lg-12 text-center p-0 mb-2">
+                            <div class="card px-0 pb-0  mb-3">
+                                 
                                 <div class="row">
+                                    <div class="col-md-12 mx-0">
+                                        <form id="msform">
+                                            <!-- progressbar -->
+                                            <ul id="progressbar">
+                                                <li class="active" id="calculate"><strong>Calculate Amnts</strong></li>
+                                                <li id="categorization"><strong>Categorization</strong></li>
+                                                <li id="kyc"><strong>Simplified KYC</strong></li>
+                                                <li id="invoice"><strong>Invoice</strong></li>
+                                                <li id="payment"><strong>Payment</strong></li>
+                                                <li id="collection"><strong>Collection</strong></li>
+                                                <!-- <li id="confirm"><strong>Finish</strong></li> -->
+
+                                                
+                                            </ul>
+                                            <!-- fieldsets -->
+
+                                            <fieldset>
+                                                <div class="form-card">
+
+                                                   <div class="row">
 
                                   <div class="col-sm-12 transaction-box">
 
@@ -152,32 +134,38 @@
 
                                             <div class="row">
 
-                                                <div class="col-md-4 step1"> 
+                                                <div class="col-md-4"> 
 
-                                                    <div class="row s1-lab-box mb-0"> 
-                                                         <label> TRANSACTION  TYPE </label>
+                                                    <div class="step1"> 
+
+                                                            <div class="row s1-lab-box mb-0"> 
+                                                                <label> TRANSACTION  TYPE </label>
+                                                            </div>
+                                                         
+                                                            <div class="row tr-input-box"> 
+
+                                                                <select class="form-select form-select mb-2" aria-label="form-select-lg example">
+                                                                    <option selected="">Select Transactions</option>
+                                                                    <option value="1">We SELL ( YOU BUY)</option>
+                                                                    <option value="2">We BUY ( YOU SELL)</option>
+                                                                    
+                                                                </select> 
+
+                                                            </div>
                                                     </div>
-
-                                                     <div class="row"> 
-
-                                                             <select class="form-select form-select mb-2" aria-label="form-select-lg example">
-                                                                <option selected="">Select Transactions</option>
-                                                                <option value="1">We SELL ( YOU BUY)</option>
-                                                                <option value="2">We BUY ( YOU SELL)</option>
-                                                                
-                                                              </select> 
-
-                                                      </div>
                                                 </div>
 
 
-                                                <div class="col-md-4 step2"> 
 
-                                                    <div class="row s1-lab-box mb-0"> 
-                                                         <label> COUNTRY </label>
-                                                    </div>
-
-                                                    <div class="row"> 
+                                                <div class="col-md-4">
+                                                  <div class="step2"> 
+                                                    
+                                                        <div class="row s2-lab-box mb-0">
+                                                           
+                                                             <label> COUNTRY </label>
+                                                        </div>
+                                                     
+                                                        <div class="row tr-input-box"> 
                                                          
                                                               <select class="form-select form-select mb-2" aria-label="form-select-lg example">
                                                                 <option selected="">Select Currency </option>
@@ -185,256 +173,216 @@
                                                                 <option value="2">MYR</option>
                                                                 <option value="3">INR</option>
                                                               </select>   
-                                                           
-                                                      </div>
+                                                        </div>
+
+                                                  </div>
+
                                                 </div>
 
 
-                                                <div class="col-md-4 step3">   
+                                                <div class="col-md-4"> 
 
-                                                    <div class="row s1-lab-box mb-0"> 
-                                                         <label> CURRENCY DISPLAY</label>
+                                                    <div class="step3">  
+
+                                                        <div class="row s3-lab-box mb-0"> 
+                                                             <label> CURRENCY</label>
+                                                        </div>
+                                                         
+                                                        <div class="row tr-input-box">
+                                                            <input type="text" class="form-control mb-2" placeholder="GBP" readonly>
+                                                        </div>
+
                                                     </div>
-                                                     
-                                                    <div class="row">
-                                                        <input type="text" class="form-control mb-2" placeholder="12.30" readonly>
-                                                    </div>
+
                                                 </div>
-
                                             </div>
                                         </div>
-
                                         
-                                        <div class="col-lg-6 col-md-12">
+                                        <div class="col-lg-6 col-md-12 tpmt-3">
 
                                             <div class="row">
 
-                                                <div class="col-md-4 step4"> 
 
-                                                    <div class="row s1-lab-box mb-0"> 
-                                                         <label> RATE </label>
+                                                <div class="col-md-4"> 
+
+                                                    <div class="step4">  
+
+                                                        <div class="row s4-lab-box mb-0"> 
+                                                             <label> RATE</label>
+                                                        </div>
+                                                         
+                                                        <div class="row tr-input-box">
+                                                            <input type="text" class="form-control mb-2" placeholder="0.000312796">
+                                                        </div>
+
                                                     </div>
 
-                                                     <div class="row"> 
-
-                                                        <input type="text" class="form-control mb-2" placeholder="0.000312796">
-
-                                                      </div>
                                                 </div>
 
 
-                                                <div class="col-md-4 step5"> 
+                                                <div class="col-md-4"> 
 
-                                                    <div class="row s1-lab-box color-yellow mb-0"> 
-                                                         <label> AMNT </label>
+                                                    <div class="step5">  
+
+                                                        <div class="row s5-lab-box mb-0"> 
+                                                             <label> AMOUNT </label>
+                                                        </div>
+                                                         
+                                                        <div class="row tr-input-box">
+                                                            <input type="text" class="form-control mb-2" placeholder="0.000134678">
+                                                        </div>
+
                                                     </div>
 
-                                                   
-                                                    <div class="row">
-                                                        <input type="text" class="form-control mb-2" placeholder="0.000134678">
-                                                    </div>   
-                                                     
                                                 </div>
 
 
-                                                <div class="col-md-4 step6">   
+                                                <div class="col-md-4"> 
 
-                                                    <div class="row s1-lab-box mb-0"> 
-                                                         <label> TTL </label>
+                                                    <div class="step6">  
+
+                                                        <div class="row s6-lab-box mb-0"> 
+                                                             <label> TOTAL MYR </label>
+                                                        </div>
+                                                         
+                                                        <div class="row tr-input-box">
+                                                            <input type="text" class="form-control" placeholder="999,999.99" readonly>
+                                                        </div>
+
                                                     </div>
-                                                     
-                                                    <div class="row">
-                                                        <input type="text" class="form-control color-yellow" placeholder="999,999.99
-                                            " readonly>
-                                                    </div>
+
                                                 </div>
+
+                                                
 
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-md-12"> 
-                                            <!-- <a href="select-category.html"> -->
-                                            <button class="btn next-btn col-md-4 col-xs-12" type="button"> AGREED & NEXT </button>  
-                                            <!-- </a> -->
-                                        </div>
                                     </div>
 
                                   </div>
-                                </div>
 
-                          </div>
-
-
-
-                          <div class="tab-pane fade" id="tabTwo" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-
-                            <div class="select-category">
-
-                                <div class="row">
-                                    <h4> Please SELECT THE CATEGORY and <span> CLICK At The Box To  Complete Transaction </span> </h4>  
-                                </div>
-
-                                <div class="row"> 
-
-
-
-                                    <div class="col-3">
-                                        <div id="local"> <p> I`m a LOCAL </p> </div>
-                                    </div>
-
-                                    <div class="col-1">  </div>
-
-                                    <div class="col-8"> 
-
-                                            <div class="col-12">
-                                                <div id="lmyself"> <p> I`ll be coming myself to COLLECT The Currencies Click Here  </p> 
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div id="lperson"> <p> I`ll be sending a person to COLLECT The Currencies Click Here    </p> 
-                                                </div>
-                                            </div>
-                                
-                                   </div>
-                                </div>
-
-                                <div class="row mt-3"> 
-
-                                    <div class="col-3">
-                                        <div id="foreign"> <p> I`m a Foreigner  </p> </div>
-                                    </div>
-
-                                    <div class="col-1">  </div>
-
-                                    <div class="col-8"> 
-
-
-                                            <div class="row">
-                                                <div class="col-3"> </div>
-                                            <div class="col-7">
-                                                <div id="fmyself" class="foreign-box"> <p> I`ll be coming myself to COLLECT The Currencies Click Here  </p> 
-                                                </div>
-                                            </div>
-                                            <div class="col-2"> </div>
-                                            </div>
-
-
-                                            <div class="row">
-                                                <div class="col-2"> </div>
-                                            <div class="col-7">
-                                                <div id="fperson" class="foreign-box"> <p> I`ll be sending a person to COLLECT The Currencies Click Here  </p> 
-                                                </div>
-                                            </div>
-                                            <div class="col-3"> </div>
-                                            </div>
-
-
-                                             
-                                
-                                   </div>
-                                </div>
-
-                                <div class="row mt-3"> 
-
-                                    <div class="col-md-3 col-sm-6">
-                                        <div id="company"> <p> I`m a Company </p> </div>
-                                    </div>
-
-                                    <div class="col-1">  </div>
-
-                                    <div class="col-md-8 col-sm-6"> 
-
-                                            <div class="col-12">
-                                               <div class="row">
-                                                <div class="col-3"> </div>
-                                                
-                                                 <div class="col-md-7 col-md-5">   
-                                                    <div id="cpartner" class="company-box"> <p> Partnership , LLP, Sdn Bhd <strong> CLICK HERE </strong>  </p> 
-                                                    </div>
-                                                 </div>
-
-                                                 <div class="col-2">  </div>
-
-                                              </div>
-                                            </div>
-
-
-
-                                            <div class="col-12">
-                                               <div class="row">
-                                                <div class="col-3"> </div>
-                                                
-                                                 <div class="col-7">   
-                                                    <div id="cpartner" class="company-box"> <p> Partnership , LLP, Sdn Bhd <strong> CLICK HERE </strong>  </p> 
-                                                    </div>
-                                                 </div>
-
-                                                 <div class="col-2">  </div>
-
-                                              </div>
-                                            </div>
-
-
-
+                                    <!-- <div class="row">
+                                        <div class="col-md-12"> 
                                             
+                                            <button class="btn next-btn col-md-4 col-xs-12" type="button"> AGREED & NEXT </button>  
+                                             
+                                        </div>
+                                    </div> -->
+                        </div>
 
-                                            <div class="col-12">
-                                                <div id="cgovt" class="company-box"> <p> Govt or Semi Govt Agency -<strong> CLICK HERE </strong></p> 
-                                                </div>
-                                            </div>
 
-                                            <div class="col-12">
-                                                <div id="cclub" class="company-box"> <p> <strong> Association , Clubs, Charity CLICK HERE  </strong> </p> 
                                                 </div>
-                                            </div>
-                                
-                                   </div>
+
+                                                <input type="button" name="next" class="next action-button" value="AGREED & NEXT"/>
+
+                                            </fieldset>
+
+                                            <fieldset>
+                                                <div class="form-card">
+                                                     <h2 class="fs-title">Categorization</h2>
+                                                    <div class="mt-5"> </div>
+                                                </div>
+
+                                               <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+
+                                                <input type="button" name="next" class="next action-button" value="Next Step"/>
+
+                                            </fieldset>
+
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">Simplified KYC</h2>
+                                                     
+                                                     <div class="mt-5"> </div>
+                                                </div>
+
+                                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+
+                                                <input type="button" name="next" class="next action-button" value="Next Step"/>
+                                            </fieldset>
+
+
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">Invoice</h2>
+                                                     <div class="mt-5"> </div>
+                                                </div>
+
+
+
+                                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                                <input type="button" name="make_payment" class="next action-button" value="Confirm"/>
+
+
+                                            </fieldset>
+
+
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">Payment</h2>
+                                                     <div class="mt-5"> </div>
+                                                </div>
+
+
+
+                                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                                <input type="button" name="make_payment" class="next action-button" value="Confirm"/>
+
+
+                                            </fieldset>
+
+
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">COLLECTION</h2>
+                                                     <div class="mt-5"> </div>
+                                                </div>
+
+
+
+                                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                                <input type="button" name="make_payment" class="next action-button" value="Confirm"/>
+
+
+                                            </fieldset>
+
+
+                                            <!-- <fieldset>
+
+                                                <div class="form-card">
+                                                    <h2 class="fs-title text-center">Success !</h2>
+                                                    <br><br>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-3">
+                                                            <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-7 text-center">
+                                                            <h5>You Have Successfully Signed Up</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </fieldset> -->
+
+                                        </form>
+
+                                    </div>
                                 </div>
-
-                          </div>
-
-
-                          <div class="tab-pane fade" id="tabThree" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-
-                             Tab content 03
-
-                          </div>
-
-                          <div class="tab-pane fade" id="tabFour" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-
-                             Tab content 04
-
-                          </div>
-
-
-                          <div class="tab-pane fade" id="tabFive" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-
-                             Tab content 05
-
-                          </div>
-
-                          <div class="tab-pane fade" id="tabSix" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-
-                             Tab content 06
-
-                          </div>
-
-
-                           
-
-
+                            </div>
                         </div>
                     </div>
-
-                </div>
+                         
+                  </div>
+              </div>
 
             </main>
 
 
-           <!--  <footer class="page-footer" id="footer">
+            <footer class="page-footer" id="footer">
 
                 <div class="container-fluid">
 
@@ -462,25 +410,83 @@
  
                 </div>
 
-            </footer> -->
+            </footer>
+
+
+    <script src="assets/vendor/jquery/jquery.min.js"></script>       
              
     <script type="text/javascript">
         
+        $(document).ready(function(){
     
-    window.addEventListener('load', () => {
-      new LeaderLine(document.getElementById('pills-one-tab'), document.getElementById('pills-two-tab'),{ path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-two-tab'), document.getElementById('pills-three-tab'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-three-tab'), document.getElementById('pills-four-tab'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-four-tab'), document.getElementById('pills-five-tab'), { path: 'curved', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-five-tab'), document.getElementById('pills-six-tab'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-six-tab'), document.getElementById('pills-seven-tab'), { path: 'straight', color: '#4472C4',size:3});
-    });
-  
+            var current_fs, next_fs, previous_fs; //fieldsets
+            var opacity;
 
+            $(".next").click(function(){
+                
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+                
+                //Add Class Active
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                
+                //show the next fieldset
+                next_fs.show(); 
+                //hide the current fieldset with style
+                current_fs.animate({opacity: 0}, {
+                    step: function(now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({'opacity': opacity});
+                    }, 
+                    duration: 600
+                });
+            });
+
+            $(".previous").click(function(){
+                
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
+                
+                //Remove class active
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+                
+                //show the previous fieldset
+                previous_fs.show();
+
+                //hide the current fieldset with style
+                current_fs.animate({opacity: 0}, {
+                    step: function(now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({'opacity': opacity});
+                    }, 
+                    duration: 600
+                });
+            });
+
+            $('.radio-group .radio').click(function(){
+                $(this).parent().find('.radio').removeClass('selected');
+                $(this).addClass('selected');
+            });
+
+            $(".submit").click(function(){
+                return false;
+            })
+                
+            });
     </script>
 
-    
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 
