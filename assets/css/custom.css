@@ -2002,6 +2002,30 @@ header.page-headr{
 
 @media only screen and (min-width:768px) and (max-width:1199px) {
 
+    .select-me p {
+        text-align: center;
+        font-size: 1.0rem;
+        font-weight: bold;
+        line-height: 120%;
+        color: red;
+        vertical-align: middle;
+        margin: auto;
+    }
+
+    .select-rss p {
+        text-align: center;
+        font-size: 1.0rem;
+        font-weight: bold;
+        line-height: 120%;
+        color: red;
+        vertical-align: middle;
+        margin: auto;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:1199px) {
+
  .or-box h1 {
         font-size: 7rem;
         text-align: center;
