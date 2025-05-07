@@ -14,12 +14,12 @@ textarea:focus, input:focus{
     outline: none;
 }
 
-a, a:hover, a:focus {
+/*a, a:hover, a:focus {
     color: #fe0808;
     text-decoration: none;
     transition: all 0.3s;
 
-}
+}*/
 
 
 .float-right {
@@ -738,7 +738,7 @@ header.page-headr{
     font-size: .950rem;
     margin-top: 5px;
     text-align: justify;
-    font-weight: 600;
+    font-weight:500;
 }
 
 .page-header p span {
@@ -885,14 +885,14 @@ header.page-headr{
     font-size: 18px;
     width: 124px;
     height: 53px;
-    bottom: -4px;
+    bottom: -5px;
     margin-right: -2px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     --bs-btn-color: #212529;
-    --bs-btn-border-color: #126197;
+    --bs-btn-border-color: #c2c2c2;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #212529;
     --bs-btn-hover-border-color: #212529;
@@ -908,20 +908,19 @@ header.page-headr{
 }
 
 .btn-activity {
-    
     font-weight: normal;
     position: relative;
     width: 161px;
     height: 41px;
     font-size: 18px;
-    margin-bottom: -20px;
+    margin-bottom: -21px;
     margin-right: -2px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     --bs-btn-color: #212529;
-    --bs-btn-border-color: #126197;
+    --bs-btn-border-color: #c2c2c2;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #212529;
     --bs-btn-hover-border-color: #212529;
@@ -949,7 +948,7 @@ header.page-headr{
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     --bs-btn-color: #212529;
-    --bs-btn-border-color: #126197;
+    --bs-btn-border-color: #c2c2c2;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #212529;
     --bs-btn-hover-border-color: #212529;
@@ -964,6 +963,142 @@ header.page-headr{
     --bs-gradient: none;
 }
 
+
+
+.btn-bulletin {
+    font-size: 13px;
+    font-weight: normal;
+    position: relative;
+    margin-bottom: -1px;
+    width: 163px;
+    height: 60px;
+    line-height: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    --bs-btn-color: #212529;
+    --bs-btn-border-color: #c2c2c2;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #212529;
+    --bs-btn-hover-border-color: #212529;
+    --bs-btn-focus-shadow-rgb: 33,37,41;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #212529;
+    --bs-btn-active-border-color: #212529;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #212529;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #212529;
+    --bs-gradient: none;
+}
+
+
+/*tooltip style -------------------------------------------------------------------*/
+
+
+                .tooltip2 {
+          position: relative;
+          display: inline-block;
+          /*border-bottom: 1px dotted black;*/
+        }
+
+        .tooltip2 .tooltiptext {
+            visibility: hidden;
+            width: auto;
+            background-color: #dc3545;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            z-index: 1;
+            top: 125%;
+            left: 50%;
+            border: 2px solid #000000;
+            margin-left: -40px;
+        }
+
+        .tooltip2 .tooltiptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #dc3545 transparent;
+        }
+
+        .tooltip2:hover .tooltiptext {
+          visibility: visible;
+        }
+
+
+                .tooltip-box {
+                    /*border: 1px solid green;*/
+                    height: 100px;
+                    display: block;
+                }
+
+
+                .tttooltip {
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 500;
+                    font-family: sans-serif;
+                    padding: 0.5em;
+                    max-width: 25ch;
+                    position: relative;
+                    z-index: 99999;
+                    height: 100px;
+                    line-height: 12px;
+                }
+
+                .tttooltip {
+                    --b: 1.5em;
+                    --h: 4em;
+                    border-image: fill 0//var(--h)
+                                conic-gradient(var(--c,#CC333F) 0 0);
+                    /*background: #CC333F;*/
+                    /*border-bottom: var(--h) solid #000;*/
+                }
+
+                /*.tttooltip {
+                    --b: 1.5em;
+                    --h: 4em;
+                    border-image: fill 0 /  / var(--h) conic-gradient(#f7f7f7 0 0);
+                    bottom: var(--b) solid #000;
+                }*/
+
+                .ttbottom {
+                        clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
+                      calc(50% + var(--b)/2) 100%,
+                      33% calc(100% + var(--h)),
+                      calc(50% - var(--b)/2) 100%);
+                }
+
+                /*.tttop {
+                  clip-path: 
+                    polygon(0 0,0 100%,100% 100%,100% 0,
+                      calc(50% + var(--b)/2) 0,
+                      50% calc(-1*var(--h)),
+                      calc(50% - var(--b)/2) 0);
+                }
+                .ttright {
+                  clip-path: 
+                    polygon(100% 100%,0 100%,0 0,100% 0,
+                      100% calc(50% - var(--b)/2),
+                      calc(100% + var(--h)) 50%,
+                      100% calc(50% + var(--b)/2));
+                }
+                .ttleft {
+                  clip-path: 
+                    polygon(0 100%,100% 100%,100% 0,0 0,
+                      0 calc(50% - var(--b)/2),
+                      calc(-1*var(--h)) 50%,
+                      0 calc(50% + var(--b)/2));
+                }*/
 
 
 
@@ -1846,6 +1981,11 @@ header.page-headr{
         display: block !important;
     }
 
+     .sm-tt-hide {
+        display :none;
+     }
+
+
 }
 
 
@@ -2234,7 +2374,7 @@ header.page-headr{
         position:relative ;
         bottom:0;
         width: auto;
-        top:69px;
+        top:79px;
     }
 
     .transaction-box .step3 {
@@ -2329,7 +2469,7 @@ header.page-headr{
     }
 
     .s2-lab-box {
-        min-height:76px;
+        min-height:66px;
         border: 2px solid #3c5170 !important;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
