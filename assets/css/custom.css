@@ -1506,6 +1506,42 @@ header.page-headr{
     }
 
 
+    .gone {
+        width: 32px;
+        height: 30px;
+        background: #000000;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 50px;
+        text-align: center;
+        margin: 13% auto 0;
+    }
+
+    .gone span {
+        color: #fe0000;
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+    .gtwo {
+        width: 32px;
+        height: 29px;
+        background: #000000;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 50px;
+        text-align: center;
+        display: inline-flex;
+    }
+
+    .gtwo span {
+        color: #fe0000;
+        font-weight: bold;
+        line-height: 30px;
+        width: 30px;
+    }
+
     .tr-top-box {
         min-height: 150px;
     }
@@ -1515,14 +1551,14 @@ header.page-headr{
         min-height: 101px;
         border: 1px solid #010101 !important;
         background-color: #fe0000;
-        padding: 5px;
+        /*padding: 5px;*/
         border-right: none;
     }
 
     .s1-guid-box h2 {
         color: #ffffff;
         font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         text-align: right;
     }
 
@@ -1543,12 +1579,12 @@ header.page-headr{
     .s1-lab-box label {
         color: #ffffff;
         font-size: 0.9rem;
-        line-height: 120%;
+        line-height: 110%;
         font-weight: bold;
         text-align: center;
         display: block;
         margin: auto;
-        padding: 10px;
+        padding: 5px 0 10px;
         /* border: 1px solid #000000; */
     }
      
@@ -1578,9 +1614,9 @@ header.page-headr{
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;*/
-        border: 0px solid green;
+        border:none;
         border-top: 0px;
-        height: 40px;
+        height:40px;
         margin: auto;
     }
 
@@ -1592,7 +1628,7 @@ header.page-headr{
 
 
     .s2-guid-box {
-        min-height:42px;
+        min-height:50px;
         border: 1px solid #010101 !important;
         background-color: #379409;
         padding: 10px 2px 5px;
@@ -1600,24 +1636,25 @@ header.page-headr{
         border-top: none;
     }
 
-    .s2-guid-box h2 {
+    .s2-guid-box p strong {
         color: #ffffff;
-        font-weight: 600;
-        font-size:0.910rem;
-        text-align: right;
+        font-weight:600;
+        font-size:1.3rem;
     }
 
     .s2-guid-box p {
         color: #ffffff;
         font-weight: 500;
         font-size: 0.9rem;
-        line-height: 14px;
+        line-height: 10px;
+        text-align: right;
+        padding: 4px 3px 0px 0px;
     }
 
     .s2-lab-box {
-        min-height: 42px;
+        min-height:50px;
         border: 1px solid #010101 !important;
-        background-color: #fe0000;
+        background-color: #379409;
     }
 
     .s2-lab-box label {
@@ -1633,7 +1670,7 @@ header.page-headr{
     }
      
     .s2-input-box {
-        min-height:40px;
+        min-height:50px;
         border: 1px solid #3c5170 !important;
         } 
 
@@ -1660,7 +1697,7 @@ header.page-headr{
         appearance: none;
         /*border: 1px solid #3c5170;*/
         border-top: 0px;
-        min-height:40px;
+        min-height:49px;
     }
 
     .s2-input-box .form-select:focus {
@@ -1680,7 +1717,7 @@ header.page-headr{
     .s3-guid-box h2 {
         color: #ffffff;
         font-weight: 600;
-        font-size: 1.0rem;
+        font-size: 1.3rem;
         text-align: right;
         margin-top: 5px;
         margin-bottom: 0px;
@@ -2213,9 +2250,9 @@ header.page-headr{
         min-height: 50px;
     }
 
-    .guid-4 {
+    /*.guid-4 {
         margin-top:8px;
-    }
+    }*/
 
     #progressbar li:before {
         width: 25px;
@@ -2243,7 +2280,7 @@ header.page-headr{
         border-radius: 5px;
         cursor: pointer;
         padding: 7px 30px;
-        margin: 0px 5px;
+        margin: 0px 10px;
     }
 
 
@@ -2263,7 +2300,17 @@ header.page-headr{
         right: 2px;
     }
 
-}
+    .gone {
+        margin: 3% auto 0;
+    }
+
+    .s2-guid-box {
+        margin-bottom: 8px;
+    }
+
+
+
+
 
 
 @media only screen and (min-width:768px) {
