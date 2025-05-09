@@ -140,11 +140,73 @@
 
                     <div class="transaction-pmt">
 
-                          
-                        <h4 class="mt-2"> Please SELECT THE CATEGORY and <span> CLICK At The Box To  Complete Transaction </span></h4>
+                        <div class="select-category">
+                            <h4> Please SELECT THE CATEGORY and 
+                                <span> CLICK At The Box To  Complete Transaction </span>
+                            </h4>
+                        </div>
+
+                        <div class="sc-section">
+
+                            <div class="row">
+
+                               <div class="col-md-3"> 
+                                    <div class="col-md-12" id="local"> <p> I`m a LOCAL </p> </div>
+                               </div>
+
+                               <div class="col-md-1"> </div>
+
+                               <div class="col-md-8"> 
+                                    <div class="col-md-12" id="lmyself"> <p> I`ll be coming myself to COLLECT The Currencies Click Here  </p> </div>
+                                    <div class="col-md-11" id="lperson"> <p> I`ll be sending a person to COLLECT The Currencies Click Here  </p> </div>
+                               </div>
+
+                            </div>
 
 
+                            <div class="row mt-3">
+
+                               <div class="col-md-3"> 
+                                    <div class="col-md-12" id="foreign"> <p> I`m a Foreigner  </p> </div>
+                               </div>
+
+                               <div class="col-md-1"> </div>
+
+                               <div class="col-md-8"> 
+                                    <div class="col-md-11 float-left" id="fmyself"> <p> I`ll be coming myself to COLLECT The Currencies Click Here   </p> </div>
+                                     
+                                    <div class="col-md-11 float-right " id="fperson"> <p> I`ll be sending a person to COLLECT The Currencies Click Here   </p> </div>
+                               </div>
+
+                            </div>
+
+
+                            <div class="row mt-3">
+
+                               <div class="col-md-3"> 
+                                    <div class="col-md-12" id="company"> <p> I`m a Company </p> </div>
+                               </div>
+
+                               <div class="col-md-1"> </div>
+
+                               <div class="col-md-8"> 
+                                     
+                                    <div class="col-md-11" id="cpartner"> <p> Partnership , LLP, Sdn Bhd <strong>CLICK HERE </strong>   </p> </div>
+
+                                    <div class="col-md-10" id="cpublic"> <p> Public Listed Company in Malaysia </strong> CLICK HERE </p>  </p> </div>
+                                    <div class="col-md-9" id="cgovt"> <p> Govt or Semi Govt Agency -<strong> CLICK HERE </strong>  </p> </div>
+                                    <div class="col-md-8" id="cclub"> <p> Association , Clubs, Charity <strong>CLICK </strong> </p> </div>
                                 
+                               </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+
 
 
                     </div>
@@ -160,12 +222,14 @@
         
     
     window.addEventListener('load', () => {
-      new LeaderLine(document.getElementById('pills-one-tab'), document.getElementById('pills-two-tab'),{ path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-two-tab'), document.getElementById('pills-three-tab'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-three-tab'), document.getElementById('pills-four-tab'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-four-tab'), document.getElementById('pills-five-tab'), { path: 'curved', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-five-tab'), document.getElementById('pills-six-tab'), { path: 'straight', color: '#4472C4',size:3 });
-      new LeaderLine(document.getElementById('pills-six-tab'), document.getElementById('pills-seven-tab'), { path: 'straight', color: '#4472C4',size:3});
+      new LeaderLine(document.getElementById('local'), document.getElementById('lmyself'),{ path: 'curved', color: '#4472C4',size:4 });
+      new LeaderLine(document.getElementById('local'), document.getElementById('lperson'), { path: 'curved', color: '#4472C4',size:4 });
+      new LeaderLine(document.getElementById('foreign'), document.getElementById('fmyself'), { path: 'curved', color: '#4472C4',size:2 });
+      new LeaderLine(document.getElementById('foreign'), document.getElementById('fperson'), { path: 'curved', color: '#4472C4',size:2 });
+      new LeaderLine(document.getElementById('company'), document.getElementById('cpartner'), { path: 'curved', color: '#4472C4',size:4 });
+      new LeaderLine(document.getElementById('company'), document.getElementById('cpublic'), { path: 'curved', color: '#4472C4',size:4});
+      new LeaderLine(document.getElementById('company'), document.getElementById('cgovt'), { path: 'curved', color: '#4472C4',size:4 });
+      new LeaderLine(document.getElementById('company'), document.getElementById('cclub'), { path: 'curved', color: '#4472C4',size:4});
     });
   
 
