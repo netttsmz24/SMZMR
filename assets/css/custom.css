@@ -1303,7 +1303,7 @@ header.page-headr{
         #progressbar li {
             list-style-type: none;
             font-size: 12px;
-            width:16%;
+            width:16.6%;
             float: left;
             position: relative;
         }
@@ -1509,37 +1509,34 @@ header.page-headr{
     .gone {
         width: 32px;
         height: 30px;
-        background: #000000;
-        font-size: 20px;
-        font-weight: 600;
+        background: #ffffff;
         border-radius: 50px;
-        text-align: center;
         margin: 13% auto 0;
     }
 
     .gone span {
         color: #fe0000;
-        font-weight: bold;
         text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        margin: auto auto 0 -2px;
     }
-
 
     .gtwo {
         width: 32px;
-        height: 29px;
-        background: #000000;
-        font-size: 20px;
-        font-weight: 600;
+        height: 30px;
+        background: #ffffff;
         border-radius: 50px;
-        text-align: center;
         display: inline-flex;
     }
 
     .gtwo span {
         color: #fe0000;
-        font-weight: bold;
+        font-size: 22px;
+        font-weight: 600;
         line-height: 30px;
         width: 30px;
+        text-align: center;
     }
 
     .tr-top-box {
@@ -1646,9 +1643,10 @@ header.page-headr{
         color: #ffffff;
         font-weight: 500;
         font-size: 0.9rem;
-        line-height: 10px;
+        line-height: 13px;
         text-align: right;
         padding: 4px 3px 0px 0px;
+        margin-bottom: 2px;
     }
 
     .s2-lab-box {
@@ -2285,7 +2283,7 @@ header.page-headr{
 
 
     #msform .action-button-previous {
-        width: 94%;
+        width: 92%;
         background: #616161;
         font-weight: bold;
         color: white;
@@ -2293,7 +2291,7 @@ header.page-headr{
         border-radius: 5px;
         cursor: pointer;
         padding: 6px 5px;
-        margin: -55px 4px 10px;
+        margin: -55px 13px 10px;
         font-size: 20px;
         /* float: right; */
         position: absolute;
