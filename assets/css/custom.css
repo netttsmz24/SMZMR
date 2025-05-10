@@ -2477,10 +2477,32 @@ header.page-headr{
     #cgovt,
     #cclub {
         margin-right:0;
+        width:65%;
     }
 
+    #local {
+        width: 42%;
+    }
 
+    #foreign {
+        width: 42%;
+    }
 
+    #company {
+        width: 42%;
+    }
+
+    #lmyself,
+    #lperson,
+    #fmyself,
+    #fperson {
+        width: 65%;
+        float:right;
+    }
+
+    .select-category h4 {
+        text-align: center;
+    }
 
 
 
