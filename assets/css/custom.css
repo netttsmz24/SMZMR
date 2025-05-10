@@ -21,6 +21,7 @@ textarea:focus, input:focus{
 
 }*/
 
+.acts-input-box input::placeholder {color:#eeeeee;}
 
 .float-right {
     float:right;
@@ -1695,7 +1696,7 @@ header.page-headr{
         appearance: none;
         /*border: 1px solid #3c5170;*/
         border-top: 0px;
-        min-height:49px;
+        min-height:50px;
     }
 
     .s2-input-box .form-select:focus {
@@ -1806,14 +1807,6 @@ header.page-headr{
         line-height: 12px;
     }
 
-
-
-
-
-
-
-     
- 
 
 
     .s4-lab-box {
@@ -1960,10 +1953,6 @@ header.page-headr{
 
 
 
-
-
- 
- 
 
 
 
@@ -2205,6 +2194,154 @@ header.page-headr{
 
 
 
+/*Acts form page ----------------------------------------------------------------------------*/
+
+.acts-form-pmt {
+        margin:1% 0 1% 0;
+    }
+
+.acts-form-head h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom:5px;
+    margin-top: 15px;
+    color: #000000;
+    margin-left: -10px;
+}
+
+.img-attach {
+    position: relative;
+    top: 10px;
+    right: 20px;
+}
+
+.acts-bottom {
+    margin: 0 -12px;
+    /*border:1px solid #555555;*/
+    position: relative;
+}
+
+.acts-bottom p {
+    color: #000000;
+    font-size: 12px;
+    margin-bottom: 0px;
+    line-height: 18px;
+    padding: 5px 0px;
+    text-align:justify;
+    font-weight: 500;
+}
+
+.acts-bottom p strong{
+    color:red;
+    font-weight: bold;
+}
+
+.acts-bottom p span{
+    display: block;
+}
+
+.acts-button {
+    width: auto;
+    background: #548235;
+    font-weight: bold;
+    color: white;
+    font-size: 19px;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 9px 30px;
+    margin: 10px -10px 10px 0;
+    float: right;
+}
+
+.acts-button:hover {
+    width: auto;
+    background: #548235;
+}
+
+.acts-section {margin-top:0;}
+ 
+ .acts-title {
+    margin: 0 -12px;
+    border:1px solid #555555;
+    position: relative;
+}
+
+.acts-title p {
+    font-size: 0.980rem;
+    color: red;
+    margin-bottom: 0px;
+    line-height: 20px;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.acts-title p span{
+    display: block;
+}
+
+.acts-row-border {
+    border:1px solid #a7a5a5;
+}
+
+.acts-lab-box {
+    min-height: 35px;
+    border: 1px solid #a7a5a5 !important;
+    background-color: #fde598;
+}
+
+.acts-lab-box label {
+    color: #000000;
+    font-size: 0.8rem;
+    line-height: 107%;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin: auto;
+}
+
+.acts-input-box {
+    min-height:35px;
+    border: 1px solid #a7a5a5 !important;
+}
+
+.acts-input-box .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    min-height: 33px;
+    border-radius: 0px;
+    padding: 0px 10px;
+    border-top: 0px;
+}
+
+.acts-input-box .form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    display: block;
+    width: 100%;
+    padding: .375rem 1.25rem .375rem .75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #010101;
+    background-color: var(--bs-form-control-bg);
+    background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
+    background-repeat: no-repeat;
+    background-position: right .55rem center;
+    background-size: 16px 22px;
+    /* border: var(--bs-border-width) solid var(--bs-border-color); */
+    border-radius: 0rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* border: 1px solid #3c5170; */
+    border-top: 0px;
+    min-height: 30px;
+}
 
 
 
@@ -2390,8 +2527,25 @@ header.page-headr{
         margin-bottom: 8px;
     }
 
+    .acts-form-pmt {
+        margin: 2% 4% 1%;
+    }
+
+    .img-attach {
+        text-align: center;
+        position: static;
+        top: 10px;
+        right: 20px;
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
 
 
+
+
+
+
+}
 
 
 
