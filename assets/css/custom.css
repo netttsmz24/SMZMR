@@ -1997,7 +1997,7 @@ header.page-headr{
     color:red;
 }
 
-.sc-section {margin-top:2%;}
+.sc-section {margin-top:4%;}
 
 
 #local {
@@ -2083,7 +2083,8 @@ header.page-headr{
     display: flex;
     /*width:90%;*/
     margin-bottom: 5px;
-    color:#4472C4;
+    color:red;
+    font-size: 1.3rem;
 }
 
 /*#fperson{
@@ -2100,7 +2101,8 @@ header.page-headr{
     /*width:90%;*/
     margin-bottom:5px;
     float:right;
-    color:red;
+    color:#4472C4;
+    font-size: 1.3rem;
 }
 
 
@@ -2123,10 +2125,17 @@ header.page-headr{
 
 #fperson p,
 #fmyself p,
-#foreign p,
-
 #lperson p,
 #lmyself p { 
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 120%;
+    vertical-align: middle;
+    margin: auto;
+}
+
+#foreign p { 
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
