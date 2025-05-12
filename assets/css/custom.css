@@ -1090,6 +1090,8 @@ header.page-headr{
             visibility: hidden;
             width: 300px;
             background-color: #dc3545;
+            font-size: 16px;
+            line-height: 17px;
             color: #fff;
             text-align: center;
             border-radius: 6px;
@@ -1100,6 +1102,7 @@ header.page-headr{
             left: 20%;
             /* border: 2px solid #000000; */
             margin-left: -130px;
+            font-weight: 500;
         }
 
         .tooltip3 .tooltiptext::after {
@@ -2285,7 +2288,8 @@ header.page-headr{
 
 .acts-button {
     width: auto;
-    background: #548235;
+    /*background: #548235;*/ 
+    background: #2eb018;
     font-weight: bold;
     color: white;
     font-size: 19px;
@@ -2300,6 +2304,7 @@ header.page-headr{
 .acts-button:hover {
     width: auto;
     background: #548235;
+    color:#ffffff;
 }
 
 .acts-section {margin-top:0;}
@@ -2388,6 +2393,10 @@ header.page-headr{
     border: none;
     margin: 2px;
     height: 98%;
+}
+
+.acts-input-box .form-control[type=file] {
+    height: 30px;
 }
 
 .acts-input-box .form-select {
