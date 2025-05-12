@@ -1078,71 +1078,114 @@ header.page-headr{
           visibility: visible;
         }
 
+        /*Tooltip3------------------------------*/
 
-                .tooltip-box {
-                    border: 1px solid green;
-                    height: 90px;
-                    display: block;
-                }
+        .tooltip3 {
+          position: relative;
+          display: inline-block;
+          /*border-bottom: 1px dotted black;*/
+        }
+
+        .tooltip3 .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #dc3545;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            z-index: 1;
+            top: 150%;
+            left: 20%;
+            /* border: 2px solid #000000; */
+            margin-left: -130px;
+        }
+
+        .tooltip3 .tooltiptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -22px;
+            border-width: 15px;
+            border-style: solid;
+            border-color: transparent transparent #dc3545 transparent;
+        }
+
+        .tooltip3:hover .tooltiptext {
+          visibility: visible;
+        }
 
 
-                .tttooltip {
-                    color: #fff;
-                    font-size: 12px;
-                    font-weight: 500;
-                    font-family: sans-serif;
-                    padding: 0.5em;
-                    max-width: 25ch;
-                    position: relative;
-                    z-index: 99999;
-                    height: 100px;
-                    line-height: 12px;
-                }
 
-                .tttooltip {
-                    --b: 1.5em;
-                    --h: 4em;
-                    border-image: fill 0//var(--h)
-                                conic-gradient(var(--c,#CC333F) 0 0);
-                    /*background: #CC333F;*/
-                    /*border-bottom: var(--h) solid #000;*/
-                }
 
-                /*.tttooltip {
-                    --b: 1.5em;
-                    --h: 4em;
-                    border-image: fill 0 /  / var(--h) conic-gradient(#f7f7f7 0 0);
-                    bottom: var(--b) solid #000;
-                }*/
 
-                .ttbottom {
-                        clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
-                      calc(50% + var(--b)/2) 100%,
-                      33% calc(100% + var(--h)),
-                      calc(50% - var(--b)/2) 100%);
-                }
 
-                /*.tttop {
-                  clip-path: 
-                    polygon(0 0,0 100%,100% 100%,100% 0,
-                      calc(50% + var(--b)/2) 0,
-                      50% calc(-1*var(--h)),
-                      calc(50% - var(--b)/2) 0);
-                }
-                .ttright {
-                  clip-path: 
-                    polygon(100% 100%,0 100%,0 0,100% 0,
-                      100% calc(50% - var(--b)/2),
-                      calc(100% + var(--h)) 50%,
-                      100% calc(50% + var(--b)/2));
-                }
-                .ttleft {
-                  clip-path: 
-                    polygon(0 100%,100% 100%,100% 0,0 0,
-                      0 calc(50% - var(--b)/2),
-                      calc(-1*var(--h)) 50%,
-                      0 calc(50% + var(--b)/2));
-                }*/
+            .tooltip-box {
+                border: 1px solid green;
+                height: 90px;
+                display: block;
+            }
+
+
+            .tttooltip {
+                color: #fff;
+                font-size: 12px;
+                font-weight: 500;
+                font-family: sans-serif;
+                padding: 0.5em;
+                max-width: 25ch;
+                position: relative;
+                z-index: 99999;
+                height: 100px;
+                line-height: 12px;
+            }
+
+            .tttooltip {
+                --b: 1.5em;
+                --h: 4em;
+                border-image: fill 0//var(--h)
+                            conic-gradient(var(--c,#CC333F) 0 0);
+                /*background: #CC333F;*/
+                /*border-bottom: var(--h) solid #000;*/
+            }
+
+            /*.tttooltip {
+                --b: 1.5em;
+                --h: 4em;
+                border-image: fill 0 /  / var(--h) conic-gradient(#f7f7f7 0 0);
+                bottom: var(--b) solid #000;
+            }*/
+
+            .ttbottom {
+                    clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
+                  calc(50% + var(--b)/2) 100%,
+                  33% calc(100% + var(--h)),
+                  calc(50% - var(--b)/2) 100%);
+            }
+
+            /*.tttop {
+              clip-path: 
+                polygon(0 0,0 100%,100% 100%,100% 0,
+                  calc(50% + var(--b)/2) 0,
+                  50% calc(-1*var(--h)),
+                  calc(50% - var(--b)/2) 0);
+            }
+            .ttright {
+              clip-path: 
+                polygon(100% 100%,0 100%,0 0,100% 0,
+                  100% calc(50% - var(--b)/2),
+                  calc(100% + var(--h)) 50%,
+                  100% calc(50% + var(--b)/2));
+            }
+            .ttleft {
+              clip-path: 
+                polygon(0 100%,100% 100%,100% 0,0 0,
+                  0 calc(50% - var(--b)/2),
+                  calc(-1*var(--h)) 50%,
+                  0 calc(50% + var(--b)/2));
+            }*/
 
 
 
@@ -2265,13 +2308,13 @@ header.page-headr{
     margin: 0 -12px;
     border: 1px solid #555555;
     position: relative;
-    background-color: #010101;
-    color: #ffffff;
+    background-color: #65ef08;
+    color: #000000;
 }
 
 .acts-title p {
     font-size: 0.980rem;
-    color:#ffffff;
+    color:#000000;
     margin-bottom: 0px;
     line-height: 20px;
     padding:8px 10px;
@@ -2287,14 +2330,20 @@ header.page-headr{
     border:1px solid #a7a5a5;
 }
 
-.acts-lab-box {
+/*.acts-lab-box {
     min-height: 35px;
     border: 1px solid #a7a5a5 !important;
     background-color: #010101;
+}*/
+
+.acts-lab-box {
+    min-height: 35px;
+    border: 1px solid #a7a5a5 !important;
+    background-color: #65ef08;
 }
 
 .acts-lab-box label {
-    color: #ffffff;
+    color: #000000;
     font-size: 0.8rem;
     line-height: 107%;
     font-weight: bold;
@@ -2313,10 +2362,17 @@ header.page-headr{
     font-weight: 700;
     color: #000000;
     font-size: 15px;
-    min-height: 33px;
+    min-height: 30px;
     border-radius: 0px;
-    padding: 0px 10px;
+    padding: 5px 10px;
     border-top: 0px;
+}
+
+.acts-input-box input {
+     width:98%;
+     border:none;
+     margin:2px;
+     height:98%;
 }
 
 .acts-input-box .form-select {
