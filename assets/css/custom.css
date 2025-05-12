@@ -2451,7 +2451,7 @@ header.page-headr{
 .tb-lab-box {
     min-height: 35px;
     border: 1px solid #a7a5a5 !important;
-    background-color: #f6f7ce;
+    background-color: #65ef08;
 }
 
 .tb-lab-box p {
@@ -2468,7 +2468,24 @@ header.page-headr{
     display: block;
 }
 
+.kyc-main-div {
+    display: flex;
+    /*height: 100vh;*/ /* Optional: Full height of the viewport */
+}
 
+
+.kyc-left-div {
+    flex: 9;  
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.kyc-right-div {
+    flex: 1;  
+    padding:0px;
+    box-sizing: border-box;
+    margin:auto;
+}
 
 
 
