@@ -2261,15 +2261,17 @@ header.page-headr{
 
 .acts-section {margin-top:0;}
  
- .acts-title {
+.acts-title {
     margin: 0 -12px;
-    border:1px solid #555555;
+    border: 1px solid #555555;
     position: relative;
+    background-color: #010101;
+    color: #ffffff;
 }
 
 .acts-title p {
     font-size: 0.980rem;
-    color:#010101;
+    color:#ffffff;
     margin-bottom: 0px;
     line-height: 20px;
     padding:8px 10px;
@@ -2288,11 +2290,11 @@ header.page-headr{
 .acts-lab-box {
     min-height: 35px;
     border: 1px solid #a7a5a5 !important;
-    /*background-color: #fde598;*/
+    background-color: #010101;
 }
 
 .acts-lab-box label {
-    color: #000000;
+    color: #ffffff;
     font-size: 0.8rem;
     line-height: 107%;
     font-weight: bold;
