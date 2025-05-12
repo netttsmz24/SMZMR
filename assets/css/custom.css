@@ -2269,10 +2269,10 @@ header.page-headr{
 
 .acts-title p {
     font-size: 0.980rem;
-    color: red;
+    color:#010101;
     margin-bottom: 0px;
     line-height: 20px;
-    padding: 10px 10px;
+    padding:8px 10px;
     text-align: center;
     font-weight: 700;
 }
@@ -2288,7 +2288,7 @@ header.page-headr{
 .acts-lab-box {
     min-height: 35px;
     border: 1px solid #a7a5a5 !important;
-    background-color: #fde598;
+    /*background-color: #fde598;*/
 }
 
 .acts-lab-box label {
@@ -2345,8 +2345,46 @@ header.page-headr{
 
 
 
+/*Acts form page ----------------------------------------------------------------------------*/
 
 
+
+.tb-title {
+    margin: 0 -12px;
+    border: 1px solid #555555;
+    position: relative;
+}
+
+.tb-title p {
+    font-size: 0.850rem;
+    color: red;
+    margin-bottom: 0px;
+    line-height: 20px;
+    padding: 8px 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.tb-lab-box {
+    min-height: 35px;
+    border: 1px solid #a7a5a5 !important;
+    background-color: #f6f7ce;
+}
+
+.tb-lab-box p {
+    color: #000000;
+    font-size: 1rem;
+    line-height: 115%;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.tb-lab-box p span{
+    display: block;
+}
 
 
 
