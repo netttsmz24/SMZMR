@@ -2357,6 +2357,12 @@ header.page-headr{
     margin: auto;
 }
 
+.acts-textare-box {
+    min-height:70px;
+    border: 1px solid #a7a5a5 !important;
+}
+
+
 .acts-input-box {
     min-height:35px;
     border: 1px solid #a7a5a5 !important;
