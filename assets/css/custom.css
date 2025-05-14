@@ -2493,6 +2493,7 @@ header.page-headr{
     text-align: center;
     margin: auto;
     padding: 10px 0;
+    position: relative
 }
 
 .tb-lab-box p span{
@@ -2559,9 +2560,70 @@ header.page-headr{
     opacity: 0;
 }
 
+.ckycOne {
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 25px;
+    margin: 5px auto;
+    position: absolute;
+    right: 10%;
+}
+
+.ckycOne span {
+    color: #fe0000;
+    text-align: center;
+    font-size:18px;
+    font-weight: 700;
+    margin: auto auto 0 -5px;
+}
 
 
+.cokyc-title {
+    margin: 0 -12px;
+    border: 1px solid #555555;
+    position: relative;
+    /*background-color: #65ef08;*/
+    color: #000000;
+}
 
+.cokyc-title p {
+    font-size: 0.840rem;
+    color: #000000;
+    margin-bottom: 0px;
+    line-height: 19px;
+    padding: 10px 10px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.cokyc-title p span{
+    display: block;
+}
+
+.cokyc-title p strong{
+    color:red;
+    font-weight: 600;
+}
+
+.acts-title h2 {
+    font-size: 1.3rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    margin: 5px;
+    padding: 5px;
+}
+
+.acts-title h2 small{
+    font-size:0.8rem;
+}
+
+.bg-light-green {
+    background-color: #65ef08;
+    color:#000000;
+}
 
 
 
@@ -2944,7 +3006,9 @@ header.page-headr{
         font-weight: bold;
     }
 
-    
+    .md-text {
+        font-size:0.7rem !important;
+    }
    
 }
 
