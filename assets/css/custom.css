@@ -2373,7 +2373,7 @@ header.page-headr{
 }
 
 .acts-textare-box textarea {
-    width:98%;
+    width:98.5%;
     margin:2px;
     border:none;
 }
@@ -2464,13 +2464,18 @@ header.page-headr{
 }
 
 .tb-title p {
-    font-size: 0.850rem;
+    font-size: 0.950rem;
     color: red;
     margin-bottom: 0px;
     line-height: 20px;
     padding: 8px 10px;
     text-align: center;
     font-weight: 700;
+    text-transform: capitalize;
+}
+
+.tb-title p span { 
+    display: block;
 }
 
 
@@ -2758,7 +2763,6 @@ header.page-headr{
 }
 
 
-
 @media only screen and (max-width:767px) {
 
     .next-btn {
@@ -2870,6 +2874,16 @@ header.page-headr{
     }
 
 
+
+}
+
+
+
+@media only screen and (max-width:1024px) {
+
+    .tb-title p span { 
+        display: inline-block;
+    }
 
 }
 
