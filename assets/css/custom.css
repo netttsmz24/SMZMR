@@ -1145,14 +1145,14 @@ header.page-headr{
                 line-height: 12px;
             }
 
-            .tttooltip {
+           /* .tttooltip {
                 --b: 1.5em;
                 --h: 4em;
                 border-image: fill 0//var(--h)
                             conic-gradient(var(--c,#CC333F) 0 0);
-                /*background: #CC333F;*/
-                /*border-bottom: var(--h) solid #000;*/
-            }
+                background: #CC333F;
+                border-bottom: var(--h) solid #000;
+            }*/
 
             /*.tttooltip {
                 --b: 1.5em;
@@ -2362,6 +2362,22 @@ header.page-headr{
     border: 1px solid #a7a5a5 !important;
 }
 
+.acts-textare-box .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    border-radius: 0px;
+    padding: 5px 10px;
+    border-top: 0px;
+}
+
+.acts-textare-box textarea {
+    width:98%;
+    margin:2px;
+    border:none;
+}
+
 
 .acts-input-box {
     min-height:35px;
@@ -2384,6 +2400,10 @@ header.page-headr{
     }
 
 .acts-section select:focus {
+        outline: solid 4px #000;
+    }
+
+.acts-section textarea:focus {
         outline: solid 4px #000;
     }
 
@@ -2428,7 +2448,7 @@ header.page-headr{
     appearance: none;
     /* border: 1px solid #3c5170; */
     border-top: 0px;
-    min-height: 30px;
+    min-height:29px;
 }
 
 
@@ -2494,6 +2514,41 @@ header.page-headr{
 }
 
 
+        .button_outer {
+            background:#dc3545;
+            border-radius: 0;
+            text-align:left;
+            height: 33px;
+            width: 100%;
+            display: inline-block;
+            transition: .2s;
+            position: relative;
+            overflow: hidden;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+
+        .btn_upload {
+            padding: 5px 4px 2px;
+            color: #fff;
+            text-align: left;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            z-index:0;
+            white-space: nowrap;
+        }
+
+        .btn_upload input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            opacity: 0;
+        }
 
 
 
@@ -2694,9 +2749,14 @@ header.page-headr{
 
 @media only screen and (min-width:768px) {
 
-
      
 }
+
+@media only screen and (max-width:768px) {
+    
+
+}
+
 
 
 @media only screen and (max-width:767px) {
@@ -2852,7 +2912,19 @@ header.page-headr{
         margin: 15px 5px 2px 0px;
     }
 
-
+    .button_outer {
+        background: #dc3545;
+        border-radius: 0;
+        text-align: left;
+        height: 33px;
+        width: 100%;
+        display: inline-block;
+        transition: .2s;
+        position: relative;
+        overflow: hidden;
+        font-size: 11px;
+        font-weight: bold;
+    }
    
 }
 
