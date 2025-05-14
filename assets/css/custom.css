@@ -2422,7 +2422,7 @@ header.page-headr{
 }
 
 .acts-input-box .form-control[type=file] {
-    height: 30px;
+    height:29px;
 }
 
 .acts-input-box .form-select {
@@ -2925,6 +2925,8 @@ header.page-headr{
         font-size: 11px;
         font-weight: bold;
     }
+
+    
    
 }
 
