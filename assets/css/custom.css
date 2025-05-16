@@ -2387,8 +2387,7 @@ header.page-headr{
 .acts-input-box .form-control {
     text-align: left;
     font-weight: 700;
-    color: #000000;
-    font-size: 15px;
+    color: #000000;  font-size: 15px;
     min-height:29px;
     border-radius: 0px;
     padding: 5px 10px;
@@ -2587,6 +2586,17 @@ header.page-headr{
     color: #000000;
 }
 
+
+.cokyc-title h4 {
+    font-size: 1.0rem;
+    color:red;
+    margin-bottom: 0px;
+    line-height: 19px;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
 .cokyc-title p {
     font-size: 0.840rem;
     color: #000000;
@@ -2716,10 +2726,29 @@ header.page-headr{
     height: 98%;
 }
 
+.woner-section{
+    margin:15px 0;
+}
 
+.date {
+    height: 32px;
+    padding: 0;
+}
 
-
-
+.date  .input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--bs-tertiary-bg);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 0rem;
+}
 
 
 
