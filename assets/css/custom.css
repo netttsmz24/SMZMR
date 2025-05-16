@@ -2617,7 +2617,7 @@ header.page-headr{
 }
 
 .acts-title h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #000000;
     font-weight: bold;
     text-align: center;
@@ -2726,8 +2726,8 @@ header.page-headr{
     height: 98%;
 }
 
-.woner-section{
-    margin:15px 0;
+.woner-section {
+    margin: 12px 0 5px;
 }
 
 .date {
@@ -2750,6 +2750,24 @@ header.page-headr{
     border-radius: 0rem;
 }
 
+
+.kyctwo {
+    width: 25px;
+    height: 25px;
+    background: #fe0000;
+    border-radius: 25px;
+    margin: 5px auto;
+    position: absolute;
+    right: 10%;
+}
+
+.kyctwo span {
+    color: #ffffff;
+    text-align: center;
+    font-size:18px;
+    font-weight: 700;
+    margin: auto auto;
+}
 
 
 
