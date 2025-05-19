@@ -3,6 +3,7 @@
 body {
     /*background-color: #EFF2F5;*/
     background-color: #ffffff;
+    /*font-family: Calibri, Arial, Helvetica, sans-serif;*/
 }
 
 textarea:focus, input:focus{   
@@ -20,6 +21,9 @@ textarea:focus, input:focus{
     transition: all 0.3s;
 
 }*/
+
+
+.kyc2-input-box input::placeholder {color:#bbbbbb;}
 
 .acts-input-box input::placeholder {color:#eeeeee;}
 
@@ -2559,6 +2563,56 @@ header.page-headr{
     opacity: 0;
 }
 
+
+/*uplaad bg transparent -----------*/
+
+.button_outer_white {
+    background:#ffffff;
+    border-radius: 0;
+    text-align:left;
+    height: 33px;
+    width: 100%;
+    display: inline-block;
+    transition: .2s;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button_outer_white .fas {
+    margin-left: 10px;
+    font-weight:400;
+    color:red;
+}
+
+.btn_upload_white {
+    padding: 5px 4px 2px;
+    color: #010101;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index:0;
+    white-space: nowrap;
+}
+
+.btn_upload_white input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+
+
+
+
+
 .ckycOne {
     width: 25px;
     height: 25px;
@@ -2586,6 +2640,15 @@ header.page-headr{
     color: #000000;
 }
 
+.cokyc-title h5 {
+    font-size: 1.2rem;
+    color:#000000;
+    margin-bottom: 0px;
+    line-height: 19px;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: 600;
+}
 
 .cokyc-title h4 {
     font-size: 1.0rem;
@@ -2726,9 +2789,12 @@ header.page-headr{
     height: 98%;
 }
 
+
 .woner-section {
     margin: 12px 0 5px;
+    border:3px solid #555555;
 }
+
 
 .date {
     height: 32px;
@@ -2769,20 +2835,123 @@ header.page-headr{
     margin: auto auto;
 }
 
+.kyc2-lab-box {
+    min-height: 35px;
+    border: 1px solid #a7a5a5 !important;
+}
+
+.kyc2-lab-box label {
+    color:#000000;
+    font-size: 0.955rem;
+    line-height: 107%;
+    font-weight:500;
+    text-align: left;
+    display: block;
+    margin: auto;
+}
 
 
+.kyc2-input-box {
+    min-height: 35px;
+    border: 1px solid #a7a5a5 !important;
+}
+
+.kyc2-input-box input {
+    width: 98.5%;
+    border: none;
+    margin: 2px;
+    height: 98%;
+}
+
+.kyc2-input-box .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    min-height: 29px;
+    border-radius: 0px;
+    padding: 5px 10px;
+    border-top: 0px;
+}
+
+.kyc2-input-box .form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    display: block;
+    width: 98.5%;
+    padding: .275rem 1.25rem .275rem .75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #010101;
+    background-color: var(--bs-form-control-bg);
+    background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
+    background-repeat: no-repeat;
+    background-position: right .55rem center;
+    background-size: 16px 22px;
+    border: none;
+    border-radius: 0rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* border: 1px solid #3c5170; */
+    border-top: 0px;
+    min-height: 29px;
+    margin: 1px 2px 1px 2px;
+}
 
 
+.kyc2-textare-box {
+    min-height: 70px;
+    border: 1px solid #a7a5a5 !important;
+}
+
+.kyc2-title {
+    margin: 0 -12px;
+    border: 1px solid #555555;
+    position: relative;
+    background-color: #65ef08;
+    color: #000000;
+    cursor: pointer;
+}
+
+.kyc2-title h2 {
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    margin: 5px;
+    padding: 5px;
+}
+
+.kyc2-title h2 small {
+    font-size: 0.8rem;
+}
 
 
+.form-control[type=file] {
+     height:25px;
+
+}
 
 
-
-
-
-
-
-
+.date  .input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--bs-tertiary-bg);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 0rem;
+    height: 34px;
+}
 
 
 
