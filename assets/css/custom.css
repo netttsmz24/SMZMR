@@ -22,6 +22,11 @@ textarea:focus, input:focus{
 
 }*/
 
+@font-face { 
+ font-family: Calibri ; 
+ src: url(assetsf/ont/Calibri.ttf); 
+} 
+
 
 .kyc2-input-box input::placeholder {color:#bbbbbb;}
 
