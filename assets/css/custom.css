@@ -2797,7 +2797,7 @@ header.page-headr{
 
 .woner-section {
     margin: 12px 0 5px;
-    border:3px solid #555555;
+    /*border:3px solid #555555;*/
 }
 
 
@@ -2912,6 +2912,13 @@ header.page-headr{
     border: 1px solid #a7a5a5 !important;
 }
 
+.kyc2-textare-box textarea {
+    border-radius: 0px;
+    margin: 2px;
+    width: 98%;
+    border: none;
+}
+
 .kyc2-title {
     margin: 0 -12px;
     border: 1px solid #555555;
@@ -2958,18 +2965,62 @@ header.page-headr{
     height: 34px;
 }
 
+div[disabled] {
+    pointer-events: none; 
+    opacity: 0.2;
+    }
 
 
 
+/*accordion style ------------------------------------------*/
+
+.accordion {
+    border-radius: 0px;
+}
+
+.accordion-item:first-of-type {
+     border-radius: 0px;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-radius: 0px;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-radius: 0px;
+}
+
+.accordion-item {
+    color: var(--bs-accordion-color);
+    background-color: var(--bs-accordion-bg);
+    border:3px solid #010101;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color:#ffffff;
+    background-color:red;
+    box-shadow: none;
+}
+
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding:10px 15px;
+    font-size: 1.2rem;
+    text-align: left;
+    color:#cc0000;
+    /*background-color:#cc0000;*/
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: var(--bs-accordion-transition);
+}
 
 
-
-
-
-
-
-
-
+/*Accordion Style End --------------------------------------*/
 
 
 
@@ -3447,14 +3498,24 @@ header.page-headr{
 
 }
 
-/*@media only screen and (min-width:430px) and (max-width:840px) {
+@media only screen and  (max-width:920px) {
 
-    #footer {
-        position:relative;
-     
-    }
+.btn_upload_white {
+    padding: 5px 4px 2px;
+    color: #010101;
+    text-align: left;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    z-index: 0;
+    white-space: normal;
+}
 
-}*/
+.button_outer_white {
+    height: 60px; 
+}
+
+}
 
 
 @media only screen and (min-width:768px) and (max-width: 992px) {
