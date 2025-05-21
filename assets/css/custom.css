@@ -2985,11 +2985,11 @@ div[disabled] {
     color: #ffffff;
     display: inline-block;
     font-weight: bold;
-    line-height: 1.6em;
+    line-height: 1.4em;
     margin-right: 5px;
     text-align: center;
     width: 1.7em;
-    border: 2px solid #ffffff;
+    border: 3px solid #ffffff;
 }
 
 
@@ -3359,6 +3359,28 @@ div[disabled] {
         text-align: center;
     }
 
+ /*.accordion-collapse .step-no{
+        line-height: 1.3em;
+        margin-right: 5px;
+        width:1.7em;
+     }*/
+
+ .accordion-button .step-no {
+    background: red;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.9em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.3em;
+    margin-right: 5px;
+    text-align: center;
+    width: 3em;
+    border: 3px solid #ffffff;
+    min-height: 33px;
+    min-width: 50px;
+}
 
 
 }
