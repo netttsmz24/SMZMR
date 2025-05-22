@@ -3051,7 +3051,130 @@ div[disabled] {
 }
 
 
+/*--- Accordion Style End ---*/
+
+
 /*Accordion Style End --------------------------------------*/
+
+.invoice-section {margin-top:0;}
+
+.invo-add-box {
+    min-height: 20vh !important;
+    border: 1px solid #a7a5a5 !important;
+    padding: 5px 0px;
+}
+
+.invo-add-box p {
+    text-align: right;
+    margin-bottom: 0px;
+    line-height: 20px;
+    margin-top: 0;
+}
+
+.invo-add-box h3 {
+    display: block;
+    vertical-align: middle;
+    margin: auto;
+    word-break: break-word;
+    font-weight: bold;
+    text-align: center;
+}
+
+.invo-add-box span {
+    display: block;
+}
+
+
+.invo-add-box h4 {
+    display: block;
+    vertical-align: middle;
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+    word-break: break-all;
+}
+
+.invo-lab-box {
+    border: 1px solid #a7a5a5 !important;
+    padding: 5px 0px;
+}
+
+.invo-lab-box h5 {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+
+
+.invo-title {
+    border: 1px solid #555555;
+    position: relative;
+    padding: 8px 0px;
+}
+
+.invo-title p {
+    font-size: 1.0rem;
+    color: #000000;
+    margin-bottom: 0px;
+    line-height: 19px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.invo-title p strong {
+    font-size: 1.0rem;
+    color:red;
+}
+
+.invo-title h5 {
+    font-size: 1.2rem;
+    color:#000000;
+    margin-bottom: 0px;
+    line-height: 19px;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.invo-button {
+    width:100%;
+    /* background: #548235; */
+    background: #2eb018;
+    font-weight: bold;
+    color: white;
+    font-size: 19px;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 9px 30px;
+    float:right;
+}
+
+.invo-button a:hover {
+    width: auto;
+    /* background: #548235; */
+    background: #2eb018;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3380,6 +3503,12 @@ div[disabled] {
     border: 3px solid #ffffff;
     min-height: 33px;
     min-width: 50px;
+}
+
+.invo-add-box {
+    min-height: 100% !important;
+    border: 1px solid #a7a5a5 !important;
+    padding: 5px 0px;
 }
 
 
