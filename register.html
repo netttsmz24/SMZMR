@@ -24,7 +24,7 @@
           border: 1px solid #ced4da;
           padding: 0px 5px;
           border-radius: 6px;
-          width: 100%;
+          width:100%;
         }
         .form-group:focus {
           color: #212529;
@@ -34,10 +34,11 @@
             box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
         }
         .form-group input {
-          display: inline-block;
+          display:inline-block;
           width: auto;
           border: none;
         }
+
         .form-group input:focus {
           box-shadow: none;
         }
@@ -151,10 +152,10 @@
                                     <input type="email" class="form-control" name="email" id="email-field" required="" placeholder="yourmail@mail.com">
                                   </div>
 
-
-                                  <div class="col-md-12">
+                                <!-- <div class="col-md-12">
                                     <label for="email-field" class="pb-1">Phone Number </label>
                                     <div class="input-group">
+                                      <span><img src="assets/images/ne.svg" alt="india" width="32" height="24"></span>
                                       <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">+91</button>
                                       <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">+63</a></li>
@@ -162,17 +163,28 @@
                                         <li><a class="dropdown-item" href="#">+29</a></li>
                                         <li><a class="dropdown-item" href="#">+235</a></li>
                                         <li><a class="dropdown-item" href="#">+129</a></li>
-                                        <!-- <li><hr class="dropdown-divider"></li> -->
+                                         
                                          
                                       </ul>
                                       <input type="text" class="form-control" aria-label="phone"  placeholder="9444800330">
                                     </div>
-                                </div>
+                                </div> -->
 
                                   <div class="col-md-12">
                                     <label for="email-field" class="pb-1">Phone Number </label>
                                      <div class="form-group d-inline-block">
-                                        <span class="border-end country-code px-2">+91</span>
+                                        <span> <img src="assets/images/ne.svg" alt="india" width="32" height="24"></span>
+                                            <div class="dropdown country-code">
+                                                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    +91
+                                                  </button>
+                                                  <ul class="dropdown-menu">
+                                                    <li><button class="dropdown-item" type="button">+92</button></li>
+                                                    <li><button class="dropdown-item" type="button">+100</button></li>
+                                                    <li><button class="dropdown-item" type="button">+19</button></li>
+                                                  </ul>
+                                            </div>
+                                        <span class="border-end"> </span>
                                         <input type="text" class="form-control" aria-label="phone"  placeholder="9444800330" />
                                     </div>
                                   </div>
