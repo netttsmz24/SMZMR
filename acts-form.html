@@ -38,8 +38,11 @@
 /*        date of birth fild style 30 / 06 / 2025 ----------------------    */
 
 
-
         .acts-input-box .dob-row input::placeholder {color:#010101; font-weight:500; font-size:12px; text-align: center;}
+
+        .acts-input-box .dob-row .form-control  {
+                padding: 5px 3px;
+        }
 
         .dob-row {
           display: flex;
@@ -47,18 +50,23 @@
           align-items: center;
         }
 
-
         .dob-row input {
             padding: 4px 6px;
             width: 75px;
             font-size:14px;
             font-weight: bold;
-            border: 1px solid #383838;
+            /*border: 1px solid #383838;*/
+            width:100%;
         }
 
         .dob-row label {
-          font-weight:normal;
+          font-weight:600;
+          font-size:14px;
+          line-height: 14px;
         }
+  
+
+
   
 
         .acts-input-box .dob-row-2 input::placeholder {color:#010101; font-weight:500; font-size:12px; text-align: center;}
@@ -582,24 +590,22 @@
                                         </div>
                                     </div>
 
+
+
+
                                     <div class="col-md-3">
                                         <div class="row acts-input-box"> 
-                                             <!-- <input type="text" class="form-control" placeholder=" "> -->
 
                                              <div class="dob-row"> 
-                                                <div>
-                                                  <input type="date" class="form-control" placeholder="Date of Birth " style="width:100%;border:none;"> 
+
+                                                <div class="col-lg-5 col-md-4">
+                                                   <label>Date of Birth</label>
                                                 </div>
 
-                                                <span class="separator">| </span>
-
-                                                <div style="width:20%;">
-                                                  <label for="Year"> <strong> 48 </strong> </label>
+                                                <div class="col-lg-7 col-md-8" style="border-left: 1px solid #a7a5a5;">
+                                                  <input type="date" class="form-control" placeholder="DD / MM / YYYY"> 
                                                 </div>
 
-                                                <div style="width:40%;">
-                                                   <label for="Year">  Years</label>
-                                                </div>
                                             </div>
 
                                         </div>
