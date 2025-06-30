@@ -19,9 +19,105 @@
 
     <style type="text/css">
         
+         .sdd-hidden {
+            display: none;
+         }
 
+         #lable_file {
+            font-size: 13px;
+            /* line-height: 30px;*/
+            cursor: pointer;
+            margin:auto;
+         }
+
+         .acts-section #lable_file:focus {
+                outline: solid 4px #000;
+            } 
+
+
+/*        date of birth fild style 30 / 06 / 2025 ----------------------    */
+
+
+
+        .acts-input-box .dob-row input::placeholder {color:#010101; font-weight:500; font-size:12px; text-align: center;}
+
+        .dob-row {
+          display: flex;
+          gap:7px;
+          align-items: center;
+        }
+
+
+        .dob-row input {
+            padding: 4px 6px;
+            width: 75px;
+            font-size:14px;
+            font-weight: bold;
+            border: 1px solid #383838;
+        }
+
+        .dob-row label {
+          font-weight:normal;
+        }
+  
+
+        .acts-input-box .dob-row-2 input::placeholder {color:#010101; font-weight:500; font-size:12px; text-align: center;}
+
+        .dob-row-2 {
+          display: flex;
+          align-items: center;
+          gap:4px;
+          font-size: 16px;
+        }
+
+        .dob-row-2 input {
+            padding: 2px 5px;
+            width: 70px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            height: auto;
+        }
+
+        .dob-row-2 span.separator {
+          font-weight: bold;
+          font-size:14px;
+        }
+
+
+        .acts-input-box .dob-row-3 input::placeholder {color:#010101; font-weight:500; font-size:12px; text-align: center;}
+
+        .dob-row-3 {
+          display: flex;
+          gap:4px;
+          align-items: center;
+        }
+
+
+        .dob-row-3 input {
+            padding: 4px 4px;
+            width: 60px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #383838;
+        }
+
+        .dob-row-3 label {
+          font-weight:normal;
+          font-size: 14px;
+        }
+  
 
     </style>
+
+    <script>
+        
+    
+     $("#files").change(function(){
+        $("#lable_file").html($(this).val().split("\\").splice(-1,1)[0] || "Select file");     
+     }); 
+
+    </script>
 
 </head>
 
@@ -114,7 +210,7 @@
                                     <tr>
                                         <td><button type="button" class="btn btn-profile">Profile</button> </td>
                                         <td><button type="button" class="btn btn-activity">Activity</button> </td>
-                                        <td><button type="button" class="btn btn-bulletin">Bulletin POP-UPS <span>Notifications</span></button> 
+                                        <td><button type="button" class="btn btn-bulletin">Bulletin POP-UPS Notifications</button> 
                                         </td>
 
 
@@ -151,8 +247,7 @@
                             <div class="row">
                                <div class="col-md-12"> 
                                      <div class="acts-title">
-                                        <p> True Beneficiary - DETAILS AS REQUIRED BY CENTRAL BANK ACTS                                           
-                                        </p>  
+                                        <p> True Beneficiary - DETAILS AS REQUIRED BY CENTRAL BANK </p>  
                                      </div>
                                </div>
                             </div>
@@ -221,28 +316,34 @@
                                         </div>
                                     </div>
 
-                                    <!-- col-md-2 col-sm-9 col-xs-9 -->
-                                        <div class="col-md-2 col-10">
-                                            <div class="row acts-input-box" style="border-right:none !important;">
-                                                 <input class="form-control" type="file" id="formFile">
+                                     
+                                    <div class="col-md-3">
+
+                                        <div class="kyc-main-div">
+
+                                            <div class="kyc-left-div"> 
+                                                <div class="row acts-input-box" style="border-right:none !important;">
+                                                  <!-- <button type="button" class="btn">Purpose of Transaction Attachment 
+                                                  </button> -->
+                                                <input type="file" id="files" name="files" class="sdd-hidden"/>
+                                                <label for="files" id="lable_file">Purpose of Transaction Attachment</label>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="col-md-1 col-2">
                                             <div class="kyc-right-div"> 
-                                                    <div class="row acts-input-box" style="border-top:none !important;border-left:none !important;">  
-                                                       
-
+                                                <div class="row acts-input-box" style="border-top:none !important;border-left:none !important; float: right;">
                                                         <a href="#" class="tooltip3">
                                                         <img src="assets/images/attach.png">  
                                                         <span class="tooltiptext">
-                                                        – Requires at increased frequency to attach supportive documents as SAVINGS – INCOME SLIPS , For Expenses – Income Slips and or any BANK documents ( Requiring only header , account no,  address and name only and or any declarations that may and will support the source of funds ; The Requirements are as per CENTRAL BANK MANDATORY ACTS read along with AMLCFT acts Malaysia ; All disseminated information governs PDPA ACTS and are strictly Private & Confidential   
+                                                        – Requires at increased frequency to attach supportive documents as SAVINGS – INCOME SLIPS , For Expenses – Income Slips and or any BANK documents ( Requiring only header , account no,  address and name only and or any declarations that may and will support the source of funds ; The Requirements are as per CENTRAL BANK MANDATORY ACTS read along with AMLCFT acts Malaysia ; All disseminated information governs PDPA ACTS and are strictly Private &amp; Confidential 
                                                         </span> 
                                                         </a>
-
                                                     </div>
                                             </div>
+
                                         </div>
+
+                                    </div>
                             </div>
 
                             <div class="row">
@@ -255,7 +356,20 @@
 
                                     <div class="col-md-3">
                                         <div class="row acts-input-box"> 
-                                             <input type="text" class="form-control" placeholder=" ">
+                                             <!-- <input type="text" class="form-control" placeholder=" "> -->
+
+                                             <div class="dob-row">
+                                                <div>
+                                                  <input type="number" id="day" min="1" max="31" placeholder="DATE">
+                                                </div>
+                                                <div>
+                                                  <input type="number" id="month" min="1" max="12" placeholder="MONTH">
+                                                </div>
+                                                <div>
+                                                  <input type="number" id="year" min="1900" max="2100" placeholder="YEAR">
+                                                </div>
+                                              </div>
+
                                         </div>
                                     </div>
 
@@ -283,7 +397,28 @@
                                     </div>
                             </div>
 
+
                             <div class="row">
+
+                                    <div class="col-md-3">
+                                        <div class="row acts-lab-box"> 
+                                            <label> Date of Birth </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="row acts-input-box"> 
+                                             <!-- <input type="text" class="form-control" placeholder=" "> -->
+
+                                             <div class="dob-row-2">
+                                                <input type="number" id="day" min="1" max="31" placeholder="DATE">
+                                                <span class="separator">/</span>
+                                                <input type="number" id="month" min="1" max="12" placeholder="MONTH">
+                                                <span class="separator">/</span>
+                                                <input type="number" id="year" min="1900" max="2100" placeholder="YEAR">
+                                            </div>
+                                        </div>
+                                    </div>
                                  
                                     <div class="col-md-3">
                                         <div class="row acts-lab-box"> 
@@ -383,6 +518,8 @@
                                         <div class="col-md-2 col-10">
                                             <div class="row acts-input-box" style="border-right:none !important;">
                                                  <input class="form-control" type="file" id="formFile">
+                                                 <!-- <input type="file" id="files" name="files" class="hidden"/>
+                                                 <label for="files" id="lable_file">Purpose of Transaction Attachment</label> -->
                                             </div>
                                         </div>
 
@@ -413,7 +550,24 @@
 
                                     <div class="col-md-3">
                                         <div class="row acts-input-box"> 
-                                             <input type="text" class="form-control" placeholder=" ">
+                                             <!-- <input type="text" class="form-control" placeholder=" "> -->
+
+                                             <div class="dob-row"> 
+                                                <div>
+                                                  <input type="date" class="form-control" placeholder="Date of Birth " style="width:100%;border:none;"> 
+                                                </div>
+
+                                                <span class="separator">| </span>
+
+                                                <div style="width:20%;">
+                                                  <label for="Year"> <strong> 48 </strong> </label>
+                                                </div>
+
+                                                <div style="width:40%;">
+                                                   <label for="Year">  Years</label>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
 
@@ -442,6 +596,53 @@
                             </div>
 
                             <div class="row">
+
+
+                                    <div class="col-md-3">
+                                        <div class="row acts-lab-box"> 
+                                            <label> Date Of Birth (DOB) </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="row acts-input-box"> 
+                                             <!-- <input type="text" class="form-control" placeholder=" "> -->
+
+                                             <div class="dob-row-3">
+                                                <div>
+                                                  <input type="number" id="day" min="1" max="31" placeholder="Date">
+                                                </div>
+                                                <div>
+                                                  <input type="number" id="month" min="1" max="12" placeholder="Month">
+                                                </div>
+                                                <div>
+                                                  <input type="number" id="year" min="1900" max="2100" placeholder="Years">
+                                                </div>
+
+                                                <!-- <span class="separator">| </span> -->
+
+                                                <div style="width:20%;">
+                                                  <label for="Year"> <strong> 102 </strong> </label>
+                                                </div>
+
+                                                <div style="width:40%;">
+                                                   <label for="Year">  Years</label>
+                                                </div>
+
+
+
+                                              </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
                                  
                                     <div class="col-md-3">
                                         <div class="row acts-lab-box"> 
