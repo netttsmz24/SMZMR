@@ -3,6 +3,7 @@
 body {
     /*background-color: #EFF2F5;*/
     background-color: #ffffff;
+    font-family: "Roboto", sans-serif;
     /*font-family: Calibri, Arial, Helvetica, sans-serif;*/
 }
 
@@ -957,6 +958,10 @@ header.page-headr{
     background-color:#212529;
  } 
 
+.btn-profile:active {
+    color: #fff !important;
+    background-color: #212529 !important;
+}
 
 .btn-activity {
     font-weight: normal;
@@ -978,6 +983,10 @@ header.page-headr{
     background-color:#212529;
  } 
 
+.btn-activity:active {
+    color: #fff !important;
+    background-color: #212529 !important;
+}
 
 .btn-bulletin {
     font-size: 13px;
@@ -1002,6 +1011,11 @@ header.page-headr{
     color: #fff;
     background-color:#212529;
  } 
+
+ .btn-bulletin:active {
+    color: #fff !important;
+    background-color: #212529 !important;
+}
 
 
 /*tooltip style -------------------------------------------------------------------*/
@@ -1094,7 +1108,7 @@ header.page-headr{
           /*border-bottom: 1px dotted black;*/
         }
 
-        .tooltip3 .tooltiptext {
+        /*.tooltip3 .tooltiptext {
             visibility: hidden;
             width: 300px;
             background-color: #dc3545;
@@ -1108,12 +1122,11 @@ header.page-headr{
             z-index: 1;
             top: 150%;
             left: 20%;
-            /* border: 2px solid #000000; */
-            margin-left: -130px;
+            margin-left: -150px;
             font-weight: 500;
-        }
+        }*/
 
-        .tooltip3 .tooltiptext::after {
+        /*.tooltip3 .tooltiptext::after {
             content: "";
             position: absolute;
             bottom: 100%;
@@ -1122,6 +1135,37 @@ header.page-headr{
             border-width: 15px;
             border-style: solid;
             border-color: transparent transparent #dc3545 transparent;
+        }*/
+
+
+        .tooltip3 .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #ffffff;
+            font-size: 16px;
+            line-height: 17px;
+            color: #010101;
+            text-align: center;
+            border-radius: 6px;
+            padding: 15px 10px;
+            position: absolute;
+            z-index: 1;
+            top: 150%;
+            left: 20%;
+            border: 1px solid #010101;
+            margin-left: -150px;
+            font-weight: 500;
+        }
+
+        .tooltip3 .tooltiptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: 0px;
+            border-width: 15px;
+            border-style: solid;
+            border-color: transparent transparent #010101 transparent;
         }
 
         .tooltip3:hover .tooltiptext {
@@ -2321,7 +2365,7 @@ header.page-headr{
     margin: 0 -12px;
     border: 1px solid #555555;
     position: relative;
-    background-color: #65ef08;
+    background-color: #e3e5e5bf;
     color: #000000;
 }
 
@@ -2352,7 +2396,7 @@ header.page-headr{
 .acts-lab-box {
     min-height: 35px;
     border: 1px solid #a7a5a5 !important;
-    background-color: #65ef08;
+    background-color: #e3e5e5bf;
 }
 
 .acts-lab-box label {
@@ -2514,7 +2558,7 @@ header.page-headr{
 
 
 .kyc-left-div {
-    flex: 9;  
+    flex: 8;  
     padding: 0px;
     box-sizing: border-box;
 }
@@ -3149,8 +3193,31 @@ div[disabled] {
 }
 
 
+.acts-input-box button {
+    width: 99%;
+    border: none;
+    height: 98%;
+    font-size: 13px;
+    font-weight: bold;
+}
 
+.ben-main-div {
+    display: flex;
+    /* height: 100vh; */
+}
 
+.ben-left-div {
+    flex:9;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.ben-right-div {
+    flex:1;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: auto;
+}
 
 
 
