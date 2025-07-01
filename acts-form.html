@@ -135,6 +135,18 @@
              
         }
 
+        /*-------------file upload ------------------------*/
+
+        .formFile input[type=file] {
+              color: transparent !important;
+          }
+
+        .formFile input[type=file]::before {
+            content: "Attach Your IC ID";
+            color: black;
+            margin-right: 10px; 
+        }
+
 
     </style>
 
@@ -558,8 +570,11 @@
 
                                     <!-- col-md-2 col-sm-9 col-xs-9 -->
                                         <div class="col-md-2 col-10">
-                                            <div class="row acts-input-box" style="border-right:none !important;">
-                                                 <input class="form-control" type="file" id="formFile">
+                                            <div class="row acts-input-box formFile"  style="border-right:none !important;">
+
+                                                 <input class="form-control" type="file">
+                                                 
+
                                                  <!-- <input type="file" id="files" name="files" class="hidden"/>
                                                  <label for="files" id="lable_file">Purpose of Transaction Attachment</label> -->
                                             </div>
@@ -567,7 +582,7 @@
 
                                         <div class="col-md-1 col-2">
                                             <div class="kyc-right-div"> 
-                                                    <div class="row acts-input-box" style="border-top:none !important;border-left:none !important;">  
+                                                    <div class="row acts-input-box" style="border-left:none !important;">  
                                                        
 
                                                         <a href="#" class="tooltip3" style="float:right;">
