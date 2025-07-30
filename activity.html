@@ -14,7 +14,7 @@
     <link href="assets/css/master.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
      
-     <style type="text/css">
+<style type="text/css">
              
     .acts-textare-box label,
     .acts-input-box label {
@@ -26,7 +26,18 @@
         font-size: 18px;
     }
 
-     </style>
+    .pagination {
+    
+        --bs-pagination-color: #cc0000;
+        --bs-pagination-active-color: #fff;
+        --bs-pagination-disabled-bg: #cc0000;
+    }
+
+    .disabled>.page-link, .page-link.disabled {
+        color: #ffffff;
+    }
+
+</style>
 
 </head>
 
@@ -135,8 +146,9 @@
                                                      
 
                                                   <tr>
-                                                    <th colspan="7"> <h2> ← Customer Activity Log  </h2> </th>
-                                                     
+                                                    <th colspan="7" style="color: #ffffff;background-color:#cc0000;"> 
+                                                        <h2 style="color: #ffffff;"> ← Customer Activity Log  </h2> 
+                                                    </th>
                                                   </tr>
                                                   <tr>
                                                     <th>COUNTRY</th>
@@ -221,7 +233,7 @@
                                                     <td>TRANSACT</td>
                                                     <td>0.04%</td>
                                                   </tr>
-                                                  
+
                                                 </tbody>
                                              </table>
                                             </div>      
