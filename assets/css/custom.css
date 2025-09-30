@@ -3221,6 +3221,97 @@ div[disabled] {
 
 
 
+/*=====================================================================================================================
+                                    02-Remittance Style
+=====================================================================================================================*/
+
+
+/*Remittance -home */
+
+.rsr-table table {
+    background-color: #ffffff;
+}
+
+.rsr-table h2 {
+    font-size:18px;
+    color: #010101;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.rsr-table h6 {
+    font-size: 15px;
+    color: #000000;
+    text-align: left;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+
+.rsr-table table th {
+    font-size:15px;
+    color: #1b1b1b;
+    text-align: right;
+    font-weight: bold;
+    text-transform:capitalize;
+    border: 2px solid #000000;
+}
+
+.rsr-table table td {
+    font-size: 14px;
+    color: #1b1b1b;
+    text-align: right;
+    font-weight: 300;
+    border: 2px solid #000000;
+    padding: .2rem .5rem;
+    line-height: 18px;
+}
+
+.country-td {
+    text-align: left !important;
+    font-weight: bolder !important;
+}
+
+
+.rh-send-btn {
+    font-weight: bold;
+    background-color: #f7f7f7;
+    border: 3px solid #000000;
+    color: #000000;
+    padding: 20px 10px;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    font-size: 24px;
+    margin:0px 0px 0px -10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+    height: 90%;
+    width: 120px;
+    border-radius: 20px;
+    line-height: 18px;
+     
+}
+
+.rh-sbtn-vcenter {
+  display:block;
+  margin:25% auto;
+   
+}
+
+.rh-send-btn span { 
+    font-size:14px; 
+}
+
+
+
+
+
 
 
 
@@ -3754,6 +3845,32 @@ div[disabled] {
 
 .button_outer_white {
     height: 60px; 
+}
+
+.rh-send-btn {
+    font-weight: bold;
+    background-color: #f7f7f7;
+    border: 3px solid #000000;
+    color: #000000;
+    padding: 5px 10px;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    font-size: 24px;
+    margin: 0px 0px 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    line-height: 14px;
+}
+
+.rh-sbtn-vcenter {
+  display:block;
+  margin:1% auto;  
 }
 
 }
