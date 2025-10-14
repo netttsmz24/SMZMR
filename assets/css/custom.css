@@ -3241,32 +3241,48 @@ div[disabled] {
 }
 
 .rsr-table h6 {
-    font-size: 15px;
+    font-size: 20px;
     color: #000000;
     text-align: left;
     font-weight: bold;
     line-height: 22px;
     margin-bottom: 0px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+}
+
+.rsr-table h5 {
+    font-size: 22px;
+    color: #000000;
+    text-align: left;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 0px;
+    text-transform: capitalize;
 }
 
 
 .rsr-table table th {
-    font-size:15px;
+    font-size: 16px;
     color: #1b1b1b;
     text-align: right;
-    font-weight: bold;
-    text-transform:capitalize;
+    font-weight: 500;
+    text-transform: uppercase;
     border: 2px solid #000000;
 }
 
+.rsr-table table th span {
+    font-size: 16px;
+    color: #000000;
+    font-weight:bolder;
+}
+
 .rsr-table table td {
-    font-size: 14px;
-    color: #1b1b1b;
+    font-size: 15px;
+    color: #000000;
     text-align: right;
     font-weight: 300;
     border: 2px solid #000000;
-    padding: .2rem .5rem;
+    padding: .4rem .5rem;
     line-height: 18px;
 }
 
@@ -3279,7 +3295,7 @@ div[disabled] {
 .rh-send-btn {
     font-weight: bold;
     background-color: #f7f7f7;
-    border: 3px solid #000000;
+    border: 5px solid #000000;
     color: #000000;
     padding: 20px 10px;
     text-align: center;
@@ -3295,7 +3311,12 @@ div[disabled] {
     width: 120px;
     border-radius: 20px;
     line-height: 18px;
-     
+}
+
+.rh-send-btn h4 {
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: -1px;
 }
 
 .rh-sbtn-vcenter {
@@ -3309,11 +3330,85 @@ div[disabled] {
 }
 
 
+.rlogin-panel {
+    background-color:#ffffff;
+     /*border:2px solid #010101;*/
+
+    /* border-left:2px solid #010101;*/
+    /*border-top: 2px solid #000000;*/
+}
 
 
+.rlogin-col-label {
+    font-size: 15px;
+    color: #1b1b1b;
+    text-align: left;
+    font-weight: 550;
+    text-transform:capitalize;
+    border:1px solid #000000;
+    /*border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;*/
+    background-color:#f3f3f3;
+}
+
+.rlogin-col-label label{
+    padding:5px 0px;
+}
 
 
+.rlogin-col-input {
+    text-transform: uppercase;
+    /*border-right: 2px solid #000000;
+    border-top: 2px solid #000000;*/
+    background-color:#ffffff;
+    border:1px solid #000000;
+    padding:0px;
+    line-height:28px;
+}
 
+
+.rlogin-col-input input {
+    font-size: 16px;
+    color: #1b1b1b;
+    text-align: left;
+    font-weight: 600;
+    border:none;
+    width:99%;
+    text-indent: 5px;
+    
+}
+
+.rlogin-col-input .form-select {
+    border-radius: 0px !important;
+}
+
+
+.rlogin-col-input input:focus {
+    outline: solid 4px #000;
+}
+
+
+.rlogin-panel button {
+    background-color: #cc0000;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #1b1b1b;
+    padding: 5px;
+}
+
+
+.rlogin-panel-title h5 {
+    font-size: 22px;
+    color: #000000;
+    text-align: left;
+    font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    font-style: italic;
+    letter-spacing: -1px;
+}
 
 
 
