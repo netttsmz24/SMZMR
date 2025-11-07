@@ -3961,6 +3961,7 @@ div[disabled] {
     padding: 10px;
 }
 
+
 .remit-payment-page .paydis {
     border: 1px solid #010101 !important;
     }
@@ -4063,7 +4064,18 @@ div[disabled] {
     margin-top:10px;
 }
 
+.remit-payment-page .note p {
+    font-size: 11px;
+    color: red;
+    line-height: 14px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-align: justify;
+}
 
+.remit-payment-page .note p span {
+    color:#010101;
+}
 
 
 
@@ -4100,8 +4112,18 @@ div[disabled] {
     .rem-rc-box-w, .rem-rc-box-l {
         min-height:125px;
     }
+
     .sm-logo {
        width:80%;
+    }
+
+    .remit-customer-page .pr-0  {
+        padding-right: 15px;
+    }
+
+   .remit-customer-page .pl-0 {
+        padding-left: 10px;
+        padding-right: 15px;
     }
 
 
@@ -4117,6 +4139,33 @@ div[disabled] {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
