@@ -115,19 +115,32 @@ header.page-headr{
 }
 
 
-#body>.navbar {
+/*#body>.navbar {
 
     border-bottom: 1px solid rgb(101 109 119 / 38%);
+}*/
+
+#body>.navbar {
+    border-bottom: 2px solid #010101;
 }
+
 
 #sidebar .sidebar-header {
     border-bottom: 1px solid rgb(101 109 119 / 38%);
 }
 
-#sidebar {
+/*#sidebar {
     
    border-right: 1px solid rgb(101 109 119 / 38%);
+}*/
+
+#sidebar {
+
+   border-right: 2px solid #010101;
 }
+
+
+
 
 #sidebar .sidebar-header {
     padding: 0.4rem 1rem 1rem;
@@ -813,15 +826,23 @@ header.page-headr{
  }*/
 
 
- #sidebar ul li a {
+ /*#sidebar ul li a {
     padding: .8rem 1.5rem;
     font-size: 0.950rem;
     display: block;
     border-bottom: 1px solid #e4e6e9;
     color: #010101;
     text-align: left;
-}
+}*/
 
+#sidebar ul li a {
+    padding: .6rem 1.5rem;
+    font-size: 0.950rem;
+    display: block;
+    border-bottom: none;
+    color: #010101;
+    text-align: left;
+}
 
 .list-middle-align {
     margin-top: 5%;
@@ -3348,7 +3369,7 @@ div[disabled] {
     border:1px solid #000000;
     /*border-top: 2px solid #000000;
     border-bottom: 2px solid #000000;*/
-    background-color:#f3f3f3;
+    background-color:#ffffff;
 }
 
 .rlogin-col-label label{
@@ -3409,6 +3430,742 @@ div[disabled] {
     font-style: italic;
     letter-spacing: -1px;
 }
+
+.rem-login-btn {
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: #000000;
+    text-align: right;
+}
+
+.rem-login-btn a {
+    font-weight: 600;
+    text-decoration:underline;
+}
+
+
+
+/*-------------------- ppt v-1 page style------------------------------*/
+
+@font-face {
+  font-family: 'Agency FB';  
+  src: url('../font/AgencyFB.woff2') format('woff2'),
+       url('../font/AgencyFB.woff') format('woff'),
+       url('../font/AgencyFB.eot') format('eot'),
+       url('../font/AgencyFB.ttf') format('truetype');
+  font-weight: normal;  
+  font-style: normal;  
+}
+
+.rem-rc-reg-container {
+    position:relative;
+    height: 100%;
+}
+
+.rem-rc-reg-box {
+    /*position:absolute;
+    bottom:25%;
+    width: 100%;*/
+    /*min-height:220px;*/
+    border:4px solid #010101;
+    padding:25px 10px; 
+}
+
+.rem-rc-reg-box p{ 
+    font-size: 10px;
+    color: #000000;
+    /*border: 1px solid #ffffff;*/
+    border-radius: 2px;
+    padding:5px 10px;
+    text-align: center;
+    line-height: 12px;
+    margin-bottom: 6px;
+}
+
+.rem-rc-reg-box h1 {
+    color:#000000;
+    font-weight:700;
+    font-size:30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.rem-rc-reg-box h1 span {
+    color: #000000;
+    font-weight: 800;
+    font-size:40px;
+    line-height: 50px;
+}
+
+
+.rem-rc-reg-box h4 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 22px;
+    text-align: center;
+    
+}
+
+.rem-rc-reg-box h4 a:link {
+    font-weight: 800;
+}
+
+
+.rem-rc-otp-box {
+    border:4px solid #010101;
+    padding:5px 10px;
+   /* min-height:220px; */  
+}
+
+.rem-rc-otp-box p{ 
+    font-size: 10px;
+    color: #000000;
+    /*border: 1px solid #ffffff;*/
+    border-radius: 2px;
+    padding:5px 10px;
+    text-align: justify;
+    line-height: 12px;
+    margin-bottom: 6px;
+}
+
+.rem-rc-otp-box h1 {
+    color: #000000;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+}
+
+.rem-rc-otp-box span {
+    color: #000000;
+    font-weight: 700;
+    font-size:15px;
+}
+
+
+
+.rem-rc-menu-box {
+    border:4px solid #010101;
+    padding:10px;
+   /* min-height:220px; */ 
+   font-family: 'Agency FB', sans-serif; 
+}
+
+.rem-rc-menu-box h1 {
+    color: #000000;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.rem-rc-menu-box h2 {
+    color: #cc0000;
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.rem-rc-box-l {
+    position: relative;
+    border:4px solid #010101;
+    padding:10px;
+    min-height:220px;   
+    font-family: 'Agency FB', sans-serif;
+}
+
+.rem-rc-box-l h2 {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 28px;
+}
+
+.rem-rc-box-l h3 {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.rem-rc-box-l h4 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.rem-rc-box-l h4 a:link {
+    font-weight: 800;
+}
+
+
+.rem-rc-box-w {
+    position: relative;
+    border: 4px solid #ffffff;
+    padding: 10px;
+    min-height: 220px;
+    font-family: 'Agency FB', sans-serif;
+}
+
+.rem-rc-box-w h3 {
+    color: #000000;
+    font-size:22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.rem-rc-box-w h3 a:link {
+    font-weight: 800;
+    
+}
+
+.rem-rc-box-w h4 a {
+    font-weight: 800;
+    
+}
+
+
+.rem-rc-box-w h4 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.rem-rc-box-w h4 a:link {
+    font-weight: 800;
+    
+}
+
+.rem-rc-box {
+    position: relative;
+    border:4px solid #010101;
+    padding: 10px 10px 0px;
+    min-height:220px;   
+}
+
+.rem-rc-box h3 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.rem-rc-box h4 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.rem-rc-box h4 a:link {
+    font-weight: 800;
+}
+
+.rem-rc-box h2 {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 28px;
+}
+
+.rem-rc-form {
+    display: block;
+    height:auto;
+}
+
+.rem-rc-form input::placeholder {color:#a7a7a7; font-size:15px; font-weight:500;}
+.rem-rc-form select::placeholder {color:#a7a7a7; font-size:15px; font-weight:500;}
+
+.rem-rc-form .input-group-text {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 1rem !important;
+    padding: .275rem .75rem;
+    margin-bottom: 2px !important;
+    border: 0.5px solid #010101;
+}
+
+.rem-rc-form .input-group>.form-control {
+    padding: .175rem .75rem;
+    margin-bottom: 2px !important;
+    border: 0.5px solid #010101;
+}
+
+.rem-rc-form .input-group> select {
+    padding: .175rem .75rem;
+    margin-bottom: 2px !important;
+    border: 0.5px solid #010101;
+}
+
+.rem-rc-form label {
+    font-size: 14px;
+}
+
+.rem-rc-form select {
+    font-size: 14px;
+    padding: .175rem .75rem;
+    border-radius: 0px;
+}
+
+.send-now-btn {
+    background-color: transparent;
+    border: 5px solid #ffffff;
+    
+    padding:10px;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    margin: 0px 0px 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+    height: 90%;
+    width: 100%;
+    border-radius: 5px;
+    line-height: 18px;
+}
+
+.send-now-btn h1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #000000;
+}
+
+.disclaimer-home p {
+    font-size: 10px;
+    color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    padding: 10px;
+    text-align: justify;
+    line-height: 12px;
+    margin-bottom: 6px;
+}
+
+.home-tr-icon {
+    padding: 10px 0;
+    float:right;
+}
+
+
+.rem-dis-container {
+    position: relative;
+    height: 100%;
+}
+
+.rem-dis-box {
+    position:absolute;
+    bottom:0;
+    
+    border:2px solid #010101;
+    padding: 10px 10px 0px;
+    min-height:220px;   
+}
+
+
+.remit-home-icon {
+    padding: 10px 0;
+    float:right;
+}
+
+.remit-ind-section {
+    border:1px solid #000;
+    padding: 5px;
+}
+
+
+.remit-ind-heading {
+    margin: 0 -12px;
+    border: 1px solid #555555;
+    position: relative;
+    background-color: #e3e5e5bf;
+    color: #000000;
+}
+
+.remit-ind-input-box .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    min-height: 29px;
+    border-radius: 0px;
+    padding: 5px 10px;
+    border-top: 0px;
+}
+
+
+.remit-ind-label label {
+    color: #000000;
+    font-size: 0.8rem;
+    line-height: 107%;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin: auto;
+}
+
+.remit-menu-list {
+    text-indent: 20px;
+    line-height: 5px;
+    border: none;
+    font-family: 'Agency FB', sans-serif;
+   font-size: 16px;
+   color:#000000;
+}
+
+.remit-menu-list a {
+     
+    font-size: 16px !important;
+}
+
+.remit-menu-list1 {
+    line-height:6px;
+    border: none;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 16px;
+    color:#000000;
+}
+
+.remit-menu-list1 a {
+     
+    font-size: 16px !important;
+}
+
+
+.remit-customer-page { }
+
+.remit-customer-page h3 {
+    line-height: 40px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 30px;
+    color: #010101;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.remit-customer-page .pr-0  {
+    padding-right: 0px;
+}
+
+.remit-customer-page .pl-0  {
+    padding-left: 0px;
+}
+
+.remit-customer-box {
+    padding:25px 10px 15px;
+    border:4px solid #010101;
+    margin:10px 5px;
+    font-family: 'Agency FB', sans-serif;
+}
+
+ 
+.remit-customer-box h2 {
+    line-height: 45px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 46px;
+    color: #010101;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+.remit-customer-box h2 a {
+    color:#010101;
+}
+
+
+.remit-customer-box h4 {
+    line-height: 35px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 29px;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.remit-customer-box h4 span{
+    color:#cc0000;
+    font-weight: bold;
+}
+
+
+.remit-customer-box p {
+    line-height: 24px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 22px;
+    color: #cc0000;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.remit-customer-box .roundno {
+    width: 50px;
+    height: 50px;
+    line-height: 35px;
+    background: #000000;
+    border-radius: 50%;
+    margin: 10px auto 20px 10px;
+    padding: 2px;
+    display: grid;
+    position: relative;
+}
+
+
+.remit-customer-box .roundno  span {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin: auto auto;
+    font-family: initial;
+}
+
+
+.remit-payment-page {
+    /*border:1px solid;*/
+    padding: 10px;
+}
+
+.remit-payment-page .paydis {
+    border: 1px solid #010101 !important;
+    }
+
+.remit-payment-page .paydis p {
+    font-size: 11px;
+    color: #000000;
+    text-align: justify;
+    padding: 10px;
+    font-weight: 500;
+    line-height: 12px;
+}
+
+.remit-payment-page .paydis p strong {
+    font-weight: bold;
+}
+
+.remit-pay-lab-box {
+    min-height: 35px;
+    border: 1px solid #a7a5a5 !important;
+/*    background-color: #e3e5e5bf;*/
+}
+
+.remit-pay-lab-box label {
+    color: #000000;
+    font-size: 1.2rem;
+    line-height: 31px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin: auto;
+    text-indent: 10px;
+}
+
+.remit-pay-input-box {
+    min-height: 35px;
+    border: 1px solid #a7a5a5 !important;
+}
+
+.remit-pay-input-box input {
+     border:none;
+}
+
+.remit-pay-input-box .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    min-height: 30px;
+    border-radius: 0px;
+    padding: 5px 10px;
+    border-top: 0px;
+}
+
+
+.remit-pay-input-box .form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    display: block;
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 30px;
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 0px;
+    border-radius: 0px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.remit-payment-page button.save {
+    background-color: #cc0000;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #1b1b1b;
+    padding: 5px;
+    width: 100%;
+    margin-top:10px;
+}
+
+.remit-payment-page button.submit {
+    background-color:green;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #1b1b1b;
+    padding: 5px;
+    width: 100%;
+    margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsive style for ppt v-1 ---------------*/
+
+
+@media only screen and (max-width:767px) {
+
+    .rem-rc-box-w, .rem-rc-box-l {
+        min-height:125px;
+    }
+    .sm-logo {
+       width:80%;
+    }
+
+
+}
+
+
+@media only screen and (min-width:1024px) {
+
+    #sidebar {
+
+        border-right: 2px solid #010101;
+        min-height:540px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
