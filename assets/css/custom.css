@@ -2677,11 +2677,6 @@ header.page-headr{
 }
 
 
-
-
-
-
-
 .ckycOne {
     width: 25px;
     height: 25px;
@@ -3242,6 +3237,10 @@ div[disabled] {
 
 
 
+
+
+
+
 /*=====================================================================================================================
                                     02-Remittance Style
 =====================================================================================================================*/
@@ -3447,7 +3446,13 @@ div[disabled] {
 
 
 
-/*-------------------- ppt v-1 page style------------------------------*/
+
+
+
+
+
+/*-------------------- ppt v-1 page style------------------------------------------------------------------------*/
+
 
 @font-face {
   font-family: 'Agency FB';  
@@ -3563,11 +3568,13 @@ div[disabled] {
 }
 
 .rem-rc-menu-box h2 {
-    color: #cc0000;
+    color: red;
     font-weight: 800;
-    font-size: 40px;
-    letter-spacing: -1px;
+    font-size: 5rem;
+    letter-spacing:-0.1rem;
     text-align: center;
+    font-family: calibri;
+    margin-top: -10px;
 }
 
 .rem-rc-box-l {
@@ -3588,10 +3595,10 @@ div[disabled] {
 
 .rem-rc-box-l h3 {
     color: #000000;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     margin-bottom: 10px;
-    line-height: 22px;
+    line-height: 2.3rem;
     text-align: center;
 }
 
@@ -3616,7 +3623,7 @@ div[disabled] {
     position: relative;
     border: 4px solid #ffffff;
     padding: 10px;
-    min-height: 220px;
+    min-height: 333px;
     font-family: 'Agency FB', sans-serif;
 }
 
@@ -3741,8 +3748,7 @@ div[disabled] {
 .send-now-btn {
     background-color: transparent;
     border: 5px solid #ffffff;
-    
-    padding:10px;
+    padding: 2px 10px;
     text-align: center;
     display: block;
     vertical-align: middle;
@@ -3751,16 +3757,17 @@ div[disabled] {
     cursor: pointer;
     text-decoration: none;
     text-transform: capitalize;
-    height: 90%;
+    height: 100%;
     width: 100%;
     border-radius: 5px;
-    line-height: 18px;
+    line-height: 20px;
 }
 
 .send-now-btn h1 {
     font-weight: 700;
     font-size: 30px;
     color: #000000;
+    margin-bottom:0px;
 }
 
 .disclaimer-home p {
@@ -3793,6 +3800,124 @@ div[disabled] {
     padding: 10px 10px 0px;
     min-height:220px;   
 }
+
+/*------------------------- pavirasan css -----------------------------------------*/
+
+.rem-rc-box h2 {
+    line-height: 2.2rem !important;
+}
+
+.rem-rc-form .input-group-text,
+.rem-rc-form .input-group>select,
+.rem-rc-form .input-group>input {
+    border-color: gray !important;
+    font-weight: medium !important;
+}
+
+.rem-rc-form .row {
+    gap: 3px !important;
+}
+
+.rem-rc-box {
+    padding: 12px !important
+}
+
+
+.rem-rc-form .row .btn-container {
+    margin: 2px 0px 2px 0px !important;
+    height: fit-content !important;
+}
+
+.disclaimer-home {
+    margin-top: 4px !important;
+}
+
+.disclaimer-home p {
+    font-size: 10px !important;
+    line-height: 1rem;
+    font-weight: 500 !important;
+    margin-bottom: 0px !important;
+}
+
+/*.rem-rc-box-l h3 {
+    line-height: 2.3rem;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+*/
+.rem-rc-box-l h4,
+.rem-rc-box-w h4 {
+    text-align: center;
+    left: 0px;
+}
+
+.rem-rc-box-l h4 a:link,
+.rem-rc-box-w h4 a:link {
+    font-weight: bold !important;
+    font-size: 24px;
+    letter-spacing: 0.05rem;
+}
+
+.rem-rc-box-w h3 {
+    line-height: 2.3rem;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/*.rem-rc-box-l,
+.rem-rc-box-w {
+    min-height: 280px !important;
+}*/
+
+.body-widget-row>div {
+    padding: 6px !important;
+}
+
+.rem-rc-menu-box h1 {
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 34px !important;
+    letter-spacing: 0.1rem !important;
+    font-weight: bolder !important;
+    text-align: center !important;
+}
+
+.rem-rc-menu-box {
+    padding: 2px !important;
+    text-align: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center !important;
+}
+
+.rem-rc-menu-box h1{
+    text-align: center !important;
+    align-items: center;
+    width: 100%;
+}
+
+/*.rem-rc-menu-box h2 {
+    color: red !important;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 60px;
+    font-weight: bolder;
+}*/
+
+.rem-rc-menu-box p {
+    text-align: right;
+    padding: 15px 10px 0px 0px;
+    margin: 0px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+
+/*-------------- End ---------------------------------------------*/
 
 
 .remit-home-icon {
@@ -4180,13 +4305,25 @@ div[disabled] {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*Responsive style for ppt v-1 ---------------*/
 
 
 @media only screen and (max-width:767px) {
 
     .rem-rc-box-w, .rem-rc-box-l {
-        min-height:125px;
+        min-height:150px;
     }
 
     .sm-logo {
@@ -4200,6 +4337,17 @@ div[disabled] {
    .remit-customer-page .pl-0 {
         padding-left: 10px;
         padding-right: 15px;
+    }
+
+    .rem-rc-menu-box h2 {
+        color: red;
+        font-weight: 800;
+        font-size: 7.5rem;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        font-family: calibri;
+        margin-top: 0px;
+        line-height: 75px;
     }
 
 
