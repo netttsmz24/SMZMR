@@ -702,7 +702,7 @@ header.page-headr{
     display: block;
     width: 100%;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size:12px;
     font-weight: 500;
     line-height: 1.5;
     color: var(--bs-body-color);
@@ -3570,10 +3570,10 @@ div[disabled] {
 .rem-rc-menu-box h2 {
     color: red;
     font-weight: 800;
-    font-size: 5rem;
+    font-size:60px;
     letter-spacing:-0.1rem;
     text-align: center;
-    font-family: calibri;
+    font-family: Calibri, "Segoe UI", Arial, sans-serif;
     margin-top: -10px;
 }
 
@@ -3598,7 +3598,7 @@ div[disabled] {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 10px;
-    line-height: 2.3rem;
+    line-height:27px;
     text-align: center;
 }
 
@@ -3623,7 +3623,7 @@ div[disabled] {
     position: relative;
     border: 4px solid #ffffff;
     padding: 10px;
-    min-height: 333px;
+    min-height:327px;
     font-family: 'Agency FB', sans-serif;
 }
 
@@ -3701,7 +3701,7 @@ div[disabled] {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
-    line-height: 28px;
+    line-height:28px;
 }
 
 .rem-rc-form {
@@ -3717,7 +3717,7 @@ div[disabled] {
     border-bottom-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    font-size: 1rem !important;
+    font-size:14px !important;
     padding: .275rem .75rem;
     margin-bottom: 2px !important;
     border: 0.5px solid #010101;
@@ -3803,9 +3803,9 @@ div[disabled] {
 
 /*------------------------- pavirasan css -----------------------------------------*/
 
-.rem-rc-box h2 {
+/*.rem-rc-box h2 {
     line-height: 2.2rem !important;
-}
+}*/
 
 .rem-rc-form .input-group-text,
 .rem-rc-form .input-group>select,
@@ -3815,7 +3815,7 @@ div[disabled] {
 }
 
 .rem-rc-form .row {
-    gap: 3px !important;
+    gap:1px !important;
 }
 
 .rem-rc-box {
@@ -3833,8 +3833,8 @@ div[disabled] {
 }
 
 .disclaimer-home p {
-    font-size: 10px !important;
-    line-height: 1rem;
+    font-size: 11px !important;
+    line-height: 13px;
     font-weight: 500 !important;
     margin-bottom: 0px !important;
 }
@@ -3860,7 +3860,7 @@ div[disabled] {
 }
 
 .rem-rc-box-w h3 {
-    line-height: 2.3rem;
+    line-height:30px;
     font-size: 26px;
     font-weight: 700;
     text-align: center;
@@ -4305,13 +4305,25 @@ div[disabled] {
 
 
 
+/*------------------ Firefox only ---------------*/
 
 
+@-moz-document url-prefix() {
+
+  .rem-rc-menu-box h2 {
+    color: red;
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: -0.1rem;
+    text-align: center;
+    font-family: Calibri, "Segoe UI", Arial, sans-serif;
+    margin-top: -10px;
+}
+
+}
 
 
-
-
-
+/*------------------ Firefox only end---------------*/
 
 
 
