@@ -4264,7 +4264,7 @@ div[disabled] {
 
 .pay-invoice-form .pi-title{
         border:1px solid #010101;
-        height: 50px;
+        min-height: 50px;
         width:100%;
         padding:10px 0 0 0;
 }
@@ -4273,7 +4273,7 @@ div[disabled] {
     font-size: 18px;
     color: #010101;
     text-align: center;
-    line-height: 12px;
+    line-height: 15px;
     font-weight: 600;
 }
 
@@ -4301,7 +4301,7 @@ div[disabled] {
 
 .remit-pay-lab label strong {
     color: #000000;
-    font-size:17px;
+    font-size:16px;
     line-height:27px;
     font-weight: 700;
     text-align: left;
@@ -4313,7 +4313,7 @@ div[disabled] {
 
 .remit-pay-lab label {
     color: #000000;
-    font-size:16px;
+    font-size:15px;
     line-height: 27px;
     font-weight: 500;
     text-align: left;
