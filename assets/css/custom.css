@@ -840,7 +840,7 @@ header.page-headr{
     font-size: 0.950rem;
     display: block;
     border-bottom: none;
-    color: #010101;
+    color: #000000;
     text-align: left;
 }
 
@@ -854,7 +854,7 @@ header.page-headr{
 /*service select -----------------------------------------------------------*/
 
 .select-box {
-    padding: 10px;
+    padding:10px;
     maragin:30% auto 20% auto   
 }
 
@@ -3871,7 +3871,7 @@ div[disabled] {
 }
 
 .disclaimer-home p {
-    font-size: 10px !important;
+    font-size: 11px !important;
     line-height: 11px;
     font-weight: 500 !important;
     margin-bottom: 0px !important;
@@ -4013,16 +4013,31 @@ div[disabled] {
     font-size: 16px !important;
 }
 
+.remit-menu-list {
+    text-indent: 20px;
+    line-height: 5px;
+}
+
+
 .remit-menu-list1 {
-    line-height:6px;
+    line-height:5px;
     border: none;
     font-family: 'Agency FB', sans-serif;
     font-size: 16px;
     color:#000000;
 }
 
+.remit-menu-list1 span {
+    display: inline-table;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.remit-menu-list1 small {
+    color: #555555;
+}
+
 .remit-menu-list1 a {
-     
     font-size: 16px !important;
 }
 
@@ -4122,6 +4137,8 @@ div[disabled] {
 .remit-payment-page {
     /*border:1px solid;*/
     padding: 10px;
+    font-family: calibri;
+
 }
 
 
@@ -4135,7 +4152,7 @@ div[disabled] {
     text-align: justify;
     padding: 10px;
     font-weight: 500;
-    line-height: 12px;
+    line-height: 13px;
 }
 
 .remit-payment-page .paydis p strong {
@@ -4143,16 +4160,16 @@ div[disabled] {
 }
 
 .remit-pay-lab-box {
-    min-height: 35px;
+    min-height:28px;
     border: 1px solid #a7a5a5 !important;
 /*    background-color: #e3e5e5bf;*/
 }
 
 .remit-pay-lab-box label {
     color: #000000;
-    font-size: 1.2rem;
-    line-height: 31px;
-    font-weight: bold;
+    font-size: 1.5rem;
+    line-height:28px;
+    font-weight:500;
     text-align: left;
     display: block;
     margin: auto;
@@ -4160,7 +4177,7 @@ div[disabled] {
 }
 
 .remit-pay-input-box {
-    min-height: 35px;
+    min-height:28px;
     border: 1px solid #a7a5a5 !important;
 }
 
@@ -4170,12 +4187,12 @@ div[disabled] {
 
 .remit-pay-input-box .form-control {
     text-align: left;
-    font-weight: 700;
+    font-weight: 500;
     color: #000000;
-    font-size: 15px;
-    min-height: 30px;
+    font-size: 16px;
+    min-height: 28px;
     border-radius: 0px;
-    padding: 5px 10px;
+    padding: 2px 10px;
     border-top: 0px;
 }
 
@@ -4186,10 +4203,10 @@ div[disabled] {
     width: 100%;
     padding: .375rem 2.25rem .375rem .75rem;
     -moz-padding-start: calc(0.75rem - 3px);
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    line-height: 1.5;
-    min-height: 30px;
+    line-height: 1.1;
+    min-height: 28px;
     color: var(--bs-body-color);
     background-color: var(--bs-form-control-bg);
     background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
@@ -4206,34 +4223,35 @@ div[disabled] {
 
 
 .remit-payment-page button.save {
-    background-color: #cc0000;
+    background-color: red;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
-    border: 1px solid #1b1b1b;
+    border: 2px solid #1b1b1b;
     padding: 5px;
     width: 100%;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .remit-payment-page button.submit {
     background-color:green;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
-    border: 1px solid #1b1b1b;
+    border: 2px solid #1b1b1b;
     padding: 5px;
     width: 100%;
-    margin-top:10px;
+    margin-top: 10px;;
 }
 
 .remit-payment-page .note p {
-    font-size: 11px;
+    font-weight: bold;
+    font-size: 13px;
     color: red;
-    line-height: 14px;
+    line-height: 15px;
     margin-bottom: 0px;
-    margin-top: 5px;
-    text-align: justify;
+    margin-top: 8px;
+    text-align: right;
 }
 
 .remit-payment-page .note p span {
@@ -4252,10 +4270,10 @@ div[disabled] {
 }
 
 .pay-invoice-form .pi-title h4 {
-    font-size: 12px;
+    font-size: 18px;
     color: #010101;
     text-align: center;
-    line-height: 10px;
+    line-height: 12px;
     font-weight: 600;
 }
 
@@ -4267,12 +4285,12 @@ div[disabled] {
 }
 
 .pay-invoice-form .pi-address p {
-    font-size: 12px;
+    font-size: 15px;
     color: #010101;
     text-align: center;
-    line-height: 12px;
+    line-height: 14px;
     font-weight: 500;
-    margin:0px 5%;
+    margin: 0px 5%;
 }
 
 .remit-pay-lab {
@@ -4281,9 +4299,21 @@ div[disabled] {
     /* background-color: #e3e5e5bf; */
 }
 
+.remit-pay-lab label strong {
+    color: #000000;
+    font-size: 1.4rem;
+    line-height: 27px;
+    font-weight: 700;
+    text-align: left;
+    display: block;
+    margin: auto;
+    text-indent: 10px;
+    font-style: italic;
+}
+
 .remit-pay-lab label {
     color: #000000;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     line-height: 27px;
     font-weight: 500;
     text-align: left;
@@ -4296,6 +4326,64 @@ div[disabled] {
     min-height: 27px;
     border: 1px solid #010101;
     /* background-color: #e3e5e5bf; */
+}
+
+.remit-pay-input label{
+    
+    color: #000000;
+    font-size: 1.4rem;
+    line-height: 27px;
+    font-weight: 600;
+    text-align: left;
+    display: block;
+    margin: auto;
+    text-indent: 10px;
+     
+}
+
+.remit-pay-input h2{
+    
+    color: #000000;
+    font-size: 2.0rem;
+    line-height: 40px;
+    font-weight: 600;
+    text-align: left;
+    display: block;
+    margin: auto;
+    text-indent: 10px;
+     
+}
+
+.remit-pay-textare {
+    min-height:70px;
+    border: 1px solid #010101;
+    /* background-color: #e3e5e5bf; */
+}
+
+.remit-pay-textare label{
+    
+    color: #000000;
+    font-size: 1.2rem;
+    line-height: 27px;
+    font-weight: 500;
+    text-align: left;
+    display: block;
+    margin: auto;
+    text-indent: 10px;
+     
+}
+
+.remit-pay-textare p{
+    
+    color: #000000;
+    font-size: 1.4rem;
+    line-height: 27px;
+    font-weight: 500;
+    text-align: left;
+    display: block;
+    margin: auto;
+    text-indent: 10px;
+     
 }
 
 
@@ -4329,6 +4417,225 @@ div[disabled] {
 }
 
 
+.send-receive-page h3 {
+    line-height:25px;
+    font-family: 'Agency FB', sans-serif;
+    font-size:18px;
+    color: #010101;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.sc-table {
+    font-family: calibri;
+}
+
+.sc-table .table-green {
+    --bs-table-color: #000000;
+    --bs-table-bg: #10f004;
+    --bs-table-border-color: #373b3e;
+    --bs-table-striped-bg: #2c3034;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+    color: var(--bs-table-color);
+    border-color: var(--bs-table-border-color);
+}
+
+.sc-table table td, table tr {
+    border-color: #010101;
+    font-size: 14px;
+    color: #000000;
+}
+
+.sc-table table th {
+    text-align: center;
+    font-weight: 500;
+    line-height: 14px;
+    min-height:15px;
+    height: 30px;
+    font-size: 15px
+}
+
+.sc-table table th span { 
+    display: block;
+}
+
+.sc-table .table>:not(caption)>*>* {
+    padding: .3rem .5rem;
+}
+
+.sc-table .table-bordered>:not(caption)>*>* {
+    border-width: 2px
+}
+
+.master-agent-page {}
+
+.master-agent-page h3 {
+    line-height: 25px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 18px;
+    color: #010101;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.master-agent-page .ma-input-box {
+    height: 30px;
+    border: 1.5px solid #000000;
+    line-height: 28px;
+    font-family: calibri;
+    font-size: 14px;
+    color: #000000;
+}
+
+.master-agent-page .ma-input-box p{
+    text-align: center;
+}
+
+.g-bg {
+    background-color: #10f004;
+}
+
+.master-agent-page .ma-label {
+    text-align: center;
+    color:#000000;
+        font-size: 16px;
+}
+
+.master-agent-page .ma-input-box .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    min-height:26px;
+    border-radius: 0px;
+    padding:2px 10px;
+    border-top: 0px;
+}
+
+
+.ec-page {
+    font-family: calibri;
+}
+
+.ec-page h2 {
+    line-height: 30px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 26px;
+    color: #010101;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.ec-form {
+    /*border-left:1.5px solid #000000;
+     border-right:1.5px solid #000000;*/
+}
+
+.ec-form .ec-input-box {
+    height: 30px;
+    border: 1.5px solid #000000;
+    line-height: 28px;
+    font-family: calibri;
+    color: #000000;
+}
+
+.ec-form .ma-label {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-indent: 10px;
+}
+
+.ec-form .ec-input-box .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    min-height:26px;
+    border-radius: 0px;
+    padding:2px 10px;
+    border-top: 0px;
+}
+
+
+.ec-form  button.submit {
+    background-color: #10f004;
+    color: #000000;
+    font-size: 27px;
+    font-weight: bold;
+    border: 2px solid #000000;
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ec-form textarea {
+    border-color: #000000 !important;
+    border-radius: 0;
+    /*border:none !important;*/
+}
+
+.ec-disclaimer {
+    Padding: 0px 5px 0px 0px;
+    font-family: calibri;
+    border: 1px solid #ddd;
+}
+
+.ec-disclaimer p {
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+    padding: 10px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+
+p.pc-text {
+    margin: 10px;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+.ec-disclaimer {
+    Padding: 0px 5px 0px 0px;
+    font-family: calibri;
+    border: 1px solid #ddd;
+}
+
+
+.pc-disclaimer {
+    Padding: 10px;
+    font-family: calibri;
+    border: 1px solid #000000;
+}
+
+.pc-disclaimer p {
+    font-size: 15px;
+    color: #000000;
+    text-align: left;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+.ec-form input.form-control::placeholder {
+  color: #010101;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.ec-form textarea.form-control::placeholder {
+  color: #010101;
+  opacity: 0.8;
+  font-weight: 500;
+}
 
 
 
@@ -4337,6 +4644,53 @@ div[disabled] {
 
 
 
+
+
+
+
+
+
+/*------------------ money change - rate check page style ----------------*/
+
+.rate-check-box18 {
+    position: relative;
+    border: 2px solid #010101;
+    padding:8px 8px 5px;
+    min-height: 200px;
+    font-family: calibri;
+    background-color: #20FB15;
+}
+
+.rate-check-box18 h2 {
+    color: #000000;
+    font-size: 31px;
+    font-weight:600;
+    margin-bottom:5px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.rate-check-box18 h6 {
+    color: #000000;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:5px;
+    line-height:16px;
+    text-align: center;
+}
+
+.rate-check-box18 p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    line-height: 16px;
+    text-align: center;
+}
+
+
+
+/*------------ end --------------*/
 
 
 
