@@ -4301,8 +4301,8 @@ div[disabled] {
 
 .remit-pay-lab label strong {
     color: #000000;
-    font-size: 1.4rem;
-    line-height: 27px;
+    font-size:17px;
+    line-height:27px;
     font-weight: 700;
     text-align: left;
     display: block;
@@ -4313,7 +4313,7 @@ div[disabled] {
 
 .remit-pay-lab label {
     color: #000000;
-    font-size: 1.2rem;
+    font-size:16px;
     line-height: 27px;
     font-weight: 500;
     text-align: left;
@@ -4331,7 +4331,7 @@ div[disabled] {
 .remit-pay-input label{
     
     color: #000000;
-    font-size: 1.4rem;
+    font-size:17px;
     line-height: 27px;
     font-weight: 600;
     text-align: left;
@@ -4344,7 +4344,7 @@ div[disabled] {
 .remit-pay-input h2{
     
     color: #000000;
-    font-size: 2.0rem;
+    font-size:24px;
     line-height: 40px;
     font-weight: 600;
     text-align: left;
