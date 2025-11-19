@@ -4277,15 +4277,15 @@ div[disabled] {
     font-weight: 600;
 }
 
-.pay-invoice-form .pi-address{
-        border:1px solid #010101;
-        height: 60px;
-        width:100%;
-        padding:10px 0 0 0;
+.pay-invoice-form .pi-address {
+    border: 1px solid #010101;
+    min-height: 60px;
+    width: 100%;
+    padding: 5px 0 5px 0;
 }
 
 .pay-invoice-form .pi-address p {
-    font-size: 15px;
+    font-size: 14px;
     color: #010101;
     text-align: center;
     line-height: 14px;
@@ -4448,6 +4448,7 @@ div[disabled] {
     border-color: #010101;
     font-size: 14px;
     color: #000000;
+    line-height: 13px;
 }
 
 .sc-table table th {
@@ -4735,12 +4736,12 @@ p.pc-text {
     }
 
     .remit-customer-page .pr-0  {
-        padding-right: 15px;
+        padding-right: 10px;
     }
 
    .remit-customer-page .pl-0 {
         padding-left: 10px;
-        padding-right: 15px;
+        padding-right: 10px;
     }
 
     .rem-rc-menu-box h2 {
