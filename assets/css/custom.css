@@ -103,8 +103,11 @@ header.page-headr{
 
 
 #sidebar ul li a:hover, #sidebar ul li a.active {
-    color: #fff;
-    background: #cc0000;
+    color: #000000;
+    background:#18e60d;
+    /*background: #cc0000;
+    color: #fff;*/
+    
 }
 
 
@@ -139,15 +142,11 @@ header.page-headr{
    border-right: 2px solid #010101;
 }
 
-
-
-
 #sidebar .sidebar-header {
     padding: 0.4rem 1rem 1rem;
-    border-bottom: 1px solid rgba(101, 109, 119, .16);
+    border-bottom: 0px solid rgba(101, 109, 119, .16);
     max-height: 60px;
 }
-
 
 .form-control:focus {
     color: var(--bs-body-color);
@@ -157,7 +156,6 @@ header.page-headr{
     box-shadow:none;
 }
 
- 
 
 /*.footer {
   position: relative;
@@ -3454,6 +3452,22 @@ div[disabled] {
 /*-------------------- ppt v-1 page style------------------------------------------------------------------------*/
 
 
+@media (max-width:767px) {
+    #body.active .navbar-collapse {
+        display: block !important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+}
+
+.logout-style {
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #000000;
+}
+
 @font-face {
   font-family: 'Agency FB';  
   src: url('../font/AgencyFB.woff2') format('woff2'),
@@ -3463,6 +3477,7 @@ div[disabled] {
   font-weight: normal;  
   font-style: normal;  
 }
+
 
 .rem-rc-reg-container {
     position:relative;
@@ -3805,17 +3820,16 @@ div[disabled] {
 .send-now-btn h1 {
     font-weight: 700;
     font-size: 30px;
-    color: #
-    000000;
+    color:#000000;
     margin-bottom:0px;
 }
 
 .disclaimer-home p {
-    font-size: 10px;
+    font-size:12px;
     color: #000000;
     border: 2px solid #ffffff;
     border-radius: 2px;
-    padding: 10px;
+    padding:12px;
     text-align: justify;
     line-height: 12px;
     margin-bottom: 6px;
@@ -3871,8 +3885,8 @@ div[disabled] {
 }
 
 .disclaimer-home p {
-    font-size: 11px !important;
-    line-height: 11px;
+    font-size: 12px !important;
+    line-height: 12px;
     font-weight: 500 !important;
     margin-bottom: 0px !important;
 }
@@ -4147,7 +4161,7 @@ div[disabled] {
     }
 
 .remit-payment-page .paydis p {
-    font-size: 11px;
+    font-size:12px;
     color: #000000;
     text-align: justify;
     padding: 10px;
@@ -4693,9 +4707,130 @@ p.pc-text {
 
 /*------------ end --------------*/
 
+/*sender and receiver form ---------------------------------*/
+
+
+.sr-form-page {
+    font-family: calibri;
+
+}
+
+.sf-form {
+
+    display: block;
+    border:1px solid #dddddd;
+    /*padding:5px;*/
+
+}
+
+.sf-form .sf-form-head {
+    background-color:#f2e9bd;
+    padding:5px;
+}
+
+.sf-form h1 {
+    font-size: 25px;
+    color: #010101;
+    font-style: italic;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+
+.bb-row {
+    border:1px solid #010101;
+}
+
+.gb-row {
+    border: 1px solid #555555;
+}
+
+.sf-form .sf-label-h {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 13px;
+    color: #000000;
+    padding: 3px 5px;
+}
+
+.sf-form .sf-input-box-h {
+    height: 27px;
+/*    border: 1.5px solid #000000;*/
+    line-height: 25px;
+    font-family: calibri;
+    color: #000000;
+}
+
+.sf-form .sf-input-box-h .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    min-height: 25px;
+    border-radius: 0px;
+    padding: 2px 10px;
+    border-top: 0px;
+    margin: 5px 0;
+}
+
+.gbb-row {
+    border: 1px solid #555555;
+}
+
+.sf-form .sf-label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 10px;
+    color: #000000;
+    padding: 5px 5px;
+    background-color: #ffffff;
+}
+
+.sf-form .sf-label span {
+    color: red;
+    text-align: right;
+    font-weight: 600;
+    font-size: 13px;
+    display: block;
+}
+
+.sf-form .sf-input-box {
+    height: 30px;
+    line-height: 25px;
+    color: #000000;
+    background-color:#fce9d9;
+}
+
+.sf-form .sf-input-box .form-control {
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    font-size: 15px;
+    min-height: 30px;
+    border-radius: 0px;
+    padding:3px 10px;
+    border-top: 0px;
+    background-color:#fce9d9;
+    font-family: calibri;
+}
+
+.bg-gry-r {
+    background-color:#fce9d9;
+}
 
 
 
+
+
+
+
+
+
+
+
+/*------------ end --------------*/
 
 
 /*------------------ Firefox only ---------------*/
@@ -4731,8 +4866,11 @@ p.pc-text {
         min-height:150px;
     }
 
-    .sm-logo {
+    /*.sm-logo {
        width:80%;
+    }*/
+    .sm-logo {
+       width:100%;
     }
 
     .remit-customer-page .pr-0  {
