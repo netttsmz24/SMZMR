@@ -4248,8 +4248,8 @@ div[disabled] {
 }
 
 .remit-payment-page button.submit {
-    background-color:green;
-    color: #ffffff;
+    background-color:#10f004;
+    color: #000000;
     font-size: 24px;
     font-weight: bold;
     border: 2px solid #1b1b1b;
@@ -4707,6 +4707,7 @@ p.pc-text {
 
 /*------------ end --------------*/
 
+
 /*sender and receiver form ---------------------------------*/
 
 
@@ -4724,16 +4725,39 @@ p.pc-text {
 }
 
 .sf-form .sf-form-head {
-    background-color:#f2e9bd;
-    padding:5px;
+    background-color: #f2e9bd;
+    padding: 5px 0px 0px;
 }
 
 .sf-form h1 {
-    font-size: 25px;
+    font-size: 24px;
     color: #010101;
+    font-style: italic;
+    line-height: 26px;
+    font-weight: bold;
+    text-indent: 10px;
+}
+
+.sf-form h1 span { display:block; }
+
+
+.sf-form h2 {
+    font-size: 17px;
+    color: red;
+    font-style: italic;
+    line-height:20px;
+    font-weight: bold;
+    text-indent: 10px;
+}
+
+.sf-form h3 {
+    font-size: 15px;
+    color:#010101;
     font-style: italic;
     line-height: 30px;
     font-weight: bold;
+    text-indent: 10px;
+    border: 1px solid #000000;
 }
 
 
@@ -4774,13 +4798,14 @@ p.pc-text {
     margin: 5px 0;
 }
 
+
 .gbb-row {
     border: 1px solid #555555;
 }
 
 .sf-form .sf-label {
     text-align: left;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     line-height: 10px;
     color: #000000;
@@ -4797,7 +4822,7 @@ p.pc-text {
 }
 
 .sf-form .sf-input-box {
-    height: 30px;
+    min-height: 30px;
     line-height: 25px;
     color: #000000;
     background-color:#fce9d9;
@@ -4816,9 +4841,127 @@ p.pc-text {
     font-family: calibri;
 }
 
-.bg-gry-r {
-    background-color:#fce9d9;
+.sf-input-box input.form-control::placeholder {
+  color: #000000;
+  opacity: 0.4;
+  font-size: 14px;
+  font-weight: 500;
+
 }
+
+.sf-form .form-control[type=file] {
+    height: 30px;
+    background-color: #ffc107;
+    border-radius: 0px;
+    font-weight: normal;
+}
+
+.sf-form input[type="date"] {
+    height: 30px !important;
+    font-weight:700;
+    font-size: 14px !important;
+}
+
+.sf-form input[type="select"] {
+    height: 30px !important;
+    font-weight: normal !important;
+    font-size: 14px !important;
+}
+
+.sf-form .form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    display: block;
+    width: 98%;
+    padding: .275rem 1.25rem .275rem .75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #010101;
+    background-color: transparent;
+    background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
+    background-repeat: no-repeat;
+    background-position: right .55rem center;
+    background-size: 16px 22px;
+    /* border: var(--bs-border-width) solid var(--bs-border-color); */
+    border-radius: 0rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* border: 1px solid #3c5170; */
+    border-top: 0px;
+    min-height: 29px;
+}
+
+.sf-input-box textarea {
+    border-radius: 0px;
+    margin: 2px;
+    width: 98%;
+    border: none;
+}
+
+.sf-form-body button.save {
+    background-color:red;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    border:2px solid #1b1b1b;
+    width: 100%;
+    margin:5px 0;
+}
+
+.sf-form-body button.submit {
+    background-color:#10f004;
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    border:2px solid #1b1b1b;
+    width: 100%;
+    margin: 5px 0; 
+}
+
+.sf-form-body .sf-individual-link {
+     padding:5px 10px;
+}
+
+.sf-form-body .sf-individual-link h4 {
+    line-height: 22px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+    margin-bottom:5px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+
+.sf-form-body .sf-individual-link h4 strong {
+    color:red;
+}
+
+.sf-form-body .sf-individual-link h5 {
+    line-height: 15px;
+    font-family: calibri;
+    font-size: 14px;
+    color: #434040;
+    text-align: justify;
+    margin-bottom: 10px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+
+.sf-form-body .sf-individual-link h5 strong {
+    color:red;
+}
+
+ 
+
+
+
+
 
 
 
@@ -4861,6 +5004,33 @@ p.pc-text {
 
 
 @media only screen and (max-width:767px) {
+
+    .sf-form h1 {
+        font-size: 20px;
+        color: #010101;
+        font-style: italic;
+        line-height: 26px;
+        font-weight: bold;
+        text-indent: 10px;
+    }
+
+    .sf-form .sf-label {
+        text-align: left;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #000000;
+        padding: 5px 5px;
+        background-color: #ffffff;
+    }
+
+    .gbb-row {
+        border: 0px solid #555555;
+    }
+    .gb-row {
+        border: 0px solid #555555;
+    }
+
 
     .rem-rc-box-w, .rem-rc-box-l {
         min-height:150px;
