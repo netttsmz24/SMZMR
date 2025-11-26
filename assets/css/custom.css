@@ -109,8 +109,8 @@ header.page-headr{
 
 
 #sidebar ul li a:hover, #sidebar ul li a.active {
-    color: #000000;
-    background:#18e60d;
+    background-color: #198754;
+    color: #ffffff;
     /*background: #cc0000;
     color: #fff;*/
     
@@ -152,7 +152,7 @@ header.page-headr{
     padding: 0.4rem 1rem 1rem;
 /*    border-bottom: 2px solid #010101;*/
     border-bottom: 1px solid rgba(101, 109, 119, .16);
-    max-height: 70px;
+    max-height:60px;
 }
 
 .form-control:focus {
@@ -830,9 +830,14 @@ header.page-headr{
     color:#f42804;
  }*/
 
+#sidebar ul li a .fas {
+    min-width: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
 
 #sidebar ul li a {
-    padding: .6rem 1.5rem;
+    padding: .7rem 1.5rem;
     font-size: 13px;
     border-bottom: 1px solid #e4e6e9;
     color: #010101;
@@ -841,9 +846,14 @@ header.page-headr{
     display: flex;
 }
  
-#sidebar ul li .select-smenu {
+/*#sidebar ul li .select-smenu {
     background-color: #a7dec5;
     color: #000000;
+}*/
+
+#sidebar ul li .select-smenu {
+    background-color: #198754;
+    color: #ffffff;
 }
 
 /*#sidebar ul li a {
@@ -3729,7 +3739,7 @@ div[disabled] {
 
 .rem-rc-box h5 {
     display: block;
-    font-size: 16px;
+    font-size:13px;
     border: 3px solid yellow;
     padding: 10px;
     font-weight: 600;
@@ -3920,7 +3930,7 @@ div[disabled] {
 
 .disclaimer-home p {
     font-size: 12px !important;
-    line-height: 12px;
+    line-height: 13px;
     font-weight: 500 !important;
     margin-bottom: 0px !important;
 }
