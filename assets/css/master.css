@@ -107,7 +107,7 @@ body {
 
 #body>.navbar {
     padding: 0 1.5rem;
-    min-height: 60px;
+    min-height: 67px;
     box-shadow: none;
     border-bottom: 1px solid rgba(101, 109, 119, .16);
 }
