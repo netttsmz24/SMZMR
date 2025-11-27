@@ -837,12 +837,12 @@ header.page-headr{
 }
 
 #sidebar ul li a {
-    padding: .7rem 1.5rem;
+    padding: .8rem 1.5rem;
     font-size: 13px;
     border-bottom: 1px solid #e4e6e9;
     color: #010101;
     text-align: left;
-    line-height: 16px;
+    line-height: 15px;
     display: flex;
 }
  
@@ -4202,35 +4202,44 @@ div[disabled] {
 
 }
 
+.remit-page-head h3 {
+    line-height: 30px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 24px;
+    color: #010101b3;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
 
 .remit-payment-page .paydis {
     border: 1px solid #010101 !important;
     }
 
 .remit-payment-page .paydis p {
-    font-size:12px;
-    color: #000000;
+    font-size: 12px;
+    color: #010101;
     text-align: justify;
     padding: 10px;
-    font-weight: 500;
-    line-height: 13px;
+    font-weight: 400;
+    line-height: 14px;
 }
 
 .remit-payment-page .paydis p strong {
-    font-weight: bold;
+    font-weight:600 !important;
 }
 
 .remit-pay-lab-box {
     min-height:28px;
-    border: 1px solid #a7a5a5 !important;
+    border: 1px solid #dcd9d9c4 !important;
 /*    background-color: #e3e5e5bf;*/
 }
 
 .remit-pay-lab-box label {
-    color: #000000;
-    font-size: 1.5rem;
-    line-height:28px;
-    font-weight:500;
+    color: #010101;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 500;
     text-align: left;
     display: block;
     margin: auto;
@@ -4239,7 +4248,7 @@ div[disabled] {
 
 .remit-pay-input-box {
     min-height:28px;
-    border: 1px solid #a7a5a5 !important;
+    border: 1px solid #dcd9d9c4 !important;
 }
 
 .remit-pay-input-box input {
@@ -4248,9 +4257,9 @@ div[disabled] {
 
 .remit-pay-input-box .form-control {
     text-align: left;
-    font-weight: 500;
+    font-weight: 600;
     color: #000000;
-    font-size: 16px;
+    font-size: 14px;
     min-height: 28px;
     border-radius: 0px;
     padding: 2px 10px;
@@ -4264,11 +4273,11 @@ div[disabled] {
     width: 100%;
     padding: .375rem 2.25rem .375rem .75rem;
     -moz-padding-start: calc(0.75rem - 3px);
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 600;
     line-height: 1.1;
     min-height: 28px;
-    color: var(--bs-body-color);
+    color:#000000;
     background-color: var(--bs-form-control-bg);
     background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none);
     background-repeat: no-repeat;
@@ -4283,35 +4292,51 @@ div[disabled] {
 }
 
 
-.remit-payment-page button.save {
+.remit-payment-page button.rpp-save {
     background-color: red;
     color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    border: 2px solid #1b1b1b;
-    padding: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    border: 0px solid #1b1b1b;
+    padding: 8px 5px;
     width: 100%;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
-.remit-payment-page button.submit {
-    background-color:#10f004;
-    color: #000000;
-    font-size: 24px;
-    font-weight: bold;
-    border: 2px solid #1b1b1b;
-    padding: 5px;
+button.rpp-save:hover {
+    color: #ffffff;
+    background-color:#cc0000;
+    border-color:#cc0000;
+}
+
+
+
+.remit-payment-page button.rpp-submit {
+    background-color:#198754;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    border: 0px solid #1b1b1b;
+    padding: 8px 5px;
     width: 100%;
-    margin-top: 10px;;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button.rpp-submit:hover {
+    color: #ffffff;
+    background-color: #157347;
+    border-color:#146c43;
 }
 
 .remit-payment-page .note p {
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: 600;
+    font-size: 12px;
     color: red;
-    line-height: 15px;
+    line-height: 16px;
     margin-bottom: 0px;
-    margin-top: 8px;
+    margin-top: 10px;
     text-align: right;
 }
 
