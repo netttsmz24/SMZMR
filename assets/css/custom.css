@@ -4217,7 +4217,7 @@ div[disabled] {
     }
 
 .remit-payment-page .paydis p {
-    font-size: 12px;
+    font-size: 11px;
     color: #010101;
     text-align: justify;
     padding: 10px;
@@ -4345,27 +4345,33 @@ button.rpp-submit:hover {
 }
 
 .pay-invoice-form {
-
+    background-color: #ffffff;
+    border: 0.5px solid #010101;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.pay-invoice-form .pi-title{
-        border:1px solid #010101;
-        min-height: 50px;
-        width:100%;
-        padding:10px 0 0 0;
+.pay-invoice-form .pi-title {
+    border: 1px solid #010101;
+    min-height: 50px;
+    width: 100%;
+    padding: 10px 0 0 0;
+    background-color: #198754;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .pay-invoice-form .pi-title h4 {
-    font-size: 18px;
-    color: #010101;
+    font-size: 15px;
+    color: #ffffff;
     text-align: center;
     line-height: 15px;
     font-weight: 600;
 }
 
 .pay-invoice-form .pi-address {
-    border: 1px solid #010101;
-    min-height: 60px;
+    border: 0px solid #010101;
+    min-height:40px;
     width: 100%;
     padding: 5px 0 5px 0;
 }
@@ -4374,20 +4380,31 @@ button.rpp-submit:hover {
     font-size: 14px;
     color: #010101;
     text-align: center;
-    line-height: 14px;
+    line-height: 16px;
     font-weight: 500;
-    margin: 0px 5%;
+    padding: 5px 15px;
+    margin-bottom: 0px;
+}
+
+.remit-pay-stitle {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 27px;
+    color: #000000;
+    background-color: #373c3a21;
+    text-indent: 10px;
+    border: 0.5px solid #0000002d;
 }
 
 .remit-pay-lab {
     min-height:27px;
-    border: 1px solid #010101;
-    /* background-color: #e3e5e5bf; */
+    border: 0.5px solid #0000002d;
+    background-color: #21252908; 
 }
 
 .remit-pay-lab label strong {
     color: #000000;
-    font-size:16px;
+    font-size:14px;
     line-height:27px;
     font-weight: 700;
     text-align: left;
@@ -4399,7 +4416,7 @@ button.rpp-submit:hover {
 
 .remit-pay-lab label {
     color: #000000;
-    font-size:15px;
+    font-size:14px;
     line-height: 27px;
     font-weight: 500;
     text-align: left;
@@ -4410,14 +4427,14 @@ button.rpp-submit:hover {
 
 .remit-pay-input {
     min-height: 27px;
-    border: 1px solid #010101;
+    border: 0.5px solid #0000002d;
     /* background-color: #e3e5e5bf; */
 }
 
 .remit-pay-input label{
     
     color: #000000;
-    font-size:17px;
+    font-size:14px;
     line-height: 27px;
     font-weight: 600;
     text-align: left;
@@ -4430,7 +4447,7 @@ button.rpp-submit:hover {
 .remit-pay-input h2{
     
     color: #000000;
-    font-size:24px;
+    font-size:18px;
     line-height: 40px;
     font-weight: 600;
     text-align: left;
@@ -4441,9 +4458,15 @@ button.rpp-submit:hover {
 }
 
 .remit-pay-textare {
-    min-height:70px;
-    border: 1px solid #010101;
-    /* background-color: #e3e5e5bf; */
+    min-height: 70px;
+    border: 0.5px solid #0000002d;
+    background-color: #f8f8f8;
+}
+
+.remit-pay-textare-input {
+    min-height: 70px;
+    border: 0.5px solid #0000002d;
+    background-color: #ffffff;
 }
 
 .remit-pay-textare label{
@@ -4459,7 +4482,7 @@ button.rpp-submit:hover {
      
 }
 
-.remit-pay-textare p{
+.remit-pay-textare p, .remit-pay-textare-input p{
     
     color: #000000;
     font-size: 1.4rem;
@@ -4497,7 +4520,7 @@ button.rpp-submit:hover {
 
 .remit-pay-lab .pi-total {
     height: 40px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     line-height: 40px;
 }
@@ -4534,7 +4557,7 @@ button.rpp-submit:hover {
     border-color: #010101;
     font-size: 14px;
     color: #000000;
-    line-height: 13px;
+    line-height: 14px;
 }
 
 .sc-table table th {
@@ -4555,7 +4578,7 @@ button.rpp-submit:hover {
 }
 
 .sc-table .table-bordered>:not(caption)>*>* {
-    border-width: 2px
+    border-width:1px
 }
 
 .master-agent-page {}
