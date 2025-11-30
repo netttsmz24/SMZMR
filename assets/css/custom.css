@@ -1429,7 +1429,7 @@ header.page-headr{
         .card {
             z-index: 0;
             border: none;
-            border-radius: 0.5rem;
+            border-radius:0;
             position: relative;
         }
 
@@ -4216,7 +4216,7 @@ div[disabled] {
 .remit-page-head h3 {
     line-height: 30px;
     font-family: 'Agency FB', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     color: #010101b3;
     font-weight: 700;
     margin-bottom: 15px;
@@ -4828,8 +4828,7 @@ p.pc-text {
 
 
 .sr-form-page {
-/*    font-family: calibri;*/
-
+ 
 }
 
 .sf-form {
@@ -5074,6 +5073,199 @@ p.pc-text {
 }
 
  
+/*--------------New Clas -------------------*/
+
+.sr-form-page { clear:both; }
+
+
+.sr-form .card-header {
+    background-color: #198754;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 0;
+}
+
+.sr-form h2 {
+    font-size: 18px;
+    color: #ffffff;
+    font-style: italic;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sr-form .form-control {
+    display: block;
+    width: 100%;
+    height:29px;
+    padding: .375rem .75rem;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    /* background-color: #f7f7f7; */
+    background-clip: padding-box;
+    border: 1px solid #c4c4c4;
+    border-radius:0px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.sr-form label {
+    font-size: 13px;
+    font-weight: 550;
+    line-height: 14px;
+    padding-right: 10px;
+    color: #180a0a;
+}
+
+.sr-form label span {
+    color: red;
+    text-align: right;
+    font-weight: 600;
+    font-size: 13px;
+    display: block;
+}
+
+.sr-form input {
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0px;
+}
+
+.sr-form select {
+    border-radius: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.sr-form .form-control[type=file] {
+    height:29px;
+    background-color: #19875469;
+    border-radius: 0px;
+    font-weight: normal;
+    color: #000000;
+}
+
+.sr-form textarea {
+    border-radius: 0px;
+    width:100%;
+    min-height: 60px;
+}
+
+.sr-form .form-select {
+    height: 29px;
+    border: 1px solid #c4c4c4;
+}
+
+.sr-form .sr-form-heading {
+    background-color: #e5f4ed;
+    padding: 10px;
+    border-right: 1px solid #19875433;
+    border-left: 1px solid #19875433;
+}
+
+.sr-form .sr-form-heading label {
+    font-size: 12px;
+    font-weight: 550;
+    line-height: 13px;
+    color: #292f30;
+}
+
+.sr-form .sr-individual-link {
+    margin: 5px 0px;
+}
+
+.sr-form .sr-individual-link h5 {
+    line-height: 14px;
+     font-family:inherit; 
+    font-size: 13px;
+    color: #434040;
+    text-align: justify;
+    margin-bottom: 10px;
+    font-weight: 500;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+
+.sr-form .sr-individual-link h4 {
+    line-height: 22px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+.sr-form .sr-individual-link h4 strong, 
+.sr-form .sr-individual-link h5 strong {
+    color: red;
+}
+
+.sr-form .sr-individual-link h4 span, 
+.sr-form .sr-individual-link h5 span {
+    display: block;
+}
+
+.sr-form button.save {
+    background-color: red;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    border: 0px solid #1b1b1b;
+    padding: 8px 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sr-form button.save:hover {
+    color: #ffffff;
+    background-color: #cc0000;
+    border-color: #cc0000;
+}
+
+.sr-form button.submit {
+    background-color: #198754;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    border: 0px solid #1b1b1b;
+    padding: 8px 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sr-form button.submit:hover {
+    color: #ffffff;
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*------------ end --------------*/
 
@@ -5224,15 +5416,18 @@ p.pc-text {
 }
 
 
-/*@media only screen and (min-width:1024px) {
+@media only screen and (max-width:1024px) {
 
-    #sidebar {
-
-        border-right: 2px solid #010101;
-        min-height:540px;
+    .sr-form label {
+        font-size: 13px;
+        font-weight: 550;
+        line-height: 24px;
+        padding-right: 10px;
+        color: #180a0a;
+       
     }
 
-}*/
+}
 
 
 
