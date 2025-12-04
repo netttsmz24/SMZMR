@@ -5117,9 +5117,11 @@ p.pc-text {
 .sr-form label {
     font-size: 13px;
     font-weight: 550;
-    line-height: 14px;
+    line-height: 100%;
     padding-right: 10px;
     color: #180a0a;
+    margin: auto;
+    vertical-align: middle;
 }
 
 .sr-form label span {
