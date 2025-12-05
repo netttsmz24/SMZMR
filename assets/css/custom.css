@@ -864,8 +864,12 @@ header.page-headr{
 }*/
 
 #sidebar ul li .select-smenu {
-    background-color: #198754;
-    color: #ffffff;
+    /*background-color: #198754;
+    color: #ffffff;*/
+    background-color:#65ef08;
+    color: #000000;
+    font-weight: bold;
+    
 }
 
 /*#sidebar ul li a {
@@ -5078,20 +5082,28 @@ p.pc-text {
 .sr-form-page { clear:both; }
 
 
-.sr-form .card-header {
+/*.sr-form .card-header {
     background-color: #198754;
     color: #ffffff;
     font-size: 15px;
     border-radius: 0;
+}*/
+
+.sr-form .card-header {
+    background-color:#65ef08;
+    color: #000000;
+    font-size: 15px;
+    border-radius: 0;
+    min-height: 45px;
 }
 
 .sr-form h2 {
     font-size: 18px;
-    color: #ffffff;
+    /* color: #ffffff; */
     font-style: italic;
-    line-height: 20px;
     font-weight: bold;
     text-align: center;
+    margin: 6px auto;
 }
 
 .sr-form .form-control {
@@ -5110,8 +5122,10 @@ p.pc-text {
     /* background-color: #f7f7f7; */
     background-clip: padding-box;
     border: 1px solid #c4c4c4;
+/*    border: 1px solid #010101;*/
     border-radius:0px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        text-align: right;
 }
 
 .sr-form label {
@@ -5119,13 +5133,20 @@ p.pc-text {
     font-weight: 550;
     line-height: 100%;
     padding-right: 10px;
-    color: #180a0a;
+    color: #413e3e;
     margin: auto;
     vertical-align: middle;
+    text-align: right;
+}
+
+.sr-form .srlab {
+    background-color: #65ef08;
+    padding: 5px 0;
+    text-align: right;
 }
 
 .sr-form label span {
-    color: red;
+    color:red;
     text-align: right;
     font-weight: 600;
     font-size: 13px;
@@ -5140,17 +5161,18 @@ p.pc-text {
 
 .sr-form select {
     border-radius: 0px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     line-height: 18px;
 }
 
 .sr-form .form-control[type=file] {
-    height:29px;
-    background-color: #19875469;
+    height: 29px;
+    background-color: #65ef08;
     border-radius: 0px;
     font-weight: normal;
     color: #000000;
+    line-height: 20px;
 }
 
 .sr-form textarea {
@@ -5162,6 +5184,7 @@ p.pc-text {
 .sr-form .form-select {
     height: 29px;
     border: 1px solid #c4c4c4;
+        text-align: right;
 }
 
 .sr-form .sr-form-heading {
@@ -5176,6 +5199,7 @@ p.pc-text {
     font-weight: 550;
     line-height: 13px;
     color: #292f30;
+    text-align: left;
 }
 
 .sr-form .sr-individual-link {
@@ -5195,7 +5219,7 @@ p.pc-text {
 }
 
 .sr-form .sr-individual-link h4 {
-    line-height: 22px;
+    line-height: 25px;
     font-family: 'Agency FB', sans-serif;
     font-size: 18px;
     color: #000000;
