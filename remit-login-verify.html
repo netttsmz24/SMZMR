@@ -199,7 +199,7 @@
                                         </div>
                                         
                                         <div class="rem-rc-box mb-2">
-                                            <h2> Login </h2>
+                                            <h2 style="line-height:16px; font-size:22px;"> Login </h2>
 
                                              <div class="rem-rc-form">
 
@@ -208,7 +208,7 @@
                                                     <div class="col-md-12">
                                                         <div class="input-group">
                                                             <span class="input-group-text">Nationality</span>
-                                                            <select class="form-select">
+                                                            <select class="form-select" disabled>
                                                                 <option selected>choose...</option>
                                                                 <option value="1">India</option>
                                                                 <option value="2">Malaysia</option>
@@ -222,7 +222,7 @@
                                                     <div class="col-md-12">
                                                         <div class="input-group">
                                                           <span class="input-group-text">User Name</span>
-                                                          <input type="text" class="form-control" placeholder="Enter username"  required>
+                                                          <input type="text" class="form-control" placeholder="Enter username" value="Ajith Kumar"  required disabled>
                                                           <div class="valid-feedback"> Looks good! </div>
                                                         </div>
                                                     </div>
@@ -230,7 +230,7 @@
                                                     <div class="col-md-12">
                                                         <div class="input-group">
                                                           <span class="input-group-text">E-Mail</span>
-                                                          <input type="text" class="form-control" placeholder="Ex: your@mail.com" required>
+                                                          <input type="text" class="form-control" placeholder="Ex: your@mail.com" value="ajithkumar@gmail.com" required disabled>
                                                           <div class="valid-feedback"> Looks good! </div>
                                                         </div>
                                                     </div>
@@ -239,18 +239,40 @@
                                                     <div class="col-md-12">
                                                         <div class="input-group">
                                                           <span class="input-group-text">Phone No</span>
-                                                          <input type="text" class="form-control" placeholder="Ex: +91 83709 38793" required>
+                                                          <input type="text" class="form-control" placeholder="Ex: +91 83709 38793" value="9839883989" required disabled>
                                                           <div class="valid-feedback"> Looks good! </div>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-md-12">
-                                                        <div class="input-group">
-                                                          <span class="input-group-text">Password</span>
-                                                          <input type="text" class="form-control" placeholder="********" required>
-                                                          <div class="valid-feedback"> Looks good! </div>
+                                                     
+
+                                                        <div class="col-md-12">
+                                                            <div class="input-group">
+                                                              <span class="input-group-text">Password</span>
+                                                              <input type="text" class="form-control" placeholder="********" value="**********" required disabled>
+                                                              <div class="valid-feedback"> Looks good! </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="input-group">
+                                                              <label class="form-otp-label mt-2">Enter OTP {Check your Registered Email} </label>
+                                                               
+                                                              <div class="form-otp" data-coreui-toggle="otp" data-coreui-type="number">
+                                                                <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                                <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                                <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                                <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                                <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                                <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                              </div>
+
+                                                              <div class="valid-feedback"> Looks good! </div>
+                                                            </div>
+                                                        </div>
+
+                                                    
+
 
                                                     <!-- <div class="col-md-12">
                                                         <div class="input-group">
@@ -263,7 +285,7 @@
 
                                                     <div class="col-md-12 btn-container">
                                                         <div class="send-now-btn" data-bs-toggle="modal" data-bs-target="#confirmModal">
-                                                             <h1> LOGIN NOW</h1>  
+                                                             <h1> VERIFY OTP</h1>  
                                                         </div>
                                                     </div>
 
@@ -327,10 +349,10 @@
             <div class="modal-body text-center">
                 <h2> OTP </h2>
                 <!-- <i class="fas fa-exclamation-triangle warning-icon"></i> -->
-                <p class="mb-0">(one time password ) will be sent to your official mail and LINK to LOG-IN  </p>
+                <p class="mb-0">Your Login Successfully Done, </p> <p> Please Go to Dashboard   </p>
             </div>
             <div class="modal-footer">
-                <a href="remit-login-verify.html">
+                <a href="remit-dashboard.html">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">
                         OK
                     </button>
