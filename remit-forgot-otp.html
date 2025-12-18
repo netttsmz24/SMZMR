@@ -108,47 +108,47 @@
                                         <div class="rem-fp-container">
 
                                              <div class="rem-fp-box mb-2">
-                                                <h3> FORGOT <br> Password </h3>
+                                                <h3> Reset <br> Password </h3>
 
                                                  <div class="rem-rc-form">
 
                                                     <div class="row">
 
-                                                        <div class="col-md-12">
+                                                       <div class="col-md-12 mb-2 mt-2">
+
+                                                        <label class="form-otp-label">Enter OTP </label>
+                                                          <div class="form-otp" data-coreui-toggle="otp" data-coreui-type="number">
+                                                            <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                            <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                            <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                            <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                            <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                            <input class="form-otp-control" maxlength="1" pattern="[0-9]" inputmode="number">
+                                                          </div>
+                                                          <div class="valid-feedback"> Looks good! </div>
+                                                       </div>
+
+                                                        <!-- <div class="col-md-12">
                                                             <div class="input-group">
-                                                                <span class="input-group-text">Nationality</span>
-                                                                <select class="form-select">
-                                                                    <option selected>choose...</option>
-                                                                    <option value="1">India</option>
-                                                                    <option value="2">Malaysia</option>
-                                                                    <option value="3">China</option>
-                                                                </select>
-                                                                <div class="valid-feedback"> Looks good! </div>
+                                                              <span class="input-group-text">OTP</span>
+                                                              <input type="text" class="form-control" placeholder="Enter OTP"  required>
+                                                              <div class="valid-feedback"> Looks good! </div>
                                                             </div>
-                                                        </div>
-
+                                                        </div> -->
 
                                                         <div class="col-md-12">
                                                             <div class="input-group">
-                                                              <span class="input-group-text">User Name</span>
-                                                              <input type="text" class="form-control" placeholder="Enter username"  required>
+                                                              <span class="input-group-text">Password</span>
+                                                              <input type="text" class="form-control" placeholder="Enter New Password" required>
                                                               <div class="valid-feedback"> Looks good! </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                              <span class="input-group-text">E-Mail</span>
-                                                              <input type="text" class="form-control" placeholder="Ex: your@mail.com" required>
-                                                              <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
 
                                                         <div class="col-md-12">
                                                             <div class="input-group">
-                                                              <span class="input-group-text">Phone No</span>
-                                                              <input type="text" class="form-control" placeholder="Ex: +91 83709 38793" required>
+                                                              <span class="input-group-text">Re-Enter Password</span>
+                                                              <input type="text" class="form-control" placeholder="Re-Enter New Password" required>
                                                               <div class="valid-feedback"> Looks good! </div>
                                                             </div>
                                                         </div>
@@ -198,12 +198,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <h2> OTP </h2>
-                <!-- <i class="fas fa-exclamation-triangle warning-icon"></i> -->
-                <p class="mb-0">(one time password ) will be sent to your official mail and LINK to LOG-IN  </p>
+                <!-- <h2> OTP </h2> -->
+                <i class="fas success-icon"></i>
+                <p class="mb-0">Password Changed Successfully <br> Go to Login  </p>
             </div>
             <div class="modal-footer">
-                <a href="remit-forgot-otp.html">
+                <a href="remit-login.html">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">
                         OK
                     </button>

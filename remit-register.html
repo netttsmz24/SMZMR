@@ -48,7 +48,7 @@
 
                       <div class="row">
 
-                         <div class="col-md-5">
+                         <div class="col-md-4">
 
                             <a href="#"> 
                                 <img class="img-fluid mx-auto d-block" src="assets/images/new-smz-logo.png">  
@@ -56,7 +56,7 @@
 
                          </div> 
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                               
                          </div>
 
@@ -103,77 +103,6 @@
 
                                     <div class="col-md-4 col-lg-3">
 
-                                        <div class="rem-fp-container">
-
-                                             <div class="rem-fp-box mb-2">
-                                                <h3> FORGOT Password </h3>
-
-                                                 <div class="rem-rc-form">
-
-                                                    <div class="row">
-
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                                <span class="input-group-text">Nationality</span>
-                                                                <select class="form-select">
-                                                                    <option selected>choose...</option>
-                                                                    <option value="1">India</option>
-                                                                    <option value="2">Malaysia</option>
-                                                                    <option value="3">China</option>
-                                                                </select>
-                                                                <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                              <span class="input-group-text">User Name</span>
-                                                              <input type="text" class="form-control" placeholder="Enter username"  required>
-                                                              <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                              <span class="input-group-text">E-Mail</span>
-                                                              <input type="text" class="form-control" placeholder="Ex: your@mail.com" required>
-                                                              <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                              <span class="input-group-text">Phone No</span>
-                                                              <input type="text" class="form-control" placeholder="Ex: +91 83709 38793" required>
-                                                              <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
-                                                        
-
-                                                        <div class="col-md-12">
-                                                            <div class="send-now-btn">
-                                                                <h1> SUBMIT </h1>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-12">
-                                                            <div class="disclaimer-home">
-                                                                <p>
-                                                                    Main Agents for a base country is exceptionally a single entity with agents who are enrolled in finite base under the main agent ; The main agents exceptional responsibility with the agent to the client is of a personally concierge manner to cater in person to the services offered                
-      
-                                                                </p>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                 </div>           
-                                             </div>
-                                        </div>
-                                         
                                     </div>
 
                                     <div class="col-md-6 col-lg-4 order-first order-md-2">
@@ -244,13 +173,13 @@
                                                      
 
                                                     <div class="col-md-12 btn-container">
-                                                        <div class="send-now-btn" onclick="toggleDiv()">
+                                                        <div class="send-now-btn" data-bs-toggle="modal" data-bs-target="#confirmModal">
                                                            <a href="#"> <h1> SEND NOW</h1> </a>
                                                         </div>
                                                     </div>
 
 
-                                                    <div id="myDIV" style="display: none;">
+                                                <div id="myDIV" style="display: none;">
 
                                                     <div class="col-md-12 mt-2">
                                                         <div class="input-group">
@@ -298,6 +227,33 @@
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
+
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">OTP Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <h2> OTP </h2>
+                <!-- <i class="fas fa-exclamation-triangle warning-icon"></i> -->
+                <p class="mb-0">(one time password ) will be sent to your official mail and LINK to LOG-IN  </p>
+            </div>
+            <div class="modal-footer">
+                <a href="remit-login.html">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                        OK
+                    </button>
+                </a>
+
+                <!-- <button type="button" class="btn btn-danger" onclick="confirmAction()">
+                        <i class="fas fa-trash-alt me-2"></i>Delete
+                </button> -->
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 

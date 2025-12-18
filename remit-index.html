@@ -17,11 +17,11 @@
 
     <style type="text/css">
         body {
-            background-color: #20FB15 !important;
+            background-color:#20FB15 !important;
         }
     </style>
 
-    <script>
+    <!-- <script>
 
         function toggleDiv() {
           var x = document.getElementById("myDIV");
@@ -31,8 +31,7 @@
             x.style.display = "none";
           }
         }
-
-    </script>
+    </script> -->
 
 </head>
 
@@ -47,7 +46,7 @@
 
                       <div class="row">
 
-                         <div class="col-md-5">
+                         <div class="col-md-4">
 
                             <a href="#"> 
                                 <img class="img-fluid mx-auto d-block" src="assets/images/new-smz-logo.png">  
@@ -55,7 +54,7 @@
 
                          </div> 
 
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                               
                          </div>
 
@@ -159,7 +158,7 @@
 
                                         <div class="col-md-12">
                                             <div class="input-group">
-                                                <span class="input-group-text">From</span>
+                                                <span class="input-group-text">From Country</span>
                                                 <select class="form-select">
                                                     <option selected>choose...</option>
                                                     <option value="1">India</option>
@@ -172,7 +171,7 @@
 
                                         <div class="col-md-12">
                                             <div class="input-group">
-                                                <span class="input-group-text">To</span>
+                                                <span class="input-group-text">To Country</span>
                                                 <select class="form-select">
                                                     <option selected>choose...</option>
                                                     <option value="1">India</option>
@@ -184,14 +183,14 @@
                                         </div>
 
 
-                                        <div class="col-md-12">
+                                        <!-- <div class="col-md-12">
                                             <div class="input-group">
                                                 <span class="input-group-text">Definition</span>
                                                 <input type="text" class="form-control" placeholder="INR "
                                                     required>
                                                 <div class="valid-feedback"> Looks good! </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                         <div class="col-md-12">
                                             <div class="input-group">
@@ -247,7 +246,7 @@
 
                                         <div class="col-md-12">
                                             <div class="input-group">
-                                                <span class="input-group-text">Commissions</span>
+                                                <span class="input-group-text">Govt. Tax</span>
                                                 <input type="text" class="form-control" placeholder="0.00"
                                                     required>
                                                 <div class="valid-feedback"> Looks good! </div>
@@ -256,7 +255,7 @@
 
                                         <div class="col-md-12">
                                             <div class="input-group">
-                                                <span class="input-group-text">Tax</span>
+                                                <span class="input-group-text">Other Govt. Tax</span>
                                                 <input type="text" class="form-control" placeholder="0.00"
                                                     required>
                                                 <div class="valid-feedback"> Looks good! </div>
@@ -272,27 +271,12 @@
                                         </div>
 
                                         <div class="col-md-12 btn-container">
-                                            <div class="send-now-btn" onclick="toggleDiv()">
+                    <div class="send-now-btn" onclick="window.location.href = 'remit-login.html'">
                                                 <h1> SEND NOW</h1> 
                                             </div>
                                         </div>
 
-                                        <div id="myDIV" style="display: none;">
-
-                                        <div class="col-md-12 mt-2">
-                                            <div class="input-group">
-                                              <span class="input-group-text">Enter OTP</span>
-                                              <input type="text" class="form-control" placeholder="XXXX" required>
-                                              <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="send-now-btn">
-                                               <h1> <a href="remit-login.html">SUBMIT </a> </h1>
-                                            </div>
-                                        </div>
-                                        </div>
+                                         
 
                                         <div class="col-md-12">
                                             <div class="disclaimer-home">
