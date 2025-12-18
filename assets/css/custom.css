@@ -3976,7 +3976,7 @@ div[disabled] {
 
 .form-otp input {
     width: 14%;
-    margin-right: 5px;
+    margin-right: 4px;
     border: 1.5px solid #000000;
     height: 35px;
     background: #fffffff0;
@@ -5554,7 +5554,7 @@ p.pc-text {
     }
 
     .rem-rc-reg-box {
-        min-height: 400px;
+        min-height:auto;
         border: 4px solid #010101;
         padding: 25px 10px;
 /*        font-family: calibri;*/
