@@ -3949,10 +3949,10 @@ div[disabled] {
 
 .rem-rc-box h2 {
     color: #000000;
-    font-size: 31px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 10px;
-    line-height: 24px;
+    line-height: 26px;
 }
 
 .rem-rc-form {
@@ -4724,8 +4724,8 @@ button.rpp-submit:hover {
 }   
 
 .sc-table .table-green {
-    --bs-table-color: #ffffff;
-    --bs-table-bg: #198754;
+    --bs-table-color: #000000;
+    --bs-table-bg: #65ef08;
     --bs-table-border-color: #373b3e;
     --bs-table-striped-bg: #2c3034;
     --bs-table-striped-color: #fff;
@@ -4746,7 +4746,7 @@ button.rpp-submit:hover {
 
 .sc-table table th {
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 14px;
     min-height: 15px;
     height: 40px;
@@ -4845,8 +4845,8 @@ button.rpp-submit:hover {
     font-size: 14px;
     font-weight: 500;
     text-indent: 10px;
-    background-color: #198754;
-    color: #ffffff;
+    background-color:#65ef08;
+    color: #000000;
     line-height: 30px;
     height: 30px;
 }
