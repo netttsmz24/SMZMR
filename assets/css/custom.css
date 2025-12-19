@@ -4937,7 +4937,30 @@ p.pc-text {
   font-weight: 500;
 }
 
+#sidebar li {position: relative;}
 
+.side-menu-roundno {
+    width: 25px;
+    height: 25px;
+    line-height:20px;
+    background: #000000;
+    border-radius: 50%;
+    display: grid;
+    border: 2px solid #000000;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+}
+
+.side-menu-roundno strong {
+    color: #ffffff;
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin: auto auto;
+    font-family: initial;
+}
 
 
 
@@ -5286,8 +5309,8 @@ p.pc-text {
     background-color: #ffffff;
     /* background-color: #f7f7f7; */
     background-clip: padding-box;
-    border: 1px solid #c4c4c4;
-/*    border: 1px solid #010101;*/
+/*    border: 1px solid #c4c4c4;*/
+    border: 1px solid #000000;
     border-radius:0px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         text-align: right;
@@ -5348,7 +5371,8 @@ p.pc-text {
 
 .sr-form .form-select {
     height: 29px;
-    border: 1px solid #c4c4c4;
+/*    border: 1px solid #c4c4c4;*/
+    border: 1px solid #000000;
         text-align: right;
 }
 
