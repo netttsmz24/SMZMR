@@ -3120,8 +3120,8 @@ div[disabled] {
 }
 
 .accordion-button:not(.collapsed) {
-    color:#ffffff;
-    background-color:red;
+    color: #000000;
+    background-color: #65ef08;
     box-shadow: none;
 }
 
@@ -3131,10 +3131,10 @@ div[disabled] {
     align-items: center;
     width: 100%;
     padding: 10px 15px;
-    font-size: 1.2rem;
+    font-size:18px;
     text-align: left;
-    color: #cc0000;
-    /* background-color: #cc0000; */
+    color: #000000;
+    background-color: #65ef08;
     border: 0;
     border-radius: 0;
     overflow-anchor: none;
@@ -3142,6 +3142,7 @@ div[disabled] {
     transition: var(--bs-accordion-transition);
     line-height: 18px;
 }
+
 
 .save-next-btn {
     padding: 5px 20px;
@@ -5397,10 +5398,10 @@ p.pc-text {
 
 .sr-form .sr-individual-link h5 {
     line-height: 14px;
-     font-family:inherit; 
+    font-family: inherit;
     font-size: 13px;
-    color: #434040;
-    text-align: justify;
+    color: #000000;
+    text-align: center;
     margin-bottom: 10px;
     font-weight: 500;
     border: 1px solid #000000;
