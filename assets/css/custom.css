@@ -1519,7 +1519,7 @@ header.page-headr{
                 font-size: 20px;
                 color: #000000;
                 border-radius: 100px;
-                margin: 0 2px 10px auto;
+                margin:auto;
                 padding: 2px;
                 font-weight: bold;
                 background-color: gray;
