@@ -1473,9 +1473,12 @@ header.page-headr{
             width:24.6%;
             float: left;
             position: relative;
+            line-height: 12px;
         }
 
         /*Icons in the ProgressBar*/
+
+        
 
         #progressbar #calculate:before {
             font-family: FontAwesome;
@@ -5928,6 +5931,37 @@ p.pc-text {
 
 
 @media only screen and (max-width:767px) {
+
+
+    #msform .action-button {
+        width: 94%;
+        background: #548235;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+        border: 0 none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 7px 30px;
+        margin: 50px 10px;
+        display: block;
+    }
+
+    #msform .action-button-previous {
+        width: 92%;
+        background: #616161;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 6px 5px;
+        margin: 0px 13px 10px;
+        font-size: 20px;
+        /* float: right; */
+        position: absolute;
+        right: 2px;
+    }
 
     .next-btn {
         background-color: #548235;
