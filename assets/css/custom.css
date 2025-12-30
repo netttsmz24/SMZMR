@@ -5857,9 +5857,9 @@ p.pc-text {
 
     #msform .action-button {
         width: 94%;
-        background: #65ef08;
+        background: #65ef08 !important;
         font-weight: bold;
-        color: #000000;
+        color: #000000 !important;
         font-size: 20px;
         border: 0 none;
         border-radius: 5px;
