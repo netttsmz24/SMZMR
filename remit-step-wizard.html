@@ -155,8 +155,8 @@
                                 <div class="row py-1">
                                   <div class="col">
                                     <div class="text-center">
-                                      <h2>Send Monies</h2>
-                                      <p class="lead">Individual Send Monies To an Individual</p>
+                                      <h3>Send Monies</h3>
+                                      <p class="lead mb-0">Individual Send Monies To an Individual</p>
                                     </div>
                                   </div>
                                 </div>
@@ -167,7 +167,7 @@
                                     <div class="col-md-12 mx-0">
                                         <form id="msform">
                                             <!-- progressbar -->
-                                            <ul id="progressbar">
+                                            <ul id="progressbar" style="margin-left:-20px; margin-right:-20px;">
                                                 <li class="active" id="calculate"><strong>Rate & Booking</strong></li>
                                                 <li id="categorization"><strong>Sender – TO Fill Forms</strong></li>
                                                 <li id="kyc"><strong>Receiver To FILL Forms By Sender</strong></li>
@@ -182,211 +182,211 @@
 
                                             <fieldset>
                                                 <div class="form-card">
-                                                     <h2 class="fs-title">Rate & Booking</h2>
-                                                    <div class="row mt-5"> 
 
-                                                        <div class="col-md-6 col-lg-6"> </div>
+                                                     <!-- <h2 class="fs-title">Rate & Booking</h2> -->
 
-                                                        <div class="col-md-6 col-lg-6">
+                                                    <div class="row"> 
+
+                                                        <div class="col-md-5"> </div>
+
+                                                        <div class="col-md-7">
                                         
-                                                            <div class="rem-rc-box mb-2 bg-light-green">
+                                                            <div class="rem-rc-box mt-4 mb-2 bg-light-green">
                                                                 <h2>Check The Rates Here {IBOR Rates}</h2>
 
                                                                  <div class="rem-rc-form pb-1">
 
-                                                                    <div class="row">
+                                                                    <div class="row" style="gap:0 !important;">
 
-                                                                    <div class="col-md-12">
-                                                                        <div class="input-group">
-                                                                            <span class="input-group-text">From Country</span>
-                                                                            <select class="form-select">
-                                                                                <option selected>choose...</option>
-                                                                                <option value="1">India</option>
-                                                                                <option value="2">Malaysia</option>
-                                                                                <option value="3">China</option>
-                                                                            </select>
-                                                                            <div class="valid-feedback"> Looks good! </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">Send Country</span>
-                                                                    <select class="form-select">
-                                                                        <option selected>choose...</option>
-                                                                        <option value="1">India</option>
-                                                                        <option value="2">Malaysia</option>
-                                                                        <option value="3">China</option>
-                                                                    </select>
-                                                                    <div class="valid-feedback"> Looks good! </div>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <!-- <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">Definition</span>
-                                                                    <input type="text" class="form-control" placeholder="INR "
-                                                                        required>
-                                                                    <div class="valid-feedback"> Looks good! </div>
-                                                                </div>
-                                                            </div> -->
-
-                                                            <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">SMZ NETTT Rate</span>
-                                                                    <input type="text" class="form-control" placeholder="Select 0.00"
-                                                                        required>
-                                                                    <div class="valid-feedback"> Looks good! </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">You Want To Send</span>
-                                                                    <input type="text" class="form-control" placeholder="0.00"
-                                                                        required>
-                                                                    <select class="form-select">
-                                                                        <option value="1">MYR</option>
-                                                                        <option value="2">INR</option>
-                                                                        <option value="3">USD</option>
-                                                                    </select>
-
-                                                                    <div class="valid-feedback"> Looks good! </div>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">You Receive</span>
-                                                                    <input type="text" class="form-control" placeholder="0.00"
-                                                                        required>
-                                                                    <select class="form-select">
-                                                                        
-                                                                        <option value="2">INR</option>
-                                                                        <option value="1">MYR</option>
-                                                                        <option value="3">USD</option>
-                                                                    </select>
-
-                                                                    <div class="valid-feedback"> Looks good! </div>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">Fees</span>
-                                                                    <input type="text" class="form-control" placeholder="0.00"
-                                                                        required>
-                                                                    <div class="valid-feedback"> Looks good! </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">Govt. Tax</span>
-                                                                    <input type="text" class="form-control" placeholder="0.00"
-                                                                        required>
-                                                                    <div class="valid-feedback"> Looks good! </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">Other Govt. Tax</span>
-                                                                    <input type="text" class="form-control" placeholder="0.00"
-                                                                        required>
-                                                                    <div class="valid-feedback"> Looks good! </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-text">Total</span>
-                                                                    <input type="text" class="form-control" placeholder="0.00" required>
-                                                                    <div class="valid-feedback"> Looks good! </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="send-now-btn" onclick="window.location.href ='remit-dashboard.html'">
-                                                                    <h1> SEND NOW</h1>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-
-                                                                            <label style="line-height:12px; padding: 10px 0px 5px;" ><small>Select Personal Assistant To Assist Personally At Location </small></label>
-
+                                                                        <div class="col-md-6">
                                                                             <div class="input-group">
-                                                                              
-                                                                              <select class="form-select">
-                                                                                <option selected="">select...</option>
-                                                                                <option value="1">One</option>
-                                                                                <option value="2">Two</option>
-                                                                                <option value="3">Three</option>
-                                                                              </select>
-                                                                              <div class="valid-feedback"> Looks good! </div>
+                                                                                <span class="input-group-text">From Country</span>
+                                                                                <select class="form-select">
+                                                                                    <option selected>choose...</option>
+                                                                                    <option value="1">India</option>
+                                                                                    <option value="2">Malaysia</option>
+                                                                                    <option value="3">China</option>
+                                                                                </select>
+                                                                                <div class="valid-feedback"> Looks good! </div>
                                                                             </div>
-                                                            </div>
-                                                             
-                                                            <div class="col-md-12">
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
                                                                             <div class="input-group">
-                                                                              <span class="input-group-text">DISCOUNTS Provided No</span>
+                                                                                <span class="input-group-text">Send Country</span>
+                                                                                <select class="form-select">
+                                                                                    <option selected>choose...</option>
+                                                                                    <option value="1">India</option>
+                                                                                    <option value="2">Malaysia</option>
+                                                                                    <option value="3">China</option>
+                                                                                </select>
+                                                                                <div class="valid-feedback"> Looks good! </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-text">SMZ NETTT Rate</span>
+                                                                                <input type="text" class="form-control" placeholder="Select 0.00"
+                                                                                    required>
+                                                                                <div class="valid-feedback"> Looks good! </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-text">You Want To Send</span>
+                                                                                <input type="text" class="form-control" placeholder="0.00"
+                                                                                    required>
+                                                                                <select class="form-select">
+                                                                                    <option value="1">MYR</option>
+                                                                                    <option value="2">INR</option>
+                                                                                    <option value="3">USD</option>
+                                                                                </select>
+
+                                                                                <div class="valid-feedback"> Looks good! </div>
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-text">You Receive</span>
+                                                                                <input type="text" class="form-control" placeholder="0.00"
+                                                                                    required>
+                                                                                <select class="form-select">
+                                                                                    
+                                                                                    <option value="2">INR</option>
+                                                                                    <option value="1">MYR</option>
+                                                                                    <option value="3">USD</option>
+                                                                                </select>
+
+                                                                                <div class="valid-feedback"> Looks good! </div>
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-text">Fees</span>
+                                                                                <input type="text" class="form-control" placeholder="0.00"
+                                                                                    required>
+                                                                                <div class="valid-feedback"> Looks good! </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-text">Govt. Tax</span>
+                                                                                <input type="text" class="form-control" placeholder="0.00"
+                                                                                    required>
+                                                                                <div class="valid-feedback"> Looks good! </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-text">Other Govt. Tax</span>
+                                                                                <input type="text" class="form-control" placeholder="0.00"
+                                                                                    required>
+                                                                                <div class="valid-feedback"> Looks good! </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-text">Total</span>
+                                                                                <input type="text" class="form-control" placeholder="0.00" required>
+                                                                                <div class="valid-feedback"> Looks good! </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="send-now-btn" onclick="window.location.href ='remit-dashboard.html'">
+                                                                                <h1> SEND NOW</h1>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-md-6 mt-2">
+
+                                                                                        <label style="line-height:12px; padding: 10px 0px 5px; text-align: right;" >Select Personal Assistant To Assist Personally At Location </label>
+                                                                        </div>
+
+                                                                        <div class="col-md-6 mt-2">
+                                                                                        <div class="input-group">
+                                                                                          
+                                                                                          <select class="form-select">
+                                                                                            <option selected="">select...</option>
+                                                                                            <option value="1">One</option>
+                                                                                            <option value="2">Two</option>
+                                                                                            <option value="3">Three</option>
+                                                                                          </select>
+                                                                                          <div class="valid-feedback"> Looks good! </div>
+                                                                                        </div>
+                                                                        </div>
+                                                                         
+                                                                         <div class="col-md-6" style="text-align: right;">DISCOUNTS Provided Number </div>
+                                                                        <div class="col-md-6">
+                                                                            <!-- <div class="input-group"> -->
+                                                                              <!-- <span class="input-group-text">DISCOUNTS Provided No</span> -->
                                                                               <input type="text" class="form-control" required="">
                                                                               <div class="valid-feedback"> Looks good! </div>
-                                                                            </div>
-                                                            </div>
-
-                                                            </div>
-
+                                                                            <!-- </div> -->
+                                                                        </div>
+                                                                    </div>
                                                                  </div>           
-
                                                             </div>
+
                                                         </div>
 
-
                                                     </div>
+
                                                 </div>
 
                                                     <input type="button" name="next" class="next action-button mt-0" value="Save Next"/>
-
                                             </fieldset>
 
 
                                             <fieldset>
                                                 <div class="form-card">
                                                      <h2 class="fs-title">Person Transacting on Behalf of True Sender – TO Fill Forms</h2>
-                                                    <div class="mt-5"> 
+                                                    <div class="mt-1"> 
 
                                                       <div class="sr-form">
                                             
                                                          <div class="sr-form-heading">
 
                                                             <div class="mb-2 row gx-lg-0 gx-md-0">
-                                                                <label class="col-md-4">Select Agent To LIASE With Directly To Ensure Sent & Receipt of Funds </label>
+                                                                <label class="col-md-3">Select Agent To LIASE With Directly To Ensure Sent & Receipt of Funds </label>
                                                                  
-                                                                <div class="col-md-4">
+                                                                <div class="col-md-3">
                                                                     <input type="text" name="" class="form-control">
                                                                 </div>
+
+                                                                <div class="col-md-6"> </div>
                                                             </div>
 
                                                             <div class="mb-2 row gx-lg-0 gx-md-0">
-                                                                <label class="col-md-4"> Agents Telephone No To Liase & Assist Personally</label>
+                                                                <label class="col-md-3"> Agents Telephone No To Liase & Assist Personally</label>
                                                                  
-                                                                <div class="col-md-4">
+                                                                <div class="col-md-3">
                                                                     <input type="text" name="" class="form-control">
                                                                 </div>
+
+                                                                <div class="col-md-6"> </div>
                                                             </div>
 
                                                             <div class="mb-2 row gx-lg-0 gx-md-0">
-                                                                <label class="col-md-4"> From Country – Ultimate Sender</label>
+                                                                <label class="col-md-3"> From Country – Ultimate Sender</label>
                                                                  
-                                                                <div class="col-md-4">
+                                                                <div class="col-md-3">
                                                                     <input type="text" name="" class="form-control">
                                                                 </div>
+
+                                                                <div class="col-md-6"> </div>
                                                             </div>
+
                                                          </div>
                                                         
                                                         <div class="card-body p-3">
@@ -666,7 +666,7 @@
                                                 <div class="form-card">
                                                     <h2 class="fs-title">Sender– To Fill Forms</h2>
                                                      
-                                                     <div class="mt-5"> 
+                                                     <div class="mt-1"> 
 
                                                         <div class="sr-form">
                                             
@@ -953,7 +953,7 @@
                                             <fieldset>
                                                 <div class="form-card">
                                                     <h2 class="fs-title">Receiver To FILL Forms By Sender</h2>
-                                                     <div class="mt-5"> 
+                                                     <div class="mt-1"> 
 
 
                                                         <div class="sr-form">
@@ -1244,12 +1244,7 @@
 
                                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                                                 <input type="button" name="make_payment" class="next action-button" value="Confirm"/>
-                                            </fieldset>
-
- 
-
-
-                                             
+                                            </fieldset> 
 
                                         </form>
 
