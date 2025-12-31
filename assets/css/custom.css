@@ -3973,6 +3973,23 @@ div[disabled] {
     line-height: 26px;
 }
 
+.rem-rc-box .fm-head {
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    line-height: 26px;
+}
+
+.rem-rc-box .fs-head {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color, inherit);
+}
+
 .rem-rc-form {
     display: block;
     height:auto;
@@ -4037,6 +4054,46 @@ div[disabled] {
     margin-bottom: 7px;
 }
 
+.san-btn {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px 10px;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    margin: 2px 0px 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+    height: 100%;
+    width: 100%;
+    line-height: 20px;
+}
+
+.san-btn h1 {
+    font-weight:600;
+    font-size:21px;
+    color: #000000;
+    margin-bottom: 0px;
+}
+
+.book-rc-box p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 7% 2%;
+    line-height: 20px;
+}
+
+.book-rc-box p span {
+    color: #000000;
+    font-size: 12px;
+    font-weight:500;
+    margin-bottom: 10px;
+        display: block;
+}
+
 .send-now-btn {
     background-color: transparent;
     border: 5px solid #ffffff;
@@ -4086,11 +4143,11 @@ div[disabled] {
 }
 
 .rem-dis-box {
-    position: absolute;
-    bottom:5px;
-/*    border: 4px solid #010101;*/
+    position: relative;
     padding: 10px 10px 10px;
-/*    min-height: 220px;*/
+    /*bottom:5px;
+    border: 4px solid #010101;
+    min-height: 220px;*/
 }
 
 

@@ -20,7 +20,7 @@
         <!-- sidebar navigation component -->
         
 
-        <nav id="sidebar" class="active">
+        <nav id="sidebar" class="active d-none">
             <div class="sidebar-header">
                 <a href="#">
                     <img src="assets/images/smz-logo.png" alt="bootraper logo" class="app-logo"> 
@@ -145,24 +145,29 @@
             </nav>
             <!-- end of navbar navigation -->
              
-            <div class="content">
+                <div class="content">
 
                         <div class="container" style="margin-top:10px;">
 
-                            <div class="row">
+                            <div class="row bg-white py-4 pb-5">
 
-                                    <div class="col-md-2 col-lg-5">
-                                    </div>
+                                    <div class="col-md-5 col-lg-5">
 
-                                    <div class="col-md-4 col-lg-3">
+                                        <h3 class="py-3"> 
+
+                                           <strong style="margin-left:10px;"> Send Monies </strong> 
+                                            <span> { Individual To Individual } </span> 
+                                            
+                                        </h3>
                                         
-                                        <div class="rem-dis-container bg-light-green">
+                                        <!-- <div class="rem-dis-container "> -->
 
-                                            <div class="rem-dis-box ">
+                                            <div class="rem-dis-box col-md-10 col-sm-12">
 
                                                 <div class="col-md-12">
-                                                    <div class="disclaimer-home">
-                                                        <p>
+
+                                                    <div class="disclaimer-home border">
+                                                        <p style="line-height:15px;">
                                                             Disclaimer ; Privacy & Confidentiality ; Individuals and entities KYC and verification is to be done as per each country demands of central banks ; NETTT (SMZ) ensures that all information dissipated is fully protected under PDPA and are not used for any other means excepting to provide and market the best rates globally that end customers seek in remitting and settlements     
                                                         </p>
                                                     </div>
@@ -170,8 +175,8 @@
 
 
                                                 <div class="col-md-12">
-                                                    <div class="disclaimer-home">
-                                                        <p>
+                                                    <div class="disclaimer-home border">
+                                                        <p style="line-height:15px;">
                                                             Personal Assistant Directly assigned to assist and ensure that your funds are received by the beneficiary and to assist in KYC and verification's that is being required by Central Banks  
                                                         </p>
                                                     </div>
@@ -179,8 +184,8 @@
 
 
                                                 <div class="col-md-12">
-                                                    <div class="disclaimer-home">
-                                                        <p>
+                                                    <div class="disclaimer-home border">
+                                                        <p style="line-height:15px;">
                                                             Discounts Provided for Clients who have patronized NETTT SMZ Services as may be provided by MASTER ASSOCIATES & MY HUB with the recommendation of the PERSONAL ASSISTANT   
                                                         </p>
                                                     </div>
@@ -188,180 +193,216 @@
 
                                             </div>
 
-                                        </div>
-
+                                        <!-- </div> -->
                                     </div>
 
-                                    <div class="col-md-6 col-lg-4 order-first order-md-2">
+                                    <div class="col-md-7 col-lg-7 order-first order-md-2">
                                         
                                         <div class="rem-rc-box mb-2 bg-light-green">
-                                            <h2>Check The Rates Here {IBOR Rates}</h2>
+                                            <div class="fm-head">Check & Book Your Remittance And Settlements Here</div>
+                                            <div class="fs-head"> {IBRO RATES Are Provided in Real Time References Below} </div>
+
 
                                              <div class="rem-rc-form pb-1">
 
-                                                <div class="row">
+                                                <div class="row" style="gap:0px !important">
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">From Country</span>
-                                                <select class="form-select">
-                                                    <option selected>choose...</option>
-                                                    <option value="1">India</option>
-                                                    <option value="2">Malaysia</option>
-                                                    <option value="3">China</option>
-                                                </select>
-                                                <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div>
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">From Country</span>
+                                                        <select class="form-select">
+                                                            <option selected>choose...</option>
+                                                            <option value="1">India</option>
+                                                            <option value="2">Malaysia</option>
+                                                            <option value="3">China</option>
+                                                        </select>
+                                                        <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div>
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">Send Country</span>
-                                                <select class="form-select">
-                                                    <option selected>choose...</option>
-                                                    <option value="1">India</option>
-                                                    <option value="2">Malaysia</option>
-                                                    <option value="3">China</option>
-                                                </select>
-                                                <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div>
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Send Country</span>
+                                                        <select class="form-select">
+                                                            <option selected>choose...</option>
+                                                            <option value="1">India</option>
+                                                            <option value="2">Malaysia</option>
+                                                            <option value="3">China</option>
+                                                        </select>
+                                                        <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div>
 
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">SMZ NETTT Rate</span>
+                                                        <input type="text" class="form-control" placeholder="Select 0.00"
+                                                            required>
+                                                        <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div>
 
-                                        <!-- <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">Definition</span>
-                                                <input type="text" class="form-control" placeholder="INR "
-                                                    required>
-                                                <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div> -->
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Commissions</span>
+                                                        <input type="text" class="form-control" placeholder="Select 0.00"
+                                                            required>
+                                                        <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div>
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">SMZ NETTT Rate</span>
-                                                <input type="text" class="form-control" placeholder="Select 0.00"
-                                                    required>
-                                                <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div>
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">You Want To Send</span>
+                                                        <input type="text" class="form-control" placeholder="0.00"
+                                                            required>
+                                                        <select class="form-select">
+                                                            <option value="1">MYR</option>
+                                                            <option value="2">INR</option>
+                                                            <option value="3">USD</option>
+                                                        </select>
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">You Want To Send</span>
-                                                <input type="text" class="form-control" placeholder="0.00"
-                                                    required>
-                                                <select class="form-select">
-                                                    <option value="1">MYR</option>
-                                                    <option value="2">INR</option>
-                                                    <option value="3">USD</option>
-                                                </select>
+                                                        <div class="valid-feedback"> Looks good! </div>
 
-                                                <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div>
 
-                                            </div>
-                                        </div>
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">You Get</span>
+                                                        <input type="text" class="form-control" placeholder="0.00"
+                                                            required>
+                                                        <select class="form-select">
+                                                            
+                                                            <option value="2">SGD</option>
+                                                            <option value="1">MYR</option>
+                                                            <option value="3">USD</option>
+                                                        </select>
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">You Receive</span>
-                                                <input type="text" class="form-control" placeholder="0.00"
-                                                    required>
-                                                <select class="form-select">
-                                                    
-                                                    <option value="2">INR</option>
-                                                    <option value="1">MYR</option>
-                                                    <option value="3">USD</option>
-                                                </select>
+                                                        <div class="valid-feedback"> Looks good! </div>
 
-                                                <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div>
 
-                                            </div>
-                                        </div>
+                                                <!-- <div class="col-md-12">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Fees</span>
+                                                        <input type="text" class="form-control" placeholder="0.00"
+                                                            required>
+                                                        <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div> -->
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">Fees</span>
-                                                <input type="text" class="form-control" placeholder="0.00"
-                                                    required>
-                                                <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div>
+                                                <div class="col-md-12 lh-1"> &nbsp;</div>
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">Govt. Tax</span>
-                                                <input type="text" class="form-control" placeholder="0.00"
-                                                    required>
-                                                <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div>
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Govt. Tax</span>
+                                                        <input type="text" class="form-control" placeholder="0.00"
+                                                            required>
+                                                        <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div>
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">Other Govt. Tax</span>
-                                                <input type="text" class="form-control" placeholder="0.00"
-                                                    required>
-                                                <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div>
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">Other Tax</span>
+                                                        <input type="text" class="form-control" placeholder="0.00"
+                                                            required>
+                                                        <div class="valid-feedback"> Looks good! </div>
+                                                    </div>
+                                                </div>
 
-                                        <div class="col-md-12">
-                                            <div class="input-group">
-                                                <span class="input-group-text">Total</span>
-                                                <input type="text" class="form-control" placeholder="0.00" required>
-                                                <div class="valid-feedback"> Looks good! </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="send-now-btn" onclick="window.location.href ='remit-dashboard.html'">
-                                                <h1> SEND NOW</h1>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-
-                                                        <label style="line-height:12px; padding: 10px 0px 5px;" ><small>Select Personal Assistant To Assist Personally At Location </small></label>
-
+                                                <div class="col-md-12 gx-1">
                                                         <div class="input-group">
-                                                          
-                                                          <select class="form-select">
-                                                            <option selected="">select...</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                          </select>
-                                                          <div class="valid-feedback"> Looks good! </div>
-                                                        </div>
-                                        </div>
-                                         
-                                        <div class="col-md-12">
-                                                        <div class="input-group">
-                                                          <span class="input-group-text">DISCOUNTS Provided No</span>
+                                                          <span class="input-group-text">Discounts Provided Voucher No</span>
                                                           <input type="text" class="form-control" required="">
                                                           <div class="valid-feedback"> Looks good! </div>
                                                         </div>
+                                                </div>
+
+                                                <div class="col-md-12 gx-1">
+                                                        <div class="input-group">
+                                                          <span class="input-group-text">Select Personal To Liase Directly With</span>
+                                                          <input type="text" class="form-control" required="">
+                                                          <div class="valid-feedback"> Looks good! </div>
+                                                        </div>
+                                                </div>
+
+
+                                                <div class="col-md-6 gx-1">
+                                                    <div class="book-rc-box">
+                                                        <p> Currency Real Time IBOR RATES 
+                                                        <span>{MYR-SGD - 1MYR = 0.3323 SGD} 1SGD=3.323 MYR}</span>
+                                                        </p>
+                                                    </div>
+                                                 </div>
+
+                                                <div class="col-md-6 gx-1"> 
+
+                                                    <div class="col-md-12">
+                                                        <div class="input-group">
+                                                            <span class="input-group-text" style="font-size: 20px !important; font-weight:bold; height:40px;">
+                                                                Total To Pay
+                                                            </span>
+                                                            <input type="text" class="form-control" placeholder="0.00" required>
+                                                            <div class="valid-feedback"> Looks good! </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <div class="san-btn" onclick="window.location.href ='remit-step-wizard.html'">
+                                                            <h1> SAVE & AGREED TO NEXT</h1>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+
+                                        
+
+
                                         </div>
 
-                                    </div>
-
-                                             </div>           
+                                          </div>           
 
                                         </div>
                                     </div>
-                                    
                             </div>
 
                         </div>
-
                 </div>
 
         </div>
     </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // Toggle sidebar on Menu button click
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+                $('#body').toggleClass('active');
+            });
+
+            // Auto-hide sidebar on window resize if window size is big
+            $(window).on('resize', function () {
+                if ($(window).width() >=768) {
+                    $('#sidebar, #body').addClass('active');
+                }
+            });
+        })(); 
+
+    </script>
+
+
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    
+
 </body>
 
 </html>
