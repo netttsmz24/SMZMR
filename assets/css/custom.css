@@ -1352,7 +1352,7 @@ header.page-headr{
             border-radius: 0.5rem;
             box-sizing: border-box;
             width: 100%;
-            margin: 0;
+            margin:10px 0;
             padding-bottom: 20px;
 
             /*stacking fieldsets above each other*/
@@ -1398,7 +1398,7 @@ header.page-headr{
         /*Blue Buttons*/
         #msform .action-button {
             width: auto;
-            width:125px;
+            min-width:125px;
             background: #65ef08;
             font-weight: bold;
             color: #000000;
@@ -1461,6 +1461,9 @@ header.page-headr{
             margin-bottom:0px;
             overflow: hidden;
             color: lightgrey;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
         }
 
         #progressbar .active {
@@ -1475,6 +1478,10 @@ header.page-headr{
             position: relative;
             line-height: 12px;
         }
+
+        /*#progressbar li strong {
+            margin-top: 20px;
+        }*/
 
         /*Icons in the ProgressBar*/
 
@@ -1512,34 +1519,34 @@ header.page-headr{
 
         /*ProgressBar before any progress*/
          #progressbar li:before {
-                width: 25%;
-                height: 40px;
-                line-height: 35px;
-                display: block;
-                font-size: 20px;
-                color: #000000;
-                border-radius: 100px;
-                margin:auto;
-                padding: 2px;
-                font-weight: bold;
-                background-color: gray;
-                border-right: 1px solid #ffffff;
-            }
+            width: 35px;
+            height: 35px;
+            line-height: 30px;
+            display: block;
+            font-size: 20px;
+            color: #000000;
+            border-radius: 100px;
+            margin: auto;
+            padding: 2px;
+            font-weight: bold;
+            background-color: gray;
+            border-right: 1px solid #ffffff;
+        }
 
-/*         #progressbar li:before {
-    width: 100%;
-    height: 40px;
-    line-height: 35px;
-    display: block;
-    font-size: 20px;
-    color: #000000;
-    border-radius: 0px;
-    margin: 0 2px 10px auto;
-    padding: 2px;
-    font-weight: bold;
-    background-color: gray;
-    border-right: 1px solid #ffffff;
-}*/
+        /*  #progressbar li:before {
+            width: 100%;
+            height: 40px;
+            line-height: 35px;
+            display: block;
+            font-size: 20px;
+            color: #000000;
+            border-radius: 0px;
+            margin: 0 2px 10px auto;
+            padding: 2px;
+            font-weight: bold;
+            background-color: gray;
+            border-right: 1px solid #ffffff;
+        }*/
 
         /*ProgressBar connectors*/
         #progressbar li:after {
@@ -3147,8 +3154,8 @@ div[disabled] {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10px 15px;
-    font-size:18px;
+    padding: 5px 15px;
+    font-size: 17px;
     text-align: left;
     color: #000000;
     background-color: #65ef08;
@@ -3652,6 +3659,17 @@ div[disabled] {
         -ms-flex-preferred-size: auto;
         flex-basis: auto;
     }
+
+    #progressbar li {
+        list-style-type: none;
+        font-size: 12px;
+        width: 24.6%;
+        float: left;
+        height: 50px;
+        position: relative;
+        line-height: 12px;
+    }
+
 }
 
 .logout-style {
@@ -4377,7 +4395,7 @@ div[disabled] {
     margin: 0px 5px;
     font-family: 'Agency FB', sans-serif;
     min-height: 270px;
-    background-color: #65ef08;
+    background-color: #ffffff;
 }
 
  
@@ -5537,7 +5555,41 @@ p.pc-text {
     border-color: #146c43;
 }
 
+.radioItem {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 4px;
+    line-height: 1;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
 
+.radioItem:not(:last-of-type) {
+  margin-right: 16px;
+}
+
+.radioButton {
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border:1px solid #000000;;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.radioButton:checked::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 12px;
+  height: 12px;
+  margin: auto;
+  border-radius: 9999px;
+  background-color:#65ef08;;
+}
 
 
 
