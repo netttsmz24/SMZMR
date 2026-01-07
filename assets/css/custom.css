@@ -1349,7 +1349,8 @@ header.page-headr{
         #msform fieldset {
             background: white;
             border: 0 none;
-            border-radius: 0.5rem;
+            /*border-radius: 0.5rem;*/
+            border-radius: 0rem;
             box-sizing: border-box;
             width: 100%;
             margin:10px 0;
@@ -6199,7 +6200,7 @@ p.pc-text {
         width:1.7em;
      }*/
 
- .accordion-button .step-no {
+.accordion-button .step-no {
     background: red;
     border-radius: 0.8em;
     -moz-border-radius: 0.8em;
@@ -6207,15 +6208,15 @@ p.pc-text {
     color: #ffffff;
     display: inline-block;
     font-weight: bold;
-    line-height: 1.3em;
+    line-height: 30px;
     margin-right: 5px;
     text-align: center;
-    width: 3em;
+    width:auto;
     border: 3px solid #ffffff;
     min-height: 33px;
-    min-width: 50px;
+    min-width: 36px;
+    font-size: 22px;
 }
-
 .invo-add-box {
     min-height: 100% !important;
     border: 1px solid #a7a5a5 !important;
