@@ -1349,8 +1349,8 @@ header.page-headr{
         #msform fieldset {
             background: white;
             border: 0 none;
-            /*border-radius: 0.5rem;*/
-            border-radius: 0rem;
+            border-radius: 0.5rem;
+/*            border-radius: 0rem;*/
             box-sizing: border-box;
             width: 100%;
             margin:10px 0;
@@ -1451,10 +1451,15 @@ header.page-headr{
         /*FieldSet headings*/
         .fs-title {
             font-size: 18px;
-            color: #2C3E50;
+            color: #000000;
             font-weight: bold;
-            margin: 10px;
-            text-align: center;
+            margin: 0 -5px;
+            padding: 4px 10px;
+            text-align:center;
+            background-color: #e2e4e4;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: 1px solid #dddddd;
         }
 
         /*progressbar*/
@@ -3155,8 +3160,8 @@ div[disabled] {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 5px 15px;
-    font-size: 17px;
+    padding: 3px 15px;
+    font-size: 16px;
     text-align: left;
     color: #000000;
     background-color: #65ef08;
