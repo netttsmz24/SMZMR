@@ -1,0 +1,310 @@
+<!doctype html>
+ 
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>### Remit : Payments and Invoice ###</title>
+    <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+
+    <style type="text/css"> 
+
+      body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  }
+
+.header {
+  padding: 15px;
+  font-size: 28px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+/* Horizontal Accordion */
+.h-accordion {
+  display: flex;
+  height: 420px;
+  overflow: hidden;
+}
+
+.h-panel {
+    flex: 1;
+    background: #66ff33;
+    cursor: pointer;
+    transition: flex 0.4s ease;
+    border-right: 1px solid #333;
+    padding: 25px 5px 25px 15px;
+    position: relative;
+}
+
+.h-panel:last-child {
+  border-right: none;
+}
+
+.h-panel.active {
+  flex:12;
+}
+
+.step-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: bold;
+  font-size:18px;
+  position: absolute;
+  left:5px;
+  top: 50%;
+  transform: rotate(180deg) translateY(50%);
+}
+
+.panel-content {
+    text-align: center;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+.panel-content h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.panel-content p {
+  font-size: 14px;
+}
+
+.panel-content i {
+    font-size: 40px;
+    color: #000000;
+}
+
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .h-accordion {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .h-panel {
+    border-right: none;
+    border-bottom: 2px solid #333;
+  }
+
+  .step-vertical {
+    writing-mode: horizontal-tb;
+    transform: none;
+    position: static;
+    margin-bottom: 10px;
+  }
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- sidebar navigation component -->
+        
+
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <a href="#">
+                    <img src="assets/images/smz-logo.png" alt="bootraper logo" class="app-logo"> 
+                    <!-- style="width:175px; margin-top:-10px; background-color:#ffffff;" -->
+                </a>
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="remit-rates-booking.html">
+                        <i class="fas fa-dollar-sign"></i> Rate & Booking
+                        <div class="side-menu-roundno"><strong> 1 </strong> </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="remit-dashboard.html" >
+                        <i class="fas fa-list-ul"></i> Select Category
+                        <div class="side-menu-roundno"><strong> 2 </strong> </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="remit-sender-receiver-3.html">
+                        <i class="fas fa-id-card"></i> KYC – Send & Receiver
+                        <div class="side-menu-roundno"><strong> 3 </strong> </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="remit-payments.html" class="select-smenu"><i class="fas fa-money-bill-alt"></i>Payments</a>
+                </li>
+
+                <li>
+                    <span><a href="remit-send-receive-history.html">
+                        <i class="fas fa-exchange-alt"></i>
+                            Dash Board -UPDATES {Send & Received} 
+                        </a>
+                    </span>
+                </li>
+                
+
+                <li>
+                    <a href="remit-send-receive-history.html"><i class="fas fa-file-alt"></i>Your Filled Forms </a>
+                </li>
+
+                <li>
+                    <a href="remit-master-agent.html"><i class="fas fa-users-cog"></i>Master Agent & Personal Assistant Chosen & Contact Details</a>
+                </li>
+
+                <li>
+                    <a href="remit-enquiries-complaints.html"><i class="fas fa-envelope"></i>Enquiries and Complaints </a>
+                </li>
+
+                <li>
+                    <a href="remit-password-change.html"><i class="fas fa-key"></i>Password Change </a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-user-friends"></i>Customers Agreement</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-edit"></i>Business Agreements</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-shield-alt"></i>PDPA</a>
+                </li>
+
+                <li>
+                    &nbsp;
+                </li>
+
+                <li>
+                    &nbsp;
+                </li>
+
+                <li>
+                    &nbsp;
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- end of sidebar component -->
+        <div id="body" class="active">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <a href="#"> 
+                                <img class="img-fluid mx-auto d-block sm-logo" src="assets/images/new-smz-logo.png">  
+                                </a>  
+                            </div>
+
+                            <div class="col-lg-2 col-md-0 col-sm-0"> 
+                            </div>
+
+                            <div class="col-lg-5 col-md-7 col-sm-12 remit-home-icon">
+                                <div style="float:right;">
+                                <a class=" " href="#" title="Back"> 
+                                  &nbsp;  <img src="assets/images/left-arrow.png"> &nbsp;
+                                </a>
+
+
+                                <a class="icon" href="#" title="Next"> 
+                                   &nbsp; <img src="assets/images/right-arrow.png"> &nbsp;
+                                </a>
+
+                                <a class="icon" href="remit-login.html" title="Logout"> 
+                                   <!-- <span class="logout-style"> LOG OUT </span> -->
+                                    <img src="assets/images/logout-1.png"> 
+                                </a>
+
+                                 
+                                </div>
+                            </div>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            <div class="content">
+                <div class="container-fluid">
+                    
+                    <div class="h-accordion mt-3">
+
+                        <!-- STEP 1 -->
+                        <div class="h-panel active" onclick="activatePanel(this)">
+
+                          <div class="step-vertical">Step 1</div>
+                          <div class="panel-content">
+                            
+                            <i class="bi bi-person-fill"></i>
+                            <h2>Sender Details</h2>
+                            <p>Due diligence as per Reserve Bank parameters.</p>
+                          </div>
+                        </div>
+
+                        <!-- STEP 2 -->
+                        <div class="h-panel" onclick="activatePanel(this)">
+                          <div class="step-vertical">Step 2</div>
+                          <div class="panel-content">
+                            <i class="bi bi-people-fill"></i>
+                            <h2>Receiver Details</h2>
+                            <p>Verification and compliance check.</p>
+                          </div>
+                        </div>
+
+                        <!-- STEP 3 -->
+                        <div class="h-panel" onclick="activatePanel(this)">
+                          <div class="step-vertical">Step 3</div>
+                          <div class="panel-content">
+                            <i class="bi bi-cash-stack"></i>
+                            <h2>Transaction Details</h2>
+                            <p>Amount, purpose, and payment method.</p>
+                          </div>
+                        </div>
+
+                        <!-- STEP 4 -->
+                        <div class="h-panel" onclick="activatePanel(this)">
+                          <div class="step-vertical">Step 4</div>
+                          <div class="panel-content">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <h2>Confirmation</h2>
+                            <p>Review and submit the transaction.</p>
+                          </div>
+                        </div>
+
+                      </div>
+                
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function activatePanel(panel) {
+          document.querySelectorAll('.h-panel').forEach(p => p.classList.remove('active'));
+          panel.classList.add('active');
+        }
+    </script>
+
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    
+</body>
+
+</html>
