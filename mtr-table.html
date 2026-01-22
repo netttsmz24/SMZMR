@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Transaction Volume Rates</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+  background:#f2f2f2;
+  font-size:14px;
+}
+
+/* Section headers */
+.rate-header {
+    color: #fff !important;
+    font-weight: bold;
+    text-align: center !important;
+    padding: 7px !important;
+}
+
+.red{background:red !important;}
+.yellow{background:yellow !important; color:#000 !important;}
+.blue{background:#1f4e79 !important;}
+
+/* Table */
+.table th { 
+  padding:6px;
+  text-align:center;
+  white-space:nowrap;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.table td {
+    padding: 4px;
+    text-align:right;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* Column background */
+.bg-red{background:red !important;}
+.bg-yellow{background:yellow !important;}
+.bg-blue{background:#e6f0fa !important;}
+
+/* Action panel */
+.action-panel {
+   
+    background: #66ff33;
+    height: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+     padding: 10px;
+     
+}
+
+.action-panel-in {
+    width: 80%;
+    margin: 10% auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    vertical-align: middle;
+    line-height: 25px;
+    padding: 20px 10px;
+}
+
+.table td.currency {
+    text-align: center;
+    font-weight: 700;
+}
+
+.table th.theader {
+    padding: 6px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #000000 !important;
+    margin: auto;
+    font-size: 14px;
+}
+
+.theader h4 {
+    margin: 16px auto;
+    display: block;
+    line-height: 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+
+/* Responsive scroll */
+.table-responsive{
+  overflow-x:auto;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid my-3">
+  <div class="row g-2">
+
+    <!-- LEFT MAIN TABLE -->
+    <div class="col-lg-10">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+
+          <thead>
+
+            <tr>
+
+              <!-- <th rowspan="2">Currency</th>
+              <th rowspan="2">Unit</th> -->
+
+              <th colspan="3" class="theader">
+                <h4> Transaction Volume </h4>
+              </th>
+
+              <th colspan="2" class="rate-header red">
+                Transaction Volume Of <br>> MYR 20,000<br>
+                <small>and above Rate Applies</small>
+              </th>
+
+              <th colspan="2" class="rate-header yellow">
+                Transaction Volume Of <br>> MYR 10,000<br>
+                <small>and above Rate Applies</small>
+              </th>
+
+              <th colspan="2" class="rate-header blue">
+                Transaction Volume Of <br>> MYR 0.000<br>
+                <small>and above Rate Applies</small>
+              </th>
+
+            </tr>
+
+            <tr>
+
+              <th>Curency</th>
+              <th>Unit</th>
+              <th>Flag</th>
+
+              <th>We Buy (You Sell)</th>
+              <th>We Sell (You Buy)</th>
+
+              <th>We Buy (You Sell)</th>
+              <th>We Sell (You Buy)</th>
+
+              <th>We Buy (You Sell)</th>
+              <th>We Sell (You Buy)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="currency">USD</td>
+              <td>1.00</td><td>&nbsp;</td>
+              <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+              <td class="bg-yellow">4.7273369</td><td class="bg-yellow">4.73839</td>
+              <td class="bg-blue">4.7273369</td><td class="bg-blue">4.73839</td>
+              
+
+            </tr>
+
+            <tr>
+              <td class="currency">GBP</td><td>1.00</td><td>&nbsp;</td>
+              <td class=" ">5.9562369</td><td class=" ">5.96549</td>
+              <td class="bg-yellow">5.9562369</td><td class="bg-yellow">5.96549</td>
+              <td class="bg-blue">5.9562369</td><td class="bg-blue">5.96549</td>
+            </tr>
+
+            <tr>
+              <td class="currency">JPY</td><td>1000.00</td><td>&nbsp;</td>
+              <td class=" ">0.031412369</td><td class=" ">0</td>
+              <td class="bg-yellow">0.031412369</td><td class="bg-yellow">0</td>
+              <td class="bg-blue">0.031412369</td><td class="bg-blue">0</td>
+            </tr>
+
+            <tr>
+              <td class="currency">EUR</td><td>1.00</td><td>&nbsp;</td>
+              <td class=" ">5.1112369</td><td class=" ">5.12439</td>
+              <td class="bg-yellow">5.1112369</td><td class="bg-yellow">5.12439</td>
+              <td class="bg-blue">5.1112369</td><td class="bg-blue">5.12439</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+    <!-- RIGHT ACTION PANEL -->
+    <div class="col-lg-2">
+      <div class="action-panel">
+
+        <div class="action-panel-in">
+          CLICK<br>HERE <br> <small class="mt-5">To Transact Online & Book</small>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
