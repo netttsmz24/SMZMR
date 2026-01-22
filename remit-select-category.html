@@ -6,21 +6,94 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>### Remit : Select Category ###</title>
+    <title>### Select Category ###</title>
     <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
     <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/master.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
+
+    <style>
+
+        /*body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }*/
+
+        /*.container {
+            display: flex;
+            flex-wrap: wrap;
+        }*/
+
+        .sc-card {
+            flex: 1;
+            min-width: 300px;
+            background: #66ff33;
+            padding: 25px;
+            box-sizing: border-box;
+            border-right: 6px solid #ffffff;
+        }
+
+        .sc-card:last-child {
+            border-right: none;
+        }
+
+        .sc-title {
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom:0px;
+            line-height: 35px;
+        }
+
+        .sc-subtitle {
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
+
+        .click-box {
+            border: 4px solid #ffffff;
+            padding: 10px 20px;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            line-height: 30px;
+            color: #000000;
+            cursor:pointer;
+        }
+
+        .sc-note {
+            border: 4px solid #000000;
+            padding: 15px;
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sc-title {
+                font-size: 30px;
+            }
+            .sc-subtitle {
+                font-size: 26px;
+            }
+            .click-box {
+                font-size: 22px;
+            }
+        }
+        </style>
+
+
+
 </head>
 
 <body>
+
     <div class="wrapper">
         <!-- sidebar navigation component -->
         
-
-        <nav id="sidebar" class="active">
+        <nav id="sidebar" class="active d-none">
             <div class="sidebar-header">
                 <a href="#">
                     <img src="assets/images/smz-logo.png" alt="bootraper logo" class="app-logo"> 
@@ -28,41 +101,54 @@
                 </a>
             </div>
             <ul class="list-unstyled components text-secondary">
-                <li>
-                    <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+                 
+                 <li>
+                    <a href="remit-rates-booking.html" class="select-smenu">
+                        <i class="fas fa-dollar-sign"></i> Rate & Booking
+                        <div class="side-menu-roundno"><strong> 1 </strong> </div>
+                    </a>
                 </li>
+                
                 <li>
-                    <a href="#"><i class="fas fa-dollar-sign"></i> Rate & Booking</a>
-                </li>
-                <li>
-                    <a href="#" class="select-smenu"><i class="fas fa-list-ul"></i> Select Category</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-id-card"></i> KYC – Send & Receiver</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-money-bill-alt"></i>Payments</a>
+                    <a href="remit-dashboard.html">
+                        <i class="fas fa-list-ul"></i> Select Category
+                        <div class="side-menu-roundno"><strong> 2 </strong> </div>
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#"><i class="fas fa-exchange-alt"></i>Send or Receive Transaction History</a>
+                    <a href="remit-sender-receiver-3.html">
+                        <i class="fas fa-id-card"></i> KYC – Send & Receiver
+                        <div class="side-menu-roundno"><strong> 3 </strong> </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="remit-payments.html"><i class="fas fa-money-bill-alt"></i>Payments</a>
+                </li>
+
+                <li>
+                    <span><a href="remit-send-receive-history.html"><i class="fas fa-exchange-alt"></i>
+                                            Dash Board -UPDATES {Send & Received} 
+                        </a>
+                    </span>
                 </li>
                 
 
                 <li>
-                    <a href="#"><i class="fas fa-file-alt"></i>Your Filled Forms </a>
+                    <a href="remit-send-receive-history.html"><i class="fas fa-file-alt"></i>Your Filled Forms </a>
                 </li>
 
                 <li>
-                    <a href="#"><i class="fas fa-users-cog"></i>Master Agent & Personal Assistant Chosen & Contact Details</a>
+                    <a href="remit-master-agent.html"><i class="fas fa-users-cog"></i>Master Agent & Personal Assistant Chosen & Contact Details</a>
                 </li>
 
                 <li>
-                    <a href="#"><i class="fas fa-envelope"></i>Enquiries and Complaints </a>
+                    <a href="remit-enquiries-complaints.html"><i class="fas fa-envelope"></i>Enquiries and Complaints </a>
                 </li>
 
                 <li>
-                    <a href="#"><i class="fas fa-key"></i>Password Change </a>
+                    <a href="remit-password-change.html"><i class="fas fa-key"></i>Password Change </a>
                 </li>
 
                 <li>
@@ -87,10 +173,8 @@
                 <li>
                     &nbsp;
                 </li>
-
             </ul>
         </nav>
-
 
         <!-- end of sidebar component -->
         <div id="body" class="active">
@@ -117,11 +201,11 @@
                                 </a>
 
 
-                                <a class="icon" href="#" title="Back"> 
+                                <a class="icon" href="#" title="Next"> 
                                    &nbsp; <img src="assets/images/right-arrow.png"> &nbsp;
                                 </a>
 
-                                <a class="icon" href="#" title="home"> 
+                                <a class="icon" href="remit-login.html" title="Logout"> 
                                    <!-- <span class="logout-style"> LOG OUT </span> -->
                                     <img src="assets/images/logout-1.png"> 
                                 </a>
@@ -132,137 +216,98 @@
                 </div>
             </nav>
             <!-- end of navbar navigation -->
-            <div class="content">
-                <div class="container-fluid">
+             
+                <div class="content">
 
-                    <div class="remit-page-head">
-                        <h3> Select Category </h3>
-                    </div>
-                  <div class="remit-customer-page">
+                    <div class="container">
 
+                        <!-- <h3 class="py-2"> 
+                            <strong> Select Category </strong> 
+                        </h3> -->
 
-                    <div class="row">
+                        <div class="row bg-light-green py-1">
 
-                        <!-- <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
-                             
-                        </div> -->
-                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3 order-last order-md-2">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
+                            <div class="col-md-4">
+                                <!-- Category 1 -->
+                                <div class="sc-card">
+                                    <div class="sc-title">SELECT</div>
+                                    <div class="sc-subtitle">Category {1}</div>
 
-                                       <div class="remit-customer-box">
-                                            <center> 
-                                            <div class="roundno"><span> 3 </span> </div>
-                                            </center>
-
-                                            <h4> I`m A <span> Company </span> Who Wants To Send Monies To A <span> Company </span> </h4>
-
-                                            <p>(KYC Requires Only To Be Done Once ; Bank To Bank  Account Only ) </p>
-
-                                            <div class="footer">
-                                                <hr>
-                                                <center>
-                                                    <!-- remit-sender-receiver-3.html -->
-                                                <a href="#">
-                                                     <button type="button" class="btn btn-lg w-100 fs-3 btn-square btn-success"> Click Here </button>
-                                                    <!-- <a href="remit-sender-receiver-3.html"> <h2> Click Here </h2> </a> -->
-                                                </a>
-                                                </center>
-                                            </div>
-
-                                        </div>  
-                                         
+                                    <div class="click-box">
+                                        Individual<br>
+                                        To Individual<br>
+                                        {Click Here}
                                     </div>
 
-                                    
-
+                                    <div class="sc-note">
+                                        Sender and Receiver must have a Bank account under their respective names
+                                        with valid ID and valid non expired passport to fulfill all requirements as
+                                        per CENTRAL BANK regulators demands; Please call the nos and/or email to get
+                                        assistance where and when required.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3 order-2 order-md-3">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
+                            <div class="col-md-4">
+                                <!-- Category 2 -->
+                                <div class="sc-card">
+                                    <div class="sc-title">SELECT</div>
+                                    <div class="sc-subtitle">Category {2}</div>
 
-                                       <div class="remit-customer-box">
-                                            <center> 
-                                            <div class="roundno"><span> 2 </span> </div>
-                                            </center>
-
-                                            <h4>I`m An <span>Individual Sending On Behalf Of Another Individual To An Individual </span> 
-                                            <strong style="display:block;">(MUST HAVE A BANK ACCOUNT) </strong></h4>
-                                            <div style="margin-bottom:45px;"> </div>
-                                            <div class="footer">
-                                                <hr>
-                                                <center>
-                                                <a href="#">
-                                                     <button type="button" class="btn btn-lg w-100 fs-3 btn-square btn-success"> Click Here </button>
-                                                    <!-- <a href="remit-sender-receiver-3.html"> <h2> Click Here </h2> </a> -->
-                                                </a>
-                                                </center>
-                                            </div>
-
-                                        </div>  
-                                         
+                                    <div class="click-box">
+                                        Individual On Behalf Of True Beneficiary<br>
+                                        To An Individual<br>
+                                        {Click Here}
                                     </div>
 
-                                    
-
+                                    <div class="sc-note">
+                                        Sender and Receiver must have a Bank account under their respective names
+                                        with valid ID and valid non expired passport to fulfill all requirements as
+                                        per CENTRAL BANK regulators demands; Please call the nos and/or email to get
+                                        assistance where and when required.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-6 col-md-6 col-lg-4 mt-3 order-first order-md-4">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
+                            <div class="col-md-4">
+                                <!-- Category 3 -->
+                                <div class="sc-card">
+                                    <div class="sc-title">SELECT</div>
+                                    <div class="sc-subtitle">Category {3}</div>
 
-                                       <div class="remit-customer-box">
-                                            <center> 
-                                            <div class="roundno"><span> 1 </span> </div>
-                                            </center>
-
-                                            <h4> I`m An <span> Individual </span> Who Wants To Send Monies To An <span> Individual </span> 
-
-                                            <strong style="display:block;">(MUST HAVE A BANK ACCOUNT) </strong></h4>
-                                            <div style="margin-bottom:45px;"> </div>
-                                            <div class="footer">
-                                                <hr>
-                                                <center>
-                                                <a href="#">
-                                                     <button type="button" class="btn btn-lg w-100 fs-3 btn-square btn-success"> Click Here </button>
-                                                    <!-- <a href="remit-sender-receiver-3.html"> <h2> Click Here </h2> </a> -->
-                                                </a>
-                                                </center>
-                                            </div>
-
-                                        </div>  
-                                         
+                                    <div class="click-box">
+                                        Company To Company<br>
+                                        {Click Here}
                                     </div>
 
-                                    
-
+                                    <div class="sc-note">
+                                        Sender and Receiver must have a Bank account under their respective names
+                                        with valid ID and valid non expired passport to fulfill all requirements as
+                                        per CENTRAL BANK regulators demands; Please call the nos and/or email to get
+                                        assistance where and when required.
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
-
-
-
-                    
-
-                 </div>
 
                 </div>
-            </div>
+
         </div>
+
     </div>
+
+     
+
+
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    
+
 </body>
 
 </html>
