@@ -38,7 +38,8 @@ body{
     text-align: center;
     white-space: nowrap;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 15px;
+    background-color: #ffffff;
 }
 
 .table td {
@@ -46,7 +47,7 @@ body{
     text-align:right;
     white-space: nowrap;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* Column background */
@@ -105,19 +106,36 @@ body{
     font-weight: 600;
 }
 
-.rate-page-dis {
+/*.rate-page-dis {
     background-color: #65ef08;
     padding: 10px;
     margin: 5px 0 10px;
     border:1px solid #000000;
+}*/
+
+.rate-page-box {
+    position: relative;
+    width: 80%;
+    margin: 0;
+    float: right;
+}
+
+.rate-page-dis {
+    background-color: #65ef08;
+    padding: 5px 10px;
+    margin: auto;
+    border: 1px solid #000000;
+    align-items: center;
+    display: block;
+    position:relative;
 }
 
 .rate-page-dis p {
-    line-height:15px;
-    font-size: 12px;
+    line-height: 15px;
+    font-size: 13px;
     color: #000000;
     margin-bottom: 0px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .text-red {
@@ -127,6 +145,17 @@ body{
 /* Responsive scroll */
 .table-responsive{
   overflow-x:auto;
+}
+
+@media (max-width:767px) {
+
+.rate-page-box {
+    position: relative;
+    width: 100%;
+    margin-top:10px;
+    float:none;
+}
+
 }
 
 
@@ -144,16 +173,21 @@ body{
                  
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                            <div class="col-lg-5 col-md-5 col-sm-12">
+                            <div class="col-lg-4 col-sm-4">
                                 <a href="#"> 
                                 <img class="img-fluid mx-auto d-block sm-logo" src="assets/images/new-smz-logo.png">  
                                 </a>  
                             </div>
 
-                            <div class="col-lg-2 col-md-0 col-sm-0"> 
+                            <div class="col-lg-5 col-sm-5"> 
+                              <div class="rate-page-box">
+                                <div class="rate-page-dis">
+                                    <p> Please call our no.s to verify tangible cash currency market rates in REAL TIME – 016 7332 134 , 019 999 6793 </p>
+                                </div>
+                              </div>
                             </div>
 
-                            <div class="col-lg-5 col-md-7 col-sm-12 remit-home-icon">
+                            <div class="col-lg-3 col-sm-3 remit-home-icon">
                                 <div style="float:right;">
                                 <a class=" " href="#" title="Back"> 
                                   &nbsp;  <img src="assets/images/left-arrow.png"> &nbsp;
@@ -180,15 +214,14 @@ body{
 
                     <div class="master-agent-page">
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-me-12">
                             <div class="rate-page-dis">
                                <p> Please call our no.s to verify tangible cash currency market rates in REAL TIME – 016 7332 134 , 019 999 6793 </p>
-
                             </div>
                             </div>
                             
-                        </div>
+                        </div> -->
 
 
                          <div class="row g-2">
