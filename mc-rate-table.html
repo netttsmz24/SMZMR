@@ -42,10 +42,10 @@ body{
 .table th {
     padding:5px;
     text-align:center;
-    white-space:nowrap;
+/*    white-space:nowrap;*/
     font-weight:600;
     line-height:20px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .table td {
@@ -69,26 +69,50 @@ body{
     display: block;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 5px;
     border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.action-panel span {
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 65px;
+    display: block;
+}
+
+.action-panel h2 {
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.action-panel h3 {
+    text-align: center;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 18px;
 }
 
 .action-panel-in {
-    width: 80%;
-    margin: 10% auto;
+    width: 100%;
     display: block;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 22px;
+    font-size: 11px;
     font-weight: bold;
-    border: 3px solid #fff;
     vertical-align: middle;
-    line-height: 25px;
-    padding: 15px 5px;
-    cursor:pointer;
+    line-height: 13px;
+    padding: 15px 0px;
+    
 }
-
 
 .table td.currency {
     text-align: center;
@@ -162,6 +186,14 @@ body{
     font-weight: 700 !important;
 }
 
+.rate-avail {
+    background-color: #e6f0fa !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    line-height: 15px !important;
+}
+
+
 /* Responsive scroll */
 .table-responsive{
   overflow-x:auto;
@@ -176,6 +208,16 @@ body{
     float:none;
 }
 
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+
+.rate-page-box {
+    position: relative;
+    width: 90%;
+    margin: 0;
+    float:right;
+}
 }
 
 
@@ -193,13 +235,13 @@ body{
                  
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                            <div class="col-lg-4 col-sm-4">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
                                 <a href="#"> 
                                 <img class="img-fluid mx-auto d-block sm-logo" src="assets/images/new-smz-logo.png">  
                                 </a>  
                             </div>
 
-                            <div class="col-lg-5 col-sm-5"> 
+                            <div class="col-lg-5 col-md-5 col-sm-3-12"> 
                               <div class="rate-page-box">
                                 <div class="rate-page-dis">
                                     <p> Please call our no.s to verify tangible cash currency market rates in REAL TIME – 016 7332 134, 019 999 6793</p>
@@ -207,7 +249,7 @@ body{
                               </div>
                             </div>
 
-                            <div class="col-lg-3 col-sm-3 remit-home-icon">
+                            <div class="col-lg-3 col-md-3 col-sm-12 remit-home-icon">
                                 <div style="float:right;">
                                 <a class=" " href="#" title="Back"> 
                                   &nbsp;  <img src="assets/images/left-arrow.png"> &nbsp;
@@ -247,7 +289,7 @@ body{
                          <div class="row g-2">
 
                             <!-- LEFT MAIN TABLE -->
-                            <div class="col-lg-10">
+                            <div class="col-lg-11">
                               <div class="table-responsive">
                                 <table class="table table-bordered">
 
@@ -277,6 +319,10 @@ body{
                                         <small>and above Rate Applies</small>
                                       </th>
 
+                                      <th colspan="2" rowspan="2" class="rate-avail">
+                                        Gauge Stock <br> Availability
+                                      </th>
+
                                     </tr>
 
                                     <tr>
@@ -293,6 +339,9 @@ body{
 
                                       <th>We Buy (You Sell)</th>
                                       <th>We Sell (You Buy)</th>
+
+                                      <!-- <th>--</th> -->
+                                       
                                     </tr>
                                   </thead>
 
@@ -303,6 +352,7 @@ body{
                                       <td class=" ">4.7273369</td><td class=" ">4.73839</td>
                                       <td class="bg-yellow">4.7273369</td><td class="bg-yellow">4.73839</td>
                                       <td class="bg-blue">4.7273369</td><td class="bg-blue">4.73839</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -310,6 +360,7 @@ body{
                                       <td class=" ">5.9562369</td><td class=" ">5.96549</td>
                                       <td class="bg-yellow">5.9562369</td><td class="bg-yellow">5.96549</td>
                                       <td class="bg-blue">5.9562369</td><td class="bg-blue">5.96549</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -317,6 +368,7 @@ body{
                                       <td class=" ">0.031412369</td><td class=" ">0</td>
                                       <td class="bg-yellow">0.031412369</td><td class="bg-yellow">0</td>
                                       <td class="bg-blue">0.031412369</td><td class="bg-blue">0</td>
+                                       <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -324,6 +376,7 @@ body{
                                       <td class=" ">5.1112369</td><td class=" ">5.12439</td>
                                       <td class="bg-yellow">5.1112369</td><td class="bg-yellow">5.12439</td>
                                       <td class="bg-blue">5.1112369</td><td class="bg-blue">5.12439</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -332,6 +385,7 @@ body{
                                       <td class=" ">4.7273369</td><td class=" ">4.73839</td>
                                       <td class="bg-yellow">4.7273369</td><td class="bg-yellow">4.73839</td>
                                       <td class="bg-blue">4.7273369</td><td class="bg-blue">4.73839</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -339,6 +393,7 @@ body{
                                       <td class=" ">5.9562369</td><td class=" ">5.96549</td>
                                       <td class="bg-yellow">5.9562369</td><td class="bg-yellow">5.96549</td>
                                       <td class="bg-blue">5.9562369</td><td class="bg-blue">5.96549</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -346,6 +401,7 @@ body{
                                       <td class=" ">0.031412369</td><td class=" ">0</td>
                                       <td class="bg-yellow">0.031412369</td><td class="bg-yellow">0</td>
                                       <td class="bg-blue">0.031412369</td><td class="bg-blue">0</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -353,6 +409,7 @@ body{
                                       <td class=" ">5.1112369</td><td class=" ">5.12439</td>
                                       <td class="bg-yellow">5.1112369</td><td class="bg-yellow">5.12439</td>
                                       <td class="bg-blue">5.1112369</td><td class="bg-blue">5.12439</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -361,6 +418,7 @@ body{
                                       <td class=" ">4.7273369</td><td class=" ">4.73839</td>
                                       <td class="bg-yellow">4.7273369</td><td class="bg-yellow">4.73839</td>
                                       <td class="bg-blue">4.7273369</td><td class="bg-blue">4.73839</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -368,6 +426,7 @@ body{
                                       <td class=" ">5.9562369</td><td class=" ">5.96549</td>
                                       <td class="bg-yellow">5.9562369</td><td class="bg-yellow">5.96549</td>
                                       <td class="bg-blue">5.9562369</td><td class="bg-blue">5.96549</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -375,6 +434,7 @@ body{
                                       <td class=" ">0.031412369</td><td class=" ">0</td>
                                       <td class="bg-yellow">0.031412369</td><td class="bg-yellow">0</td>
                                       <td class="bg-blue">0.031412369</td><td class="bg-blue">0</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
                                     <tr>
@@ -382,6 +442,7 @@ body{
                                       <td class=" ">5.1112369</td><td class=" ">5.12439</td>
                                       <td class="bg-yellow">5.1112369</td><td class="bg-yellow">5.12439</td>
                                       <td class="bg-blue">5.1112369</td><td class="bg-blue">5.12439</td>
+                                      <td class="bg-blue">&nbsp;</td>
                                     </tr>
 
 
@@ -393,12 +454,21 @@ body{
                             </div>
 
                             <!-- RIGHT ACTION PANEL -->
-                            <div class="col-lg-2">
+                            <div class="col-lg-1 ">
                               <div class="action-panel">
 
                                 <div class="action-panel-in">
-                                  CLICK<br>HERE <br> <br> <small>To <br> Transact Online & Book</small>
+                                 (CLICK HERE)  <br>   To <br> TRANSACT  
                                 </div>
+
+                                 <span> & </span>
+
+                                 <h2>Book </h2>
+
+                                 <h3>Online</h3>
+
+                                </div>
+
                               </div>
 
                             </div>
