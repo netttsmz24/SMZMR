@@ -28,11 +28,16 @@
 
         .sc-card {
             flex: 1;
-            min-width: 300px;
-            background: #66ff33;
+            min-width:auto;
+        /*  background: #66ff33;*/
             padding: 25px;
             box-sizing: border-box;
             border-right: 6px solid #ffffff;
+        }
+
+        .sc-card-border {
+            border-right: 6px solid #eff2f5 !important;
+            height: 100%;
         }
 
         .sc-card:last-child {
@@ -49,6 +54,7 @@
         .sc-subtitle {
             font-size: 34px;
             margin-bottom: 25px;
+            line-height: 45px;
         }
 
         .click-box {
@@ -79,12 +85,43 @@
                 font-size: 26px;
             }
             .click-box {
-                font-size: 22px;
+                font-size: 18px;
+                line-height: 20px;
+                padding: 10px 15px;
             }
+
+            .sc-card {
+                flex: 1;
+                min-width: auto;
+                /* background: #66ff33; */
+                padding:15px;
+                box-sizing: border-box;
+                border-right: 6px solid #ffffff;
+            }
+
         }
+
+        @media (max-width: 767px) {
+
+            .sc-card {
+                flex: 1;
+                min-width: auto;
+                /* background: #66ff33; */
+                padding: 10px;
+                box-sizing: border-box;
+                border-right: 0px solid #ffffff !important;
+                /* border-bottom: 6px solid #ffffff; */
+            }
+
+            .sc-card-border {
+                border-bottom: 6px solid #ffffff;
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
         </style>
-
-
 
 </head>
 
@@ -225,11 +262,11 @@
                             <strong> Select Category </strong> 
                         </h3> -->
 
-                        <div class="row bg-light-green py-1">
+                        <div class="row g-1 bg-light-green mt-2">
 
                             <div class="col-md-4">
                                 <!-- Category 1 -->
-                                <div class="sc-card">
+                                <div class="sc-card sc-card-border">
                                     <div class="sc-title">SELECT</div>
                                     <div class="sc-subtitle">Category {1}</div>
 
@@ -250,7 +287,7 @@
 
                             <div class="col-md-4">
                                 <!-- Category 2 -->
-                                <div class="sc-card">
+                                <div class="sc-card sc-card-border">
                                     <div class="sc-title">SELECT</div>
                                     <div class="sc-subtitle">Category {2}</div>
 
