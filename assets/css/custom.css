@@ -4355,8 +4355,8 @@ div[disabled] {
     line-height:5px;
     border: none;
 /*    font-family: 'Agency FB', sans-serif;*/
-    font-size: 16px;
-    color:#000000;
+   /* font-size: 16px;
+    color:#000000;*/
 }
 
 .remit-menu-list1 span {
@@ -5391,6 +5391,7 @@ p.pc-text {
     font-weight: bold;
     text-align: center;
     margin: 6px auto;
+    line-height: 40px;
 }
 
 .sr-form .form-control {
@@ -5641,6 +5642,28 @@ p.pc-text {
     margin-top: 10px;
     font-size: 13px;
 }
+
+/*new select categorization new style 22/01/2026 ---------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
