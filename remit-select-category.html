@@ -26,6 +26,8 @@
             flex-wrap: wrap;
         }*/
 
+        body {background-color:#ffffff;}
+
         .sc-card {
             flex: 1;
             min-width:auto;
@@ -35,14 +37,20 @@
             border-right: 6px solid #ffffff;
         }
 
-        .sc-card-border {
+        /*.sc-card-border {
             border-right: 6px solid #eff2f5 !important;
             height: 100%;
-        }
+        }*/
 
+        .sc-card-border {
+            border: 1px solid #010101 !important;
+            height: 100%;
+        }
+            
+/*
         .sc-card:last-child {
             border-right: none;
-        }
+        }*/
 
         .sc-title {
             font-size: 38px;
@@ -76,7 +84,15 @@
             color: #000000;
         }
 
+        /*.g-sm {
+            --bs-gutter-y: 0.40rem;
+        }*/
+        .g-sm {
+            --bs-gutter-x: 0.50rem;
+        }
+
         /* Responsive */
+
         @media (max-width: 768px) {
             .sc-title {
                 font-size: 30px;
@@ -102,6 +118,10 @@
         }
 
         @media (max-width: 767px) {
+
+            .g-sm {
+                --bs-gutter-y: 0.70rem;
+            }
 
             .sc-card {
                 flex: 1;
@@ -262,11 +282,11 @@
                             <strong> Select Category </strong> 
                         </h3> -->
 
-                        <div class="row g-1 bg-light-green mt-2">
+                        <div class="row g-sm mt-2">
 
                             <div class="col-md-4">
                                 <!-- Category 1 -->
-                                <div class="sc-card sc-card-border">
+                                <div class="sc-card bg-light-green sc-card-border">
                                     <div class="sc-title">SELECT</div>
                                     <div class="sc-subtitle">Category {1}</div>
 
@@ -286,7 +306,7 @@
 
                             <div class="col-md-4">
                                 <!-- Category 2 -->
-                                <div class="sc-card sc-card-border">
+                                <div class="sc-card bg-light-green sc-card-border">
                                     <div class="sc-title">SELECT</div>
                                     <div class="sc-subtitle">Category {2}</div>
 
@@ -305,9 +325,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 ">
                                 <!-- Category 3 -->
-                                <div class="sc-card">
+                                <div class="sc-card bg-light-green sc-card-border">
                                     <div class="sc-title">SELECT</div>
                                     <div class="sc-subtitle">Category {3}</div>
 
@@ -319,8 +339,7 @@
                                     <div class="sc-note">
                                         Sender and Receiver must have a Bank account under their respective names
                                         with valid ID and valid non expired passport to fulfill all requirements as
-                                        per CENTRAL BANK regulators demands; Please call the nos and/or email to get
-                                        assistance where and when required.
+                                        per CENTRAL BANK regulators demands; Please call the nos and/or email to get assistance where and when required.
                                     </div>
                                 </div>
                             </div>
