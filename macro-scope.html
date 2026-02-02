@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>### Home ###</title>
+    <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f8f9fa;
+      font-size: 14px;
+    }
+
+    .border-box {
+        border: 1px solid #010101;
+        background: #e9f0fb;
+        min-height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #010101;
+    }
+
+    .stat-box {
+      border: 1px solid #000;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .stat-red {
+      background: red;
+      color: #fff;
+    }
+
+    .stat-green {
+      background: #20FB15;
+      color: #000;
+      font-size: 18px;
+      padding: 15px;
+      border: 1px solid #010101;
+    }
+
+    .table th {
+        background: #ffffff;
+        border: 1px solid #010101;
+    }
+
+    .highlight-green {
+      background-color: #2bff00 !important;
+      font-weight: bold;
+      min-width: 100px;
+      text-align: left;
+      border: 1px solid #010101;
+    }
+
+    .report-btn {
+        background: #198754;
+        border: 2px solid #198754;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .mct-left table{
+      border:1px solid #010101;
+    }
+
+    .mct-left label.strong{
+      font-weight: bold;
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="container p-3">
+
+      <!-- Header -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="fw-bold">Home 1.0 &nbsp; Master Partner Overall Macro Scope</h5>
+        <div class="border px-3 py-1 fw-bold">
+          This Page automatically updates 60 sec
+        </div>
+      </div>
+
+
+    <div class="row g-3">
+
+         <div class="col-md-6">
+
+          <!-- Graphs -->
+          <div class="row g-1 mb-3">
+            <div class="col-md-12">
+              <div class="border-box">Graph</div>
+            </div>
+             
+          </div>
+
+          <!-- Stats -->
+          <div class="row g-1 mb-3">
+            <div class="col-md-3 stat-box">
+              Exec Trn<br>369
+            </div>
+            <div class="col-md-3 stat-box stat-red">
+              Pend Trn<br><span class="fs-4">369</span>
+            </div>
+            <div class="col-md-3 stat-box">
+              Vol Trn Exec<br>369$$
+            </div>
+            <div class="col-md-3 stat-box stat-red">
+              Pend Trn Vol<br>369$$
+            </div>
+          </div>
+
+          <!-- Volume Exceeded -->
+          <div class="row g-1 mb-3">
+            <div class="col-md-6 stat-green text-center">
+              Trn<br>Vol Exceed No
+            </div>
+            <div class="col-md-6 stat-green text-center">
+              Trn<br>Vol Exceeded 369$$
+            </div>
+             
+          </div>
+
+          <!-- Country Tables -->
+          <div class="row g-1">
+            <!-- Left -->
+            <div class="col-md-12 mct-left">
+              <table class="table table-bordered">
+                <tr>
+                  <td><label class="strong">FROM Country</label></td>
+                  <td class="highlight-green">MYR</td>
+                  <td><label class="strong">To Country</label></td>
+                  <td class="highlight-green">SGD</td>
+                </tr>
+                <tr><td>IN - Credit - FT (From To) +</td> <td colspan="3"> </td> </tr>
+                <tr><td>OUT - Debit - FT (From To) -</td> <td colspan="3"> </td> </tr>
+                <tr class="highlight-green">
+                  <td>Current Capital CF BASE</td> <td colspan="3"> </td>
+                </tr>
+                <tr>
+                  <td>Average of IN CREDIT</td>
+                  <td>Days</td>
+                  <td colspan="2">Averages Cross Calculated</td>
+                </tr>
+                <tr>
+                  <td>Average of OUT DEBIT</td>
+                  <td>Days</td>
+                  <td colspan="2">Averages Cross Calculated</td>
+                </tr>
+                <tr>
+                  <td>Current Offered Rate</td>
+                  <td colspan="3">3.1575</td>
+                </tr>
+                <tr>
+                  <td>IBOR Rates</td>
+                  <td colspan="3">3.1620</td>
+                </tr>
+                <tr>
+                  <td>From Date (STATUS)</td>
+                  <td></td>
+                  <td>To Date (STATUS)</td>
+                  <td></td>
+                </tr>
+              </table>
+              <div class="report-btn">GENERATE REPORT OF IN ↔ OUT MAPPING STATUS</div>
+            </div>
+          </div>
+         </div>
+         
+
+         <div class="col-md-6">
+
+          <!-- Graphs -->
+          <div class="row g-2 mb-3">
+             
+            <div class="col-md-12">
+              <div class="border-box text-center">
+                Graph Sales – IN-self MYR – SGDIN<br>
+                & Graph Sales – Out-self SGD
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Stats -->
+          <div class="row g-1 mb-3">
+            <div class="col-md-3 stat-box">
+              Exec Trn<br>369
+            </div>
+            <div class="col-md-3 stat-box stat-red">
+              Pend Trn<br><span class="fs-4">369</span>
+            </div>
+            <div class="col-md-3 stat-box">
+              Vol Trn Exec<br>369$$
+            </div>
+            <div class="col-md-3 stat-box stat-red">
+              Pend Trn Vol<br>369$$
+            </div>
+          </div>
+
+          <!-- Volume Exceeded -->
+          <div class="row g-1 mb-3">
+             
+            <div class="col-md-6 stat-green text-center">
+              Trn<br>Vol Exceed No
+            </div>
+            <div class="col-md-6 stat-green text-center">
+              Trn<br>Vol Exceeded 369$$
+            </div>
+          </div>
+
+          <!-- Country Tables -->
+          <div class="row g-1">
+             
+
+            <!-- Right -->
+            <div class="col-md-12 mct-left">
+              <table class="table table-bordered">
+                <tr>
+                  <td><label class="strong">FROM Country</label></td>
+                  <td class="highlight-green">SGD</td>
+                  <td><label class="strong">To Country</label></td>
+                  <td class="highlight-green">MYR</td>
+                </tr>
+                <tr><td>IN - Credit - FT (From To) +</td><td colspan="3"> </td></tr>
+                <tr><td>OUT - Debit - FT (From To) -</td><td colspan="3"> </td></tr>
+                <tr class="highlight-green">
+                  <td>Current Capital CF BASE</td> <td colspan="3"> </td>
+                </tr>
+                <tr>
+                  <td>Average of IN CREDIT</td> 
+                  <td>Days</td>
+                  <td colspan="2">Averages Cross Calculated</td>
+                </tr>
+                <tr>
+                  <td>Average of OUT DEBIT</td>
+                  <td>Days</td>
+                  <td colspan="2">Averages Cross Calculated</td>
+                </tr>
+                <tr>
+                  <td>Current Offered Rate</td>
+                  <td colspan="3">3.1575</td>
+                </tr>
+                <tr>
+                  <td>IBOR Rates</td>
+                  <td colspan="3">3.1620</td>
+                </tr>
+                <tr>
+                  <td>From Date (STATUS)</td>
+                  <td></td>
+                  <td>To Date (STATUS)</td>
+                  <td></td>
+                </tr>
+              </table>
+
+              <div class="report-btn">GENERATE REPORT OF IN ↔ OUT MAPPING STATUS</div>
+
+            </div>
+          </div>
+         </div>
+
+    </div>
+
+</div>
+
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
