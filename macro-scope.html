@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
+ 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>### Home ###</title>
+    <title>### Macro Scope ###</title>
     <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
     <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
@@ -12,276 +14,453 @@
     <link href="assets/css/master.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
 
-  <style>
-    body {
-      background: #f8f9fa;
-      font-size: 14px;
-    }
+      <style>
 
-    .border-box {
-        border: 1px solid #010101;
-        background: #e9f0fb;
-        min-height: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: #010101;
-    }
+        /*body {
+          background: #f8f9fa;
+          font-size: 14px;
+        }*/
 
-    .stat-box {
-      border: 1px solid #000;
-      text-align: center;
-      padding: 10px;
-      font-weight: bold;
-    }
+        .border-box {
+            border: 1px solid #010101;
+            background: #e9f0fb;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #010101;
+        }
 
-    .stat-red {
-      background: red;
-      color: #fff;
-    }
+        .stat-box {
+          border: 1px solid #000;
+          text-align: center;
+          padding: 10px;
+          font-weight: bold;
+        }
 
-    .stat-green {
-      background: #20FB15;
-      color: #000;
-      font-size: 18px;
-      padding: 15px;
-      border: 1px solid #010101;
-    }
+        .stat-red {
+          background: red;
+          color: #fff;
+        }
 
-    .table th {
-        background: #ffffff;
-        border: 1px solid #010101;
-    }
+        .stat-green {
+          background: #20FB15;
+          color: #000;
+          font-size: 16px;
+          padding: 15px;
+          border: 1px solid #010101;
+          line-height:20px;
+        }
 
-    .highlight-green {
-      background-color: #2bff00 !important;
-      font-weight: bold;
-      min-width: 100px;
-      text-align: left;
-      border: 1px solid #010101;
-    }
+        .table th {
+            background: #ffffff;
+            border: 1px solid #010101;
+        }
 
-    .report-btn {
-        background: #198754;
-        border: 2px solid #198754;
-        text-align: center;
-        padding: 10px;
-        font-weight: bold;
-        color: #ffffff;
-        cursor: pointer;
-    }
+        .highlight-green {
+          background-color: #2bff00 !important;
+          font-weight: bold;
+          min-width: 100px;
+          text-align: left;
+          border: 1px solid #010101;
+        }
 
-    .mct-left table{
-      border:1px solid #010101;
-    }
+        .report-btn {
+            background: #198754;
+            border: 2px solid #198754;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            color: #ffffff;
+            cursor: pointer;
+        }
 
-    .mct-left label.strong{
-      font-weight: bold;
-    }
+        .mct-left table{
+          border:1px solid #010101;
+        }
+
+        .mct-left label.strong{
+          font-weight: bold;
+        }
 
 
-  </style>
+        #sidebar ul.admin-side-menu li a {
+            padding: .5rem 1.0rem;
+            font-size: 12px;
+            border-bottom: 1px solid #e4e6e9;
+            color: #010101;
+            text-align: left;
+            line-height: 14px;
+            display: flex;
+        }
+
+        #sidebar ul ul a {
+            /*font-size: 1rem;
+            background: #EEEEEE;*/
+            border-bottom: 1px solid #a7a5a5 !important;
+        }
+
+        #sidebar ul ul {
+            text-indent: 25px;
+        }
+
+      </style>
 
 </head>
 
 <body>
 
-<div class="container p-3">
+    <div class="wrapper">
+        <!-- sidebar navigation component -->
+        
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <a href="#">
+                    <img src="assets/images/smz-logo.png" alt="bootraper logo" class="app-logo"> 
+                    <!-- style="width:175px; margin-top:-10px; background-color:#ffffff;" -->
+                </a>
+            </div>
+            <ul class="list-unstyled components text-secondary admin-side-menu mt-2">
+                 
+                <li>
+                    <a href="#" class=" "> <!-- .select-smenu -->
+                        <i class="fas fa-dollar-sign"></i> Rate & Booking
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <i class="fas fa-list-ul"></i> Select Category
+                    </a>
+                </li>
 
-      <!-- Header -->
-      <div class="d-flex justify-content-between align-items-center mb-2">
-        <h5 class="fw-bold">Home 1.0 &nbsp; Master Partner Overall Macro Scope</h5>
-        <div class="border px-3 py-1 fw-bold">
-          This Page automatically updates 60 sec
+                <li>
+                    <a href="#"><i class="fas fa-user"></i>Customers Agreement</a>
+                </li>
+                <li>
+                    <a href="#" class=" ">  
+                        <i class="fas fa-dollar-sign"></i> Rate & Booking
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <i class="fas fa-list-ul"></i> Select Category
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-user"></i>Customers Agreement</a>
+                </li>
+                <li>
+                    <a href="#" class=" ">  
+                        <i class="fas fa-dollar-sign"></i> Rate & Booking
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <i class="fas fa-list-ul"></i> Select Category
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-user"></i>Customers Agreement</a>
+                </li>
+                <li>
+                    <a href="#" class=" "> 
+                        <i class="fas fa-dollar-sign"></i> Rate & Booking
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <i class="fas fa-list-ul"></i> Select Category
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-user"></i>Customers Agreement</a>
+                </li>
+
+                <li>
+                    <a href="#" class=" ">  
+                        <i class="fas fa-dollar-sign"></i> Rate & Booking
+                    </a>
+                </li>
+                
+                 
+
+                <li>
+                    <a href="#pagesmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-copy"></i>FINANCIALS  <i class="fas fa-arrow-right"></i></a>
+                    <ul class="collapse list-unstyled" id="pagesmenu">
+                        <li>
+                            <a href="#"><i class="fas fa-file"></i>Profit & Loss BRICK</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-info-circle"></i>Balance Sheet BRICK</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-info-circle"></i>LOG  History</a>
+                        </li>
+                    </ul>
+                </li>
+                 
+            </ul>
+        </nav>
+
+        <!-- end of sidebar component -->
+        <div id="body" class="active">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <a href="#"> 
+                                <img class="img-fluid mx-auto d-block sm-logo" src="assets/images/new-smz-logo.png">  
+                                </a>  
+                            </div>
+
+                            <div class="col-lg-2 col-md-0 col-sm-0"> 
+                            </div>
+
+                            <div class="col-lg-5 col-md-7 col-sm-12 remit-home-icon">
+                                <div style="float:right;">
+                                <a class=" " href="#" title="Back"> 
+                                  &nbsp;  <img src="assets/images/left-arrow.png"> &nbsp;
+                                </a>
+
+
+                                <a class="icon" href="#" title="Next"> 
+                                   &nbsp; <img src="assets/images/right-arrow.png"> &nbsp;
+                                </a>
+
+                                <a class="icon" href="remit-login.html" title="Logout"> 
+                                   <!-- <span class="logout-style"> LOG OUT </span> -->
+                                    <img src="assets/images/logout-1.png"> 
+                                </a>
+
+                                 
+                                </div>
+                            </div>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+             
+                <div class="content">
+
+                    <div class="container">
+
+                         <!-- Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-bold">Home 1.0 &nbsp; Master Partner Overall Macro Scope</h5>
+                            <div class="border px-3 py-1 fw-bold">
+                              This Page automatically updates 60 sec
+                            </div>
+                        </div>
+
+
+                        <div class="row g-3">
+
+                             <div class="col-md-6">
+
+                              <!-- Graphs -->
+                              <div class="row g-1 mb-3">
+                                <div class="col-md-12">
+                                  <div class="border-box">Graph</div>
+                                </div>
+                                 
+                              </div>
+
+                              <!-- Stats -->
+                              <div class="row g-1 mb-3">
+                                <div class="col-md-3 stat-box">
+                                  Exec Trn<br>369
+                                </div>
+                                <div class="col-md-3 stat-box stat-red">
+                                  Pend Trn<br><span class="fs-4">369</span>
+                                </div>
+                                <div class="col-md-3 stat-box">
+                                  Vol Trn Exec<br>369$$
+                                </div>
+                                <div class="col-md-3 stat-box stat-red">
+                                  Pend Trn Vol<br>369$$
+                                </div>
+                              </div>
+
+                              <!-- Volume Exceeded -->
+                              <div class="row g-1 mb-3">
+                                <div class="col-md-6 stat-green text-center">
+                                  Trn<br>Vol Exceed No
+                                </div>
+                                <div class="col-md-6 stat-green text-center">
+                                  Trn<br>Vol Exceeded 369$$
+                                </div>
+                                 
+                              </div>
+
+                              <!-- Country Tables -->
+                              <div class="row g-1">
+                                <!-- Left -->
+                                <div class="col-md-12 mct-left">
+                                  <table class="table table-bordered">
+                                    <tr>
+                                      <td><label class="strong">FROM Country</label></td>
+                                      <td class="highlight-green">MYR</td>
+                                      <td><label class="strong">To Country</label></td>
+                                      <td class="highlight-green">SGD</td>
+                                    </tr>
+                                    <tr><td>IN - Credit - FT (From To) +</td> <td colspan="3"> </td> </tr>
+                                    <tr><td>OUT - Debit - FT (From To) -</td> <td colspan="3"> </td> </tr>
+                                    <tr class="highlight-green">
+                                      <td>Current Capital CF BASE</td> <td colspan="3"> </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Average of IN CREDIT</td>
+                                      <td>Days</td>
+                                      <td colspan="2">Averages Cross Calculated</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Average of OUT DEBIT</td>
+                                      <td>Days</td>
+                                      <td colspan="2">Averages Cross Calculated</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Current Offered Rate</td>
+                                      <td colspan="3">3.1575</td>
+                                    </tr>
+                                    <tr>
+                                      <td>IBOR Rates</td>
+                                      <td colspan="3">3.1620</td>
+                                    </tr>
+                                    <tr>
+                                      <td>From Date (STATUS)</td>
+                                      <td></td>
+                                      <td>To Date (STATUS)</td>
+                                      <td></td>
+                                    </tr>
+                                  </table>
+                                  <div class="report-btn">GENERATE REPORT OF IN ↔ OUT MAPPING STATUS</div>
+                                </div>
+                              </div>
+                             </div>
+                             
+
+                             <div class="col-md-6">
+
+                              <!-- Graphs -->
+                              <div class="row g-2 mb-3">
+                                 
+                                <div class="col-md-12">
+                                  <div class="border-box text-center">
+                                    Graph Sales – IN-self MYR – SGDIN<br>
+                                    & Graph Sales – Out-self SGD
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <!-- Stats -->
+                              <div class="row g-1 mb-3">
+                                <div class="col-md-3 stat-box">
+                                  Exec Trn<br>369
+                                </div>
+                                <div class="col-md-3 stat-box stat-red">
+                                  Pend Trn<br><span class="fs-4">369</span>
+                                </div>
+                                <div class="col-md-3 stat-box">
+                                  Vol Trn Exec<br>369$$
+                                </div>
+                                <div class="col-md-3 stat-box stat-red">
+                                  Pend Trn Vol<br>369$$
+                                </div>
+                              </div>
+
+                              <!-- Volume Exceeded -->
+                              <div class="row g-1 mb-3">
+                                 
+                                <div class="col-md-6 stat-green text-center">
+                                  Trn<br>Vol Exceed No
+                                </div>
+                                <div class="col-md-6 stat-green text-center">
+                                  Trn<br>Vol Exceeded 369$$
+                                </div>
+                              </div>
+
+                              <!-- Country Tables -->
+                              <div class="row g-1">
+                                 
+
+                                <!-- Right -->
+                                <div class="col-md-12 mct-left">
+                                  <table class="table table-bordered">
+                                    <tr>
+                                      <td><label class="strong">FROM Country</label></td>
+                                      <td class="highlight-green">SGD</td>
+                                      <td><label class="strong">To Country</label></td>
+                                      <td class="highlight-green">MYR</td>
+                                    </tr>
+                                    <tr><td>IN - Credit - FT (From To) +</td><td colspan="3"> </td></tr>
+                                    <tr><td>OUT - Debit - FT (From To) -</td><td colspan="3"> </td></tr>
+                                    <tr class="highlight-green">
+                                      <td>Current Capital CF BASE</td> <td colspan="3"> </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Average of IN CREDIT</td> 
+                                      <td>Days</td>
+                                      <td colspan="2">Averages Cross Calculated</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Average of OUT DEBIT</td>
+                                      <td>Days</td>
+                                      <td colspan="2">Averages Cross Calculated</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Current Offered Rate</td>
+                                      <td colspan="3">3.1575</td>
+                                    </tr>
+                                    <tr>
+                                      <td>IBOR Rates</td>
+                                      <td colspan="3">3.1620</td>
+                                    </tr>
+                                    <tr>
+                                      <td>From Date (STATUS)</td>
+                                      <td></td>
+                                      <td>To Date (STATUS)</td>
+                                      <td></td>
+                                    </tr>
+                                  </table>
+
+                                  <div class="report-btn">GENERATE REPORT OF IN ↔ OUT MAPPING STATUS</div>
+
+                                </div>
+                              </div>
+                             </div>
+                        </div>
+
+                         
+
+                    </div>
+
+                </div>
+
         </div>
-      </div>
-
-
-    <div class="row g-3">
-
-         <div class="col-md-6">
-
-          <!-- Graphs -->
-          <div class="row g-1 mb-3">
-            <div class="col-md-12">
-              <div class="border-box">Graph</div>
-            </div>
-             
-          </div>
-
-          <!-- Stats -->
-          <div class="row g-1 mb-3">
-            <div class="col-md-3 stat-box">
-              Exec Trn<br>369
-            </div>
-            <div class="col-md-3 stat-box stat-red">
-              Pend Trn<br><span class="fs-4">369</span>
-            </div>
-            <div class="col-md-3 stat-box">
-              Vol Trn Exec<br>369$$
-            </div>
-            <div class="col-md-3 stat-box stat-red">
-              Pend Trn Vol<br>369$$
-            </div>
-          </div>
-
-          <!-- Volume Exceeded -->
-          <div class="row g-1 mb-3">
-            <div class="col-md-6 stat-green text-center">
-              Trn<br>Vol Exceed No
-            </div>
-            <div class="col-md-6 stat-green text-center">
-              Trn<br>Vol Exceeded 369$$
-            </div>
-             
-          </div>
-
-          <!-- Country Tables -->
-          <div class="row g-1">
-            <!-- Left -->
-            <div class="col-md-12 mct-left">
-              <table class="table table-bordered">
-                <tr>
-                  <td><label class="strong">FROM Country</label></td>
-                  <td class="highlight-green">MYR</td>
-                  <td><label class="strong">To Country</label></td>
-                  <td class="highlight-green">SGD</td>
-                </tr>
-                <tr><td>IN - Credit - FT (From To) +</td> <td colspan="3"> </td> </tr>
-                <tr><td>OUT - Debit - FT (From To) -</td> <td colspan="3"> </td> </tr>
-                <tr class="highlight-green">
-                  <td>Current Capital CF BASE</td> <td colspan="3"> </td>
-                </tr>
-                <tr>
-                  <td>Average of IN CREDIT</td>
-                  <td>Days</td>
-                  <td colspan="2">Averages Cross Calculated</td>
-                </tr>
-                <tr>
-                  <td>Average of OUT DEBIT</td>
-                  <td>Days</td>
-                  <td colspan="2">Averages Cross Calculated</td>
-                </tr>
-                <tr>
-                  <td>Current Offered Rate</td>
-                  <td colspan="3">3.1575</td>
-                </tr>
-                <tr>
-                  <td>IBOR Rates</td>
-                  <td colspan="3">3.1620</td>
-                </tr>
-                <tr>
-                  <td>From Date (STATUS)</td>
-                  <td></td>
-                  <td>To Date (STATUS)</td>
-                  <td></td>
-                </tr>
-              </table>
-              <div class="report-btn">GENERATE REPORT OF IN ↔ OUT MAPPING STATUS</div>
-            </div>
-          </div>
-         </div>
-         
-
-         <div class="col-md-6">
-
-          <!-- Graphs -->
-          <div class="row g-2 mb-3">
-             
-            <div class="col-md-12">
-              <div class="border-box text-center">
-                Graph Sales – IN-self MYR – SGDIN<br>
-                & Graph Sales – Out-self SGD
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Stats -->
-          <div class="row g-1 mb-3">
-            <div class="col-md-3 stat-box">
-              Exec Trn<br>369
-            </div>
-            <div class="col-md-3 stat-box stat-red">
-              Pend Trn<br><span class="fs-4">369</span>
-            </div>
-            <div class="col-md-3 stat-box">
-              Vol Trn Exec<br>369$$
-            </div>
-            <div class="col-md-3 stat-box stat-red">
-              Pend Trn Vol<br>369$$
-            </div>
-          </div>
-
-          <!-- Volume Exceeded -->
-          <div class="row g-1 mb-3">
-             
-            <div class="col-md-6 stat-green text-center">
-              Trn<br>Vol Exceed No
-            </div>
-            <div class="col-md-6 stat-green text-center">
-              Trn<br>Vol Exceeded 369$$
-            </div>
-          </div>
-
-          <!-- Country Tables -->
-          <div class="row g-1">
-             
-
-            <!-- Right -->
-            <div class="col-md-12 mct-left">
-              <table class="table table-bordered">
-                <tr>
-                  <td><label class="strong">FROM Country</label></td>
-                  <td class="highlight-green">SGD</td>
-                  <td><label class="strong">To Country</label></td>
-                  <td class="highlight-green">MYR</td>
-                </tr>
-                <tr><td>IN - Credit - FT (From To) +</td><td colspan="3"> </td></tr>
-                <tr><td>OUT - Debit - FT (From To) -</td><td colspan="3"> </td></tr>
-                <tr class="highlight-green">
-                  <td>Current Capital CF BASE</td> <td colspan="3"> </td>
-                </tr>
-                <tr>
-                  <td>Average of IN CREDIT</td> 
-                  <td>Days</td>
-                  <td colspan="2">Averages Cross Calculated</td>
-                </tr>
-                <tr>
-                  <td>Average of OUT DEBIT</td>
-                  <td>Days</td>
-                  <td colspan="2">Averages Cross Calculated</td>
-                </tr>
-                <tr>
-                  <td>Current Offered Rate</td>
-                  <td colspan="3">3.1575</td>
-                </tr>
-                <tr>
-                  <td>IBOR Rates</td>
-                  <td colspan="3">3.1620</td>
-                </tr>
-                <tr>
-                  <td>From Date (STATUS)</td>
-                  <td></td>
-                  <td>To Date (STATUS)</td>
-                  <td></td>
-                </tr>
-              </table>
-
-              <div class="report-btn">GENERATE REPORT OF IN ↔ OUT MAPPING STATUS</div>
-
-            </div>
-          </div>
-         </div>
 
     </div>
 
-</div>
+     
 
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/script.js"></script>
+
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    
 
 </body>
+
 </html>
