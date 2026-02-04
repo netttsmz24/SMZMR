@@ -33,11 +33,35 @@
         }
 
         .stat-box {
-          border: 1px solid #000;
-          text-align: center;
-          padding: 10px;
-          font-weight: bold;
+            border: 1px solid #bbbbbb;
+            padding: 8px 15px 2px;
+            border-radius: 0px;
+            background-color: #ffffff;
         }
+
+        .stat-box p {
+            text-align: left;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 15px;
+            margin-bottom:5px;
+        }
+
+        .stat-box span {
+            text-align: left;
+            font-weight: 500;
+            font-size: 13px;
+             
+        }
+
+
+        .stat-box h2 {
+            text-align: left;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
 
         .stat-red {
           background: red;
@@ -273,25 +297,70 @@
                               <!-- Graphs -->
                               <div class="row g-1 mb-3">
                                 <div class="col-md-12">
-                                  <div class="border-box">Graph</div>
+                                  <div class="border-box">
+
+                                    <!-- TradingView Widget BEGIN -->
+                                        <div class="tradingview-widget-container" style="height:100%;width:100%">
+                                          <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                                          <div class="tradingview-widget-copyright">  </div>
+                                          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                                          {
+                                          "allow_symbol_change": true,
+                                          "calendar": false,
+                                          "details": false,
+                                          "hide_side_toolbar": true,
+                                          "hide_top_toolbar": false,
+                                          "hide_legend": false,
+                                          "hide_volume": false,
+                                          "hotlist": false,
+                                          "interval": "D",
+                                          "locale": "en",
+                                          "save_image": true,
+                                          "style": "1",
+                                          "symbol": "NASDAQ:AAPL",
+                                          "theme": "light",
+                                          "timezone": "Etc/UTC",
+                                          "backgroundColor": "#ffffff",
+                                          "gridColor": "rgba(46, 46, 46, 0.06)",
+                                          "watchlist": [],
+                                          "withdateranges": false,
+                                          "compareSymbols": [],
+                                          "studies": [],
+                                          "autosize": true
+                                                }
+                                          </script>
+                                        </div>
+                                    <!-- TradingView Widget END -->
+
+                                  </div>
                                 </div>
                                  
                               </div>
 
                               <!-- Stats -->
                               <div class="row g-1 mb-3">
+
                                 <div class="col-md-3 stat-box">
-                                  Exec Trn<br>369
+                                  <p><span>Exceuted </span> Transactions </p>
+                                  <h2>369</h2>
                                 </div>
+
                                 <div class="col-md-3 stat-box stat-red">
-                                  Pend Trn<br><span class="fs-4">369</span>
+                                  <p><span>Vol Transactions</span>  Exceuted </p>
+                                  <h2>200</h2>
                                 </div>
+
                                 <div class="col-md-3 stat-box">
-                                  Vol Trn Exec<br>369$$
+                                  <p><span>Pending </span> Transactions </p>
+                                  <h2>369$$</h2>
                                 </div>
+                                 
                                 <div class="col-md-3 stat-box stat-red">
-                                  Pend Trn Vol<br>369$$
+                                  <p><span>Pend Transactions</span> Volume  </p>
+                                  <h2>369$$</h2>
                                 </div>
+
+
                               </div>
 
                               <!-- Volume Exceeded -->
@@ -359,8 +428,38 @@
                                  
                                 <div class="col-md-12">
                                   <div class="border-box text-center">
-                                    Graph Sales – IN-self MYR – SGDIN<br>
-                                    & Graph Sales – Out-self SGD
+                                    <!-- TradingView Widget BEGIN -->
+                                        <div class="tradingview-widget-container" style="height:100%;width:100%">
+                                          <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                                          <div class="tradingview-widget-copyright">  </div>
+                                          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                                          {
+                                          "allow_symbol_change": true,
+                                          "calendar": false,
+                                          "details": false,
+                                          "hide_side_toolbar": true,
+                                          "hide_top_toolbar": false,
+                                          "hide_legend": false,
+                                          "hide_volume": false,
+                                          "hotlist": false,
+                                          "interval": "D",
+                                          "locale": "en",
+                                          "save_image": true,
+                                          "style": "1",
+                                          "symbol": "NASDAQ:AAPL",
+                                          "theme": "light",
+                                          "timezone": "Etc/UTC",
+                                          "backgroundColor": "#ffffff",
+                                          "gridColor": "rgba(46, 46, 46, 0.06)",
+                                          "watchlist": [],
+                                          "withdateranges": false,
+                                          "compareSymbols": [],
+                                          "studies": [],
+                                          "autosize": true
+                                                }
+                                          </script>
+                                        </div>
+                                    <!-- TradingView Widget END -->
                                   </div>
                                 </div>
 
@@ -369,16 +468,23 @@
                               <!-- Stats -->
                               <div class="row g-1 mb-3">
                                 <div class="col-md-3 stat-box">
-                                  Exec Trn<br>369
+                                  <p><span>Exceuted </span> Transactions </p>
+                                  <h2>369</h2>
                                 </div>
+
                                 <div class="col-md-3 stat-box stat-red">
-                                  Pend Trn<br><span class="fs-4">369</span>
+                                  <p><span>Vol Transactions</span>  Exceuted </p>
+                                  <h2>200</h2>
                                 </div>
+
                                 <div class="col-md-3 stat-box">
-                                  Vol Trn Exec<br>369$$
+                                  <p><span>Pending </span> Transactions </p>
+                                  <h2>369$$</h2>
                                 </div>
+                                 
                                 <div class="col-md-3 stat-box stat-red">
-                                  Pend Trn Vol<br>369$$
+                                  <p><span>Pend Transactions</span> Volume  </p>
+                                  <h2>369$$</h2>
                                 </div>
                               </div>
 
