@@ -22,9 +22,9 @@
         }*/
 
         .border-box {
-            border: 1px solid #010101;
+            border: 1px solid #dddddd;
             background: #e9f0fb;
-            min-height: 180px;
+            height: 250px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -32,12 +32,29 @@
             color: #010101;
         }
 
-        .stat-box {
-            border: 1px solid #bbbbbb;
+        .border-box iframe{
+            height: calc(100% - 0px) !important;
+        }
+
+
+        /*.stat-box {
+            border: 1px solid #dfdfdf;
             padding: 8px 15px 2px;
             border-radius: 0px;
             background-color: #ffffff;
+        }*/
+
+        .stat-box {
+            border: 1px solid #dfdfdf;
+            padding: 8px 13px 2px;
+            border-radius: 0px;
+            background-color: #ffffff;
+            margin-right: 4px;
+            width: 24%;
         }
+
+        .stat-box:last-child { margin-right:0px; width:25%; }
+        .stat-box:first-child { margin-left:2px;}
 
         .stat-box p {
             text-align: left;
@@ -49,19 +66,18 @@
 
         .stat-box span {
             text-align: left;
-            font-weight: 500;
-            font-size: 13px;
+            font-weight:300;
+            font-size: 12px;
              
         }
 
-
         .stat-box h2 {
-            text-align: left;
+            text-align: right;
             font-weight: 600;
-            font-size: 30px;
-            line-height: 30px;
+            font-size: 22px;
+            line-height: 25px;
+            margin-top: 10px;
         }
-
 
         .stat-red {
           background: red;
@@ -128,6 +144,24 @@
         #sidebar ul ul {
             text-indent: 25px;
         }
+
+
+
+        @media only screen and (max-width:1023px) {
+            .stat-box {
+                border: 1px solid #dfdfdf;
+                padding: 8px 13px 2px;
+                border-radius: 0px;
+                background-color: #ffffff;
+                margin-right:5px;
+                width:48%;
+            }
+
+            .stat-box:last-child { margin-right:0px; width:49%; }
+            .stat-box:first-child { margin-left:0px;}
+
+        }
+
 
       </style>
 
@@ -295,7 +329,7 @@
                              <div class="col-md-6">
 
                               <!-- Graphs -->
-                              <div class="row g-1 mb-3">
+                              <div class="row g-1 mb-2">
                                 <div class="col-md-12">
                                   <div class="border-box">
 
@@ -345,7 +379,7 @@
                                   <h2>369</h2>
                                 </div>
 
-                                <div class="col-md-3 stat-box stat-red">
+                                <div class="col-md-3 stat-box">
                                   <p><span>Vol Transactions</span>  Exceuted </p>
                                   <h2>200</h2>
                                 </div>
@@ -355,7 +389,7 @@
                                   <h2>369$$</h2>
                                 </div>
                                  
-                                <div class="col-md-3 stat-box stat-red">
+                                <div class="col-md-3 stat-box">
                                   <p><span>Pend Transactions</span> Volume  </p>
                                   <h2>369$$</h2>
                                 </div>
@@ -424,7 +458,7 @@
                              <div class="col-md-6">
 
                               <!-- Graphs -->
-                              <div class="row g-2 mb-3">
+                              <div class="row g-2 mb-2">
                                  
                                 <div class="col-md-12">
                                   <div class="border-box text-center">
@@ -467,12 +501,13 @@
 
                               <!-- Stats -->
                               <div class="row g-1 mb-3">
+                                
                                 <div class="col-md-3 stat-box">
                                   <p><span>Exceuted </span> Transactions </p>
                                   <h2>369</h2>
                                 </div>
 
-                                <div class="col-md-3 stat-box stat-red">
+                                <div class="col-md-3 stat-box">
                                   <p><span>Vol Transactions</span>  Exceuted </p>
                                   <h2>200</h2>
                                 </div>
@@ -482,10 +517,11 @@
                                   <h2>369$$</h2>
                                 </div>
                                  
-                                <div class="col-md-3 stat-box stat-red">
+                                <div class="col-md-3 stat-box">
                                   <p><span>Pend Transactions</span> Volume  </p>
                                   <h2>369$$</h2>
                                 </div>
+
                               </div>
 
                               <!-- Volume Exceeded -->
