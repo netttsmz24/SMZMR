@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Partner Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ===== Windows 10 Theme ===== */
+body {
+    background: #f3f3f3;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Header */
+.header-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.auto-update {
+    background: #0078D7;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+/* Cards */
+.card-modern {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Graph Area */
+.graph-box {
+    height: 160px;
+    background: #e8f2ff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-weight: 500;
+}
+
+/* KPI */
+.kpi {
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.kpi.gray {
+    background: #e1e1e1;
+}
+
+.kpi.red {
+    background: #d13438;
+    color: white;
+}
+
+.kpi.green {
+    background: #107c10;
+    color: white;
+    font-size: 15px;
+}
+
+/* Table */
+.table-modern td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    font-size: 13px;
+}
+
+.table-modern .highlight {
+    background: #0078D7;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Button */
+.btn-modern {
+    background: #0078D7;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-modern:hover {
+    background: #005fa3;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid mt-3">
+
+    <!-- Header -->
+    <div class="header-bar">
+        <div>Home 1.0 &nbsp; Master Partner Overall Macro Scope</div>
+        <div class="auto-update">Auto Updates Every 60 Sec</div>
+    </div>
+
+    <!-- Graph Section -->
+    <div class="row mt-3">
+        <div class="col-lg-6">
+            <div class="card-modern">
+                <div class="graph-box">Graph</div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card-modern">
+                <div class="graph-box">
+                    Graph Sales - IN sell MYR SGDIN <br>
+                    & Graph Sales - Out sell SGD
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panels -->
+    <div class="row">
+
+        <!-- LEFT PANEL -->
+        <div class="col-lg-6">
+            <div class="card-modern">
+
+                <div class="row g-2 mb-3">
+                    <div class="col-3"><div class="kpi gray">Exec Trn<br>369</div></div>
+                    <div class="col-3"><div class="kpi red">Pend Trn<br>369</div></div>
+                    <div class="col-3"><div class="kpi gray">Vol Trn Exec<br>369$$</div></div>
+                    <div class="col-3"><div class="kpi red">Pend Trn Vol<br>369$$</div></div>
+                </div>
+
+                <div class="kpi green mb-3">Trn Vol Exceed No</div>
+
+                <table class="table-modern w-100">
+                    <tr>
+                        <td>FROM Country</td>
+                        <td class="highlight">MYR</td>
+                        <td>TO Country</td>
+                        <td class="highlight">SGD</td>
+                    </tr>
+                    <tr><td colspan="4">IN- Credit - FT (From To) +</td></tr>
+                    <tr><td colspan="4">OUT- Debit – FT ( From To ) -</td></tr>
+                    <tr><td colspan="4" class="highlight">Current Capital CF BASE</td></tr>
+                    <tr>
+                        <td>Average of IN CREDIT</td>
+                        <td>Days</td>
+                        <td colspan="2">Averages Cross Calculated</td>
+                    </tr>
+                    <tr>
+                        <td>Average of OUT DEBIT</td>
+                        <td>Days</td>
+                        <td colspan="2">Averages Cross Calculated</td>
+                    </tr>
+                    <tr>
+                        <td>Current Offered Rate</td>
+                        <td colspan="3">3.1575</td>
+                    </tr>
+                    <tr>
+                        <td>IBOR Rates</td>
+                        <td colspan="3">3.1620</td>
+                    </tr>
+                </table>
+
+                <button class="btn-modern mt-3">
+                    GENERATE REPORT OF IN ↔ OUT MAPPING STATUS
+                </button>
+
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="col-lg-6">
+            <div class="card-modern">
+
+                <div class="row g-2 mb-3">
+                    <div class="col-3"><div class="kpi gray">Exec Trn<br>369</div></div>
+                    <div class="col-3"><div class="kpi red">Pend Trn<br>369</div></div>
+                    <div class="col-3"><div class="kpi gray">Vol Trn Exec<br>369$$</div></div>
+                    <div class="col-3"><div class="kpi red">Pend Trn Vol<br>369$$</div></div>
+                </div>
+
+                <div class="kpi green mb-3">Trn Vol Exceeded 369$$</div>
+
+                <table class="table-modern w-100">
+                    <tr>
+                        <td>FROM Country</td>
+                        <td class="highlight">SGD</td>
+                        <td>TO Country</td>
+                        <td class="highlight">MYR</td>
+                    </tr>
+                    <tr><td colspan="4">IN- Credit - FT (From To) +</td></tr>
+                    <tr><td colspan="4">OUT- Debit – FT ( From To ) -</td></tr>
+                    <tr><td colspan="4" class="highlight">Current Capital CF BASE</td></tr>
+                    <tr>
+                        <td>Average of IN CREDIT</td>
+                        <td>Days</td>
+                        <td colspan="2">Averages Cross Calculated</td>
+                    </tr>
+                    <tr>
+                        <td>Average of OUT DEBIT</td>
+                        <td>Days</td>
+                        <td colspan="2">Averages Cross Calculated</td>
+                    </tr>
+                    <tr>
+                        <td>Current Offered Rate</td>
+                        <td colspan="3">3.1575</td>
+                    </tr>
+                    <tr>
+                        <td>IBOR Rates</td>
+                        <td colspan="3">3.1620</td>
+                    </tr>
+                </table>
+
+                <button class="btn-modern mt-3">
+                    GENERATE REPORT OF IN ↔ OUT MAPPING STATUS
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
