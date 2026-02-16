@@ -48,12 +48,14 @@ body {
 .tree ul {
     list-style: none;
     padding-left: 20px;
+    
 }
 
 .tree li {
     position: relative;
     padding: 2px 0;
     font-size: 12px;
+    list-style-type:none;
 }
 
 .tree li ul li {
@@ -527,7 +529,7 @@ body {
                     font-family: Arial, Helvetica, sans-serif;
                     background: #ffffff;
                     margin: 0;
-                    padding: 20px;
+/*                    padding: 20px;*/
                 }
 
                 .table-wrapper {
@@ -578,7 +580,7 @@ body {
                 }
 
                 @media (max-width: 768px) {
-                    th, td {
+                  .currency th, .currency td {
                         padding: 10px;
                         font-size: 13px;
                     }
@@ -742,7 +744,7 @@ body {
                         <table>
                             <thead>
                                 <tr>
-                                    <th></th>
+                                    <th>To <i class="fa fa-arrow-down" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; From <i class="fa fa-arrow-right" aria-hidden="true"></i></th>
                                     <th><div class="currency"><img src="https://flagcdn.com/w40/eu.png">EUR</div></th>
                                     <th><div class="currency"><img src="https://flagcdn.com/w40/us.png">USD</div></th>
                                     <th><div class="currency"><img src="https://flagcdn.com/w40/jp.png">JPY</div></th>
