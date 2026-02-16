@@ -252,17 +252,18 @@ body {
           font-weight: bold;
         }
 
-        .widget-box {
+        .widget-box1 {
             background: #ffffff;
             border: 1px solid #dee2e6;
             border-radius: 6px;
-            padding: 20px 5px 10px;
+            padding: 0px 0px 0;
             text-align: center;
-            min-height:150px;
+            min-height:132px;
             box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+            position: relative;
         }
 
-        .widget-box:hover {
+        .widget-box1:hover {
             background: #f4f4f4f4;
             border: 1px solid #c8c8c8;
         }
@@ -281,9 +282,14 @@ body {
         }
 
         .widget-value {
-            font-size: 20px;
+            font-size: 15px;
+            height: 40px;
+            line-height: 40px;
             font-weight: 700;
-            color: #279f0f;
+            color: #010101;
+            background: #bbbbbb;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
         }
 
         /* Table Section */
@@ -392,10 +398,11 @@ body {
 
                 .sbstyle4 {
                     border-radius: 0px;
-                    background-color: #ced1d1;
+                    background-color: #f7f7f7;
                     font-size: 14px;
                     color: #000000;
-                    border: 1px solid #dddddd;
+                    border: 1px solid #c8c8c8;
+                    height: 50px;
                 }
 
                 .sbstyle2 {
@@ -450,25 +457,24 @@ body {
                     font-weight: 500;
                     border-radius: 1px;
                     color: #ffffff;
-                    font-size: 14px;
+                    font-size:20px;
                     width:100%;
+/*                    position: absolute;*/
+                    bottom: 0px;
                 }
 
                 .btn-generate-add:hover {
                     background: #198754;
-                    border: 1px solid #999;
-                      padding: 5px 30px;
-                    font-weight: 500;
-                    border-radius: 1px;
                     color: #ffffff;
-                    font-size: 14px;  
                 }
+
                 .control-box {
                     /* box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5); */
-                    padding: 10px;
+                    padding: 10px 10px 0px;
                     background-color: #ffffff;
                     position: relative;
                     border: 1px solid #e5e7eb;
+                    border-radius: 7px;
                 }
 
                 .btn-remove-can {
@@ -478,7 +484,7 @@ body {
                     font-weight: 500;
                     border-radius: 1px;
                     color: #ffffff;
-                    font-size: 14px;
+                    font-size: 19px;
                     width: 100%;
                 }
 
@@ -545,11 +551,15 @@ body {
 
                 .crtable th, .crtable td {
                     border: 1px solid #eef0f3;
-                    padding: 8px 8px;
+                    padding: 8px 5px;
                     text-align: center;
-                    font-size: 12px;
+                    font-size: 13px;
                     white-space: nowrap;
-                        font-weight: bold;
+                    font-weight: normal;
+                }
+
+                .crtable th {
+                    font-weight:bold;
                 }
 
                 .crtable thead th {
@@ -577,6 +587,22 @@ body {
                     width: 22px;
                     height: 22px;
                     border-radius: 50%;
+                }
+
+                .fstyle p {
+                    font-size: 25px;
+                    font-weight: 600;
+                    text-align: left;
+                    word-wrap: break-word;
+                    margin-top: 4%;
+                    color: #010101;
+                    margin-left: 15px;
+                }
+
+                .fstyle p span {
+                    font-size: 25px;
+                    font-weight: 800;
+                    color:#279f0f;
                 }
 
                 @media (max-width: 768px) {
@@ -684,7 +710,49 @@ body {
 
                 <div class="control-box">
 
-                    <div class="row g-1 gy-1">
+                    <div class="row">
+
+                        <div class="col-mw-6 col-sm-6 fstyle">
+                            <p> Cross Rate Table <br> and <span>Fetch Fast </span> forex <br> IO MID-Rates </p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="widget-box1">
+                                <!-- <div class="widget-title">Executed Transactions</div> -->
+                                <div class="widget-value">Add Country</div>
+                                <select class="form-select form-select sbstyle4" aria-label="form-select-lg example">
+                                            <option>Select Cuntry</option>
+                                            <option selected="" value="2">MYR</option>
+                                            <option value="2">INR</option>
+                                            <option value="2">UK</option>
+                                            <option value="1">USA</option>
+                            </select>
+                            <button class="btn btn-generate-add"> <i class="fa-solid fa-plus"></i> Add Country</button>
+                            </div>
+                         </div>
+
+                        <div class="col-md-3"> 
+
+                            <div class="widget-box1">
+                                <!-- <div class="widget-title">Delete Country</div> -->
+                                <div class="widget-value">Delete Country</div>
+                                <select class="form-select form-select sbstyle4" aria-label="form-select-lg example">
+                                            <option>Select Cuntry</option>
+                                            <option selected="" value="2">MYR</option>
+                                            <option value="2">INR</option>
+                                            <option value="2">UK</option>
+                                            <option value="1">USA</option>
+                            </select>
+
+                            <button class="btn btn-remove-can"> <i class="fa-solid fa-trash"></i> Delete Country</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- <div class="row g-1 gy-1">
 
                         <div class="col-md-3"> <h5> From -> To </h5></div>
 
@@ -706,9 +774,9 @@ body {
                         <div class="col-md-3">
                             <button class="btn btn-generate-add"> <i class="fa-solid fa-plus"></i> Add Country</button>
                         </div>          
-                    </div>
+                    </div> -->
 
-                    <div class="row g-1">
+                    <!-- <div class="row g-1">
 
                         <div class="col-md-3"> </div>
 
@@ -730,16 +798,17 @@ body {
                         <div class="col-md-3">
                             <button class="btn btn-remove-can"> <i class="fa-solid fa-trash"></i> Delete Country</button>
                         </div>        
-                    </div>
+                    </div> -->
+
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-12">
                         <div class="kpi gwhite mb-3">Cross Rate Table and Fetch Fast forex IO MID-Rates</div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="row g-1">
+                <div class="row g-1 mt-3">
                     <div class="table-wrapper crtable">
                         <table>
                             <thead>
