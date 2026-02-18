@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rates & Booking • Remittance</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+  body { background: #f6f8fb; }
+  .stepper .nav-link { color: #6c757d; border: 1px solid #e9ecef; }
+  .stepper .nav-link.active { color: #0d6efd; background: #e7f1ff; border-color: #b6d4fe; }
+  .stepper .nav-link .index { width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: .5rem; background: #e9ecef; color: #6c757d; }
+  .stepper .nav-link.active .index { background: #0d6efd; color: #fff; }
+  .card-ghost { border: 1px solid #e9ecef; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+  .invoice-box { background: #fff; border-radius: .5rem; border: 1px solid #e9ecef; }
+  .form-section { display: none; }
+  .form-section.active { display: block; }
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem 1.25rem; }
+  @media (max-width: 576px) { .summary-grid { grid-template-columns: 1fr; } }
+  .app-header { 
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 45%, #00bcd4 100%);
+    border-bottom: 1px solid rgba(255,255,255,.15);
+  }
+  @media print {
+    body { background: #fff !important; }
+    nav, #stepper, #step-1, #step-2, #step-3, #step-4 { display: none !important; }
+    #step-5 { display: block !important; }
+    #step-5 .invoice-box { border: none !important; box-shadow: none !important; }
+    #invoiceActions { display: none !important; }
+    .container { max-width: 100% !important; padding: 0 !important; }
+  }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark app-header">
+  <div class="container">
+    <span class="navbar-brand"><i class="bi bi-currency-exchange me-2"></i>Rates & Booking</span>
+  </div>
+</nav>
+
+<div class="container py-4">
+  <ul class="nav nav-pills stepper mb-4" id="stepper">
+    <li class="nav-item flex-fill me-2">
+      <span class="nav-link d-flex align-items-center active" data-step="1">
+        <span class="index">1</span><span>Rates & Booking</span>
+      </span>
+    </li>
+    <li class="nav-item flex-fill me-2">
+      <span class="nav-link d-flex align-items-center" data-step="2">
+        <span class="index">2</span><span>Select Category</span>
+      </span>
+    </li>
+    <li class="nav-item flex-fill me-2">
+      <span class="nav-link d-flex align-items-center" data-step="3">
+        <span class="index">3</span><span>Details</span>
+      </span>
+    </li>
+    <li class="nav-item flex-fill me-2">
+      <span class="nav-link d-flex align-items-center" data-step="4">
+        <span class="index">4</span><span>Payment</span>
+      </span>
+    </li>
+    <li class="nav-item flex-fill">
+      <span class="nav-link d-flex align-items-center" data-step="5">
+        <span class="index">5</span><span>Invoice</span>
+      </span>
+    </li>
+  </ul>
+
+  <section id="step-1" class="form-section active">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="card card-ghost">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Money Details</h5>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">From Currency</label>
+                <select class="form-select" id="fromCurrency">
+                  <option value="USD" selected>USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="INR">INR</option>
+                  <option value="PKR">PKR</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">To Currency</label>
+                <select class="form-select" id="toCurrency">
+                  <option value="INR" selected>INR</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="PKR">PKR</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Send Amount</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="fromSymbol">$</span>
+                  <input type="number" class="form-control" id="sendAmount" min="1" step="0.01" value="1000" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Rate</label>
+                <input type="text" class="form-control" id="rateDisplay" readonly>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Fee</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="feeSymbol">$</span>
+                  <input type="text" class="form-control" id="feeDisplay" readonly>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Recipient Receives</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="toSymbol">₹</span>
+                  <input type="text" class="form-control" id="receiveDisplay" readonly>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check mt-2">
+                  <input class="form-check-input" type="checkbox" value="" id="agreeTerms">
+                  <label class="form-check-label" for="agreeTerms">I agree to the rates and terms</label>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-end pt-2">
+                <button class="btn btn-primary" id="toCategory"><i class="bi bi-send me-2"></i>Agree & Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card card-ghost">
+          <div class="card-body">
+            <h6 class="text-muted mb-2">Summary</h6>
+            <div class="summary-grid">
+              <div class="text-muted">From</div><div id="summaryFrom" class="fw-semibold"></div>
+              <div class="text-muted">To</div><div id="summaryTo" class="fw-semibold"></div>
+              <div class="text-muted">Amount</div><div id="summaryAmount" class="fw-semibold"></div>
+              <div class="text-muted">Rate</div><div id="summaryRate" class="fw-semibold"></div>
+              <div class="text-muted">Fee</div><div id="summaryFee" class="fw-semibold"></div>
+              <div class="text-muted">Recipient</div><div id="summaryReceive" class="fw-semibold"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step-2" class="form-section">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <label class="w-100">
+          <input class="btn-check" type="radio" name="category" value="i2i" id="catI2I">
+          <div class="card card-ghost h-100 p-3 btn btn-outline-secondary w-100">
+            <div class="d-flex align-items-center">
+              <div class="display-6 me-3 text-primary"><i class="bi bi-people"></i></div>
+              <div>
+                <div class="fw-semibold">Individuals to Individuals</div>
+                <div class="text-muted small">Send from an individual to another individual</div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="col-md-4">
+        <label class="w-100">
+          <input class="btn-check" type="radio" name="category" value="i2o" id="catI2O">
+          <div class="card card-ghost h-100 p-3 btn btn-outline-secondary w-100">
+            <div class="d-flex align-items-center">
+              <div class="display-6 me-3 text-primary"><i class="bi bi-person-badge"></i></div>
+              <div>
+                <div class="fw-semibold">Individual on Behalf of Individual</div>
+                <div class="text-muted small">Send on behalf of another individual</div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="col-md-4">
+        <label class="w-100">
+          <input class="btn-check" type="radio" name="category" value="c2c" id="catC2C">
+          <div class="card card-ghost h-100 p-3 btn btn-outline-secondary w-100">
+            <div class="d-flex align-items-center">
+              <div class="display-6 me-3 text-primary"><i class="bi bi-building"></i></div>
+              <div>
+                <div class="fw-semibold">Companies to Companies</div>
+                <div class="text-muted small">Corporate to corporate transfers</div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between mt-4">
+      <button class="btn btn-outline-secondary" data-back="1"><i class="bi bi-arrow-left me-2"></i>Back</button>
+      <button class="btn btn-primary" id="toDetails">Next</button>
+    </div>
+  </section>
+
+  <section id="step-3" class="form-section">
+    <div class="card card-ghost mb-3">
+      <div class="card-body">
+        <h5 class="card-title mb-3" id="detailsTitle">Enter Details</h5>
+        <form id="formI2I" class="category-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Sender Name</label>
+              <input type="text" class="form-control" id="i2iSenderName" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Sender Email</label>
+              <input type="email" class="form-control" id="i2iSenderEmail" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Sender Phone</label>
+              <input type="tel" class="form-control" id="i2iSenderPhone" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Name</label>
+              <input type="text" class="form-control" id="i2iRecipientName" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Country</label>
+              <input type="text" class="form-control" id="i2iRecipientCountry" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Bank</label>
+              <input type="text" class="form-control" id="i2iRecipientBank" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Account</label>
+              <input type="text" class="form-control" id="i2iRecipientAccount" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Purpose of Transfer</label>
+              <select class="form-select" id="i2iPurpose" required>
+                <option value="">Select purpose</option>
+                <option value="Family Support">Family Support</option>
+                <option value="Gift">Gift</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+        </form>
+
+        <form id="formI2O" class="category-form d-none">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="i2oSenderName" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">On-Behalf Person</label>
+              <input type="text" class="form-control" id="i2oBehalfName" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">On-Behalf ID</label>
+              <input type="text" class="form-control" id="i2oBehalfId" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Name</label>
+              <input type="text" class="form-control" id="i2oRecipientName" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Country</label>
+              <input type="text" class="form-control" id="i2oRecipientCountry" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Account</label>
+              <input type="text" class="form-control" id="i2oRecipientAccount" required>
+            </div>
+          </div>
+        </form>
+
+        <form id="formC2C" class="category-form d-none">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Sender Company</label>
+              <input type="text" class="form-control" id="c2cSenderCompany" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Registration No.</label>
+              <input type="text" class="form-control" id="c2cSenderReg" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Contact Email</label>
+              <input type="email" class="form-control" id="c2cSenderEmail" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Company</label>
+              <input type="text" class="form-control" id="c2cRecipientCompany" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Registration</label>
+              <input type="text" class="form-control" id="c2cRecipientReg" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Country</label>
+              <input type="text" class="form-control" id="c2cRecipientCountry" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Recipient Account</label>
+              <input type="text" class="form-control" id="c2cRecipientAccount" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Invoice Reference</label>
+              <input type="text" class="form-control" id="c2cInvoiceRef" required>
+            </div>
+          </div>
+        </form>
+
+        <div class="d-flex justify-content-between mt-4">
+          <button class="btn btn-outline-secondary" data-back="2"><i class="bi bi-arrow-left me-2"></i>Back</button>
+          <button class="btn btn-primary" id="toPayment">Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step-4" class="form-section">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="card card-ghost">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Online Payment</h5>
+            <form id="paymentForm" class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Cardholder Name</label>
+                <input type="text" class="form-control" id="cardName" required>
+                <div class="invalid-feedback">Enter the cardholder name</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Card Number</label>
+                <input type="text" inputmode="numeric" class="form-control" id="cardNumber" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
+                <div class="invalid-feedback">Invalid card number. Use 4242 4242 4242 4242 for testing</div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Expiry (MM/YY)</label>
+                <input type="text" class="form-control" id="cardExpiry" maxlength="5" placeholder="MM/YY" required>
+                <div class="invalid-feedback">Enter a valid future expiry date</div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">CVV</label>
+                <input type="password" inputmode="numeric" class="form-control" id="cardCvv" maxlength="4" required>
+                <div class="invalid-feedback">Enter a 3–4 digit CVV</div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Postal Code</label>
+                <input type="text" class="form-control" id="billingZip" required>
+                <div class="invalid-feedback">Enter your billing postal code</div>
+              </div>
+            </form>
+            <div class="d-flex justify-content-between mt-3">
+              <button class="btn btn-outline-secondary" data-back="3"><i class="bi bi-arrow-left me-2"></i>Back</button>
+              <button class="btn btn-success" id="toInvoice"><i class="bi bi-credit-card-2-front me-2"></i>Pay & Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="card card-ghost">
+          <div class="card-body">
+            <h6 class="text-muted mb-2">Charge Summary</h6>
+            <div class="summary-grid">
+              <div class="text-muted">Send</div><div id="payAmount" class="fw-semibold"></div>
+              <div class="text-muted">Fee</div><div id="payFee" class="fw-semibold"></div>
+              <div class="text-muted">Total</div><div id="payTotal" class="fw-bold"></div>
+              <div class="text-muted">Recipient Receives</div><div id="payReceive" class="fw-semibold"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="step-5" class="form-section">
+    <div class="invoice-box p-4">
+      <div class="d-flex justify-content-between align-items-start">
+        <div>
+          <h4 class="mb-1">Remittance Invoice</h4>
+          <div class="text-muted" id="invoiceNumber"></div>
+        </div>
+        <div class="text-end">
+          <div class="fw-semibold" id="invoiceDate"></div>
+          <div class="text-muted small">Processed</div>
+        </div>
+      </div>
+      <hr>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="mb-2 fw-semibold">Transfer</div>
+          <div class="text-muted small">From</div>
+          <div id="invFrom" class="mb-2"></div>
+          <div class="text-muted small">To</div>
+          <div id="invTo"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-2 fw-semibold">Parties</div>
+          <div class="text-muted small">Category</div>
+          <div id="invCategory" class="mb-2"></div>
+          <div class="text-muted small">Details</div>
+          <div id="invParties"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <div class="text-muted small">Amount</div>
+          <div id="invAmount" class="fw-semibold"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-muted small">Fee</div>
+          <div id="invFee" class="fw-semibold"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-muted small">Rate</div>
+          <div id="invRate" class="fw-semibold"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-muted small">Recipient Receives</div>
+          <div id="invReceive" class="fw-semibold"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between" id="invoiceActions">
+        <div class="text-muted">Paid by card ending <span id="invCardLast4"></span></div>
+        <div>
+          <button class="btn btn-outline-secondary me-2" id="printInvoice"><i class="bi bi-printer me-1"></i>Print</button>
+          <button class="btn btn-primary" id="newTransfer"><i class="bi bi-arrow-repeat me-1"></i>New Transfer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var state = {
+    money: { from: "USD", to: "INR", amount: 1000, rate: 0, fee: 0, receive: 0 },
+    category: null,
+    forms: { i2i: {}, i2o: {}, c2c: {} },
+    payment: {}
+  }
+
+  var currencySymbols = { USD: "$", EUR: "€", GBP: "£", INR: "₹", PKR: "₨" }
+  var rates = {
+    "USD-USD": 1, "EUR-EUR": 1, "GBP-GBP": 1, "INR-INR": 1, "PKR-PKR": 1,
+    "USD-INR": 83.5, "EUR-INR": 91.2, "GBP-INR": 105.4,
+    "USD-PKR": 279, "EUR-PKR": 304, "GBP-PKR": 354,
+    "USD-EUR": 0.92, "EUR-USD": 1.09,
+    "USD-GBP": 0.79, "GBP-USD": 1.27,
+    "INR-USD": 0.012, "PKR-USD": 0.0036,
+    "INR-EUR": 0.011, "INR-GBP": 0.0095,
+    "EUR-GBP": 0.86, "GBP-EUR": 1.16
+  }
+
+  function formatMoney(v, ccy) {
+    var s = currencySymbols[ccy] || ""
+    return s + Number(v || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+  }
+
+  function updateSymbols() {
+    document.getElementById("fromSymbol").textContent = currencySymbols[state.money.from] || ""
+    document.getElementById("feeSymbol").textContent = currencySymbols[state.money.from] || ""
+    document.getElementById("toSymbol").textContent = currencySymbols[state.money.to] || ""
+  }
+
+  function computeQuote() {
+    var key = state.money.from + "-" + state.money.to
+    var r = rates[key] || 1
+    state.money.rate = r
+    var amt = Number(document.getElementById("sendAmount").value || 0)
+    state.money.amount = amt
+    var fee = Math.max(2, amt * 0.015)
+    state.money.fee = Math.round(fee * 100) / 100
+    state.money.receive = Math.round(amt * r * 100) / 100
+    document.getElementById("rateDisplay").value = "1 " + state.money.from + " = " + state.money.rate.toFixed(4) + " " + state.money.to
+    document.getElementById("feeDisplay").value = state.money.fee.toFixed(2)
+    document.getElementById("receiveDisplay").value = state.money.receive.toFixed(2)
+    syncSummary()
+    syncPaymentSummary()
+  }
+
+  function syncSummary() {
+    document.getElementById("summaryFrom").textContent = state.money.from
+    document.getElementById("summaryTo").textContent = state.money.to
+    document.getElementById("summaryAmount").textContent = formatMoney(state.money.amount, state.money.from)
+    document.getElementById("summaryRate").textContent = "1 " + state.money.from + " = " + state.money.rate.toFixed(4) + " " + state.money.to
+    document.getElementById("summaryFee").textContent = formatMoney(state.money.fee, state.money.from)
+    document.getElementById("summaryReceive").textContent = formatMoney(state.money.receive, state.money.to)
+  }
+
+  function syncPaymentSummary() {
+    var total = state.money.amount + state.money.fee
+    document.getElementById("payAmount").textContent = formatMoney(state.money.amount, state.money.from)
+    document.getElementById("payFee").textContent = formatMoney(state.money.fee, state.money.from)
+    document.getElementById("payTotal").textContent = formatMoney(total, state.money.from)
+    document.getElementById("payReceive").textContent = formatMoney(state.money.receive, state.money.to)
+  }
+
+  function showStep(n) {
+    ;[1, 2, 3, 4, 5].forEach(function (i) {
+      var sec = document.getElementById("step-" + i)
+      if (!sec) return
+      if (i === n) sec.classList.add("active")
+      else sec.classList.remove("active")
+    })
+    var links = document.querySelectorAll("#stepper .nav-link")
+    links.forEach(function (el) {
+      var step = Number(el.getAttribute("data-step"))
+      if (step === n) el.classList.add("active")
+      else el.classList.remove("active")
+    })
+  }
+
+  function selectCategoryForm() {
+    var cat = state.category
+    var forms = document.querySelectorAll(".category-form")
+    forms.forEach(function (f) { f.classList.add("d-none") })
+    var title = document.getElementById("detailsTitle")
+    if (cat === "i2i") {
+      document.getElementById("formI2I").classList.remove("d-none")
+      title.textContent = "Individuals to Individuals Details"
+    } else if (cat === "i2o") {
+      document.getElementById("formI2O").classList.remove("d-none")
+      title.textContent = "Individual on Behalf of Individual Details"
+    } else if (cat === "c2c") {
+      document.getElementById("formC2C").classList.remove("d-none")
+      title.textContent = "Companies to Companies Details"
+    }
+  }
+
+  function setFieldError(input, message) {
+    if (!input) return
+    input.classList.add("is-invalid")
+    var fb = input.nextElementSibling
+    if (fb && fb.classList.contains("invalid-feedback") && message) fb.textContent = message
+  }
+  function clearFieldError(input) {
+    if (!input) return
+    input.classList.remove("is-invalid")
+  }
+
+  function luhnCheck(num) {
+    var s = (num || "").replace(/\D/g, "")
+    var sum = 0
+    var dbl = false
+    for (var i = s.length - 1; i >= 0; i--) {
+      var d = parseInt(s.charAt(i), 10)
+      if (dbl) {
+        d = d * 2
+        if (d > 9) d = d - 9
+      }
+      sum += d
+      dbl = !dbl
+    }
+    return s.length >= 12 && sum % 10 === 0
+  }
+
+  function fillInvoice() {
+    var now = new Date()
+    var id = "INV-" + now.getFullYear().toString().slice(-2) + (now.getMonth() + 1).toString().padStart(2, "0") + now.getDate().toString().padStart(2, "0") + "-" + Math.floor(1000 + Math.random() * 9000)
+    document.getElementById("invoiceNumber").textContent = id
+    document.getElementById("invoiceDate").textContent = now.toLocaleString()
+    document.getElementById("invFrom").textContent = state.money.from
+    document.getElementById("invTo").textContent = state.money.to
+    var catText = state.category === "i2i" ? "Individuals to Individuals" : state.category === "i2o" ? "Individual on Behalf of Individual" : "Companies to Companies"
+    document.getElementById("invCategory").textContent = catText
+    var parties = ""
+    if (state.category === "i2i") {
+      parties = "Sender: " + (state.forms.i2i.senderName || "") + " | Recipient: " + (state.forms.i2i.recipientName || "")
+    } else if (state.category === "i2o") {
+      parties = "Sender: " + (state.forms.i2o.senderName || "") + " | On-behalf: " + (state.forms.i2o.behalfName || "") + " | Recipient: " + (state.forms.i2o.recipientName || "")
+    } else if (state.category === "c2c") {
+      parties = "Sender: " + (state.forms.c2c.senderCompany || "") + " | Recipient: " + (state.forms.c2c.recipientCompany || "")
+    }
+    document.getElementById("invParties").textContent = parties
+    document.getElementById("invAmount").textContent = formatMoney(state.money.amount, state.money.from)
+    document.getElementById("invFee").textContent = formatMoney(state.money.fee, state.money.from)
+    document.getElementById("invRate").textContent = "1 " + state.money.from + " = " + state.money.rate.toFixed(4) + " " + state.money.to
+    document.getElementById("invReceive").textContent = formatMoney(state.money.receive, state.money.to)
+    var last4 = (state.payment.cardNumber || "").replace(/\D/g, "").slice(-4)
+    document.getElementById("invCardLast4").textContent = last4
+  }
+
+  document.getElementById("fromCurrency").addEventListener("change", function (e) {
+    state.money.from = e.target.value
+    updateSymbols()
+    computeQuote()
+  })
+  document.getElementById("toCurrency").addEventListener("change", function (e) {
+    state.money.to = e.target.value
+    updateSymbols()
+    computeQuote()
+  })
+  document.getElementById("sendAmount").addEventListener("input", computeQuote)
+
+  document.getElementById("toCategory").addEventListener("click", function () {
+    if (!document.getElementById("agreeTerms").checked) return
+    if (state.money.amount <= 0) return
+    showStep(2)
+  })
+
+  document.getElementById("toDetails").addEventListener("click", function () {
+    var selected = document.querySelector('input[name="category"]:checked')
+    if (!selected) return
+    state.category = selected.value
+    selectCategoryForm()
+    showStep(3)
+  })
+
+  document.querySelectorAll("[data-back]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var to = Number(btn.getAttribute("data-back"))
+      showStep(to)
+    })
+  })
+
+  document.getElementById("toPayment").addEventListener("click", function () {
+    if (state.category === "i2i") {
+      var f = document.getElementById("formI2I")
+      if (!f.reportValidity()) return
+      state.forms.i2i = {
+        senderName: document.getElementById("i2iSenderName").value.trim(),
+        senderEmail: document.getElementById("i2iSenderEmail").value.trim(),
+        senderPhone: document.getElementById("i2iSenderPhone").value.trim(),
+        recipientName: document.getElementById("i2iRecipientName").value.trim(),
+        recipientCountry: document.getElementById("i2iRecipientCountry").value.trim(),
+        recipientBank: document.getElementById("i2iRecipientBank").value.trim(),
+        recipientAccount: document.getElementById("i2iRecipientAccount").value.trim(),
+        purpose: document.getElementById("i2iPurpose").value
+      }
+    } else if (state.category === "i2o") {
+      var f2 = document.getElementById("formI2O")
+      if (!f2.reportValidity()) return
+      state.forms.i2o = {
+        senderName: document.getElementById("i2oSenderName").value.trim(),
+        behalfName: document.getElementById("i2oBehalfName").value.trim(),
+        behalfId: document.getElementById("i2oBehalfId").value.trim(),
+        recipientName: document.getElementById("i2oRecipientName").value.trim(),
+        recipientCountry: document.getElementById("i2oRecipientCountry").value.trim(),
+        recipientAccount: document.getElementById("i2oRecipientAccount").value.trim()
+      }
+    } else if (state.category === "c2c") {
+      var f3 = document.getElementById("formC2C")
+      if (!f3.reportValidity()) return
+      state.forms.c2c = {
+        senderCompany: document.getElementById("c2cSenderCompany").value.trim(),
+        senderReg: document.getElementById("c2cSenderReg").value.trim(),
+        senderEmail: document.getElementById("c2cSenderEmail").value.trim(),
+        recipientCompany: document.getElementById("c2cRecipientCompany").value.trim(),
+        recipientReg: document.getElementById("c2cRecipientReg").value.trim(),
+        recipientCountry: document.getElementById("c2cRecipientCountry").value.trim(),
+        recipientAccount: document.getElementById("c2cRecipientAccount").value.trim(),
+        invoiceRef: document.getElementById("c2cInvoiceRef").value.trim()
+      }
+    } else {
+      return
+    }
+    syncPaymentSummary()
+    showStep(4)
+  })
+
+  document.getElementById("cardNumber").addEventListener("input", function (e) {
+    var v = e.target.value.replace(/\D/g, "").slice(0, 16)
+    var out = v.match(/.{1,4}/g)
+    e.target.value = out ? out.join(" ") : ""
+  })
+  document.getElementById("cardExpiry").addEventListener("input", function (e) {
+    var v = e.target.value.replace(/\D/g, "").slice(0, 4)
+    if (v.length >= 3) e.target.value = v.slice(0, 2) + "/" + v.slice(2)
+    else e.target.value = v
+  })
+
+  document.getElementById("toInvoice").addEventListener("click", function () {
+    var form = document.getElementById("paymentForm")
+    if (!form.reportValidity()) return
+    var numEl = document.getElementById("cardNumber")
+    var expEl = document.getElementById("cardExpiry")
+    var cvvEl = document.getElementById("cardCvv")
+    var zipEl = document.getElementById("billingZip")
+    clearFieldError(numEl); clearFieldError(expEl); clearFieldError(cvvEl); clearFieldError(zipEl)
+
+    var num = numEl.value
+    var ok = true
+    if (!luhnCheck(num)) {
+      setFieldError(numEl, "Invalid card number. Use 4242 4242 4242 4242 for testing")
+      ok = false
+    }
+    var exp = (expEl.value || "").trim()
+    var m = exp.match(/^(\d{2})\/(\d{2})$/)
+    if (!m) {
+      setFieldError(expEl, "Enter expiry as MM/YY")
+      ok = false
+    } else {
+      var mm = parseInt(m[1], 10)
+      var yy = parseInt(m[2], 10)
+      if (mm < 1 || mm > 12) {
+        setFieldError(expEl, "Invalid month")
+        ok = false
+      } else {
+        var now = new Date()
+        var year = 2000 + yy
+        var expDate = new Date(year, mm, 0, 23, 59, 59)
+        if (expDate < now) {
+          setFieldError(expEl, "Card expired")
+          ok = false
+        }
+      }
+    }
+    var cvv = (cvvEl.value || "").replace(/\D/g, "")
+    if (cvv.length < 3 || cvv.length > 4) {
+      setFieldError(cvvEl, "Enter a 3–4 digit CVV")
+      ok = false
+    }
+    if (!ok) return
+    state.payment = {
+      cardName: document.getElementById("cardName").value.trim(),
+      cardNumber: num,
+      cardExpiry: document.getElementById("cardExpiry").value.trim(),
+      cardCvv: document.getElementById("cardCvv").value.trim(),
+      billingZip: document.getElementById("billingZip").value.trim()
+    }
+    fillInvoice()
+    showStep(5)
+  })
+
+  document.getElementById("printInvoice").addEventListener("click", function () {
+    window.print()
+  })
+  document.getElementById("newTransfer").addEventListener("click", function () {
+    state.category = null
+    document.querySelectorAll('input[name="category"]').forEach(function (e) { e.checked = false })
+    document.getElementById("agreeTerms").checked = false
+    showStep(1)
+  })
+
+  state.money.from = document.getElementById("fromCurrency").value
+  state.money.to = document.getElementById("toCurrency").value
+  updateSymbols()
+  computeQuote()
+  showStep(1)
+})
+</script>
+</body>
+</html>
