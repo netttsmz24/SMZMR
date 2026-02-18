@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer Details | NETTT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="transaction-stage.css" /> -->
+    <style type="text/css">
+      
+      :root {
+    --color-primary: #163117;
+    --color-accent-green: #9fe35e;
+    --gray-100: #f5f7f8;
+    --gray-200: #e8ebed;
+    --gray-500: #5d7079;
+    --gray-900: #163117;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: var(--gray-900);
+}
+
+/* --- Header & Stepper --- */
+.header {
+    border-bottom: 1px solid var(--gray-200);
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1000;
+}
+
+.header__container {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.logo__text {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.stepper {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 40px;
+}
+
+.stepper__progress-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: 4px;
+}
+
+.stepper__progress-fill {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+    width: 0;
+}
+
+.stepper__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.stepper__item {
+    font-size: 13px;
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.stepper__item--active {
+    color: var(--gray-900);
+    font-weight: 700;
+}
+
+.stepper__item--completed {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--gray-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--gray-900);
+}
+
+/* --- Layout --- */
+.main-content {
+    padding: 48px 0;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.page-title {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+/* --- Step 1: Category --- */
+.category-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.category-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 28px 20px;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid var(--gray-200);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.category-card:hover {
+    background-color: #f8faf9;
+    border-radius: 12px;
+    border-bottom-color: transparent;
+}
+
+.category-card__icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: #f1f4f1;
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+}
+
+.category-card__icon--accent {
+    background-color: var(--color-accent-green);
+}
+
+.category-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.category-card__desc {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.5;
+}
+
+.category-card__arrow {
+    margin-left: auto;
+    opacity: 0.5;
+}
+
+/* --- Step 2: Form & Switcher --- */
+.method-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    background: var(--gray-200);
+    padding: 4px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.method-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gray-500);
+}
+
+.method-btn--active {
+    background: #fff;
+    color: var(--gray-900);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-section__subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px 16px;
+}
+
+/* --- Floating Labels --- */
+.floating-group {
+    position: relative;
+}
+
+.floating-input,
+.floating-select {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    font-size: 14px;
+    border: 1px solid var(--gray-200);
+    border-radius: 4px;
+    background: #fff;
+    outline: none;
+}
+
+.floating-label {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    padding: 0 5px;
+    font-size: 14px;
+    color: var(--gray-500);
+    background-color: #fff;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.floating-input:focus~.floating-label,
+.floating-input:not(:placeholder-shown)~.floating-label,
+.floating-input[type="date"]~.floating-label,
+.floating-select:focus~.floating-label,
+.floating-select:valid~.floating-label {
+    top: -9px;
+    left: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.floating-input:focus {
+    border-color: var(--color-primary);
+}
+
+.file-input-container {
+    display: flex;
+}
+
+.file-input-container .floating-input {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+.attach-trigger {
+    height: 48px;
+    padding: 0 12px;
+    background: #f1f4f1;
+    border: 1px solid var(--gray-200);
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.hidden-file {
+    display: none;
+}
+
+
+
+/* --- Step 3: Review --- */
+/* --- Review Section Container --- */
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+/* --- Review Card Component --- */
+.review-card {
+    background: #fff;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+
+.review-card--hero {
+    background-color: #fcfdfc;
+    border-color: var(--color-primary);
+}
+
+.review-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review-card__label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.review-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* --- Amount Display --- */
+.review-amount {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.review-amount__value {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--gray-900);
+    letter-spacing: -1.5px;
+}
+
+.review-amount__currency {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-500);
+}
+
+/* --- Details List (Rows) --- */
+.review-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.review-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: var(--gray-500);
+}
+
+.review-row__value {
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.review-row--total {
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-200);
+    font-size: 18px;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* --- Info Grid for Details --- */
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.review-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.info-block label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.info-block p {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+/* --- Action Elements --- */
+.edit-btn {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.security-notice {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #f8faf9;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--gray-500);
+    line-height: 1.4;
+}
+
+.security-notice svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.btn-back {
+    font-weight: 600;
+    color: var(--gray-500);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .review-grid, .review-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-amount__value {
+        font-size: 36px;
+    }
+    
+    .form-footer {
+        flex-direction: column-reverse;
+        gap: 16px;
+    }
+    
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+
+/* --- Step 4: Payment --- */
+/* --- Payment Summary --- */
+.payment-summary {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(22, 49, 23, 0.15);
+}
+
+.payment-summary__total {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment-summary__total .label {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.payment-summary__total .amount {
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.payment-summary__breakdown {
+    margin-top: 12px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* --- Payment Method Options --- */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.payment-option {
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.payment-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.payment-option__card {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    background: #fff;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 12px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.payment-option__icon {
+    width: 48px;
+    height: 48px;
+    background: #f8faf9;
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.payment-option__content {
+    flex: 1;
+    text-align: left;
+}
+
+.payment-option__title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.payment-option__desc {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.4;
+}
+
+.payment-option__meta {
+    text-align: right;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.meta-fee {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--gray-900);
+}
+
+.meta-time {
+    font-size: 12px;
+    color: var(--gray-500);
+    font-weight: 600;
+}
+
+/* Selected State */
+.payment-option input:checked + .payment-option__card {
+    border-color: var(--color-primary);
+    background-color: #fcfdfc;
+    box-shadow: 0 4px 12px rgba(22, 49, 23, 0.05);
+}
+
+.payment-option__check {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gray-200);
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+}
+
+.payment-option input:checked + .payment-option__card .payment-option__check {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.payment-option input:checked + .payment-option__card .payment-option__check::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    top: 2px;
+    left: 6px;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    .payment-option__card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .payment-option__icon {
+        margin-bottom: 16px;
+    }
+
+    .payment-option__meta {
+        margin-left: 0;
+        margin-top: 16px;
+        text-align: left;
+        width: 100%;
+        border-top: 1px solid var(--gray-200);
+        padding-top: 12px;
+    }
+
+    .payment-option__check {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* --- Footer Buttons --- */
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.btn-clear {
+    background: none;
+    border: none;
+    color: var(--gray-500);
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn-submit {
+    height: 50px;
+    padding: 0 40px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* --- Mobile --- */
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stepper {
+        display: none;
+    }
+
+    .form-footer {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+}
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__left">
+          <div class="logo"><span class="logo__text">NETTT</span></div>
+        </div>
+        <nav class="stepper">
+          <div class="stepper__progress-bg">
+            <div id="progress-bar" class="stepper__progress-fill"></div>
+          </div>
+          <ul class="stepper__list">
+            <li class="stepper__item" data-step="1">Category</li>
+            <li class="stepper__item" data-step="2">Remittance</li>
+            <li class="stepper__item" data-step="3">Review</li>
+            <li class="stepper__item" data-step="4">Payment</li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <div class="avatar">PV</div>
+          <button class="close-btn" onclick="window.location.reload()">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- STEP 1: CATEGORY SELECTION -->
+    <main id="step-1" class="main-content">
+      <div class="form-wrapper">
+        <h1 class="page-title">Who's your recipient?</h1>
+        <div class="category-container">
+          <div class="category-list">
+            <button type="button" class="category-card" onclick="nextStep()">
+              <div class="category-card__icon category-card__icon--accent">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="category-card__content">
+                <h3 class="category-card__title">Individual to Individual</h3>
+                <p class="category-card__desc">
+                  Personal transfer directly to another individual.
+                </p>
+              </div>
+              <div class="category-card__arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </button>
+            <button type="button" class="category-card" onclick="nextStep()">
+              <div class="category-card__icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="category-card__content">
+                <h3 class="category-card__title">Behalf of True Beneficiary</h3>
+                <p class="category-card__desc">
+                  Sending funds representing another person.
+                </p>
+              </div>
+              <div class="category-card__arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </button>
+            <button type="button" class="category-card" onclick="nextStep()">
+              <div class="category-card__icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="category-card__content">
+                <h3 class="category-card__title">Company to Company</h3>
+                <p class="category-card__desc">
+                  Official business-to-business invoice transfer.
+                </p>
+              </div>
+              <div class="category-card__arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- STEP 2: DETAILS FORM -->
+    <main id="step-2" class="main-content" style="display: none">
+      <div class="form-wrapper">
+        <h1 class="page-title">Transfer Details</h1>
+        <div class="method-switcher">
+          <button
+            type="button"
+            id="tab-sender"
+            class="method-btn method-btn--active"
+            onclick="toggleForm('sender')"
+          >
+            <span class="method-btn__title">Sender Details</span>
+          </button>
+          <button
+            type="button"
+            id="tab-receiver"
+            class="method-btn"
+            onclick="toggleForm('receiver')"
+          >
+            <span class="method-btn__title">Receiver Details</span>
+          </button>
+        </div>
+
+        <form
+          id="remittance-form"
+          onsubmit="
+            event.preventDefault();
+            nextStep();
+          "
+        >
+          <!-- SENDER SUB-SECTION -->
+          <div id="form-sender-fields" class="form-section">
+            <h2 class="form-section__subtitle">Sender Information</h2>
+            <div class="form-grid">
+              <div class="floating-group">
+                <input
+                  type="text"
+                  class="floating-input"
+                  placeholder=" "
+                /><label class="floating-label">First Name</label>
+              </div>
+              <div class="floating-group">
+                <input
+                  type="text"
+                  class="floating-input"
+                  placeholder=" "
+                /><label class="floating-label">Middle Name</label>
+              </div>
+              <div class="floating-group">
+                <input
+                  type="text"
+                  class="floating-input"
+                  placeholder=" "
+                /><label class="floating-label">Third Name</label>
+              </div>
+              <div class="floating-group">
+                <input
+                  type="text"
+                  class="floating-input"
+                  placeholder=" "
+                /><label class="floating-label">Last Name</label>
+              </div>
+              <div class="floating-group file-wrapper">
+                <div class="file-input-container">
+                  <input
+                    type="text"
+                    class="floating-input"
+                    placeholder=" "
+                  /><label class="floating-label">ID / Passport</label>
+                  <label class="attach-trigger"
+                    ><input type="file" class="hidden-file" /><svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="17 8 12 3 7 8"></polyline>
+                      <line x1="12" y1="3" x2="12" y2="15"></line></svg
+                    ><span>Attach</span></label
+                  >
+                </div>
+              </div>
+              <div class="floating-group">
+                <input type="date" class="floating-input" /><label
+                  class="floating-label"
+                  >Date of Birth</label
+                >
+              </div>
+              <div class="floating-group select-wrapper">
+                <select class="floating-select">
+                  <option value="" disabled selected hidden></option>
+                  <option value="US">United States</option>
+                </select>
+                <label class="floating-label">Nationality</label>
+              </div>
+              <div class="floating-group">
+                <input
+                  type="text"
+                  class="floating-input"
+                  placeholder=" "
+                /><label class="floating-label highlight-label"
+                  >Account No.</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- RECEIVER SUB-SECTION -->
+          <div
+            id="form-receiver-fields"
+            class="form-section"
+            style="display: none"
+          >
+            <h2 class="form-section__subtitle">Receiver Information</h2>
+            <div class="form-grid">
+              <div class="floating-group">
+                <input
+                  type="text"
+                  class="floating-input"
+                  placeholder=" "
+                /><label class="floating-label">Full Name</label>
+              </div>
+              <div class="floating-group select-wrapper">
+                <select class="floating-select">
+                  <option value="" disabled selected hidden></option>
+                  <option value="SC">Standard Chartered</option>
+                </select>
+                <label class="floating-label">Bank Name</label>
+              </div>
+              <div class="floating-group">
+                <input
+                  type="text"
+                  class="floating-input"
+                  placeholder=" "
+                /><label class="floating-label highlight-label"
+                  >Receiver Account No.</label
+                >
+              </div>
+              <div class="floating-group">
+                <input
+                  type="text"
+                  class="floating-input"
+                  placeholder=" "
+                /><label class="floating-label">Swift Code</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button type="button" class="btn-clear" onclick="prevStep()">
+              Back
+            </button>
+            <button type="submit" class="btn-submit">SAVE & NEXT</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- STEP 3: REVIEW -->
+    <main id="step-3" class="main-content" style="display: none">
+      <div class="form-wrapper">
+        <h1 class="page-title">Review your transfer</h1>
+
+        <div class="review-container">
+          <!-- 1. TRANSFER SUMMARY CARD -->
+          <div class="review-card review-card--hero">
+            <div class="review-card__header">
+              <span class="review-card__label">You're sending</span>
+              <button class="edit-btn">Edit</button>
+            </div>
+            <div class="review-amount">
+              <span class="review-amount__value">5,000.00</span>
+              <span class="review-amount__currency">USD</span>
+            </div>
+            <div class="review-details-list">
+              <div class="review-row">
+                <span>Fee</span>
+                <span class="review-row__value">12.50 USD</span>
+              </div>
+              <div class="review-row">
+                <span>Exchange rate</span>
+                <span class="review-row__value">1 USD = 0.92 EUR</span>
+              </div>
+              <div class="review-row review-row--total">
+                <span>Recipient gets</span>
+                <span class="review-row__value">4,588.50 EUR</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-grid">
+            <!-- 2. SENDER DETAILS CARD -->
+            <div class="review-card">
+              <div class="review-card__header">
+                <h3 class="review-card__title">Sender Details</h3>
+                <button class="edit-btn">Edit</button>
+              </div>
+              <div class="review-info">
+                <div class="info-block">
+                  <label>Name</label>
+                  <p>Pavi Yarasan</p>
+                </div>
+                <div class="info-block">
+                  <label>Method</label>
+                  <p>Swipe ACH</p>
+                </div>
+                <div class="info-block">
+                  <label>Account No.</label>
+                  <p>**** 4567</p>
+                </div>
+                <div class="info-block">
+                  <label>Account Type</label>
+                  <p>Checking</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. RECEIVER DETAILS CARD -->
+            <div class="review-card">
+              <div class="review-card__header">
+                <h3 class="review-card__title">Receiver Details</h3>
+                <button class="edit-btn">Edit</button>
+              </div>
+              <div class="review-info">
+                <div class="info-block">
+                  <label>Name</label>
+                  <p>John Doe</p>
+                </div>
+                <div class="info-block">
+                  <label>Bank</label>
+                  <p>Standard Chartered</p>
+                </div>
+                <div class="info-block">
+                  <label>Account No.</label>
+                  <p>9876543210</p>
+                </div>
+                <div class="info-block">
+                  <label>Reference</label>
+                  <p>Family Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECURITY DISCLOSURE -->
+          <div class="security-notice">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span
+              >Your information is encrypted and processed through secure
+              banking protocols.</span
+            >
+          </div>
+
+          <div class="form-footer">
+            <button type="button" class="btn-back" onclick="prevStep()">
+              Back
+            </button>
+            <button type="submit" class="btn-submit" onclick="nextStep()">
+              CONFIRM & PAY
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- STEP 4: PAYMENT -->
+    <main id="step-4" class="main-content" style="display: none">
+      <div class="form-wrapper">
+        <h1 class="page-title">Choose how to pay</h1>
+
+        <div class="payment-container">
+          <!-- TOTAL TO PAY SUMMARY -->
+          <div class="payment-summary">
+            <div class="payment-summary__total">
+              <span class="label">Total to pay</span>
+              <span class="amount">5,012.50 USD</span>
+            </div>
+            <div class="payment-summary__breakdown">
+              Includes 12.50 USD transaction fee
+            </div>
+          </div>
+
+          <!-- PAYMENT METHODS LIST -->
+          <div class="payment-methods">
+            <!-- Option 1: Manual Bank Transfer -->
+            <label class="payment-option">
+              <input
+                type="radio"
+                name="pay_method"
+                value="bank_transfer"
+                checked
+              />
+              <div class="payment-option__card">
+                <div class="payment-option__icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M3 21h18M3 10h18M5 10v11M19 10v11M12 10v11M2 10l10-7 10 7"
+                    />
+                  </svg>
+                </div>
+                <div class="payment-option__content">
+                  <h3 class="payment-option__title">Manual Bank Transfer</h3>
+                  <p class="payment-option__desc">
+                    Transfer the money to NETTT using your banking app.
+                  </p>
+                </div>
+                <div class="payment-option__meta">
+                  <span class="meta-fee">FREE</span>
+                  <span class="meta-time">Arrives in 1-2 days</span>
+                </div>
+                <div class="payment-option__check"></div>
+              </div>
+            </label>
+
+            <!-- Option 2: Debit Card -->
+            <label class="payment-option">
+              <input type="radio" name="pay_method" value="debit_card" />
+              <div class="payment-option__card">
+                <div class="payment-option__icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="5" width="20" height="14" rx="2" ry="2" />
+                    <line x1="2" y1="10" x2="22" y2="10" />
+                  </svg>
+                </div>
+                <div class="payment-option__content">
+                  <h3 class="payment-option__title">Debit Card</h3>
+                  <p class="payment-option__desc">
+                    Secure payment using your Visa or Mastercard.
+                  </p>
+                </div>
+                <div class="payment-option__meta">
+                  <span class="meta-fee">+4.50 USD</span>
+                  <span class="meta-time">Arrives instantly</span>
+                </div>
+                <div class="payment-option__check"></div>
+              </div>
+            </label>
+
+            <!-- Option 3: Swipe ACH (Connected Account) -->
+            <label class="payment-option">
+              <input type="radio" name="pay_method" value="ach" />
+              <div class="payment-option__card">
+                <div class="payment-option__icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="8.5" cy="7" r="4" />
+                    <polyline points="17 11 19 13 23 9" />
+                  </svg>
+                </div>
+                <div class="payment-option__content">
+                  <h3 class="payment-option__title">Swipe ACH</h3>
+                  <p class="payment-option__desc">
+                    Directly debit from your connected bank account.
+                  </p>
+                </div>
+                <div class="payment-option__meta">
+                  <span class="meta-fee">+2.00 USD</span>
+                  <span class="meta-time">Arrives in 1 day</span>
+                </div>
+                <div class="payment-option__check"></div>
+              </div>
+            </label>
+          </div>
+
+          <div class="form-footer">
+            <button type="button" class="btn-clear">Cancel Transfer</button>
+            <button type="submit" class="btn-submit">COMPLETE PAYMENT</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="text/javascript">
+      
+      let currentStep = 1;
+const totalSteps = 4;
+
+function updateStepper() {
+    // 1. Update Progress Bar Width
+    const progressBar = document.getElementById('progress-bar');
+    const widths = [0, 5, 38, 72, 100]; // Map steps to percentages
+    progressBar.style.width = widths[currentStep] + '%';
+
+    // 2. Update Stepper Labels
+    const stepperItems = document.querySelectorAll('.stepper__item');
+    stepperItems.forEach((item, index) => {
+        const stepNum = index + 1;
+        item.classList.remove('stepper__item--active', 'stepper__item--completed');
+
+        if (stepNum < currentStep) {
+            item.classList.add('stepper__item--completed');
+        } else if (stepNum === currentStep) {
+            item.classList.add('stepper__item--active');
+        }
+    });
+}
+
+function showStep(stepNum) {
+    // Hide all steps
+    document.querySelectorAll('.main-content').forEach(step => {
+        step.style.display = 'none';
+    });
+    // Show current step
+    document.getElementById(`step-${stepNum}`).style.display = 'block';
+    window.scrollTo(0, 0);
+}
+
+function nextStep() {
+    if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+        updateStepper();
+    }
+}
+
+function prevStep() {
+    if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+        updateStepper();
+    }
+}
+
+// Form Switcher (Sender/Receiver Tabs)
+function toggleForm(target) {
+    const senderTab = document.getElementById('tab-sender');
+    const receiverTab = document.getElementById('tab-receiver');
+    const senderFields = document.getElementById('form-sender-fields');
+    const receiverFields = document.getElementById('form-receiver-fields');
+
+    if (target === 'sender') {
+        senderTab.classList.add('method-btn--active');
+        receiverTab.classList.remove('method-btn--active');
+        senderFields.style.display = 'block';
+        receiverFields.style.display = 'none';
+    } else {
+        receiverTab.classList.add('method-btn--active');
+        senderTab.classList.remove('method-btn--active');
+        receiverFields.style.display = 'block';
+        senderFields.style.display = 'none';
+    }
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => {
+    updateStepper();
+});
+    </script>
+
+    <!-- <script src="transaction-stage.js"></script> -->
+  </body>
+</html>
