@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>### Money Transaction ###</title>
+
+ 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="assets/css/master.css" rel="stylesheet"> -->
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+<style>
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size:11px;
+    /* Tahoma,*/
+}
+
+/* HEADER */
+.top-header {
+    background: #f3f3f3;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 8px 15px;
+}
+
+/* SIDEBAR */
+#sidebar {
+    width:240px;
+    background: #f7f7f7;
+    border-right:1px solid #c8c8c8;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+}
+
+#sidebar.collapsed {
+    margin-left: -240px;
+}
+
+/* TREE STYLE */
+.tree ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.tree li {
+    position: relative;
+    padding: 2px 0;
+    font-size: 12px;
+}
+
+.tree li ul li {
+    position: relative;
+    padding: 0px 0;
+    font-size: 11px;
+}
+
+.tree li span {
+    cursor: pointer;
+}
+
+.tree li i {
+    margin-right: 6px;
+    font-size: 10px;
+}
+
+/* Toggle Arrow */
+.tree-toggle::before {
+    content: "\f0da";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.tree-toggle.open::before {
+    content: "\f0d7";
+}
+
+/* Hide nested */
+.tree ul {
+    display: none;
+}
+
+.tree ul.show {
+    display: block;
+}
+
+/* MAIN CONTENT */
+#main-content {
+    flex: 1;
+    transition: all 0.3s ease;
+/*    background-color: #f2f4f8;*/
+    background: #ffffff;
+}
+
+/* TOOLBAR */
+.toolbar {
+    border-bottom: 1px solid #c8c8c8;
+    padding: 8px;
+    background-color:#e6e6e6;
+}
+
+.toolbar i {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* LAYOUT */
+.wrapper {
+    display: flex;
+}
+
+.btn#toggleSidebar {
+    border:none;
+    padding:2px 5px 2px 2px;
+}
+
+.btn#toggleSidebar:hover {
+    color:#000000;
+    background-color:transparent;
+    border-color:none;
+}
+
+
+
+/* MOBILE */
+@media (max-width: 992px) {
+    #sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        z-index: 1050;
+    }
+
+    #sidebar.active {
+        left: 0;
+    }
+}
+
+/*page style -----------------------------------------------------*/
+
+  /* GREEN PANEL */
+.step-panel {
+    background: #66ff4d;
+    border-right: 2px solid #ccc;
+    min-height: 100vh;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* HEADER */
+.header-row {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    border-bottom:1px solid #8b8b8b;
+}
+
+.header-row h1 {
+    font-size: 24px;
+    margin: 0;
+    flex: 1;
+    font-weight: 700;
+}
+
+.select-boxs {
+    background: #fff;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+/* STEP ROW */
+.step-row {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #000;
+}
+
+.step-nom {
+    width: 130px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.step-content {
+    background: #fff;
+    padding: 10px 5px;
+    width: 100%;
+    text-align: center;
+    line-height: 14px;
+}
+
+.step-content h5{
+    margin-bottom:5px;
+    font-weight:bold;
+}
+.step-content small{
+    font-size:14px;
+}
+
+/* RECEIPT */
+.receipt-box {
+    margin: 10px 12px;
+    background: #fff;
+    padding: 15px 10px 15px 20px;
+    font-size: 11px;
+    text-align: right;
+    line-height: 12px;
+}
+
+.receipt-box h4{
+        font-size: 16px;
+}
+
+.step-main {
+    border:1px solid #dddddd;
+/*    border:2px solid #5cde47*/
+}
+
+.step-select {
+    background: #1e970b;
+}
+
+.step-select .select-boxs {
+    background: transparent;
+    color: #ffffff;
+}
+
+.step-select .step-content {
+    background: transparent;
+    color: #ffffff;
+}
+
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .header-row h1{
+        font-size:28px;
+    }
+    .step-nom{
+        font-size:28px;
+        width:90px;
+    }
+}
+
+/*------------main content -----------------------------------------------------------*/
+
+.sc-card {
+            flex: 1;
+            min-width:auto;
+        /*  background: #66ff33;*/
+            padding: 25px;
+            box-sizing: border-box;
+            border-right: 6px solid #ffffff;
+        }
+
+        /*.sc-card-border {
+            border-right: 6px solid #eff2f5 !important;
+            height: 100%;
+        }*/
+
+        .sc-card-border {
+            border: 1px solid #010101 !important;
+            height: 100%;
+        }
+            
+/*
+        .sc-card:last-child {
+            border-right: none;
+        }*/
+
+        .sc-title {
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom:0px;
+            line-height: 35px;
+        }
+
+        .sc-subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .click-box {
+            border: 2px solid #ffffff;
+            padding: 10px 10px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            line-height: 19px;
+            color: #000000;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .sc-note {
+            text-align: justify;
+            border: 1px solid #000000;
+            padding:15px 10px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #000000;
+        }
+
+        /*.g-sm {
+            --bs-gutter-y: 0.40rem;
+        }*/
+        .g-sm {
+            --bs-gutter-x: 0.50rem;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 768px) {
+            .sc-title {
+                font-size: 30px;
+            }
+            .sc-subtitle {
+                font-size: 26px;
+            }
+            .click-box {
+                font-size: 18px;
+                line-height: 20px;
+                padding: 10px 15px;
+            }
+
+            .sc-card {
+                flex: 1;
+                min-width: auto;
+                /* background: #66ff33; */
+                padding:15px;
+                box-sizing: border-box;
+                border-right: 6px solid #ffffff;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+
+            .g-sm {
+                --bs-gutter-y: 0.70rem;
+            }
+
+            .sc-card {
+                flex: 1;
+                min-width: auto;
+                /* background: #66ff33; */
+                padding: 10px;
+                box-sizing: border-box;
+                border-right: 0px solid #ffffff !important;
+                /* border-bottom: 6px solid #ffffff; */
+            }
+
+            .sc-card-border {
+                border-bottom: 6px solid #ffffff;
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+        .bg-light-green {
+            background-color: #66ff4d;
+            color: #000000;
+        }
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="top-header d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <button class="btn btn-outline-secondary" id="toggleSidebar">
+            <i class="fa fa-bars"></i>
+        </button>
+        <!-- <img class="img-fluid mx-auto d-block sm-logo" src="assets/images/new-smz-logo.png"> -->
+        <span class="fw-bold text-danger fs-4">NETTT</span>
+        <span class="ms-3 small">Currency Exchange Remittance & Settlements</span>
+    </div>
+    <div>
+       <a href="money-sender.html" title="Back"> <img src="assets/images/left-arrow.png"> </a>
+        &nbsp;
+        <a class="icon" href="#" title="Next"> 
+            <img src="assets/images/right-arrow.png"> 
+        </a>
+        &nbsp;
+        <a class="icon" href="remit-login.html" title="Logout"> 
+                                    
+            <img src="assets/images/logout-1.png"> 
+        </a>
+
+    </div>
+</div>
+
+<div class="wrapper">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="collapsed">
+        <div class="p-3 tree">
+
+            <ul class="show">
+
+                <li><i class="fa fa-folder"></i> Home </li>
+                
+                <li>
+                    <span class="tree-toggle open">Profile</span>
+                    <ul class="show">
+
+                        <li>
+                            <span class="tree-toggle">System Databases</span>
+                            <ul>
+                                <li><i class="fa fa-database"></i> master</li>
+                                <li><i class="fa fa-database"></i> model</li>
+                                <li><i class="fa fa-database"></i> msdb</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="tree-toggle">User Database</span>
+                            <ul>
+                                <li><i class="fa fa-table"></i>Tables</li>
+                                <li><i class="fa fa-eye"></i> Views</li>
+                                <li><i class="fa fa-code"></i> Stored Procedures</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><i class="fa fa-folder"></i> Agent Reg. & Assign </li>
+                <li><i class="fa fa-folder"></i> Derivation </li>
+                <li><i class="fa fa-folder"></i> Rates Control BRICK</li>
+                <li><i class="fa fa-folder"></i> Rates & CAPITALIZATION </li>
+                <li><i class="fa fa-folder"></i> FT(a)↔(b)FT BRICK  </li>
+                <li><i class="fa fa-folder"></i> Forward Booking MP </li>
+                <li><i class="fa fa-folder"></i> Real Time Stock  </li>
+                <li><i class="fa fa-folder"></i> Transaction History </li>
+                <li><i class="fa fa-folder"></i> Biometrics SCORE </li>
+
+                <li><i class="fa fa-lock"></i> Security</li>
+                <li><i class="fa fa-server"></i> Server Objects</li>
+                <li><i class="fa fa-gear"></i> Management</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="w-100">
+        
+        <div class="toolbar">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-3"> 
+                    <div class="float-right">  
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-solid fa-gear"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-2">
+             
+            <div class="container-fluid">
+
+                   <div class="row">
+
+                        <!-- LEFT STEP WIZARD -->
+                        <div class="col-lg-4 col-md-5 step-panel mt-2">
+
+                            <!-- HEADER -->
+                            <div class="header-row">
+                                <h1>Start Here</h1>
+                                <div class="select-boxs">Select Category</div>
+                            </div>
+
+                            <!-- STEP 1 -->
+                            <div class="step-row">
+                                <div class="step-nom">STEP 1</div>
+                                <div class="step-content">
+                                    <h5>Sender’s Details</h5>
+                                    <small>Governed By PDPA ACTS</small>
+                                </div>
+                            </div>
+
+                            <!-- STEP 2 -->
+                            <div class="step-row step-select">
+                                <div class="step-nom">STEP 2</div>
+                                <div class="step-content">
+                                    <h5>Receiver’s Details</h5>
+                                    <small>Governed By PDPA ACTS</small>
+                                </div>
+                            </div>
+
+                            <!-- STEP 3 -->
+                            <div class="step-row">
+                                <div class="step-nom">STEP 3</div>
+                                <div class="step-content">
+                                    <h5>PAYMENTS</h5>
+                                    <small>FPX Secure Online Banking<br>Governed By PDPA ACTS</small>
+                                </div>
+                            </div>
+
+                            <!-- RECEIPT -->
+                            <div class="receipt-box">
+                                <h4><strong>RECEIPT</strong></h4>
+                                Pls keep the receipt and a copy will also be sent to your email
+                                for follow ups. You may also call your agent for follow up.  NOTIFICATIONS will be sent to your mail to ensure payments are credited with no discrepancies. All information are Governed By PDPA ACTS
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT EMPTY CONTENT (as per image) -->
+                        
+                        <div class="col-lg-8 col-md-7 bg-white step-main">
+
+
+                          <div class="container">
+                            <div class="row mt-3">
+
+                                 <div class="mb-5">
+
+                                    <div class="step-content">
+                                    <h5>Receiver’s Details</h5>
+                                    <small>Governed By PDPA ACTS</small>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+
+                                <div class="col-md-5"> </div>
+                                    <div class="col-md-3">
+                                        <div class="san-btn" onclick="window.location.href ='money-payments.html'">
+                                            <h1> SAVE &amp; NEXT</h1>
+                                        </div>
+                                    </div>
+                                <div class="col-md-4"> </div>
+                            </div>
+                         </div>
+
+                        
+                        </div>
+
+                    </div>
+                        
+                        
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- Modal -->
+
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="max-width:90%;">
+        <div class="modal-content" style="height:500px;" >
+          <div class="modal-header" style="background-color:#dddddd; padding: 5px 10px;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Graph</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+          </div>
+
+          <div class="modal-body"> 
+
+              <!-- TradingView Widget BEGIN -->
+                      <div class="tradingview-widget-container" style="height:100%;width:100%">
+                                          <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                                          <div class="tradingview-widget-copyright">  </div>
+                                          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                                          {
+                                          "allow_symbol_change": true,
+                                          "calendar": false,
+                                          "details": false,
+                                          "hide_side_toolbar": true,
+                                          "hide_top_toolbar": false,
+                                          "hide_legend": false,
+                                          "hide_volume": false,
+                                          "hotlist": false,
+                                          "interval": "D",
+                                          "locale": "en",
+                                          "save_image": true,
+                                          "style": "1",
+                                          "symbol": "NASDAQ:AAPL",
+                                          "theme": "light",
+                                          "timezone": "Etc/UTC",
+                                          "backgroundColor": "#ffffff",
+                                          "gridColor": "rgba(46, 46, 46, 0.06)",
+                                          "watchlist": [],
+                                          "withdateranges": false,
+                                          "compareSymbols": [],
+                                          "studies": [],
+                                          "autosize": true
+                                                }
+                                          </script>
+                                        </div>
+                      <!-- TradingView Widget END -->
+
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+             
+        </div>
+      </div>
+    </div>
+     
+  
+ 
+
+
+    <!-- SCRIPTS -->
+    <script>
+        /* Sidebar Toggle */
+        document.getElementById("toggleSidebar").addEventListener("click", function() {
+            const sidebar = document.getElementById("sidebar");
+            if (window.innerWidth <= 992) {
+                sidebar.classList.toggle("active");
+            } else {
+                sidebar.classList.toggle("collapsed");
+            }
+        });
+
+        /* Tree Toggle */
+        document.querySelectorAll(".tree-toggle").forEach(function(toggle) {
+            toggle.addEventListener("click", function() {
+                this.classList.toggle("open");
+                let nextUl = this.nextElementSibling;
+                if (nextUl) {
+                    nextUl.classList.toggle("show");
+                }
+            });
+        });
+    </script>
+
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+
+   
+
+</body>
+</html>
