@@ -3524,7 +3524,7 @@ div[disabled] {
 
 
 #sidebar ul li span {
-    padding-left: 40px;
+/*    padding-left: 40px;*/
     display: block;
 }
 
@@ -4081,24 +4081,53 @@ div[disabled] {
 .san-btn {
     background-color: #ffffff;
     border: 1px solid #000000;
-    padding: 10px 10px;
+    color:#010101;
+    padding: 7px 5px;
     text-align: center;
     display: block;
     vertical-align: middle;
-    margin: 2px 0px 0px 0px;
+    margin: 9px 0px 0px 0px;
     transition-duration: 0.4s;
     cursor: pointer;
     text-decoration: none;
     text-transform: capitalize;
-    height: 100%;
     width: 100%;
-    line-height: 20px;
+    line-height: 100%;
+}
+
+.san-btn:focus {
+    border: none; 
 }
 
 .san-btn h1 {
     font-weight:600;
     font-size:21px;
-    color: #000000;
+    color: #010101;
+    margin-bottom: 0px;
+}
+
+.tran-btn {
+    background-color: #198754;
+    border: 1px solid #000000;
+    color:#ffffff;
+    padding: 7px 5px;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    margin: 9px 0px 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    line-height: 10px;
+}
+
+
+.tran-btn h1 {
+    font-weight:600;
+    font-size:21px;
+    color: #ffffff;
     margin-bottom: 0px;
 }
 
@@ -4838,9 +4867,9 @@ button.rpp-submit:hover {
 
 .sc-table table td, table tr {
     border-color: #010101;
-    font-size: 12px;
+    font-size: 11px;
     color: #000000;
-    line-height: 18px;
+    line-height: 12px;
 }
 
 .sc-table table th {
@@ -5387,11 +5416,19 @@ p.pc-text {
 .sr-form h2 {
     font-size: 18px;
     /* color: #ffffff; */
-    font-style: italic;
+    font-style:normal;
     font-weight: bold;
     text-align: center;
     margin: 6px auto;
     line-height: 40px;
+}
+
+.card-header p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px;
+    padding: 0px 5px 5px;
+    margin-top: -5px;
 }
 
 .sr-form .form-control {
@@ -5413,12 +5450,12 @@ p.pc-text {
     border: 1px solid #000000;
     border-radius:0px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        text-align: right;
+        text-align: left;
 }
 
 .sr-form label {
-    font-size: 13px;
-    font-weight: 550;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 100%;
     padding-right: 10px;
     color: #413e3e;
