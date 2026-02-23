@@ -4548,9 +4548,10 @@ div[disabled] {
     height: 100%;
 }
 
-.step-main .paydis .botdiv{
-    position: absolute;
+.step-main .paydis .botdiv {
+    position: relative;
     bottom: 0;
+    top: 10px;
 }
 
 .remit-payment-page .paydis p strong {
