@@ -175,6 +175,7 @@ body {
     background: #fff;
     padding: 10px 15px;
     font-size: 20px;
+/*    border-bottom: 1px solid #000;*/
 }
 
 /* STEP ROW */
@@ -197,6 +198,7 @@ body {
     width: 100%;
     text-align: center;
     line-height: 14px;
+     
 }
 
 .step-content h5{
@@ -215,6 +217,7 @@ body {
     font-size: 11px;
     text-align: right;
     line-height: 12px;
+/*     border: 1px solid #000000;*/
 }
 
 .receipt-box h4{
@@ -385,9 +388,9 @@ body {
         <button class="btn btn-outline-secondary" id="toggleSidebar">
             <i class="fa fa-bars"></i>
         </button>
-        <!-- <img class="img-fluid mx-auto d-block sm-logo" src="assets/images/new-smz-logo.png"> -->
-        <span class="fw-bold text-danger fs-4">NETTT</span>
-        <span class="ms-3 small">Currency Exchange Remittance & Settlements</span>
+        <img class="img-fluid d-block sm-logo col-md-5" src="assets/images/new-smz-logo.png">
+        <!-- <span class="fw-bold text-danger fs-4">NETTT</span>
+        <span class="ms-3 small">Currency Exchange Remittance & Settlements</span> -->
     </div>
     <div>
        <a href="money-sender.html" title="Back"> <img src="assets/images/left-arrow.png"> </a>
@@ -530,28 +533,366 @@ body {
                         
                         <div class="col-lg-8 col-md-7 bg-white step-main">
 
-
                           <div class="container">
-                            <div class="row mt-3">
+
+                            <div class="row">
 
                                  <div class="mb-5">
 
-                                    <div class="step-content">
-                                    <h5>Receiver’s Details</h5>
-                                    <small>Governed By PDPA ACTS</small>
+                                    <form class="sr-form bg-white">
+
+                                    <div class="card-header">
+                                        <h2>{ RECEIVERS  DETAILS }</h2>
+                                        <p>You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction  </p>
+                                    </div>
+                                            
+                                    <!-- <div class="sr-form-heading">
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5">Select Agent To LIASE With Directly To Ensure Sent &amp; Receipt of Funds </label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5"> Agents Telephone No To Liase &amp; Assist Personally</label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5"> From Country – Ultimate Sender</label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    
+                                    <div class="card-body mt-2">
+
+                                        <div class="row">
+
+                                          <div class="col-lg-6">
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 1 First Name  </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                    <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 2 Middle Name </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 3  Middle Name - Surname </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 4 Surname  </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="line"></div><br> -->
+                                            
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Date of Birth</label>
+                                                <div class="col-md-7">
+                                                    <input type="date" class="form-control" placeholder="DD / MM / YYYY">
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Nationality</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Country</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Visa Expiry Date If Foreign National</label>
+                                                <div class="col-md-7">
+                                                    <input type="date" class="form-control" placeholder="DD / MM / YYYY">
+                                                    
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">ID NO Passport No  – ATTACH ID - PASSPORT</label>
+                                                <div class="col-md-4">
+                                                     <input type="text" name="" class="form-control">
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                
+                                                <label class="col-md-5">Telephone Number</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                    <small class="form-text text-muted"> </small>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Address</label>
+                                                <div class="col-md-7">
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Type Of Employment</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select one</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Occupation</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Occupation</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            
+
+
+                                          </div>
+
+                                          <div class="col-lg-6">
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                 
+                                                <label class="col-md-5">Name of employer</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Nature of business</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Business</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                 
+                                                <label class="col-md-5">Personal Email</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="email" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Income Range  </label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Income Range</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Purpose of Transaction</label>
+                                                <div class="col-md-4">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Purpose</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Source of Funds</label>
+                                                <div class="col-md-4">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Source of Funds</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5"> Bank Name ( SENDER )</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Bank</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">  Bank Account Number </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control" placeholder="Bank Account No. Sending from">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Sender / Receiver Relationship</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Relationship</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Payment by</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Payment Method</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-9" style="font-size:10px;"> BANK HEADER  ONLY -  Support Docs ( No Statement Is Required Excepting Top Part of Statement  ( Name ADDRESS and Account No ) ATTACH </label>
+                                                <div class="col-md-3">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-7">  Customer Type – IND-IND CO-CO Auto Generated On Selection  </label>
+                                                <div class="col-md-5">
+                                                    <input type="text" name="" class="form-control" placeholder="Individual to Individual" readonly>
+                                                </div>
+                                            </div>
+                                            
+
+                                            <div class="row">
+                                                <div class="col-md-4"> 
+                                                        <button class="save">
+                                                          <i class="fas fa-file"></i>  Clear 
+                                                        </button>
+                                                </div>
+                                                <div class="col-md-8"> 
+                                                    <!-- <a href="money-receiver.html">  -->
+
+                                                    <div class="tran-btn" onclick="window.location.href ='money-payments.html'"> 
+                                                            <h1>  
+                                                                <i class="fas fa-save"></i> SAVE &amp; NEXT
+                                                            </h1> 
+                                                    </div>
+
+                                                        <!-- <button class="submit">
+                                                          <i class="fas fa-save"></i>  SAVE &amp; NEXT 
+                                                        </button> -->
+                                                    <!-- </a> -->
+                                                </div>
+                                            </div>
+
+                                          </div>
+
+                                        </div>
+
+                                    </div>
+                                
+                                  </form>
+                                     
+
                                 </div>
                             </div>
 
-                            <div class="row mt-3">
-
-                                <div class="col-md-5"> </div>
-                                    <div class="col-md-3">
-                                        <div class="san-btn" onclick="window.location.href ='money-payments.html'">
-                                            <h1> SAVE &amp; NEXT</h1>
-                                        </div>
-                                    </div>
-                                <div class="col-md-4"> </div>
-                            </div>
+                             
                          </div>
 
                         

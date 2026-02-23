@@ -4110,7 +4110,7 @@ div[disabled] {
     background-color: #198754;
     border: 1px solid #000000;
     color:#ffffff;
-    padding: 7px 5px;
+    padding:8px 5px;
     text-align: center;
     display: block;
     vertical-align: middle;
@@ -4520,9 +4520,9 @@ div[disabled] {
     letter-spacing: 0.5px;
 }
 
-.remit-payment-page .paydis {
+/*.remit-payment-page .paydis {
     border: 1px solid #010101 !important;
-    }
+    }*/
 
 .remit-payment-page .paydis p {
     font-size: 11px;
@@ -4531,6 +4531,26 @@ div[disabled] {
     padding: 10px;
     font-weight: 400;
     line-height: 14px;
+}
+
+.step-main .paydis p {
+    font-size: 10px;
+    color: #010101;
+    text-align: justify;
+    padding: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    border: 1px solid #010101;
+}
+
+.step-main .paydis{
+    position: relative;
+    height: 100%;
+}
+
+.step-main .paydis .botdiv{
+    position: absolute;
+    bottom: 0;
 }
 
 .remit-payment-page .paydis p strong {
@@ -4640,9 +4660,9 @@ button.rpp-submit:hover {
 
 .remit-payment-page .note p {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 11px;
     color: red;
-    line-height: 16px;
+    line-height: 14px;
     margin-bottom: 0px;
     margin-top: 10px;
     text-align: right;
@@ -4686,12 +4706,12 @@ button.rpp-submit:hover {
 }
 
 .pay-invoice-form .pi-address p {
-    font-size: 14px;
+    font-size: 12px;
     color: #010101;
     text-align: center;
-    line-height: 16px;
+    line-height: 14px;
     font-weight: 500;
-    padding: 5px 15px;
+    padding: 2px 15px;
     margin-bottom: 0px;
 }
 
@@ -4725,8 +4745,8 @@ button.rpp-submit:hover {
 
 .remit-pay-lab label {
     color: #000000;
-    font-size:14px;
-    line-height: 27px;
+    font-size: 12px;
+    line-height: 22px;
     font-weight: 500;
     text-align: left;
     display: block;
@@ -4740,17 +4760,15 @@ button.rpp-submit:hover {
     /* background-color: #e3e5e5bf; */
 }
 
-.remit-pay-input label{
-    
+.remit-pay-input label {
     color: #000000;
-    font-size:14px;
-    line-height: 27px;
+    font-size: 13px;
+    line-height: 25px;
     font-weight: 600;
     text-align: left;
     display: block;
     margin: auto;
     text-indent: 10px;
-     
 }
 
 .remit-pay-input h2{
@@ -4767,13 +4785,13 @@ button.rpp-submit:hover {
 }
 
 .remit-pay-textare {
-    min-height: 70px;
+/*    min-height: 70px;*/
     border: 0.5px solid #0000002d;
     background-color: #f8f8f8;
 }
 
 .remit-pay-textare-input {
-    min-height: 70px;
+/*    min-height: 70px;*/
     border: 0.5px solid #0000002d;
     background-color: #ffffff;
 }
@@ -4875,9 +4893,9 @@ button.rpp-submit:hover {
 .sc-table table th {
     text-align: center;
     font-weight: 600;
-    line-height: 14px;
+    line-height:30px;
     min-height: 15px;
-    height: 40px;
+    height:35px;
     font-size: 14px;
 }
 
