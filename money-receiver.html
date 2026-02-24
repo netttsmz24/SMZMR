@@ -378,6 +378,30 @@ body {
             color: #000000;
         }
 
+        .money-tran-btn {
+            border: 1px solid #000000;
+            color: #010101;
+            padding: 6px 10px;
+            text-align: center;
+            display: block;
+            vertical-align: middle;
+            margin: 9px 0px 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%;
+            line-height: 32px;
+            background: transparent;
+            font-size: 28px;
+        }
+
+        .money-tran-btn:hover {
+            border: 1px solid #000000;
+            color:#ffffff;
+            background-color:#198754;
+        }
+
 </style>
 </head>
 <body>
@@ -542,8 +566,8 @@ body {
                                     <form class="sr-form bg-white">
 
                                     <div class="card-header">
-                                        <h2>{ RECEIVERS  DETAILS }</h2>
-                                        <p>You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction  </p>
+                                         
+                                        <p> <strong> { RECEIVERS  DETAILS } </strong> You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction  </p>
                                     </div>
                                             
                                     <!-- <div class="sr-form-heading">
@@ -860,17 +884,17 @@ body {
 
                                             <div class="row">
                                                 <div class="col-md-4"> 
-                                                        <button class="save">
-                                                          <i class="fas fa-file"></i>  Clear 
+                                                        <button class="money-tran-btn text-danger">
+                                                          Clear 
                                                         </button>
                                                 </div>
                                                 <div class="col-md-8"> 
                                                     <!-- <a href="money-receiver.html">  -->
 
-                                                    <div class="tran-btn" onclick="window.location.href ='money-payments.html'"> 
-                                                            <h1>  
-                                                                <i class="fas fa-save"></i> SAVE &amp; NEXT
-                                                            </h1> 
+
+
+                                                    <div class="money-tran-btn" onclick="window.location.href ='money-payments.html'"> 
+                                                               SAVE &amp; NEXT
                                                     </div>
 
                                                         <!-- <button class="submit">
@@ -909,7 +933,7 @@ body {
 
     <!-- Modal -->
 
-   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" style="max-width:90%;">
         <div class="modal-content" style="height:500px;" >
           <div class="modal-header" style="background-color:#dddddd; padding: 5px 10px;">
@@ -963,9 +987,7 @@ body {
         </div>
       </div>
     </div>
-     
-  
- 
+    
 
 
     <!-- SCRIPTS -->

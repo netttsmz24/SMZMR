@@ -384,6 +384,30 @@ body {
             color: #000000;
         }
 
+        .remit-payments {
+            color: #000000;
+            border: none;
+            background: transparent;
+            font-size: 24px;
+            font-weight: 500;
+            padding: 8px 5px;
+            width: 100%;
+            margin-top:10px;
+            margin-bottom:3px;
+            line-height: 30px;
+            border:1px solid #010101;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .remit-payments strong { font-size: 26px; font-weight:500; display: block; }
+
+        .remit-payments:hover {
+            border: 1px solid #000000;
+            color:#ffffff;
+            background-color:#198754;
+        }
+
 </style>
 </head>
 <body>
@@ -623,8 +647,7 @@ body {
 
                                                 <!-- <div class="col-md-4"> <button onclick="location.href ='#';" class="rpp-save"> SAVE</button> </div> -->
                                                 
-                                                <div class="col-md-12"> <button onclick="window.location.href ='money-receipt.html'" class="rpp-submit"> SAVE & SUBMIT To Online Banking Payment</button> 
-                                                </div>
+                                                
 
                                             </div>
 
@@ -632,7 +655,17 @@ body {
                                           </div>
                                          
 
-                                         <div class="paydis mt-3"> 
+                                         <div class="paydis mt-5"> 
+
+
+                                             <div class="col-md-12"> 
+
+                                                <div onclick="window.location.href ='money-receipt.html'" class="remit-payments"> 
+                                               <strong> SAVE & SUBMIT </strong> For Online Banking Payment
+                                                </div> 
+
+                                            </div>
+
                                             <p><strong> Fund Transfer &amp; Security Disclaimer </strong>-This Fund Transfer &amp; Security Disclaimer outlines the terms and conditions governing the use of our fund transfer services. By using our services, you agree to the following: <strong>1.Authorization and Consent </strong> You authorize us to process fund transfers as per your instructions. You confirm that all information provided for the transfer is accurate and complete.<strong> 2.Security Measures </strong> We employ industry-standard security measures to protect your information and transactions. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. <strong> 3.Transaction Limits </strong> and Fees Transactions may be subject to limits and fees as specified in our terms of service. You agree to pay all applicable fees associated with your transactions. <strong>4.  Errors and Disputes </strong> Report any errors or unauthorized transactions immediately. We will investigate and resolve disputes in accordance with our policies and applicable laws.<strong> 5.Liability </strong> We are not liable for any losses resulting from unauthorized transactions if you fail to maintain the security of your account. We are not responsible for delays or failures in processing due to circumstances beyond our control. <strong> 6.Compliance with Laws </strong> You agree to comply with all applicable laws and regulations regarding fund transfers. We may refuse or delay transactions that we suspect are illegal or violate our policies. <strong> 7. Changes to Terms </strong> We reserve the right to modify this disclaimer at any time. Continued use of our services constitutes acceptance of the modified terms. <strong>8. Contact Information </strong> For any questions or concerns regarding this disclaimer or your transactions, please contact our customer support team. By using our fund transfer services, you acknowledge that you have read, understood, and agree to this Fund Transfer &amp; Security Disclaimer. </p> 
                                         </div>
                                     </div>

@@ -347,6 +347,12 @@ body {
                 border-right: 6px solid #ffffff;
             }
 
+            .step-main .paydis .botdiv {
+                position: relative;
+                bottom: 0;
+                top: 10px;
+            }
+
         }
 
         @media (max-width: 767px) {
@@ -376,6 +382,30 @@ body {
         .bg-light-green {
             background-color: #66ff4d;
             color: #000000;
+        }
+
+        .money-tran-btn {
+            border: 1px solid #000000;
+            color: #010101;
+            padding: 6px 10px;
+            text-align: center;
+            display: block;
+            vertical-align: middle;
+            margin: 9px 0px 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%;
+            line-height: 32px;
+            background: transparent;
+            font-size: 28px;
+        }
+
+        .money-tran-btn:hover {
+            border: 1px solid #000000;
+            color:#ffffff;
+            background-color:#198754;
         }
 
 </style>
@@ -548,8 +578,7 @@ body {
                                   <form class="sr-form bg-white">
 
                                     <div class="card-header">
-                                        <h2>{ SENDERS DETAILS }</h2>
-                                        <p>You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction </p>
+                                        <p> <strong> { SENDERS DETAILS } </strong> You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction  </p>
                                     </div>
                                             
                                     <!-- <div class="sr-form-heading">
@@ -866,17 +895,17 @@ body {
 
                                             <div class="row">
                                                 <div class="col-md-4"> 
-                                                        <button class="save">
-                                                          <i class="fas fa-file"></i>  Clear 
+                                                        <button class="money-tran-btn text-danger">
+                                                          Clear 
                                                         </button>
                                                 </div>
                                                 <div class="col-md-8"> 
                                                     <!-- <a href="money-receiver.html">  -->
 
-                                                    <div class="tran-btn" onclick="window.location.href ='money-receiver.html'"> 
-                                                            <h1>  
-                                                                <i class="fas fa-save"></i> SAVE &amp; NEXT
-                                                            </h1> 
+                                                    <div class="money-tran-btn" onclick="window.location.href ='money-receiver.html'"> 
+                                                          
+                                                             SAVE &amp; NEXT
+                                                            
                                                     </div>
 
                                                         <!-- <button class="submit">

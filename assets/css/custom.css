@@ -4534,12 +4534,12 @@ div[disabled] {
 }
 
 .step-main .paydis p {
-    font-size: 10px;
+    font-size: 12px;
     color: #010101;
     text-align: justify;
     padding: 10px;
     font-weight: 400;
-    line-height: 12px;
+    line-height: 15px;
     border: 1px solid #010101;
 }
 
@@ -4692,11 +4692,11 @@ button.rpp-submit:hover {
 }
 
 .pay-invoice-form .pi-title h4 {
-    font-size: 15px;
+    font-size: 14px;
     color: #ffffff;
     text-align: center;
     line-height: 15px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .pay-invoice-form .pi-address {
@@ -4894,10 +4894,10 @@ button.rpp-submit:hover {
 .sc-table table th {
     text-align: center;
     font-weight: 600;
-    line-height:30px;
-    min-height: 15px;
-    height:35px;
+    line-height: 15px;
+    height: 45px;
     font-size: 14px;
+    vertical-align: middle;
 }
 
 .sc-table table th span { 
@@ -5425,7 +5425,7 @@ p.pc-text {
 }*/
 
 .sr-form .card-header {
-    background-color:#65ef08;
+    background-color:#ffffff;
     color: #000000;
     font-size: 15px;
     border-radius: 0;
@@ -5434,7 +5434,7 @@ p.pc-text {
 
 .sr-form h2 {
     font-size: 18px;
-    /* color: #ffffff; */
+     color: #000000; 
     font-style:normal;
     font-weight: bold;
     text-align: center;
@@ -5444,10 +5444,17 @@ p.pc-text {
 
 .card-header p {
     font-size: 12px;
-    text-align: center;
-    line-height: 14px;
+    text-align: right;
+    line-height: 16px;
     padding: 0px 5px 5px;
-    margin-top: -5px;
+    color: #000000; 
+    margin-top: 12px;
+}
+
+.card-header p strong{
+    font-size: 20px;
+    font-style:normal;
+    font-weight:500;
 }
 
 .sr-form .form-control {

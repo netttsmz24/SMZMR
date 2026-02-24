@@ -165,10 +165,12 @@ body {
 }
 
 .header-row h1 {
-    font-size: 24px;
+    font-size: 26px;
     margin: 0;
+    text-transform: uppercase;
     flex: 1;
-    font-weight:500;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .select-boxs {
@@ -257,19 +259,22 @@ body {
 
 /*------------main content -----------------------------------------------------------*/
 
-.sc-card {
+        /*.sc-card {
             flex: 1;
             min-width:auto;
-        /*  background: #66ff33;*/
+          background: #66ff33;
             padding:20px;
             box-sizing: border-box;
             border-right: 6px solid #ffffff;
-        }
-
-        /*.sc-card-border {
-            border-right: 6px solid #eff2f5 !important;
-            height: 100%;
         }*/
+
+        .sc-card {
+            flex: 1;
+            min-width: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #010101;
+        }
 
         .sc-card-border {
             border: 1px solid #010101 !important;
@@ -307,12 +312,18 @@ body {
             text-align: center;
         }
 
+        .click-box strong {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+
         .sc-note {
             text-align: justify;
             border: 1px solid #000000;
             padding:10px 10px;
             font-size: 12px;
-            line-height: 14px;
+            line-height: 16px;
             color: #000000;
         }
 
@@ -546,9 +557,9 @@ body {
                           <div class="container">
                             <div class="row mt-3">
 
-                                <div class="col-lg-2 col-md-0"> </div>
+                                <div class="col-lg-1 col-md-0"> </div>
 
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-5 col-md-6">
                                     <!-- Category 1 -->
                                     <div class="sc-card bg-light-green mt-2">
                                         <!-- <div class="sc-title">SELECT</div> -->
@@ -556,19 +567,19 @@ body {
 
                                         <div class="click-box" onclick="window.location.href='money-sender.html'">
                                             Send Monies <br>
-                                            Individual To Individual 
+                                            <strong> Individual To Individual </strong>
                                                 <br>
                                             <span> Click Here </span>
                                         </div>
 
-                                        <div class="sc-note">
+                                        <div class="sc-note mt-5 mb-4">
                                             Please note that successful send and receive can only be subjected if the senders account and receiver are the true beneficiary as being declared in the forms ; Only true beneficiary Bank account holders corresponding to the true account number and names as declared in the forms will be successful if not rejected ; <strong> This are criteria's set by REGULATORS </strong>
 
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-5 col-md-6">
                                     <!-- Category 2 -->
                                     <div class="sc-card bg-light-green mt-2">
                                         <!-- <div class="sc-title">SELECT</div> -->
@@ -576,7 +587,7 @@ body {
 
                                         <div class="click-box" onclick="window.location.href='money-sender.html'">
                                             Send Monies <br>
-                                            Company To Company 
+                                           <strong> Company To Company </strong>
                                             <br>
                                             <span> Click Here </span>
 
@@ -584,13 +595,13 @@ body {
 
                                         <div class="mb-4">&nbsp; </div>
 
-                                        <div class="sc-note">
+                                        <div class="sc-note mt-5 mb-5">
                                             Please note that successful send and receive can only be subjected if the senders account and receiver are the true beneficiary as being declared in the forms ; Only true beneficiary Bank account holders corresponding to the true account number and names as declared in the forms will be successful if not rejected ; <strong> This are criteria's set by REGULATORS </strong>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-2 col-md-0"> </div>
+                                <div class="col-lg-1 col-md-0"> </div>
                                  
 
                             </div>
