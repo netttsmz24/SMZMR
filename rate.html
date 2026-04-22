@@ -13,8 +13,259 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/master.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
+ 
+ <style> 
+     /* Section headers */
+  .rate-header {
+      /* color: #fff !important; */
+      font-weight:700 !important;
+      text-align: center !important;
+      padding: 7px !important;
+  }
 
-     
+  .rate-header span {
+      font-size: 22px;
+      display: block;
+      line-height: 18px;
+      border: 4px solid red;
+      padding: 5px 0px;
+      border-radius: 4px;
+      font-family: 'Agency FB', sans-serif;
+  }
+
+  .rate-header small {
+      margin-top: 3px;
+      font-size: 15px;
+      display: block;
+  }
+
+  .red{background:red !important;}
+  .yellow{background:yellow !important; color:#000 !important;}
+  .blue{background:#1f4e79 !important;}
+
+
+  /* Table */
+  .table th {
+      padding:5px;
+      text-align:center;
+  /*    white-space:nowrap;*/
+      font-weight:500;
+      line-height:20px;
+      font-size: 15px;
+  }
+
+  .table td {
+      padding:4px;
+      text-align:right;
+      white-space:nowrap;
+      font-weight:600;
+      font-size:14px;
+  }
+
+  /* Column background */
+  .bg-red{background:red !important;}
+  .bg-yellow{background:yellow !important;}
+  .bg-blue{background:#e6f0fa !important;}
+  .bg-gray{background:#e2e7e8 !important;}
+
+  /* Action panel */
+  .action-panel {
+    
+      background: #66ff33;
+      height:97.4%;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 5px;
+      border: 2px solid #000000;
+      cursor: pointer;
+  }
+
+  .action-panel p {
+      line-height: 14px;
+      text-align: justify;
+      margin: 6px;
+      font-size: 13px;
+      color: #010101;
+  }
+
+  .action-panel span {
+      text-align: center;
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 65px;
+      color: #000000;
+  }
+
+  .action-panel h2 {
+      text-align: center;
+      font-family: inherit;
+      font-weight: 800;
+      letter-spacing: 0px;
+      font-size: 18px;
+      /* text-transform: uppercase; */
+      line-height: 15px;
+      margin-bottom: 5px;
+      color: #000000 !important;
+  }
+
+  .action-panel h3 {
+      text-align: center;
+      /* font-family: inherit; */
+      font-weight: 800;
+      letter-spacing: 1px;
+      font-size: 24px;
+      /* text-transform: uppercase; */
+      line-height: 25px;
+      margin-bottom: 5px;
+      color: #000000;
+  }
+
+  .action-panel h3 span {
+      font-size: 28px;
+      line-height: 35px;
+  }
+
+  .action-panel-in {
+      width: 100%;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 11px;
+      font-weight: bold;
+      vertical-align: middle;
+      line-height: 13px;
+      padding: 15px 0px;
+      
+  }
+
+  .ap-top {
+      padding: 10px 5px 0px;
+      border: 5px solid red;
+      width: 85%;
+      margin: auto;
+      border-radius: 4px;
+  }
+
+
+  .table td.currency {
+      text-align:center;
+      font-weight: 500;
+      font-size: 13px;
+  }
+
+  .table td.unit {
+      text-align: right;
+      font-weight: 500;
+      font-size: 13px;
+  }
+
+
+  .table th.theader {
+      padding:6px;
+      white-space: nowrap;
+      font-weight: 600;
+      color: #000000 !important;
+      margin: auto;
+      font-size: 14px;
+  /*    background-color: #eeeeee;*/
+  }
+
+  .theader h4 {
+      margin: 10px auto;
+      display: block;
+      color: #ff0000;
+      line-height: 20px;
+      font-size:20px;
+      text-transform: capitalize;
+      font-weight: 700;
+      text-align: left;
+      text-indent: 5px;
+  }
+
+  /*.rate-page-dis {
+      background-color: #65ef08;
+      padding: 10px;
+      margin: 5px 0 10px;
+      border:1px solid #000000;
+  }*/
+
+  .rate-page-box {
+      position: relative;
+      width: 80%;
+      margin: 0;
+      float: right;
+  }
+
+  .rate-page-dis {
+      background-color:#66ff33;
+      padding:4px 7px;
+      margin: auto;
+      border:1px solid #000000;
+      align-items: center;
+      display: block;
+      position: relative;
+  }
+
+  .rate-page-dis p {
+      line-height: 17px;
+      font-size: 15px;
+      color: #000000;
+      margin-bottom: 0px;
+      font-weight: 500;
+  }
+
+  .text-red {
+      color:red;
+      font-weight: 700 !important;
+  }
+
+  .text-blue {
+      color:#1f4e79;
+      font-weight: 700 !important;
+  }
+
+  .rate-avail {
+      background-color: #ffffff !important;
+      font-size: 16px !important;
+      text-transform: none;
+      line-height: 19px !important;
+      text-align: right !important;
+  }
+
+  /* Responsive scroll */
+  .table-responsive{
+    overflow-x:auto;
+  }
+
+  .font-bold {
+      font-weight: bold !important;
+  }
+
+  @media (max-width:767px) {
+
+  .rate-page-box {
+      position: relative;
+      width: 100%;
+      margin-top:10px;
+      float:none;
+  }
+
+  }
+
+  @media (min-width:768px) and (max-width:1024px) {
+
+  .rate-page-box {
+      position: relative;
+      width: 90%;
+      margin: 0;
+      float:right;
+  }
+  }
+
+
+</style>
 
 </head>
 
@@ -28,7 +279,7 @@
 
                       <div class="row">
 
-                         <div class="col-lg-6 col-md-6">
+                         <div class="col-lg-4 col-md-6">
                             <div class="nettt-logo">
                                 <a href="#"> <img class="img-fluid" src="assets/images/new-smz-logo.png">  </a> 
                             </div>
@@ -36,29 +287,47 @@
 
                          <!-- <div class="col-lg-1">&nbsp;</div> -->
 
-                         <div class="col-lg-4 col-md-4 col-8">
+                         <div class="col-lg-5 col-md-4 col-sm-6">
                             <a href="#"> 
                                <button class="transact-btn"> To Transact For Cash Exchange Buying And Selling Pls Click Here Or Below At Transact </button>
                             </a> 
                          </div> 
 
+                          <div class="col-lg-3 col-md-2 remit-home-icon">
+                                <div style="float:right;">
+                                <a class=" " href="#" title="Back"> 
+                                  &nbsp; <img src="../../assets/images/left-arrow.png"> &nbsp;
+                                </a>
 
-                         <div class="col-lg-2 col-md-2 col-4"> 
+
+                                <a class="icon" href="#" title="Next"> 
+                                   &nbsp; <img src="../../assets/images/right-arrow.png"> &nbsp;
+                                </a>
+
+                                <a class="icon" href="remit-login.html" title="Logout"> 
+                                   <!-- <span class="logout-style"> LOG OUT </span> -->
+                                    <img src="../../assets/images/logout-1.png"> 
+                                </a>
+
+                                 
+                                </div>
+                          </div>
+
+                         <!-- <div class="col-lg-3 col-md-2 col-4"> 
                             <div class="home-icon float-right">
 
                                 <a class="icon" href="#" title="Back"> 
                                     <img src="assets/images/red-left-arrow.png"> 
                                 </a>
 
-
                                 <a class="icon" href="index.html" title="Home"> 
                                    &nbsp; <img src="assets/images/home-icon.png"> 
                                 </a>
 
-                                 <!-- <a class="icon" href="index.html" title="Back"> <i class="fas fa-arrow-alt-circle-left fs-5"></i></a>
-                                 <a class="icon" href="index.html" title="home"> <i class="fas fa-home fs-5"></i> </a> -->
+                                <a class="icon" href="index.html" title="home"> <i class="fas fa-home fs-5"></i> </a> 
                             </div>
-                         </div>
+                         </div> -->
+                         
                       </div>
 
                     </div>
@@ -78,7 +347,7 @@
                                         <li class="nav-item rate-tab-style col-md-4 rate-tab-ce" role="presentation">
 
                                             <div class="list-middle-align">
-                                                <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">CASH EXCHANGE RATES – Click Here
+                                                <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">CASH EXCHANGE RATES <br> – Click Here
                                                 </a>
                                             </div>
                                         </li>
@@ -95,11 +364,405 @@
                                  
                                  <div class="card">  
 
-                                    <div class="tab-content" id="pills-tabContent">
+                                    <div class="pt-2" id="pills-tabContent">
 
                                         <div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
-                                        <div class="rate-table table-responsive">
+                                          <div class="container-fluid">
+
+                    <div class="master-agent-page">
+
+                        <!-- <div class="row">
+                            <div class="col-me-12">
+                            <div class="rate-page-dis">
+                               <p> Please call our no.s to verify tangible cash currency market rates in REAL TIME – 016 7332 134 , 019 999 6793 </p>
+                            </div>
+                            </div>
+                        </div> -->
+
+                        <div class="row g-2">
+
+                            <!-- LEFT MAIN TABLE -->
+                            <div class="col-lg-10">
+                              <div class="table-responsive">
+                                <table class="table table-bordered" style="border-left: 2px solid #ffffff; border-right: 2px solid #ffffff;">
+
+                                  <thead>
+
+                                    <tr>
+
+                                      <!-- <th rowspan="2">Currency</th>
+                                      <th rowspan="2">Unit</th> -->
+
+                                      <th colspan="3" rowspan="2" class="theader">
+                                        <h4> Transaction Volume </h4>
+                                      </th>
+
+                                      <th colspan="2" class="rate-header">
+                                        Volume Of Currency Traded Over 
+                                        <span style="color:red;"> >= 20,000.00 MYR </span>
+                                        <small>Rate APPLIES</small>
+                                      </th>
+
+                                       <th colspan="2" class="rate-header bg-gray">
+                                        Volume Of Currency Traded Over 
+                                        <span> >= 10,000.00 MYR </span>
+                                        <small>Rate APPLIES</small>
+                                      </th>
+
+                                       <th colspan="2" class="rate-header">
+                                        Volume Of Currency Traded Over 
+                                        <span> >= 0.00 MYR </span>
+                                        <small>Rate APPLIES</small>
+                                      </th>
+
+                                      <!-- <th colspan="2" rowspan="2" class="rate-avail">
+                                        GAUGE <br> Stock <br> Availability
+                                      </th> -->
+
+                                    </tr>
+
+                                    <tr>
+
+                                      <!-- <th colspan="3"> </th> -->
+                                       
+                                      <th class="font-bold"> We Buy </th>
+                                      <th class="font-bold"> We Sell </th>
+
+                                      <th class="bg-gray font-bold">We Buy </th>
+                                      <th class="bg-gray font-bold">We Sell </th>
+
+                                      <th class="font-bold">We Buy </th>
+                                      <th class="font-bold">We Sell </th>
+
+                                      <!-- <th>--</th> -->
+                                       
+                                    </tr>
+
+                                    <tr>
+
+                                      <th>Currency Code</th>
+                                      <th>Flag</th>
+                                      <th>Unit</th>
+                                      
+
+                                      <th>(You Sell) We Buy </th>
+                                      <th>(You Buy) We Sell </th>
+
+                                      <th class="bg-gray">(You Sell) We Buy </th>
+                                      <th class="bg-gray">(You Buy) We Sell </th>
+
+                                      <th>(You Sell) We Buy </th>
+                                      <th>(You Buy) We Sell </th>
+
+                                      <!-- <th>--</th> -->
+                                       
+                                    </tr>
+                                  </thead>
+
+                                  <tbody>
+                                    <tr>
+                                      <td class="currency">USD</td>
+                                      <td class="currency">USD</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-gray">4.7273369</td><td class="bg-gray">4.73839</td>
+                                      <td class="">4.7273369</td><td class="">4.73839</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">GBP</td>
+                                      <td class="currency">GBP</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">5.9562369</td>
+                                      <td class=" ">5.96549</td>
+                                      <td class="bg-gray">5.9562369</td>
+                                      <td class="bg-gray">5.96549</td>
+                                      <td class="">5.9562369</td>
+                                      <td class="">5.96549</td>
+                                      
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td>
+                                      <td class="currency">SGD</td>
+                                      <td class="unit">1.00</td>
+                                      <td class=" ">0.031412369</td>
+                                      <td class=" ">0</td>
+                                      <td class="bg-gray">0.031412369</td>
+                                      <td class="bg-gray">0</td>
+                                      <td class="">0.031412369</td>
+                                      <td class="">0</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">JPY</td>
+                                      <td class="currency">JPY</td>
+                                      <td class="unit">1000.00</td> 
+                                      <td class=" ">5.1112369</td><td class=" ">5.12439</td>
+                                      <td class="bg-gray">5.1112369</td><td class="bg-gray">5.12439</td>
+                                      <td class="">5.1112369</td><td class="">5.12439</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">AUD</td>
+                                      <td class="currency">AUD</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-gray">4.7273369</td><td class="bg-gray">4.73839</td>
+                                      <td class="">4.7273369</td><td class="">4.73839</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">THB</td> 
+                                      <td class="currency">THB</td>    
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">5.9562369</td><td class=" ">5.96549</td>
+                                      <td class="bg-gray">5.9562369</td><td class="bg-gray">5.96549</td>
+                                      <td class="">5.9562369</td><td class="">5.96549</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td>
+                                      <td class="currency">SGD</td>
+                                      <td class="unit">1.00</td>
+                                      <td class=" ">0.031412369</td><td class=" ">0</td>
+                                      <td class="bg-gray">0.031412369</td><td class="bg-gray">0</td>
+                                      <td class="">0.031412369</td><td class="">0</td>
+                                      
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">JPY</td>
+                                      <td class="currency">JPY</td>
+                                      <td class="unit">1000.00</td>
+                                      <td class=" ">5.1112369</td>
+                                      <td class=" ">5.12439</td>
+                                      <td class="bg-gray">5.1112369</td>
+                                      <td class="bg-gray">5.12439</td>
+                                      <td class="">5.1112369</td>
+                                      <td class="">5.12439</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">USD</td>
+                                      <td class="currency">USD</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-gray">4.7273369</td><td class="bg-gray">4.73839</td>
+                                      <td class="">4.7273369</td><td class="">4.73839</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">GBP</td>
+                                      <td class="currency">GBP</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">5.9562369</td><td class=" ">5.96549</td>
+                                      <td class="bg-gray">5.9562369</td><td class="bg-gray">5.96549</td>
+                                      <td class="">5.9562369</td><td class="">5.96549</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td>
+                                      <td class="currency">SGD</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">0.031412369</td><td class=" ">0</td>
+                                      <td class="bg-gray">0.031412369</td><td class="bg-gray">0</td>
+                                      <td class="">0.031412369</td><td class="">0</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">JPY</td>
+                                      <td class="currency">JPY</td>
+                                      <td class="unit">1000.00</td> 
+                                      <td class=" ">5.1112369</td>
+                                      <td class=" ">5.12439</td>
+                                      <td class="bg-gray">5.1112369</td>
+                                      <td class="bg-gray">5.12439</td>
+                                      <td class="">5.1112369</td>
+                                      <td class="">5.12439</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">USD</td>
+                                      <td class="currency">USD</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-gray">4.7273369</td><td class="bg-gray">4.73839</td>
+                                      <td class="">4.7273369</td><td class="">4.73839</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">GBP</td>
+                                      <td class="currency">GBP</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">5.9562369</td>
+                                      <td class=" ">5.96549</td>
+                                      <td class="bg-gray">5.9562369</td>
+                                      <td class="bg-gray">5.96549</td>
+                                      <td class="">5.9562369</td>
+                                      <td class="">5.96549</td>
+                                      
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td>
+                                      <td class="currency">SGD</td>
+                                      <td class="unit">1.00</td>
+                                      <td class=" ">0.031412369</td>
+                                      <td class=" ">0</td>
+                                      <td class="bg-gray">0.031412369</td>
+                                      <td class="bg-gray">0</td>
+                                      <td class="">0.031412369</td>
+                                      <td class="">0</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">JPY</td>
+                                      <td class="currency">JPY</td>
+                                      <td class="unit">1000.00</td> 
+                                      <td class=" ">5.1112369</td><td class=" ">5.12439</td>
+                                      <td class="bg-gray">5.1112369</td><td class="bg-gray">5.12439</td>
+                                      <td class="">5.1112369</td><td class="">5.12439</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">AUD</td>
+                                      <td class="currency">AUD</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-gray">4.7273369</td><td class="bg-gray">4.73839</td>
+                                      <td class="">4.7273369</td><td class="">4.73839</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">THB</td> 
+                                      <td class="currency">THB</td>    
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">5.9562369</td><td class=" ">5.96549</td>
+                                      <td class="bg-gray">5.9562369</td><td class="bg-gray">5.96549</td>
+                                      <td class="">5.9562369</td><td class="">5.96549</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td>
+                                      <td class="currency">SGD</td>
+                                      <td class="unit">1.00</td>
+                                      <td class=" ">0.031412369</td><td class=" ">0</td>
+                                      <td class="bg-gray">0.031412369</td><td class="bg-gray">0</td>
+                                      <td class="">0.031412369</td><td class="">0</td>
+                                      
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">JPY</td>
+                                      <td class="currency">JPY</td>
+                                      <td class="unit">1000.00</td>
+                                      <td class=" ">5.1112369</td>
+                                      <td class=" ">5.12439</td>
+                                      <td class="bg-gray">5.1112369</td>
+                                      <td class="bg-gray">5.12439</td>
+                                      <td class="">5.1112369</td>
+                                      <td class="">5.12439</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">USD</td>
+                                      <td class="currency">USD</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-gray">4.7273369</td><td class="bg-gray">4.73839</td>
+                                      <td class="">4.7273369</td><td class="">4.73839</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">GBP</td>
+                                      <td class="currency">GBP</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">5.9562369</td><td class=" ">5.96549</td>
+                                      <td class="bg-gray">5.9562369</td><td class="bg-gray">5.96549</td>
+                                      <td class="">5.9562369</td><td class="">5.96549</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td>
+                                      <td class="currency">SGD</td>
+                                      <td class="unit">1.00</td> 
+                                      <td class=" ">0.031412369</td><td class=" ">0</td>
+                                      <td class="bg-gray">0.031412369</td><td class="bg-gray">0</td>
+                                      <td class="">0.031412369</td><td class="">0</td>
+                                       
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">JPY</td>
+                                      <td class="currency">JPY</td>
+                                      <td class="unit">1000.00</td> 
+                                      <td class=" ">5.1112369</td>
+                                      <td class=" ">5.12439</td>
+                                      <td class="bg-gray">5.1112369</td>
+                                      <td class="bg-gray">5.12439</td>
+                                      <td class="">5.1112369</td>
+                                      <td class="">5.12439</td>
+                                       
+                                    </tr>
+                                  </tbody>
+
+                                </table>
+                              </div>
+                            </div>
+
+                            <!-- RIGHT ACTION PANEL -->
+                            <div class="col-lg-2 ">
+
+                              <!-- <div style="height:90px;"> </div> -->
+
+                              <div class="action-panel pt-100">
+                                 <br>
+                                 <div class="ap-top">
+                                    <h3> <span>BOOK ONLINE </span> No Ques </h3>
+                                    <!-- <h2> No Ques </h2> -->
+                                  </div>
+                                  <br>
+                                  <p style="text-align: center;"><strong>Immediate Exchange </strong> </p>
+                                  <p style="text-align:center;"><strong>{ Pls bring receipt, IC or ID passport Documents
+                                  and relevant supporting documents as required } </strong> </p>
+                                    <br>
+                                 <p> You may book online and reserve your currency for
+                                  6-8 Hours maximum; Please  note that consecutive
+                                  booking and no show is considered for the third time
+                                  may bar from further booking; We regret any inconveniences. </p>
+
+                                </div>
+
+                              </div>
+
+                        </div>
+
+                    </div>
+
+                  </div>
+
+
+                                          <!-- <div class="rate-table table-responsive">
 
                                              <table class="table table-bordered">
                                                 <thead>
@@ -160,7 +823,7 @@
                                                 </tbody>
                                              </table>
 
-                                         </div>
+                                          </div> -->
 
                                        </div>
 
@@ -182,7 +845,7 @@
                             </div>
                         </div>
    
-                    </div>
+                </div>
 
                 </div>                
 

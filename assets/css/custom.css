@@ -443,9 +443,10 @@ header.page-headr{
     text-align: center;
     font-size: 14px;
     background-color: #ffffff;
-    margin:2%;
     display: block;
     letter-spacing: 0.1px;
+    width: 80%;
+    margin: auto;
 }
 
 
