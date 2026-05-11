@@ -166,7 +166,7 @@
         }
 
         .rem-rc-otp-box p {
-            font-size: 12px;
+            font-size: 13px;
             color: #000000;
             text-align: justify;
             line-height: 14px;
@@ -384,7 +384,7 @@
     }
 
     .right-box h2 {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 800;
         margin-bottom: 18px;
         line-height: 1.2;
@@ -404,6 +404,88 @@
         font-family: Agency FB;
     }
 
+
+     
+
+    /* last box desing class --------------------- */
+
+     .card-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 480px;
+    /*    font-family: Agency FB;*/
+
+    }
+
+   .card-wrap .card {
+        background: #fff;
+        border-radius: 0px 0px 0 0;
+        padding: 40px 20px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+        border: 4px solid #010101;
+        /* border-bottom: none; */
+    }
+
+    .wave-bottom {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: -15px;
+    }
+
+    .card-wrap .section { margin-bottom: 18px; }
+    .card-wrap .section:last-child { margin-bottom: 0; }
+
+    .card-wrap .section-title {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: clamp(15px, 3.5vw, 18px);
+        color: #111;
+        margin-bottom:3px;
+        letter-spacing: -0.01em;
+    }
+
+    .card-wrap .email-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        align-items: center;
+        font-size: clamp(13px, 3vw, 15px);
+    }
+
+    .card-wrap .email-row a {
+        color: #111;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
+    .card-wrap .email-row a:hover { color: #00b818; }
+
+    .card-wrap .divider {
+        color: #aaa;
+        font-weight: 400;
+    }
+
+    .card-wrap .reg-text {
+        font-size: clamp(13px, 3vw, 14px);
+        color: #333;
+        line-height: 1.25;
+    }
+
+    .card-wrap .reg-text strong {
+        font-weight: 700;
+        color: #111;
+    }
+
+    .card-wrap .reg-text a {
+        color: #111;
+        text-underline-offset: 2px;
+    }
+
+    .card-wrap .reg-text a:hover { color: #00b818; }
 
     </style>
 
@@ -502,114 +584,41 @@
                                 </div>
 
                                 <div class="mt-3">
-                                    <div class="info-box">
-                                        <div class="info-box-inner">
-                                            <div class="content">
-
-                                                <h1>Connect with Us</h1>
-
-                                                <div class="email">
-                                                    services@smz.my | support@smz.my
+                                    <div class=" ">
+                                         
+                                        <div class="card-wrap">
+                                            <div class="card">
+                                                <div class="section">
+                                                <div class="section-title">Connect with Us</div>
+                                                <div class="email-row">
+                                                    <a href="mailto:services@smz.my">services@smz.my</a>
+                                                    <span class="divider">|</span>
+                                                    <a href="mailto:support@smz.my">support@smz.my</a>
+                                                </div>
                                                 </div>
 
-                                                <h2>Regulatory Verification</h2>
-
-                                                <p>
-                                                    SMZ Exchange is licensed and authorized
-                                                    by the <strong>Reserve Bank of Malaysia (BNM)</strong>.
-                                                    Please verify via BNM TeleLink or visit
-                                                    www.bnm.gov.my
+                                                <div class="section">
+                                                <div class="section-title">Regulatory Verification</div>
+                                                <p class="reg-text">
+                                                    SMZ Exchange is licensed and authorized by the <strong>Reserve Bank of Malaysia (BNM)</strong>.
+                                                    Please verify via BNM TeleLink or visit <a href="https://www.bnm.gov.my" target="_blank" rel="noopener">www.bnm.gov.my</a>
                                                 </p>
-
+                                                </div>
                                             </div>
-                                        </div>
-                                        <!-- EXACT CURVE -->
-                                        <svg viewBox="0 0 1000 289" preserveAspectRatio="none">
 
-                                            <!-- WHITE SHAPE -->
-                                            <path d="
-                                                M0,0
-                                                L1000,30
-                                                L1000,35
-                                                C760,110 640,180 520,210
-                                                C350,250 180,240 0,180
-                                                L0,50
-                                                Z
-                                            " fill="#ffffff" stroke="#010101" stroke-width="0" />
 
-                                        </svg>
+
+
+
+
+                                            <!-- wave SVG matching the original -->
+                                            
+                                            </div>
 
                                     </div>
 
 
                                 </div>
-
-                                <!-- <div class="rem-fp-box mb-2">
-                                                <h3> FORGOT Password </h3>
-
-                                                <div class="rem-rc-form">
-
-                                                    <div class="row">
-
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                                <span class="input-group-text">Nationality</span>
-                                                                <select class="form-select">
-                                                                    <option selected>choose...</option>
-                                                                    <option value="1">India</option>
-                                                                    <option value="2">Malaysia</option>
-                                                                    <option value="3">China</option>
-                                                                </select>
-                                                                <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                              <span class="input-group-text">User Name</span>
-                                                              <input type="text" class="form-control" placeholder="Enter username"  required>
-                                                              <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                              <span class="input-group-text">E-Mail</span>
-                                                              <input type="text" class="form-control" placeholder="Ex: your@mail.com" required>
-                                                              <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="col-md-12">
-                                                            <div class="input-group">
-                                                              <span class="input-group-text">Phone No</span>
-                                                              <input type="text" class="form-control" placeholder="Ex: +91 83709 38793" required>
-                                                              <div class="valid-feedback"> Looks good! </div>
-                                                            </div>
-                                                        </div>
-
-                                                        
-
-                                                        <div class="col-md-12">
-                                                            <div class="send-now-btn">
-                                                                <h1> SUBMIT </h1>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-12">
-                                                            <div class="disclaimer-home">
-                                                                <p>
-                                                                    Main Agents for a base country is exceptionally a single entity with agents who are enrolled in finite base under the main agent ; The main agents exceptional responsibility with the agent to the client is of a personally concierge manner to cater in person to the services offered                
-      
-                                                                </p>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>   
-                                            </div> -->
 
 
                             </div>
